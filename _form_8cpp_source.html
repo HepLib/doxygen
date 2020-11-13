@@ -378,151 +378,153 @@ $(function() {
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                }</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                ff &lt;&lt; <span class="stringliteral">&quot;L [o]=&quot;</span> &lt;&lt; item &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib_1_1_f_c.html#a2b509d99c7fc5bb30e0fa313ebd9dce1">trace_method</a>==<a class="code" href="namespace_hep_lib_1_1_f_c.html#a40732d2100dd31bbfe5186d7c3be4e41">trace_each_each</a>) {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                exset trs;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                find(item,TR(w),trs);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                exmap tr2v;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordtype">int</span> trn=0;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                exvector trvec;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> tr : trs) {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    tr2v[tr] = Symbol(<span class="stringliteral">&quot;trcN&quot;</span>+to_string(trn));</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    <span class="keyword">auto</span> tri = mapGamma(gid)(tr.op(0));</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    trvec.push_back(tri);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    trn++;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                item = item.subs(tr2v);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                ff &lt;&lt; <span class="stringliteral">&quot;L [o]=&quot;</span> &lt;&lt; item &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;trvec.size(); i++) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;L [tr&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]=&quot;</span> &lt;&lt; trvec[i] &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;tracen &quot;</span> &lt;&lt; gid &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;id trcN&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;=[tr&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;runform: the supplied trace_method is NOT supported yet.&quot;</span>);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            ff &lt;&lt; <span class="stringliteral">&quot;contract 0;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">if</span>(verb==1) {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;\r                                     \r&quot;</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;  \\--Form Script @ &quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; total &lt;&lt; flush;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(verb&gt;1) {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Form Script @ &quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; total &lt;&lt; endl;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib_1_1_f_c.html#a2b509d99c7fc5bb30e0fa313ebd9dce1">trace_method</a>==<a class="code" href="namespace_hep_lib_1_1_f_c.html#a40732d2100dd31bbfe5186d7c3be4e41">trace_each_each</a>) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                exset trs;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                find(item,TR(w),trs);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                exmap tr2v;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordtype">int</span> trn=0;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                exvector trvec;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> tr : trs) {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    tr2v[tr] = Symbol(<span class="stringliteral">&quot;trcN&quot;</span>+to_string(trn));</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    <span class="keyword">auto</span> tri = mapGamma(gid)(tr.op(0));</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    trvec.push_back(tri);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    trn++;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                item = item.subs(tr2v);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                ff &lt;&lt; <span class="stringliteral">&quot;L [o]=&quot;</span> &lt;&lt; item &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;trvec.size(); i++) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;L [tr&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]=&quot;</span> &lt;&lt; trvec[i] &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;tracen &quot;</span> &lt;&lt; gid &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;id trcN&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;=[tr&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;runform: the supplied trace_method is NOT supported yet.&quot;</span>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            ff &lt;&lt; <span class="stringliteral">&quot;contract 0;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            ff &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            ff &lt;&lt; idstr &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">if</span>(verb==1) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;\r                                     \r&quot;</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;  \\--Form Script @ &quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; total &lt;&lt; flush;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(verb&gt;1) {</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                cout &lt;&lt; ss.str() &lt;&lt; endl;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keyword">auto</span> script = ss.str();</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            string_replace_all(script, <span class="stringliteral">&quot;sin(&quot;</span>, <span class="stringliteral">&quot;sin_(&quot;</span>);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            string_replace_all(script, <span class="stringliteral">&quot;cos(&quot;</span>, <span class="stringliteral">&quot;cos_(&quot;</span>);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keyword">auto</span> otmp = fprc.Execute(script);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">if</span>(verb&gt;2) {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Form Output @&quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; total &lt;&lt; endl;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Form Script @ &quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; total &lt;&lt; endl;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                cout &lt;&lt; ss.str() &lt;&lt; endl;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keyword">auto</span> script = ss.str();</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            string_replace_all(script, <span class="stringliteral">&quot;sin(&quot;</span>, <span class="stringliteral">&quot;sin_(&quot;</span>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            string_replace_all(script, <span class="stringliteral">&quot;cos(&quot;</span>, <span class="stringliteral">&quot;cos_(&quot;</span>);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keyword">auto</span> otmp = fprc.Execute(script);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span>(verb&gt;2) {</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                cout &lt;&lt; otmp &lt;&lt; endl;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            ostr += otmp;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            ss.clear();</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            <span class="keywordflow">if</span>(c&lt;total) ostr += <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            c++;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">if</span>(verb==1) cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        ostr += <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;[&quot;</span>, <span class="stringliteral">&quot;(&quot;</span>);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;]&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> v : vec_lst) {</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <span class="keywordtype">string</span> pat(ex_to&lt;Vector&gt;(v).name.get_name());</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="keywordtype">string</span> from = pat+<span class="stringliteral">&quot;(&quot;</span>;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="keywordtype">string</span> to = <span class="stringliteral">&quot;SP(&quot;</span>+pat+<span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            string_replace_all(ostr, from, to);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            from = pat+<span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            to = pat+<span class="stringliteral">&quot;_&quot;</span>;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            string_replace_all(ostr, from, to);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        }</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        </div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;d_(&quot;</span>, <span class="stringliteral">&quot;SP(&quot;</span>);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;e_(&quot;</span>, <span class="stringliteral">&quot;LC(&quot;</span>);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;sin_&quot;</span>, <span class="stringliteral">&quot;sin&quot;</span>);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;cos_&quot;</span>, <span class="stringliteral">&quot;cos&quot;</span>);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        st[<span class="stringliteral">&quot;I2R&quot;</span>] = ex(1)/2;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        st[<span class="stringliteral">&quot;NA&quot;</span>] = <a class="code" href="namespace_hep_lib_1_1_f_c.html#aef5952887c666da594a06ca463aa3c9d">NA</a>;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        st[<span class="stringliteral">&quot;NF&quot;</span>] = <a class="code" href="namespace_hep_lib_1_1_f_c.html#a665b80d43cf21ab3271ac22679783fd0">NF</a>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        st[<span class="stringliteral">&quot;I&quot;</span>] = I;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        st[<span class="stringliteral">&quot;i_&quot;</span>] = I;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        Parser fp(st);</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        fp.FTable[make_pair(<span class="stringliteral">&quot;SP&quot;</span>, 2)] = SP_reader;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        fp.FTable[make_pair(<span class="stringliteral">&quot;LC&quot;</span>, 4)] = LC_reader;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        fp.FTable[make_pair(<span class="stringliteral">&quot;T&quot;</span>, 3)] = SUNT_reader;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        ex ret = fp.Read(ostr);</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">if</span>(!islst) ret = ret.op(0);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }}</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    </div>
-<div class="line"><a name="l00416"></a><span class="lineno"><a class="line" href="namespace_hep_lib_1_1_f_c.html#ab360e49b3d9371b2fc19383cb5eff893">  416</a></span>&#160;    ex <a class="code" href="namespace_hep_lib_1_1_f_c.html#ab360e49b3d9371b2fc19383cb5eff893">form</a>(<span class="keyword">const</span> ex &amp;expr, <span class="keywordtype">bool</span> all, <span class="keywordtype">int</span> verb) {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span>(all || is_a&lt;lst&gt;(expr)) <span class="keywordflow">return</span> runform(expr, verb);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keyword">auto</span> cv_lst = mma_collect_lst(expr.subs(<a class="code" href="namespace_hep_lib_1_1_f_c.html#afe826a1c17b91a15719a6dbfd715b022">SP_map</a>), [](<span class="keyword">const</span> ex &amp; e)-&gt;bool {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            return e.has(TR(w)) || SUNT::has(e) || SUNF::has(e) || SUNF4::has(e) || Index::has(e) || DiracGamma::has(e);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        });</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        lst to_lst;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> cv : cv_lst) to_lst.append(cv.op(1));</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        lst out_lst = ex_to&lt;lst&gt;(runform(to_lst, verb));</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        </div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        ex ret = 0;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;cv_lst.nops(); i++) ret += cv_lst.op(i).op(0) * out_lst.op(i);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        <span class="keywordflow">return</span> ret.subs(<a class="code" href="namespace_hep_lib_1_1_f_c.html#afe826a1c17b91a15719a6dbfd715b022">SP_map</a>);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
-<div class="line"><a name="l00436"></a><span class="lineno"><a class="line" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">  436</a></span>&#160;    ex <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <span class="keywordflow">if</span>(expr.has(Qgraf::Matrix(w1,w2,w3))) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;charge_conjugate: Matrix found.&quot;</span>);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a87b25cb7c2ac583c559e4ec7f604c3eb">DiracGamma::has</a>(expr)) <span class="keywordflow">return</span> expr;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">if</span>(is_a&lt;DiracGamma&gt;(expr)) {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            <a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html">DiracGamma</a> g = ex_to&lt;DiracGamma&gt;(expr);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;Vector&gt;(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>) || is_a&lt;Index&gt;(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>)) <span class="keywordflow">return</span> -expr;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(is_zero(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>-1) || is_zero(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>-5)) <span class="keywordflow">return</span> expr;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        </div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">if</span>(is_a&lt;add&gt;(expr)) {</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            ex ret = 0;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr) ret += <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(item);</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(is_a&lt;mul&gt;(expr)) {</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            ex ret = 1;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr) ret *= <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(item);</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(is_a&lt;ncmul&gt;(expr)) {</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;            ex ret = 1;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            <span class="keywordtype">int</span> n = expr.nops();</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=n-1; i&gt;-1; i--) ret *= <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(expr.op(i));</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        }</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        cout &lt;&lt; <a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a87b25cb7c2ac583c559e4ec7f604c3eb">DiracGamma::has</a>(expr) &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; expr &lt;&lt; endl;</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;charge_conjugate: unexpected region.&quot;</span>);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    }</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Form Output @&quot;</span> &lt;&lt; c &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; total &lt;&lt; endl;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                cout &lt;&lt; otmp &lt;&lt; endl;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            ostr += otmp;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            ss.clear();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">if</span>(c&lt;total) ostr += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            c++;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">if</span>(verb==1) cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        ostr += <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;[&quot;</span>, <span class="stringliteral">&quot;(&quot;</span>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;]&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> v : vec_lst) {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="keywordtype">string</span> pat(ex_to&lt;Vector&gt;(v).name.get_name());</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keywordtype">string</span> from = pat+<span class="stringliteral">&quot;(&quot;</span>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordtype">string</span> to = <span class="stringliteral">&quot;SP(&quot;</span>+pat+<span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            string_replace_all(ostr, from, to);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            from = pat+<span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            to = pat+<span class="stringliteral">&quot;_&quot;</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            string_replace_all(ostr, from, to);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;d_(&quot;</span>, <span class="stringliteral">&quot;SP(&quot;</span>);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;e_(&quot;</span>, <span class="stringliteral">&quot;LC(&quot;</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;sin_&quot;</span>, <span class="stringliteral">&quot;sin&quot;</span>);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        string_replace_all(ostr, <span class="stringliteral">&quot;cos_&quot;</span>, <span class="stringliteral">&quot;cos&quot;</span>);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        st[<span class="stringliteral">&quot;I2R&quot;</span>] = ex(1)/2;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        st[<span class="stringliteral">&quot;NA&quot;</span>] = <a class="code" href="namespace_hep_lib_1_1_f_c.html#aef5952887c666da594a06ca463aa3c9d">NA</a>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        st[<span class="stringliteral">&quot;NF&quot;</span>] = <a class="code" href="namespace_hep_lib_1_1_f_c.html#a665b80d43cf21ab3271ac22679783fd0">NF</a>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        st[<span class="stringliteral">&quot;I&quot;</span>] = I;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        st[<span class="stringliteral">&quot;i_&quot;</span>] = I;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        Parser fp(st);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        fp.FTable[make_pair(<span class="stringliteral">&quot;SP&quot;</span>, 2)] = SP_reader;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        fp.FTable[make_pair(<span class="stringliteral">&quot;LC&quot;</span>, 4)] = LC_reader;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        fp.FTable[make_pair(<span class="stringliteral">&quot;T&quot;</span>, 3)] = SUNT_reader;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        ex ret = fp.Read(ostr);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">if</span>(!islst) ret = ret.op(0);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }}</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    </div>
+<div class="line"><a name="l00418"></a><span class="lineno"><a class="line" href="namespace_hep_lib_1_1_f_c.html#ab360e49b3d9371b2fc19383cb5eff893">  418</a></span>&#160;    ex <a class="code" href="namespace_hep_lib_1_1_f_c.html#ab360e49b3d9371b2fc19383cb5eff893">form</a>(<span class="keyword">const</span> ex &amp;expr, <span class="keywordtype">bool</span> all, <span class="keywordtype">int</span> verb) {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span>(all || is_a&lt;lst&gt;(expr)) <span class="keywordflow">return</span> runform(expr, verb);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keyword">auto</span> cv_lst = mma_collect_lst(expr.subs(<a class="code" href="namespace_hep_lib_1_1_f_c.html#afe826a1c17b91a15719a6dbfd715b022">SP_map</a>), [](<span class="keyword">const</span> ex &amp; e)-&gt;bool {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            return e.has(TR(w)) || SUNT::has(e) || SUNF::has(e) || SUNF4::has(e) || Index::has(e) || DiracGamma::has(e);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        });</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        lst to_lst;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> cv : cv_lst) to_lst.append(cv.op(1));</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        lst out_lst = ex_to&lt;lst&gt;(runform(to_lst, verb));</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        ex ret = 0;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;cv_lst.nops(); i++) ret += cv_lst.op(i).op(0) * out_lst.op(i);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">return</span> ret.subs(<a class="code" href="namespace_hep_lib_1_1_f_c.html#afe826a1c17b91a15719a6dbfd715b022">SP_map</a>);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    }</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno"><a class="line" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">  438</a></span>&#160;    ex <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">if</span>(expr.has(Qgraf::Matrix(w1,w2,w3))) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;charge_conjugate: Matrix found.&quot;</span>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a87b25cb7c2ac583c559e4ec7f604c3eb">DiracGamma::has</a>(expr)) <span class="keywordflow">return</span> expr;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <span class="keywordflow">if</span>(is_a&lt;DiracGamma&gt;(expr)) {</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html">DiracGamma</a> g = ex_to&lt;DiracGamma&gt;(expr);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;Vector&gt;(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>) || is_a&lt;Index&gt;(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>)) <span class="keywordflow">return</span> -expr;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(is_zero(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>-1) || is_zero(g.<a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">pi</a>-5)) <span class="keywordflow">return</span> expr;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        }</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="keywordflow">if</span>(is_a&lt;add&gt;(expr)) {</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            ex ret = 0;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr) ret += <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(item);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(is_a&lt;mul&gt;(expr)) {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            ex ret = 1;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr) ret *= <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(item);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(is_a&lt;ncmul&gt;(expr)) {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            ex ret = 1;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;            <span class="keywordtype">int</span> n = expr.nops();</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=n-1; i&gt;-1; i--) ret *= <a class="code" href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">charge_conjugate</a>(expr.op(i));</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        cout &lt;&lt; <a class="code" href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a87b25cb7c2ac583c559e4ec7f604c3eb">DiracGamma::has</a>(expr) &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; expr &lt;&lt; endl;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;charge_conjugate: unexpected region.&quot;</span>);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    }</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;}</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_hep_lib_1_1_f_c_1_1_dirac_gamma_html"><div class="ttname"><a href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html">HepLib::FC::DiracGamma</a></div><div class="ttdoc">class for DiracGamma object</div><div class="ttdef"><b>Definition:</b> <a href="_f_c_8h_source.html#l00254">FC.h:254</a></div></div>
 <div class="ttc" id="a_f_c_8h_html"><div class="ttname"><a href="_f_c_8h.html">FC.h</a></div><div class="ttdoc">FC header file.</div></div>
-<div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_ab360e49b3d9371b2fc19383cb5eff893"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#ab360e49b3d9371b2fc19383cb5eff893">HepLib::FC::form</a></div><div class="ttdeci">ex form(const ex &amp;expr, bool all_in_one=false, int verb=0)</div><div class="ttdoc">evalulate expr in form program</div><div class="ttdef"><b>Definition:</b> <a href="_form_8cpp_source.html#l00416">Form.cpp:416</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_ab360e49b3d9371b2fc19383cb5eff893"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#ab360e49b3d9371b2fc19383cb5eff893">HepLib::FC::form</a></div><div class="ttdeci">ex form(const ex &amp;expr, bool all_in_one=false, int verb=0)</div><div class="ttdoc">evalulate expr in form program</div><div class="ttdef"><b>Definition:</b> <a href="_form_8cpp_source.html#l00418">Form.cpp:418</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_a665b80d43cf21ab3271ac22679783fd0"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#a665b80d43cf21ab3271ac22679783fd0">HepLib::FC::NF</a></div><div class="ttdeci">const Symbol NF</div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_afe826a1c17b91a15719a6dbfd715b022"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#afe826a1c17b91a15719a6dbfd715b022">HepLib::FC::SP_map</a></div><div class="ttdeci">exmap SP_map</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_f_c_1_1_dirac_gamma_html_a2728766aba573432dda61bb4fa3bcbe1"><div class="ttname"><a href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a2728766aba573432dda61bb4fa3bcbe1">HepLib::FC::DiracGamma::pi</a></div><div class="ttdeci">ex pi</div><div class="ttdef"><b>Definition:</b> <a href="_f_c_8h_source.html#l00257">FC.h:257</a></div></div>
@@ -530,7 +532,7 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_a215eb974b55fe1e9fa6842a9b3b0aef3"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#a215eb974b55fe1e9fa6842a9b3b0aef3">HepLib::FC::SP</a></div><div class="ttdeci">ex SP(const ex &amp;a, bool use_map=false)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8cpp_source.html#l00152">Pair.cpp:152</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_a5265a43af585d19bd0cd562306299cb6"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#a5265a43af585d19bd0cd562306299cb6">HepLib::FC::gs</a></div><div class="ttdeci">const Symbol gs</div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_ab04313d9609f23bb9c2d44fe9d2a8ffe"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#ab04313d9609f23bb9c2d44fe9d2a8ffe">HepLib::FC::LC</a></div><div class="ttdeci">ex LC(ex pi1, ex pi2, ex pi3, ex pi4)</div><div class="ttdoc">function similar to LCD in FeynCalc</div><div class="ttdef"><b>Definition:</b> <a href="_eps_8cpp_source.html#l00128">Eps.cpp:128</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_aa57b6d86e9a7891c14b9c1d5f022423f"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">HepLib::FC::charge_conjugate</a></div><div class="ttdeci">ex charge_conjugate(const ex &amp;)</div><div class="ttdoc">make the charge conjugate operaton, M -&gt; C^{-1} . M^T . C w.r.t. a Matrix object</div><div class="ttdef"><b>Definition:</b> <a href="_form_8cpp_source.html#l00436">Form.cpp:436</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_1_1_f_c_html_aa57b6d86e9a7891c14b9c1d5f022423f"><div class="ttname"><a href="namespace_hep_lib_1_1_f_c.html#aa57b6d86e9a7891c14b9c1d5f022423f">HepLib::FC::charge_conjugate</a></div><div class="ttdeci">ex charge_conjugate(const ex &amp;)</div><div class="ttdoc">make the charge conjugate operaton, M -&gt; C^{-1} . M^T . C w.r.t. a Matrix object</div><div class="ttdef"><b>Definition:</b> <a href="_form_8cpp_source.html#l00438">Form.cpp:438</a></div></div>
 <div class="ttc" id="a_form_8cpp_html_a408ca86aadd0f759c0cc14d229dc868a"><div class="ttname"><a href="_form_8cpp.html#a408ca86aadd0f759c0cc14d229dc868a">glmax</a></div><div class="ttdeci">unsigned glmax</div><div class="ttdef"><b>Definition:</b> <a href="_form_8cpp_source.html#l00072">Form.cpp:72</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_f_c_1_1_dirac_gamma_html_a87b25cb7c2ac583c559e4ec7f604c3eb"><div class="ttname"><a href="class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a87b25cb7c2ac583c559e4ec7f604c3eb">HepLib::FC::DiracGamma::has</a></div><div class="ttdeci">static bool has(const ex &amp;e)</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_f_c_1_1_index_html_aeafe7430aa28a2f84bb644d230525dcc"><div class="ttname"><a href="class_hep_lib_1_1_f_c_1_1_index.html#aeafe7430aa28a2f84bb644d230525dcc">HepLib::FC::Index::has</a></div><div class="ttdeci">static bool has(const ex &amp;e)</div></div>
