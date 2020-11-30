@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['red_1337',['RED',['../_b_a_s_i_c_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'BASIC.h']]],
-  ['reset_1338',['RESET',['../_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'BASIC.h']]]
+  ['red_1343',['RED',['../_b_a_s_i_c_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'BASIC.h']]],
+  ['reset_1344',['RESET',['../_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'BASIC.h']]]
 ];
