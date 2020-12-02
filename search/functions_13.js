@@ -28,6 +28,6 @@ var searchData=
   ['sum_1042',['sum',['../class_hep_lib_1_1lst_helper.html#a9399bd30aa77398e76a9eab142ac02d5',1,'HepLib::lstHelper']]],
   ['sunf_1043',['SUNF',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f.html#a23c363520567ceb0fc7b850a947294d3',1,'HepLib::FC::SUNF']]],
   ['sunf4_1044',['SUNF4',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f4.html#ac59c488aae24993778aa31db1a32ef83',1,'HepLib::FC::SUNF4']]],
-  ['sunt_1045',['SUNT',['../class_hep_lib_1_1_f_c_1_1_s_u_n_t.html#a6cd88d1b9c07c924ced88fb3cc0b3c1c',1,'HepLib::FC::SUNT']]],
+  ['sunt_1045',['SUNT',['../class_hep_lib_1_1_f_c_1_1_s_u_n_t.html#ae636e1b1e2158f0f0c9ad2d22d970987',1,'HepLib::FC::SUNT']]],
   ['symbol_1046',['Symbol',['../class_hep_lib_1_1_symbol.html#acfe660122bfbe069fd78a61c3d569156',1,'HepLib::Symbol']]]
 ];

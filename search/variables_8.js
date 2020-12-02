@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['iepsilon_1150',['iEpsilon',['../namespace_hep_lib.html#a4c0802f836a8eeffa15780580fbe85e4',1,'HepLib']]],
-  ['iepsilonn_1151',['iEpsilonN',['../namespace_hep_lib.html#aa2d68db54e5cdbe29c74cc082d4dfe99',1,'HepLib']]],
-  ['ija_1152',['ija',['../class_hep_lib_1_1_f_c_1_1_s_u_n_t.html#af5538ee7cd4e8dd14ae930b50e0d287d',1,'HepLib::FC::SUNT']]],
+  ['iepsilon_1151',['iEpsilon',['../namespace_hep_lib.html#a4c0802f836a8eeffa15780580fbe85e4',1,'HepLib']]],
+  ['iepsilonn_1152',['iEpsilonN',['../namespace_hep_lib.html#aa2d68db54e5cdbe29c74cc082d4dfe99',1,'HepLib']]],
   ['ijk_1153',['ijk',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f.html#aef3974f0aefbca19748487d4d1bf1489',1,'HepLib::FC::SUNF']]],
   ['ijkl_1154',['ijkl',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f4.html#a85981cb69e4d26d062a83429dbabdc63',1,'HepLib::FC::SUNF4']]],
   ['in_1155',['In',['../class_hep_lib_1_1_f_c_1_1_qgraf_1_1_process.html#ae5a2de9c7ba806af3ddcb0370018f931',1,'HepLib::FC::Qgraf::Process']]],

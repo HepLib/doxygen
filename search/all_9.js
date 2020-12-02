@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['ibp_2eh_267',['IBP.h',['../_i_b_p_8h.html',1,'']]],
-  ['iepsilon_268',['iEpsilon',['../namespace_hep_lib.html#a4c0802f836a8eeffa15780580fbe85e4',1,'HepLib']]],
-  ['iepsilonn_269',['iEpsilonN',['../namespace_hep_lib.html#aa2d68db54e5cdbe29c74cc082d4dfe99',1,'HepLib']]],
-  ['ija_270',['ija',['../class_hep_lib_1_1_f_c_1_1_s_u_n_t.html#af5538ee7cd4e8dd14ae930b50e0d287d',1,'HepLib::FC::SUNT']]],
+  ['ibp_2eh_268',['IBP.h',['../_i_b_p_8h.html',1,'']]],
+  ['iepsilon_269',['iEpsilon',['../namespace_hep_lib.html#a4c0802f836a8eeffa15780580fbe85e4',1,'HepLib']]],
+  ['iepsilonn_270',['iEpsilonN',['../namespace_hep_lib.html#aa2d68db54e5cdbe29c74cc082d4dfe99',1,'HepLib']]],
   ['ijk_271',['ijk',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f.html#aef3974f0aefbca19748487d4d1bf1489',1,'HepLib::FC::SUNF']]],
   ['ijkl_272',['ijkl',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f4.html#a85981cb69e4d26d062a83429dbabdc63',1,'HepLib::FC::SUNF4']]],
   ['imag_5fpart_273',['imag_part',['../class_hep_lib_1_1_symbol.html#a4df587167faf136341ce9b200e9246b2',1,'HepLib::Symbol::imag_part()'],['../class_hep_lib_1_1i_symbol.html#aa32a3369623a4379a2d8b03def10fab5',1,'HepLib::iSymbol::imag_part()']]],

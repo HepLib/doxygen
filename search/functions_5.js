@@ -15,7 +15,7 @@ var searchData=
   ['evalmp_836',['EvalMP',['../namespace_hep_lib.html#a9d2a97e91ff71668b3515a9a1d400c79',1,'HepLib']]],
   ['evalq_837',['EvalQ',['../namespace_hep_lib.html#a4b24518fb3855fffc8f86fe50911a630',1,'HepLib']]],
   ['evaluate_838',['Evaluate',['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#aaf764eebefca12009866469929166d57',1,'HepLib::SD::ChengWu::Evaluate()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ac32a1f5473bc83c413c4ed090501e046',1,'HepLib::SD::SecDec::Evaluate(FeynmanParameter fpi, const string &amp;key=&quot;&quot;)'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#af47a4d6f661c26e0d8fab8fb7816a84f',1,'HepLib::SD::SecDec::Evaluate(XIntegrand xint, const string &amp;key=&quot;&quot;)'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a26233c5a702e0b67007166d8e7e04241',1,'HepLib::SD::SecDec::Evaluate(vector&lt; ex &gt; FunExp, const string &amp;key=&quot;&quot;)']]],
-  ['ex2file_839',['ex2file',['../namespace_hep_lib.html#a308104bb494242e1bdf839cb03af1bcb',1,'HepLib']]],
+  ['ex2file_839',['ex2file',['../namespace_hep_lib.html#a308104bb494242e1bdf839cb03af1bcb',1,'HepLib::ex2file(const ex &amp;expr, string filename)'],['../namespace_hep_lib.html#aab4674b5f8f6336c57718b11b93bb2b4',1,'HepLib::ex2file(string filename, const ex &amp;expr)']]],
   ['ex2int_840',['ex2int',['../namespace_hep_lib.html#afc4bf20f32677c161baf3515aa44d29a',1,'HepLib']]],
   ['ex2q_841',['ex2q',['../namespace_hep_lib.html#a167e436fe694bcf59bef6d17fe0fdda0',1,'HepLib']]],
   ['ex2str_842',['ex2str',['../namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d',1,'HepLib']]],
