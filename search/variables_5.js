@@ -13,7 +13,7 @@ var searchData=
   ['form_5ftrace_5feach_5feach_1138',['form_trace_each_each',['../namespace_hep_lib_1_1_f_c.html#ab4c105f296ff27d19ff8d81714808a9c',1,'HepLib::FC']]],
   ['form_5ftrace_5fmode_1139',['form_trace_mode',['../namespace_hep_lib_1_1_f_c.html#af5f295ada0bf5f2d6f21ccffe4b2a105',1,'HepLib::FC']]],
   ['form_5fusing_5fdim4_1140',['form_using_dim4',['../namespace_hep_lib_1_1_f_c.html#abae242cb8a58b46b0347f28e5e1ac2a0',1,'HepLib::FC']]],
-  ['form_5fusing_5fsun3_1141',['form_using_sun3',['../namespace_hep_lib_1_1_f_c.html#afb11c8e6eeb8842bd72e1aad751de052',1,'HepLib::FC']]],
+  ['form_5fusing_5fsu3_1141',['form_using_su3',['../namespace_hep_lib_1_1_f_c.html#a9c20bfc9bf38b735cd0735ea7dcd0768',1,'HepLib::FC']]],
   ['ft_1142',['FT',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a3cc67d6c7da5d9ea40d11dfc2f874100',1,'HepLib::SD::IntegratorBase']]],
   ['ftable_1143',['FTable',['../class_hep_lib_1_1_parser.html#a03c2868fd3ece781e30ed4d314ecf224',1,'HepLib::Parser']]],
   ['functions_1144',['Functions',['../class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc',1,'HepLib::XIntegral::Functions()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a5b5b7feaf705e57727b6e33ac2d272fb',1,'HepLib::SD::XIntegrand::Functions()']]],
