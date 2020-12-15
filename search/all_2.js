@@ -15,5 +15,6 @@ var searchData=
   ['boldmagenta_45',['BOLDMAGENTA',['../_b_a_s_i_c_8h.html#ac4723c5ee12cfca16e2172b57b99cb07',1,'BASIC.h']]],
   ['boldred_46',['BOLDRED',['../_b_a_s_i_c_8h.html#ab912d02c7998c3d47d05f87be4e2c920',1,'BASIC.h']]],
   ['boldwhite_47',['BOLDWHITE',['../_b_a_s_i_c_8h.html#aa4ef051614aa0bd503b0a18ee158c5d7',1,'BASIC.h']]],
-  ['boldyellow_48',['BOLDYELLOW',['../_b_a_s_i_c_8h.html#a8cec79108dfc3c61e8e32d390ec28b26',1,'BASIC.h']]]
+  ['boldyellow_48',['BOLDYELLOW',['../_b_a_s_i_c_8h.html#a8cec79108dfc3c61e8e32d390ec28b26',1,'BASIC.h']]],
+  ['buffer_5fsize_49',['buffer_size',['../class_hep_lib_1_1_fermat.html#a3cbb2d5f8c4c703d56e55bc5716d5e12',1,'HepLib::Fermat::buffer_size()'],['../class_hep_lib_1_1_form.html#a74b59af9142a64befa66f3d96f8036aa',1,'HepLib::Form::buffer_size()']]]
 ];
