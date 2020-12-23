@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['j1sum_321',['J1Sum',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a5d0a84ec7d2b2788edd17e9573606ad3',1,'HepLib::FC::Qgraf']]],
-  ['j1suml_322',['J1SumL',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#ac36e9fcf1173306b5e03b123e678e767',1,'HepLib::FC::Qgraf']]],
-  ['j1sumr_323',['J1SumR',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a88a49a4808a81f3f5f764507fa39cfb7',1,'HepLib::FC::Qgraf']]]
+  ['killpowers_277',['KillPowers',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a12b3a832df820bb1a53552899446d038',1,'HepLib::SD::SecDec']]],
+  ['killpowers_2ecpp_278',['KillPowers.cpp',['../_kill_powers_8cpp.html',1,'']]],
+  ['kira_279',['KIRA',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html',1,'HepLib::IBP']]],
+  ['kira_2ecpp_280',['KIRA.cpp',['../_k_i_r_a_8cpp.html',1,'']]]
 ];

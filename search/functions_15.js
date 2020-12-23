@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['uf_1055',['UF',['../namespace_hep_lib_1_1_i_b_p.html#a11478e2404f5e282e57d74d2cf9463b6',1,'HepLib::IBP']]],
-  ['up_1056',['Up',['../class_hep_lib_1_1_s_d_1_1_f_c_n.html#a4eb293cd1a5aa804a709f5bb5a7c0034',1,'HepLib::SD::FCN']]]
+  ['vector_893',['Vector',['../class_hep_lib_1_1_f_c_1_1_vector.html#a08455756ffe454b9df32837fe0eedcb1',1,'HepLib::FC::Vector']]],
+  ['vemaxerr_894',['VEMaxErr',['../namespace_hep_lib_1_1_s_d.html#a700ce1d39a2aef53456560192c0d4ffa',1,'HepLib::SD']]],
+  ['veprint_895',['VEPrint',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a154b52760548639afdce3378c10c1960',1,'HepLib::SD::SecDec']]],
+  ['veresult_896',['VEResult',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#aa4585a723ba0769c23ca24e1d4806da4',1,'HepLib::SD::SecDec::VEResult()'],['../namespace_hep_lib_1_1_s_d.html#a38387af4704240ed6e6c50e36490481f',1,'HepLib::SD::VEResult()']]],
+  ['veresult2_897',['VEResult2',['../namespace_hep_lib_1_1_s_d.html#aea22b1456fc67fc9e831113a7db761ef',1,'HepLib::SD']]],
+  ['verifysd_898',['VerifySD',['../class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#a9c2b1729c41dbda42a64fbe38d663749',1,'HepLib::SD::SecDecBase::VerifySD()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2a362efae906ce496a7e59339525c99a',1,'HepLib::SD::SecDec::VerifySD()']]],
+  ['vesimplify_899',['VESimplify',['../namespace_hep_lib_1_1_s_d.html#a88748e20a4d48cab602def634ead5f83',1,'HepLib::SD']]],
+  ['vsrank_900',['vsRank',['../namespace_hep_lib_1_1_s_d.html#a2f3c8d34c6dfe2070e10bb76103301df',1,'HepLib::SD']]]
 ];

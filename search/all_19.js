@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_5ffree_5findex_654',['y_free_index',['../namespace_hep_lib_1_1_s_d.html#ab635b37329070788c0195a5fed870786',1,'HepLib::SD']]],
-  ['yellow_655',['YELLOW',['../_b_a_s_i_c_8h.html#abf681265909adf3d3e8116c93c0ba179',1,'BASIC.h']]]
+  ['zero_5frow_5findex_569',['zero_row_index',['../class_hep_lib_1_1_mat_helper.html#a4e877c251cb3a2c4c2634a279841309b',1,'HepLib::MatHelper']]],
+  ['zerovalue_570',['ZeroValue',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html#a3fac12ad2562a2429b0e3d89e09a55e8',1,'HepLib::SD::MinimizeBase']]]
 ];

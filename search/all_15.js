@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['uf_578',['UF',['../namespace_hep_lib_1_1_i_b_p.html#a11478e2404f5e282e57d74d2cf9463b6',1,'HepLib::IBP']]],
-  ['ukira_579',['UKIRA',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html',1,'HepLib::IBP']]],
-  ['ukira_2ecpp_580',['UKIRA.cpp',['../_u_k_i_r_a_8cpp.html',1,'']]],
-  ['up_581',['Up',['../class_hep_lib_1_1_s_d_1_1_f_c_n.html#a4eb293cd1a5aa804a709f5bb5a7c0034',1,'HepLib::SD::FCN']]],
-  ['use_5fdlclose_582',['use_dlclose',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a557d2aee7d90a66866d9c2674ecf4cbb',1,'HepLib::SD::SecDec']]],
-  ['use_5ferrmin_583',['use_ErrMin',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a1b0f61e887728a48bb3f27cd3ee08e64',1,'HepLib::SD::SecDec']]],
-  ['use_5fibf_584',['use_IBF',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ad70422813dad5feda64f0fee77fdb371',1,'HepLib::SD::SecDec']]],
-  ['use_5flas_585',['use_las',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a23f1be9063d17f73c0bdfc48a2507fa8',1,'HepLib::SD::SecDec']]],
-  ['use_5flast_586',['use_last',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html#a394b95a492ed94712fc9b92302f7f1f1',1,'HepLib::SD::HCubature']]],
-  ['use_5fweight_587',['use_weight',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a0e3c91182df7521c4d8d8120882d113d',1,'HepLib::IBP::UKIRA::use_weight()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a73886e9a2e780d24c936c8be9def642d',1,'HepLib::IBP::Laporta::use_weight()']]],
-  ['use_5fxreorders_588',['use_XReOrders',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a52307ed83c16ce0c48535070ca949857',1,'HepLib::SD::SecDec']]],
-  ['usecpp_589',['UseCpp',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a805ffcbe3b1fc29afb0abbffb9857e0c',1,'HepLib::SD::IntegratorBase']]]
+  ['vd_509',['VD',['../class_hep_lib_1_1_f_c_1_1_index.html#aaefdc36e31dedd02dec44f03ab2e9d37a3c77f9678aa1ebec2149fe7dc2a54f28',1,'HepLib::FC::Index']]],
+  ['vector_510',['Vector',['../class_hep_lib_1_1_f_c_1_1_vector.html',1,'HepLib::FC::Vector'],['../class_hep_lib_1_1_f_c_1_1_vector.html#a08455756ffe454b9df32837fe0eedcb1',1,'HepLib::FC::Vector::Vector()']]],
+  ['vegas_511',['VEGAS',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a443ca66dc01a78f93cee239fa48eb13caaa3fc38cb105c66530abf7c3db14bc3f',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fnbatch_512',['VEGAS_NBATCH',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a11c528cb4faa10d044addc25124148c8',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fnincrease_513',['VEGAS_NINCREASE',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a4b8e391b5a513eb5039768787237fd1b',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fnstart_514',['VEGAS_NSTART',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a5411369115b45bfbd2750b0a381e10bf',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fseed_515',['VEGAS_SEED',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#acaad18387674ec77492706f85ac07da4',1,'HepLib::SD::CUBA']]],
+  ['vemaxerr_516',['VEMaxErr',['../namespace_hep_lib_1_1_s_d.html#a700ce1d39a2aef53456560192c0d4ffa',1,'HepLib::SD']]],
+  ['veprint_517',['VEPrint',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a154b52760548639afdce3378c10c1960',1,'HepLib::SD::SecDec']]],
+  ['verbose_518',['VERBOSE',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a777f200197f04b688f67e25b8c2c0d81',1,'HepLib::SD::CUBA::VERBOSE()'],['../namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1',1,'HepLib::Verbose()']]],
+  ['veresult_519',['VEResult',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#aa4585a723ba0769c23ca24e1d4806da4',1,'HepLib::SD::SecDec::VEResult()'],['../namespace_hep_lib_1_1_s_d.html#a38387af4704240ed6e6c50e36490481f',1,'HepLib::SD::VEResult()']]],
+  ['veresult2_520',['VEResult2',['../namespace_hep_lib_1_1_s_d.html#aea22b1456fc67fc9e831113a7db761ef',1,'HepLib::SD']]],
+  ['verifysd_521',['VerifySD',['../class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#a9c2b1729c41dbda42a64fbe38d663749',1,'HepLib::SD::SecDecBase::VerifySD()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2a362efae906ce496a7e59339525c99a',1,'HepLib::SD::SecDec::VerifySD()']]],
+  ['version_522',['Version',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a8d472ac05777c3cce5b84f032071d9f0',1,'HepLib::IBP::FIRE']]],
+  ['vesimplify_523',['VESimplify',['../namespace_hep_lib_1_1_s_d.html#a88748e20a4d48cab602def634ead5f83',1,'HepLib::SD']]],
+  ['vs_524',['vs',['../namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164',1,'HepLib::SD']]],
+  ['vsrank_525',['vsRank',['../namespace_hep_lib_1_1_s_d.html#a2f3c8d34c6dfe2070e10bb76103301df',1,'HepLib::SD']]],
+  ['vz_526',['vz',['../namespace_hep_lib_1_1_s_d.html#a84557ef62307c3303329bebacf374cd9',1,'HepLib::SD']]]
 ];

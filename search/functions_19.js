@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_5ffree_5findex_1085',['y_free_index',['../namespace_hep_lib_1_1_s_d.html#ab635b37329070788c0195a5fed870786',1,'HepLib::SD']]]
+  ['zero_5frow_5findex_921',['zero_row_index',['../class_hep_lib_1_1_mat_helper.html#a4e877c251cb3a2c4c2634a279841309b',1,'HepLib::MatHelper']]]
 ];
