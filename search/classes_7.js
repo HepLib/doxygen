@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hcubature_596',['HCubature',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html',1,'HepLib::SD']]],
-  ['hookejeeves_597',['HookeJeeves',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html',1,'HepLib::SD']]]
+  ['hcubature_790',['HCubature',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html',1,'HepLib::SD']]],
+  ['hookejeeves_791',['HookeJeeves',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html',1,'HepLib::SD']]]
 ];

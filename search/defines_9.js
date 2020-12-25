@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_1174',['WHITE',['../_b_a_s_i_c_8h.html#a87b537f5fa5c109d3c05c13d6b18f382',1,'BASIC.h']]]
+  ['use_5fsame_5fdegree_5ffactor_1583',['USE_SAME_DEGREE_FACTOR',['../exfactor_8cpp.html#ac54f0986ad84aea714355deae99a53d9',1,'exfactor.cpp']]]
 ];
