@@ -133,9 +133,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a72fa0b668de3d087f081a6d8a8416ceb"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#a72fa0b668de3d087f081a6d8a8416ceb">Apart</a> (const matrix &amp;mat)</td></tr>
 <tr class="memdesc:a72fa0b668de3d087f081a6d8a8416ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on matrix.  <a href="namespace_hep_lib_1_1_f_c.html#a72fa0b668de3d087f081a6d8a8416ceb">More...</a><br /></td></tr>
 <tr class="separator:a72fa0b668de3d087f081a6d8a8416ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a952070e876fb1185af979e16a6711183"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#a952070e876fb1185af979e16a6711183">Apart</a> (const ex &amp;expr_in, const lst &amp;vars_in)</td></tr>
-<tr class="memdesc:a952070e876fb1185af979e16a6711183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on ex.  <a href="namespace_hep_lib_1_1_f_c.html#a952070e876fb1185af979e16a6711183">More...</a><br /></td></tr>
-<tr class="separator:a952070e876fb1185af979e16a6711183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae570febaa9a1964ac00a05dfca0e2c7b"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#ae570febaa9a1964ac00a05dfca0e2c7b">Apart</a> (const ex &amp;expr_ino, const lst &amp;vars_in, exmap sgnmap)</td></tr>
+<tr class="memdesc:ae570febaa9a1964ac00a05dfca0e2c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on ex.  <a href="namespace_hep_lib_1_1_f_c.html#ae570febaa9a1964ac00a05dfca0e2c7b">More...</a><br /></td></tr>
+<tr class="separator:ae570febaa9a1964ac00a05dfca0e2c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ff7621def36feb94574f6752321d35"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#ab7ff7621def36feb94574f6752321d35">Apart</a> (const ex &amp;expr_ino, const lst &amp;loops, const lst &amp;extps)</td></tr>
 <tr class="memdesc:ab7ff7621def36feb94574f6752321d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on ex.  <a href="namespace_hep_lib_1_1_f_c.html#ab7ff7621def36feb94574f6752321d35">More...</a><br /></td></tr>
 <tr class="separator:ab7ff7621def36feb94574f6752321d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,8 +273,6 @@ Variables</h2></td></tr>
 <tr class="separator:acda09037252baf40fe8fbd98adbb8a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe826a1c17b91a15719a6dbfd715b022"><td class="memItemLeft" align="right" valign="top">exmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#afe826a1c17b91a15719a6dbfd715b022">SP_map</a></td></tr>
 <tr class="separator:afe826a1c17b91a15719a6dbfd715b022"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0295a208cff0cad8ae277901df4bb3eb"><td class="memItemLeft" align="right" valign="top">exmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#a0295a208cff0cad8ae277901df4bb3eb">Apart_SignMap</a></td></tr>
-<tr class="separator:a0295a208cff0cad8ae277901df4bb3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5f295ada0bf5f2d6f21ccffe4b2a105"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#af5f295ada0bf5f2d6f21ccffe4b2a105">form_trace_mode</a> = <a class="el" href="namespace_hep_lib_1_1_f_c.html#ab4c105f296ff27d19ff8d81714808a9c">FC::form_trace_each_each</a></td></tr>
 <tr class="separator:af5f295ada0bf5f2d6f21ccffe4b2a105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addbc751e86615e79351a07669896a176"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_f_c.html#addbc751e86615e79351a07669896a176">form_trace_all</a> = 0</td></tr>
@@ -305,48 +303,8 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>namespace for <a class="el" href="class_hep_lib_1_1_f_c_1_1_index.html" title="class for index object">Index</a>, <a class="el" href="class_hep_lib_1_1_f_c_1_1_vector.html" title="class for vector object">Vector</a>, Dirac Gamma, etc. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a952070e876fb1185af979e16a6711183"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a952070e876fb1185af979e16a6711183">&#9670;&nbsp;</a></span>Apart() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ex HepLib::FC::Apart </td>
-          <td>(</td>
-          <td class="paramtype">const ex &amp;&#160;</td>
-          <td class="paramname"><em>expr_in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const lst &amp;&#160;</td>
-          <td class="paramname"><em>vars_in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Apart on ex. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">expr_in</td><td>normal expresion, product of [ linear w.r.t. vars ]^n </td></tr>
-    <tr><td class="paramname">vars_in</td><td>independent variables </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>sum of coefficient * ApartIR </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00412">412</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
-
-</div>
-</div>
 <a id="ab7ff7621def36feb94574f6752321d35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7ff7621def36feb94574f6752321d35">&#9670;&nbsp;</a></span>Apart() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ff7621def36feb94574f6752321d35">&#9670;&nbsp;</a></span>Apart() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +346,53 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>sum of coefficient * ApartIR </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00540">540</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00577">577</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae570febaa9a1964ac00a05dfca0e2c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae570febaa9a1964ac00a05dfca0e2c7b">&#9670;&nbsp;</a></span>Apart() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ex HepLib::FC::Apart </td>
+          <td>(</td>
+          <td class="paramtype">const ex &amp;&#160;</td>
+          <td class="paramname"><em>expr_ino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const lst &amp;&#160;</td>
+          <td class="paramname"><em>vars_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exmap&#160;</td>
+          <td class="paramname"><em>sgnmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apart on ex. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expr_in</td><td>normal expresion, product of [ linear w.r.t. vars ]^n </td></tr>
+    <tr><td class="paramname">vars_in</td><td>independent variables </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum of coefficient * ApartIR </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00412">412</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +481,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing returned, the input air_vec will be updated </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00643">643</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00681">681</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
 
 </div>
 </div>
@@ -507,7 +511,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00329">329</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00328">328</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +551,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00338">338</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00337">337</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
 
 </div>
 </div>
@@ -635,7 +639,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ApartIR with complete matrix rank, ready for <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00599">599</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00637">637</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
 
 </div>
 </div>
@@ -927,7 +931,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00307">307</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00306">306</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
 
 </div>
 </div>
@@ -965,7 +969,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00306">306</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_f_c_8h_source.html#l00305">305</a> of file <a class="el" href="_f_c_8h_source.html">FC.h</a>.</p>
 
 </div>
 </div>
@@ -1985,30 +1989,6 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a0295a208cff0cad8ae277901df4bb3eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0295a208cff0cad8ae277901df4bb3eb">&#9670;&nbsp;</a></span>Apart_SignMap</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">exmap HepLib::FC::Apart_SignMap</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00099">99</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
-
-</div>
-</div>
 <a id="af7d926965c6e4c4140d5b0844e0b43be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7d926965c6e4c4140d5b0844e0b43be">&#9670;&nbsp;</a></span>as</h2>
 
@@ -2073,7 +2053,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00124">124</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00123">123</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2097,7 +2077,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00122">122</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00121">121</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2121,7 +2101,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00123">123</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00122">122</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2145,7 +2125,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00125">125</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00124">124</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2169,7 +2149,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00120">120</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00119">119</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2193,7 +2173,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00121">121</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00120">120</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2217,7 +2197,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00115">115</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00114">114</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2241,7 +2221,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00116">116</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00115">115</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2265,7 +2245,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00117">117</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00116">116</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2289,7 +2269,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00118">118</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00117">117</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2313,7 +2293,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00128">128</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00127">127</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -2337,7 +2317,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00127">127</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00126">126</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
