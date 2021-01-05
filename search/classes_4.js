@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['diracgamma_776',['DiracGamma',['../class_hep_lib_1_1_f_c_1_1_dirac_gamma.html',1,'HepLib::FC']]]
+  ['dgamma_785',['DGamma',['../class_hep_lib_1_1_f_c_1_1_d_gamma.html',1,'HepLib::FC']]]
 ];
