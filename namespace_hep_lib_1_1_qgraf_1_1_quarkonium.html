@@ -234,12 +234,13 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">i</td><td>quark qgraf index </td></tr>
     <tr><td class="paramname">j</td><td>anti-quark qgraf index </td></tr>
+    <tr><td class="paramname">a</td><td>the color index </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Color-Octet Projector </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00139">139</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00140">140</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,14 +287,14 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">moms</td><td>momentum in phase space </td></tr>
     <tr><td class="paramname">amp</td><td>input amplitudes </td></tr>
-    <tr><td class="paramname">si</td><td>start index, -1 for automatically detect </td></tr>
+    <tr><td class="paramname">si_in</td><td>start index, -1 for automatically detect </td></tr>
     <tr><td class="paramname">q2</td><td>refers to q^2, total invarant mass </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>amp * PS2/3/4, for PS4, a list will be returned </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00399">399</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00401">401</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +371,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the LProj result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00236">236</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00237">237</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,12 +405,13 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>the number of massless particles </td></tr>
+    <tr><td class="paramname">q2</td><td>the squared total momentum </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>integrated phase space </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00381">381</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00383">383</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -457,13 +459,13 @@ Functions</h2></td></tr>
     <tr><td class="paramname">si</td><td>spin index </td></tr>
     <tr><td class="paramname">qi</td><td>q-vector index </td></tr>
     <tr><td class="paramname">mu</td><td>spin index </td></tr>
-    <tr><td class="paramname">total</td><td>momentum </td></tr>
+    <tr><td class="paramname">p</td><td>total momentum </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>S-L with total spin 1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00168">168</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00169">169</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -518,13 +520,13 @@ Functions</h2></td></tr>
     <tr><td class="paramname">qi</td><td>q-vector index </td></tr>
     <tr><td class="paramname">mu1</td><td>spin-2 index </td></tr>
     <tr><td class="paramname">mu2</td><td>spin-2 index </td></tr>
-    <tr><td class="paramname">total</td><td>momentum </td></tr>
+    <tr><td class="paramname">p</td><td>total momentum </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>S-L with total spin 2 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00181">181</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00182">182</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +573,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>S-L with total spin 0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00156">156</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00157">157</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +641,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>S-L with total spin J </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00222">222</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00223">223</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -694,13 +696,13 @@ Functions</h2></td></tr>
     <tr><td class="paramname">qi1</td><td>q1-vector index </td></tr>
     <tr><td class="paramname">qi2</td><td>q2-vector index </td></tr>
     <tr><td class="paramname">mu</td><td>spin index </td></tr>
-    <tr><td class="paramname">total</td><td>momentum </td></tr>
+    <tr><td class="paramname">p</td><td>total momentum </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>S-L with total spin 1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00194">194</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00195">195</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>
@@ -762,13 +764,13 @@ Functions</h2></td></tr>
     <tr><td class="paramname">qi2</td><td>q2-vector index </td></tr>
     <tr><td class="paramname">mu1</td><td>spin-2 index </td></tr>
     <tr><td class="paramname">mu2</td><td>spin-2 index </td></tr>
-    <tr><td class="paramname">total</td><td>momentum </td></tr>
+    <tr><td class="paramname">p</td><td>total momentum </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>S-L with total spin L </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00208">208</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_quarkonium_8cpp_source.html#l00209">209</a> of file <a class="el" href="_quarkonium_8cpp_source.html">Quarkonium.cpp</a>.</p>
 
 </div>
 </div>

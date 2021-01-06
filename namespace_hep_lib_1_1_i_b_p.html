@@ -101,9 +101,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a74542e9d4b3915b787c1c436dc8c5c1e"><td class="memItemLeft" align="right" valign="top">lst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_i_b_p.html#a74542e9d4b3915b787c1c436dc8c5c1e">SortPermutation</a> (const ex &amp;in_expr, const lst &amp;xs)</td></tr>
 <tr class="memdesc:a74542e9d4b3915b787c1c436dc8c5c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort for all permuations, and return xs w.r.t. 1st permutation.  <a href="namespace_hep_lib_1_1_i_b_p.html#a74542e9d4b3915b787c1c436dc8c5c1e">More...</a><br /></td></tr>
 <tr class="separator:a74542e9d4b3915b787c1c436dc8c5c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeb95c41d1f8ff815ee7e8b703d5c1e1"><td class="memItemLeft" align="right" valign="top">lst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_i_b_p.html#aaeb95c41d1f8ff815ee7e8b703d5c1e1">LoopUF</a> (const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;fire, const ex &amp;idx)</td></tr>
-<tr class="memdesc:aaeb95c41d1f8ff815ee7e8b703d5c1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">UF function, from FIRE.m.  <a href="namespace_hep_lib_1_1_i_b_p.html#aaeb95c41d1f8ff815ee7e8b703d5c1e1">More...</a><br /></td></tr>
-<tr class="separator:aaeb95c41d1f8ff815ee7e8b703d5c1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6293a6aeb6af54d81fc4ecc5de2f80b6"><td class="memItemLeft" align="right" valign="top">lst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_i_b_p.html#a6293a6aeb6af54d81fc4ecc5de2f80b6">LoopUF</a> (const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;base, const ex &amp;idx)</td></tr>
+<tr class="memdesc:a6293a6aeb6af54d81fc4ecc5de2f80b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">UF function, from FIRE.m.  <a href="namespace_hep_lib_1_1_i_b_p.html#a6293a6aeb6af54d81fc4ecc5de2f80b6">More...</a><br /></td></tr>
+<tr class="separator:a6293a6aeb6af54d81fc4ecc5de2f80b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11478e2404f5e282e57d74d2cf9463b6"><td class="memItemLeft" align="right" valign="top">lst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib_1_1_i_b_p.html#a11478e2404f5e282e57d74d2cf9463b6">UF</a> (const ex &amp;ps, const ex &amp;ns, const ex &amp;loops, const ex &amp;tloops, const ex &amp;lsubs, const ex &amp;tsubs)</td></tr>
 <tr class="memdesc:a11478e2404f5e282e57d74d2cf9463b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">UF function, from FIRE.m.  <a href="namespace_hep_lib_1_1_i_b_p.html#a11478e2404f5e282e57d74d2cf9463b6">More...</a><br /></td></tr>
 <tr class="separator:a11478e2404f5e282e57d74d2cf9463b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,17 +156,18 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">fs</td><td>vector of <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html" title="Base class for IBP reduction.">Base</a> pointer object </td></tr>
     <tr><td class="paramname">mi</td><td>true for Master Integals </td></tr>
+    <tr><td class="paramname">uf</td><td>the function to compute the UF polynomial </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>rules replacement and left integrals or left master integrals </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00286">286</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00293">293</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aaeb95c41d1f8ff815ee7e8b703d5c1e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaeb95c41d1f8ff815ee7e8b703d5c1e1">&#9670;&nbsp;</a></span>LoopUF()</h2>
+<a id="a6293a6aeb6af54d81fc4ecc5de2f80b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6293a6aeb6af54d81fc4ecc5de2f80b6">&#9670;&nbsp;</a></span>LoopUF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +176,7 @@ Variables</h2></td></tr>
           <td class="memname">lst HepLib::IBP::LoopUF </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;&#160;</td>
-          <td class="paramname"><em>fire</em>, </td>
+          <td class="paramname"><em>base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -194,13 +195,14 @@ Variables</h2></td></tr>
 <p>UF function, from FIRE.m. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">base</td><td>the <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html" title="Base class for IBP reduction.">Base</a> object </td></tr>
     <tr><td class="paramname">idx</td><td>exponent for the internal Propagator </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst of {U, F} </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00130">130</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00131">131</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +265,7 @@ Variables</h2></td></tr>
 <p>Sort for all permuations, and return xs w.r.t. 1st permutation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">expr</td><td>the input expression, as the sort key, no need of polynormial of xs </td></tr>
+    <tr><td class="paramname">in_expr</td><td>the input expression, as the sort key, no need of polynormial of xs </td></tr>
     <tr><td class="paramname">xs</td><td>the permutation list </td></tr>
   </table>
   </dd>
@@ -327,13 +329,18 @@ Variables</h2></td></tr>
 <p>UF function, from FIRE.m. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">idx</td><td>exponent for the internal Propagator </td></tr>
+    <tr><td class="paramname">ps</td><td>the list of propagator </td></tr>
+    <tr><td class="paramname">ns</td><td>the list of exponent </td></tr>
+    <tr><td class="paramname">loops</td><td>the list of loop momenta </td></tr>
+    <tr><td class="paramname">tloops</td><td>the list of transverse/quasi momenta </td></tr>
+    <tr><td class="paramname">lsubs</td><td>the replacements for loops </td></tr>
+    <tr><td class="paramname">tsubs</td><td>the replacements for tloops </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst of {U, F} </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00192">192</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00198">198</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
 
 </div>
 </div>

@@ -25,7 +25,7 @@ var searchData=
   ['loopmomenta_374',['LoopMomenta',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a3db16e02850fb466e15dd816783ee8b0',1,'HepLib::SD::FeynmanParameter']]],
   ['loopprefix_375',['LoopPrefix',['../class_hep_lib_1_1_qgraf_1_1_process.html#a40e13fc68445ce304c7e45a722664151',1,'HepLib::Qgraf::Process']]],
   ['loops_376',['Loops',['../class_hep_lib_1_1_qgraf_1_1_process.html#a28d92531e4cb552a5d56b3659b2bde75',1,'HepLib::Qgraf::Process']]],
-  ['loopuf_377',['LoopUF',['../namespace_hep_lib_1_1_i_b_p.html#aaeb95c41d1f8ff815ee7e8b703d5c1e1',1,'HepLib::IBP']]],
+  ['loopuf_377',['LoopUF',['../namespace_hep_lib_1_1_i_b_p.html#a6293a6aeb6af54d81fc4ecc5de2f80b6',1,'HepLib::IBP']]],
   ['lproj_378',['LProj',['../namespace_hep_lib_1_1_qgraf_1_1_quarkonium.html#a8628a6321649fa78093eab900e982a17',1,'HepLib::Qgraf::Quarkonium']]],
   ['lreplacements_379',['lReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a02a773582d956c381941e04a158788a8',1,'HepLib::SD::FeynmanParameter']]],
   ['lst2vec_380',['lst2vec',['../namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e',1,'HepLib']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['ibp_2eh_284',['IBP.h',['../_i_b_p_8h.html',1,'']]],
-  ['iepsilon_285',['iEpsilon',['../namespace_hep_lib.html#a4c0802f836a8eeffa15780580fbe85e4',1,'HepLib']]],
+  ['iepsilon_285',['iEpsilon',['../namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3',1,'HepLib::iEpsilon()'],['../namespace_hep_lib.html#a4c0802f836a8eeffa15780580fbe85e4',1,'HepLib::iEpsilon(&quot;iEpsilon&quot;)']]],
   ['iepsilonn_286',['iEpsilonN',['../namespace_hep_lib.html#aa2d68db54e5cdbe29c74cc082d4dfe99',1,'HepLib']]],
   ['ijk_287',['ijk',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f.html#aef3974f0aefbca19748487d4d1bf1489',1,'HepLib::FC::SUNF']]],
   ['ijkl_288',['ijkl',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f4.html#a85981cb69e4d26d062a83429dbabdc63',1,'HepLib::FC::SUNF4']]],

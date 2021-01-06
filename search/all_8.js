@@ -19,7 +19,7 @@ var searchData=
   ['hjrho_274',['hjRHO',['../class_hep_lib_1_1_s_d_1_1_err_min.html#aef291343770d8f3a5f16dba37b2d191d',1,'HepLib::SD::ErrMin']]],
   ['hookejeeves_275',['HookeJeeves',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html',1,'HepLib::SD']]],
   ['hookejeeves_2ecpp_276',['HookeJeeves.cpp',['../_hooke_jeeves_8cpp.html',1,'']]],
-  ['hout_277',['hout',['../namespace_hep_lib.html#a92a46efe4a8bd4f27a4f6238ca615106',1,'HepLib']]],
+  ['hout_277',['hout',['../namespace_hep_lib.html#ac14f1046e0657b6b7520a97fec753a1d',1,'HepLib::hout()'],['../namespace_hep_lib.html#a92a46efe4a8bd4f27a4f6238ca615106',1,'HepLib::hout(cout)']]],
   ['ibp_278',['IBP',['../namespace_hep_lib_1_1_i_b_p.html',1,'HepLib']]],
   ['heplib_20project_279',['HepLib Project',['../index.html',1,'']]],
   ['qgraf_280',['Qgraf',['../namespace_hep_lib_1_1_qgraf.html',1,'HepLib']]],
