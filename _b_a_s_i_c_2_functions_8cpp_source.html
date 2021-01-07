@@ -324,7 +324,7 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div>
 <div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a3d9d4b2fbb420324379735d293990cee">  258</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespace_hep_lib.html#a3d9d4b2fbb420324379735d293990cee">isSorted</a>(<span class="keyword">const</span> lst &amp; exs) {</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;exs.nops()-1; i++) {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">if</span>(is_zero(exs.op(i)-exs.op(i+1))) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">if</span>(exs.op(i).is_equal(exs.op(i+1))) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a>(exs.op(i),exs.op(i+1))) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -332,7 +332,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    </div>
 <div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ac2f6ac0247115f5d5e58372b8d17b0d7">  266</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespace_hep_lib.html#a3d9d4b2fbb420324379735d293990cee">isSorted</a>(<span class="keywordtype">int</span> n, <span class="keyword">const</span> ex exs[]) {</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;n-1; i++) {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">if</span>(is_zero(exs[i]-exs[i+1])) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">if</span>(exs[i].is_equal(exs[i+1])) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a>(exs[i],exs[i+1])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
