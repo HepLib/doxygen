@@ -165,6 +165,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_hep_format.html">HepFormat</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class for <a class="el" href="namespace_hep_lib.html" title="HepLib namespace.">HepLib</a> Format Output  <a href="class_hep_lib_1_1_hep_format.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class for <a class="el" href="namespace_hep_lib.html" title="HepLib namespace.">HepLib</a> Format Output  <a href="class_hep_lib_1_1_m_m_a_format.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -557,6 +560,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2de7fae40f94cde4073a50d5501c89ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92a46efe4a8bd4f27a4f6238ca615106"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_hep_format.html">HepFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a92a46efe4a8bd4f27a4f6238ca615106">hout</a> (cout)</td></tr>
 <tr class="separator:a92a46efe4a8bd4f27a4f6238ca615106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c76a303da407e1a54796927149f25b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a38c76a303da407e1a54796927149f25b">mout</a> (cout)</td></tr>
+<tr class="separator:a38c76a303da407e1a54796927149f25b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec352cd07325348d37a233a20ae42285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_map_function.html">MapFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aec352cd07325348d37a233a20ae42285">Rationalize</a> ([](const ex &amp;e, <a class="el" href="class_hep_lib_1_1_map_function.html">MapFunction</a> &amp;self) -&gt;ex{ if(is_a&lt; numeric &gt;(e)) { auto ne=ex_to&lt; numeric &gt;(e);if(ne.is_crational()) return e;auto zz=ne.to_cl_N();auto re=cln::rationalize(cln::realpart(zz));auto im=cln::rationalize(cln::imagpart(zz));return numeric(cln::complex(re, im));} else return e.map(self);})</td></tr>
 <tr class="separator:aec352cd07325348d37a233a20ae42285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -618,8 +623,12 @@ Variables</h2></td></tr>
 <tr class="separator:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac14f1046e0657b6b7520a97fec753a1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_hep_format.html">HepFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac14f1046e0657b6b7520a97fec753a1d">hout</a></td></tr>
 <tr class="separator:ac14f1046e0657b6b7520a97fec753a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c35718fe58a25c1980c75c91195a599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a1c35718fe58a25c1980c75c91195a599">mout</a></td></tr>
+<tr class="separator:a1c35718fe58a25c1980c75c91195a599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6c44af2a91e4ed35ce7f277af00f3b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_hep_format_1_1__init.html">HepFormat::_init</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad6c44af2a91e4ed35ce7f277af00f3b7">HepFormat_init</a></td></tr>
 <tr class="separator:ad6c44af2a91e4ed35ce7f277af00f3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cef78223fc65580e8329a04dcd18ee4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_m_m_a_format_1_1__init.html">MMAFormat::_init</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a8cef78223fc65580e8329a04dcd18ee4">MMAFormat_init</a></td></tr>
+<tr class="separator:a8cef78223fc65580e8329a04dcd18ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespace_hep_lib.html" title="HepLib namespace.">HepLib</a> namespace. </p>
@@ -640,7 +649,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a15db74a3d0da5d683ef7bf23950e1b66a59cbb1f5ab5c5cfb1d4045375deef0dc"></a>FORM&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00384">384</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00353">353</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -758,7 +767,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00623">623</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00592">592</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -796,7 +805,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00624">624</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00593">593</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -935,7 +944,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00625">625</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00594">594</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1012,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00254">254</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00223">223</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1396,7 +1405,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00440">440</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00409">409</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1445,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00449">449</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00418">418</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1682,7 +1691,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00246">246</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00215">215</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2490,7 +2499,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00286">286</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00255">255</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2518,7 +2527,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00582">582</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00551">551</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2612,7 +2621,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00572">572</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00541">541</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2656,7 +2665,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00575">575</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00544">544</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2736,7 +2745,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00503">503</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00472">472</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2776,7 +2785,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00512">512</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00481">481</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2822,7 +2831,7 @@ template&lt;typename T1 , typename T2 , typename T3 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00521">521</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00490">490</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2874,7 +2883,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00530">530</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00499">499</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2932,7 +2941,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00539">539</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00508">508</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2970,7 +2979,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00250">250</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00219">219</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -4649,6 +4658,24 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 
 </div>
 </div>
+<a id="a38c76a303da407e1a54796927149f25b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c76a303da407e1a54796927149f25b">&#9670;&nbsp;</a></span>mout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> HepLib::mout </td>
+          <td>(</td>
+          <td class="paramtype">cout&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa9accb230931feda004cf696a8bfcafb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9accb230931feda004cf696a8bfcafb">&#9670;&nbsp;</a></span>mul2lst()</h2>
 
@@ -5411,7 +5438,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00266">266</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00235">235</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5449,7 +5476,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00269">269</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00238">238</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5487,7 +5514,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00259">259</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00228">228</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5525,7 +5552,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00262">262</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00231">231</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5555,7 +5582,7 @@ template&lt;typename T1 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00458">458</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00427">427</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5595,7 +5622,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00467">467</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00436">436</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5641,7 +5668,7 @@ template&lt;typename T1 , typename T2 , typename T3 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00476">476</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00445">445</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5693,7 +5720,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00485">485</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00454">454</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5751,7 +5778,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00494">494</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00463">463</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5971,7 +5998,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00053">53</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00060">60</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -6047,7 +6074,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00055">55</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00062">62</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -6063,7 +6090,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00054">54</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00061">61</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -6079,7 +6106,37 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00056">56</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00063">63</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8cef78223fc65580e8329a04dcd18ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cef78223fc65580e8329a04dcd18ee4">&#9670;&nbsp;</a></span>MMAFormat_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hep_lib_1_1_m_m_a_format_1_1__init.html">MMAFormat::_init</a> HepLib::MMAFormat_init</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00057">57</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c35718fe58a25c1980c75c91195a599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c35718fe58a25c1980c75c91195a599">&#9670;&nbsp;</a></span>mout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> HepLib::mout(cout)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -6173,7 +6230,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6189,7 +6246,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6205,7 +6262,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6221,7 +6278,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6237,7 +6294,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6253,7 +6310,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6269,7 +6326,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6285,7 +6342,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6301,7 +6358,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -6317,7 +6374,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00408">408</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>

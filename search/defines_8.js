@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['red_1475',['RED',['../_b_a_s_i_c_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'BASIC.h']]],
-  ['reset_1476',['RESET',['../_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'BASIC.h']]]
+  ['use_5fsame_5fdegree_5ffactor_1481',['USE_SAME_DEGREE_FACTOR',['../exfactor_8cpp.html#ac54f0986ad84aea714355deae99a53d9',1,'exfactor.cpp']]]
 ];

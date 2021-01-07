@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lambda_352',['lambda',['../class_hep_lib_1_1_s_d_1_1_err_min.html#adbbd281231f555b1f61e72aa9026033f',1,'HepLib::SD::ErrMin::lambda()'],['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a457dd48e6692306d7322fc3225ad375b',1,'HepLib::SD::IntegratorBase::Lambda()']]],
+  ['lambda_352',['Lambda',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a457dd48e6692306d7322fc3225ad375b',1,'HepLib::SD::IntegratorBase::Lambda()'],['../class_hep_lib_1_1_s_d_1_1_err_min.html#adbbd281231f555b1f61e72aa9026033f',1,'HepLib::SD::ErrMin::lambda()']]],
   ['lambdasplit_353',['LambdaSplit',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9',1,'HepLib::SD::SecDec']]],
   ['laporta_354',['Laporta',['../class_hep_lib_1_1_i_b_p_1_1_laporta.html',1,'HepLib::IBP']]],
   ['laporta_2ecpp_355',['Laporta.cpp',['../_laporta_8cpp.html',1,'']]],

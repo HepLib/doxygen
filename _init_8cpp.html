@@ -101,6 +101,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2de7fae40f94cde4073a50d5501c89ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92a46efe4a8bd4f27a4f6238ca615106"><td class="memItemLeft" align="right" valign="top">HepFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a92a46efe4a8bd4f27a4f6238ca615106">HepLib::hout</a> (cout)</td></tr>
 <tr class="separator:a92a46efe4a8bd4f27a4f6238ca615106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c76a303da407e1a54796927149f25b"><td class="memItemLeft" align="right" valign="top">MMAFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a38c76a303da407e1a54796927149f25b">HepLib::mout</a> (cout)</td></tr>
+<tr class="separator:a38c76a303da407e1a54796927149f25b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec352cd07325348d37a233a20ae42285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map_function.html">MapFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aec352cd07325348d37a233a20ae42285">HepLib::Rationalize</a> ([](const ex &amp;e, <a class="el" href="class_map_function.html">MapFunction</a> &amp;self) -&gt;ex{ if(is_a&lt; numeric &gt;(e)) { auto ne=ex_to&lt; numeric &gt;(e);if(ne.is_crational()) return e;auto zz=ne.to_cl_N();auto re=cln::rationalize(cln::realpart(zz));auto im=cln::rationalize(cln::imagpart(zz));return numeric(cln::complex(re, im));} else return e.map(self);})</td></tr>
 <tr class="separator:aec352cd07325348d37a233a20ae42285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -108,6 +110,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:ad6c44af2a91e4ed35ce7f277af00f3b7"><td class="memItemLeft" align="right" valign="top">HepFormat::_init&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad6c44af2a91e4ed35ce7f277af00f3b7">HepLib::HepFormat_init</a></td></tr>
 <tr class="separator:ad6c44af2a91e4ed35ce7f277af00f3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cef78223fc65580e8329a04dcd18ee4"><td class="memItemLeft" align="right" valign="top">MMAFormat::_init&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a8cef78223fc65580e8329a04dcd18ee4">HepLib::MMAFormat_init</a></td></tr>
+<tr class="separator:a8cef78223fc65580e8329a04dcd18ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Initailization for global objects. </p>
