@@ -30,7 +30,7 @@ var searchData=
   ['mma_5fseries_376',['mma_series',['../namespace_hep_lib.html#a89e08065294c2a6c4cffdd355d825d10',1,'HepLib']]],
   ['mmaformat_377',['MMAFormat',['../class_hep_lib_1_1_m_m_a_format.html',1,'HepLib::MMAFormat'],['../class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c',1,'HepLib::MMAFormat::MMAFormat()']]],
   ['mmaformat_5finit_378',['MMAFormat_init',['../namespace_hep_lib.html#a8cef78223fc65580e8329a04dcd18ee4',1,'HepLib']]],
-  ['model_379',['Model',['../class_hep_lib_1_1_qgraf_1_1_process.html#aa1982d9980179126401aa89091799bb4',1,'HepLib::Qgraf::Process']]],
+  ['model_379',['Model',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html#a60cff953782a2acb9b94460b1074112d',1,'HepLib::QGRAF::Process']]],
   ['mout_380',['mout',['../namespace_hep_lib.html#a1c35718fe58a25c1980c75c91195a599',1,'HepLib::mout()'],['../namespace_hep_lib.html#a38c76a303da407e1a54796927149f25b',1,'HepLib::mout(cout)']]],
   ['mpcomplex_381',['mpCOMPLEX',['../_c_u_b_a_8cpp.html#a5948a5ed0736aa071a27cfc9592c61ef',1,'mpCOMPLEX():&#160;CUBA.cpp'],['../_h_cubature_8cpp.html#a5948a5ed0736aa071a27cfc9592c61ef',1,'mpCOMPLEX():&#160;HCubature.cpp'],['../_n_functions_8h.html#a5948a5ed0736aa071a27cfc9592c61ef',1,'mpCOMPLEX():&#160;NFunctions.h']]],
   ['mpdigits_382',['MPDigits',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#ac4ec3663c94e3091b4c50f4f0b819693',1,'HepLib::SD::IntegratorBase::MPDigits()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a17f7620d6f273c1d1d44a012ecce09d3',1,'HepLib::SD::SecDec::MPDigits()']]],

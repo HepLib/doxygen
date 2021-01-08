@@ -23,7 +23,7 @@ var searchData=
   ['printhookertype_449',['PrintHookerType',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html#a1eff446ac18fa752b0bf8a31ede4ddc3',1,'HepLib::SD::HCubature']]],
   ['problemdimension_450',['ProblemDimension',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a2f7a8895b8297046058e510775a8e64e',1,'HepLib::IBP::FIRE']]],
   ['problemnumber_451',['ProblemNumber',['../class_hep_lib_1_1_i_b_p_1_1_base.html#ac2efa066a938244ab89e527016619acf',1,'HepLib::IBP::Base']]],
-  ['process_452',['Process',['../class_hep_lib_1_1_qgraf_1_1_process.html',1,'HepLib::Qgraf']]],
+  ['process_452',['Process',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html',1,'HepLib::QGRAF']]],
   ['process_2ecpp_453',['Process.cpp',['../_process_8cpp.html',1,'']]],
   ['projectivize_454',['Projectivize',['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#a81ffba0874f3bb3d85cfe191016c76d7',1,'HepLib::SD::ChengWu']]],
   ['prompt_455',['Prompt',['../class_hep_lib_1_1_form.html#a9b5067f611112288231665b14e76c41a',1,'HepLib::Form']]],

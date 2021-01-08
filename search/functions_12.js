@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['rai_996',['RAI',['../namespace_hep_lib_1_1_qgraf.html#a51409b05880d7d5e46cd5bf2767d0d6f',1,'HepLib::Qgraf']]],
+  ['rai_996',['RAI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#abb5b492f76631f37185792562b445605',1,'HepLib::QGRAF']]],
   ['rationalize_997',['Rationalize',['../namespace_hep_lib.html#aec352cd07325348d37a233a20ae42285',1,'HepLib']]],
-  ['rci_998',['RCI',['../namespace_hep_lib_1_1_qgraf.html#a2d1f26d54b82cfa589029e5a6a59e018',1,'HepLib::Qgraf']]],
+  ['rci_998',['RCI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a79e4bae3bcaf02eb2e4f0272af37b412',1,'HepLib::QGRAF']]],
   ['rclog_999',['RCLog',['../_n_functions_8cpp.html#a188f1d44eb3ffb7d895b15b7c8d20ff7',1,'RCLog(dCOMPLEX xs[], int n):&#160;NFunctions.cpp'],['../_n_functions_8cpp.html#ab94608edabad6a7289a1612bcb00ef17',1,'RCLog(qCOMPLEX xs[], int n):&#160;NFunctions.cpp'],['../_n_functions_8cpp.html#a4ced6aeece11d579195bd069fc6208fd',1,'RCLog(mpCOMPLEX xs[], int n):&#160;NFunctions.cpp'],['../_n_functions_8h.html#a188f1d44eb3ffb7d895b15b7c8d20ff7',1,'RCLog(dCOMPLEX xs[], int n):&#160;NFunctions.cpp'],['../_n_functions_8h.html#ab94608edabad6a7289a1612bcb00ef17',1,'RCLog(qCOMPLEX xs[], int n):&#160;NFunctions.cpp'],['../_n_functions_8h.html#a4ced6aeece11d579195bd069fc6208fd',1,'RCLog(mpCOMPLEX xs[], int n):&#160;NFunctions.cpp']]],
-  ['rdi_1000',['RDI',['../namespace_hep_lib_1_1_qgraf.html#a77342c52f86a275a437e8d0ad16e06fd',1,'HepLib::Qgraf']]],
+  ['rdi_1000',['RDI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a3c26080b3c4bd432e4899bc30a7889f1',1,'HepLib::QGRAF']]],
   ['read_1001',['Read',['../class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39',1,'HepLib::Parser']]],
   ['read_5farchive_1002',['read_archive',['../class_hep_lib_1_1_symbol.html#aeed3b8fa6d115792f221733fe76140ae',1,'HepLib::Symbol::read_archive()'],['../class_hep_lib_1_1i_symbol.html#ac53c807a42f356a850c6cb3174e2bd16',1,'HepLib::iSymbol::read_archive()'],['../class_hep_lib_1_1_x_integral.html#a6936c60c0605cf017af4ec742d538594',1,'HepLib::XIntegral::read_archive()']]],
   ['readfile_1003',['ReadFile',['../class_hep_lib_1_1_parser.html#a03ec970deb8855f62d6563b2e69b3f16',1,'HepLib::Parser']]],
@@ -16,9 +16,9 @@ var searchData=
   ['removedeltas_1009',['RemoveDeltas',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a50636ace902a374250c87fc3cc072633',1,'HepLib::SD::SecDec']]],
   ['replacements_1010',['Replacements',['../class_integral.html#abb43aad6072f9e78b4785db080ae270a',1,'Integral']]],
   ['replacements2_1011',['Replacements2',['../namespace_hep_lib_1_1_s_d.html#a51a289dcf22a817ee8d36a57474db1eb',1,'HepLib::SD']]],
-  ['rfi_1012',['RFI',['../namespace_hep_lib_1_1_qgraf.html#a6acf4f47312c58b2ccb764ba3b019c3f',1,'HepLib::Qgraf']]],
-  ['rli_1013',['RLI',['../namespace_hep_lib_1_1_qgraf.html#ae8b472d005bbac815532c49097e060c5',1,'HepLib::Qgraf']]],
-  ['rti_1014',['RTI',['../namespace_hep_lib_1_1_qgraf.html#a6e950ebe0a2aaaeaf12c3da7f1a015b6',1,'HepLib::Qgraf']]],
+  ['rfi_1012',['RFI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#ae6117d24b70df5b5e5ce907035cd1dd6',1,'HepLib::QGRAF']]],
+  ['rli_1013',['RLI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a92d9eee8af3f6ffef0a09d5cc395d02c',1,'HepLib::QGRAF']]],
+  ['rti_1014',['RTI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a67be28e9251de4618c23f7a09aaa49ba',1,'HepLib::QGRAF']]],
   ['run_1015',['Run',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a4aebab053f1799b17dcff97de799c38a',1,'HepLib::IBP::Base::Run()'],['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#aaf2f70a2f4b8dfdb093252a098b0cb8a',1,'HepLib::IBP::FIRE::Run()'],['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#af725f76676ad6cc2335f3dd1217c95b0',1,'HepLib::IBP::KIRA::Run()'],['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a6751c53fd9a5dfd14713843b9f3a90f0',1,'HepLib::IBP::UKIRA::Run()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a566cbe5c5b33184bdde8f8bb1bbebe28',1,'HepLib::IBP::Laporta::Run()']]],
   ['runos_1016',['RunOS',['../namespace_hep_lib.html#a6f8a54612e162040af9d020d95668b7c',1,'HepLib']]],
   ['runqhull_1017',['RunQHull',['../class_hep_lib_1_1_s_d_1_1_sec_dec_g.html#acd91a89ab347c06ae5661ce143b6617d',1,'HepLib::SD::SecDecG']]]

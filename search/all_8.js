@@ -3,7 +3,7 @@ var searchData=
   ['has_231',['has',['../class_hep_lib_1_1_symbol.html#a74173ca005f49e93e23417b87fd6450e',1,'HepLib::Symbol::has()'],['../class_hep_lib_1_1i_symbol.html#ac082ae2f44940234881cf598bd52e4af',1,'HepLib::iSymbol::has()'],['../class_hep_lib_1_1_x_integral.html#a8dd4d780909607720ea909f3c5097f2f',1,'HepLib::XIntegral::has()']]],
   ['has_5ffunction_232',['has_function',['../namespace_hep_lib.html#a1c854e391c8b82674c8f995dddcb8fbc',1,'HepLib']]],
   ['has_5fzero_5frow_233',['has_zero_row',['../class_hep_lib_1_1_mat_helper.html#a5b0db8f65778a8980279123f070e9f43',1,'HepLib::MatHelper']]],
-  ['hasloop_234',['HasLoop',['../namespace_hep_lib_1_1_qgraf.html#a97948f55d4eb78a2fcf6bf7b9f0a2836',1,'HepLib::Qgraf']]],
+  ['hasloop_234',['HasLoop',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a0d59b6572767ca67211a161c2e204ec8',1,'HepLib::QGRAF']]],
   ['hcubature_235',['HCubature',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html',1,'HepLib::SD']]],
   ['hcubature_2ecpp_236',['HCubature.cpp',['../_h_cubature_8cpp.html',1,'']]],
   ['helpers_2ecpp_237',['Helpers.cpp',['../_helpers_8cpp.html',1,'']]],
@@ -19,8 +19,8 @@ var searchData=
   ['hout_247',['hout',['../namespace_hep_lib.html#ac14f1046e0657b6b7520a97fec753a1d',1,'HepLib::hout()'],['../namespace_hep_lib.html#a92a46efe4a8bd4f27a4f6238ca615106',1,'HepLib::hout(cout)']]],
   ['ibp_248',['IBP',['../namespace_hep_lib_1_1_i_b_p.html',1,'HepLib']]],
   ['heplib_20project_249',['HepLib Project',['../index.html',1,'']]],
-  ['qgraf_250',['Qgraf',['../namespace_hep_lib_1_1_qgraf.html',1,'HepLib']]],
-  ['quarkonium_251',['Quarkonium',['../namespace_hep_lib_1_1_qgraf_1_1_quarkonium.html',1,'HepLib::Qgraf']]],
-  ['rc_252',['RC',['../namespace_hep_lib_1_1_qgraf_1_1_r_c.html',1,'HepLib::Qgraf']]],
+  ['qgraf_250',['QGRAF',['../namespace_hep_lib_1_1_q_g_r_a_f.html',1,'HepLib']]],
+  ['quarkonium_251',['Quarkonium',['../namespace_hep_lib_1_1_q_g_r_a_f_1_1_quarkonium.html',1,'HepLib::QGRAF']]],
+  ['rc_252',['RC',['../namespace_hep_lib_1_1_q_g_r_a_f_1_1_r_c.html',1,'HepLib::QGRAF']]],
   ['sd_253',['SD',['../namespace_hep_lib_1_1_s_d.html',1,'HepLib']]]
 ];

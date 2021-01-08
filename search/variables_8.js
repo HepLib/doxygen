@@ -2,9 +2,9 @@ var searchData=
 [
   ['iepsilon_1157',['iEpsilon',['../namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3',1,'HepLib']]],
   ['iepsilonn_1158',['iEpsilonN',['../namespace_hep_lib.html#aa2d68db54e5cdbe29c74cc082d4dfe99',1,'HepLib']]],
-  ['in_1159',['In',['../class_hep_lib_1_1_qgraf_1_1_process.html#a4f7f0abc86554b88d5716c3995213300',1,'HepLib::Qgraf::Process']]],
+  ['in_1159',['In',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html#aa7c5894e813a01c562d05da520774699',1,'HepLib::QGRAF::Process']]],
   ['inc_5fflags_1160',['INC_FLAGS',['../namespace_hep_lib.html#a04d7c11ac19192c1b7ac658a982e085d',1,'HepLib']]],
-  ['inouttex_1161',['InOutTeX',['../namespace_hep_lib_1_1_qgraf.html#a128718d564c268d27244cb79728b0945',1,'HepLib::Qgraf']]],
+  ['inouttex_1161',['InOutTeX',['../namespace_hep_lib_1_1_q_g_r_a_f.html#ad8deeef91a877962cc5394b6e84ccce3',1,'HepLib::QGRAF']]],
   ['installprefix_1162',['InstallPrefix',['../namespace_hep_lib.html#a9ee0225383b483fa51f36e82cdfaf323',1,'HepLib']]],
   ['integrals_1163',['Integrals',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a800e72f9ed6eb125a41ca9abb7bd8103',1,'HepLib::IBP::Base']]],
   ['integrand_1164',['Integrand',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a110c753d490d28053482b52fa322f3d6',1,'HepLib::SD::IntegratorBase']]],

@@ -17,7 +17,7 @@ var searchData=
   ['normal_409',['normal',['../classexpr.html#af0366d75ffb6a1892ac1590494f3cee2',1,'expr::normal()'],['../classexpr.html#ab5f00283ab752d49f1329c366c202450',1,'expr::normal()'],['../_hep_lib_w_8cpp.html#ab5f00283ab752d49f1329c366c202450',1,'normal(const expr &amp;e):&#160;HepLibW.cpp'],['../_hep_lib_w_8h.html#ab5f00283ab752d49f1329c366c202450',1,'normal(const expr &amp;e):&#160;HepLibW.cpp']]],
   ['normalizes_410',['Normalizes',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a5ecc277882917dcbb73487348bd7cf18',1,'HepLib::SD::SecDec']]],
   ['now_411',['now',['../namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2',1,'HepLib']]],
-  ['nps_412',['nPS',['../namespace_hep_lib_1_1_qgraf_1_1_quarkonium.html#af82819119b83a0d64a6b53123dab5c50',1,'HepLib::Qgraf::Quarkonium']]],
+  ['nps_412',['nPS',['../namespace_hep_lib_1_1_q_g_r_a_f_1_1_quarkonium.html#a9f6549306e5941cde708ae4fed2a3588',1,'HepLib::QGRAF::Quarkonium']]],
   ['nrclog_413',['NRCLog',['../_n_functions_8cpp.html#afa0e4a5849573f84aa53db81916cfe91',1,'NRCLog():&#160;NFunctions.cpp'],['../_n_functions_8h.html#afa0e4a5849573f84aa53db81916cfe91',1,'NRCLog():&#160;NFunctions.cpp']]],
   ['nreplacements_414',['nReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4a5c77001804946c739c3d06abd56fa7',1,'HepLib::SD::FeynmanParameter::nReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a6dd5589abf31519eb8144323aa5ee522',1,'HepLib::SD::XIntegrand::nReplacements()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431',1,'HepLib::SD::SecDec::nReplacements()']]]
 ];

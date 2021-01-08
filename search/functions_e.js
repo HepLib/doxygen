@@ -6,5 +6,5 @@ var searchData=
   ['normal_962',['normal',['../classexpr.html#af0366d75ffb6a1892ac1590494f3cee2',1,'expr::normal()'],['../_hep_lib_w_8cpp.html#ab5f00283ab752d49f1329c366c202450',1,'normal(const expr &amp;e):&#160;HepLibW.cpp'],['../_hep_lib_w_8h.html#ab5f00283ab752d49f1329c366c202450',1,'normal(const expr &amp;e):&#160;HepLibW.cpp']]],
   ['normalizes_963',['Normalizes',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a5ecc277882917dcbb73487348bd7cf18',1,'HepLib::SD::SecDec']]],
   ['now_964',['now',['../namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2',1,'HepLib']]],
-  ['nps_965',['nPS',['../namespace_hep_lib_1_1_qgraf_1_1_quarkonium.html#af82819119b83a0d64a6b53123dab5c50',1,'HepLib::Qgraf::Quarkonium']]]
+  ['nps_965',['nPS',['../namespace_hep_lib_1_1_q_g_r_a_f_1_1_quarkonium.html#a9f6549306e5941cde708ae4fed2a3588',1,'HepLib::QGRAF::Quarkonium']]]
 ];

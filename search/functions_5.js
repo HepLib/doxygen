@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['eikonalpropagator_809',['eikonalPropagator',['../namespace_hep_lib_1_1_qgraf.html#a6088a9e71d28d6db5c34defcf2868fc3',1,'HepLib::Qgraf']]],
-  ['eikonalpropagatorr_810',['eikonalPropagatorR',['../namespace_hep_lib_1_1_qgraf.html#aab37728cc02498bbaf7cc71fe9a2934a',1,'HepLib::Qgraf']]],
-  ['eikonalvertex_811',['eikonalVertex',['../namespace_hep_lib_1_1_qgraf.html#a6f0bf450fd3bb5b94796f502581350eb',1,'HepLib::Qgraf']]],
-  ['eikonalvertexr_812',['eikonalVertexR',['../namespace_hep_lib_1_1_qgraf.html#a000d3895caaf94784531d543cbbc89db',1,'HepLib::Qgraf']]],
+  ['eikonalpropagator_809',['eikonalPropagator',['../namespace_hep_lib_1_1_q_g_r_a_f.html#ae62bfccac88b7967ee3273deac5934d7',1,'HepLib::QGRAF']]],
+  ['eikonalpropagatorr_810',['eikonalPropagatorR',['../namespace_hep_lib_1_1_q_g_r_a_f.html#ad29ca64d770b511092cdc96f52eea90c',1,'HepLib::QGRAF']]],
+  ['eikonalvertex_811',['eikonalVertex',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a2cb3955690899f9c71a5781aa526bfe5',1,'HepLib::QGRAF']]],
+  ['eikonalvertexr_812',['eikonalVertexR',['../namespace_hep_lib_1_1_q_g_r_a_f.html#af5a410ca02abf1152037235cf49e6dd2',1,'HepLib::QGRAF']]],
   ['ep_813',['ep',['../namespace_hep_lib.html#a2e6bd583b415d8eb2d822b79c0d42f22',1,'HepLib']]],
   ['eprank_814',['epRank',['../namespace_hep_lib_1_1_s_d.html#acfffda1f78aab9a2defa2ade9c0b23e5',1,'HepLib::SD']]],
   ['epsepexpands_815',['EpsEpExpands',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7c140dcaeb0698d23db4d635823e4745',1,'HepLib::SD::SecDec']]],
