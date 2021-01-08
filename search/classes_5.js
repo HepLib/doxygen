@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['eps_722',['Eps',['../class_hep_lib_1_1_f_c_1_1_eps.html',1,'HepLib::FC']]],
-  ['errmin_723',['ErrMin',['../class_hep_lib_1_1_s_d_1_1_err_min.html',1,'HepLib::SD']]],
-  ['error_724',['Error',['../class_hep_lib_1_1_error.html',1,'HepLib']]],
-  ['expr_725',['expr',['../classexpr.html',1,'']]]
+  ['hcubature_678',['HCubature',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html',1,'HepLib::SD']]],
+  ['hepformat_679',['HepFormat',['../class_hep_lib_1_1_hep_format.html',1,'HepLib']]],
+  ['hookejeeves_680',['HookeJeeves',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html',1,'HepLib::SD']]]
 ];
