@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ti_1045',['TI',['../namespace_hep_lib_1_1_q_g_r_a_f.html#adfc5aa5269436de993ec26a37f01bfc5',1,'HepLib::QGRAF']]],
-  ['topolines_1046',['TopoLines',['../namespace_hep_lib_1_1_q_g_r_a_f.html#ae91c155600d79e46c57635a95ee0a71f',1,'HepLib::QGRAF']]],
-  ['tr_1047',['TR',['../_hep_lib_w_8cpp.html#a96b704aeb36f4bfffbeae46a2c9122bb',1,'TR(const expr &amp;e):&#160;HepLibW.cpp'],['../_hep_lib_w_8h.html#a96b704aeb36f4bfffbeae46a2c9122bb',1,'TR(const expr &amp;e):&#160;HepLibW.cpp']]]
+  ['uf_1019',['UF',['../namespace_hep_lib_1_1_i_b_p.html#a11478e2404f5e282e57d74d2cf9463b6',1,'HepLib::IBP']]],
+  ['up_1020',['Up',['../class_hep_lib_1_1_s_d_1_1_f_c_n.html#a4eb293cd1a5aa804a709f5bb5a7c0034',1,'HepLib::SD::FCN']]]
 ];

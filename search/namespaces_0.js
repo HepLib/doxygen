@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ginac_716',['GiNaC',['../namespace_gi_na_c.html',1,'']]]
+  ['ginac_682',['GiNaC',['../namespace_gi_na_c.html',1,'']]]
 ];

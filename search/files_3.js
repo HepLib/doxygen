@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['errmin_2ecpp_733',['ErrMin.cpp',['../_err_min_8cpp.html',1,'']]],
-  ['exfactor_2ecpp_734',['exfactor.cpp',['../exfactor_8cpp.html',1,'']]]
+  ['dgamma_2ecpp_700',['DGamma.cpp',['../_d_gamma_8cpp.html',1,'']]]
 ];
