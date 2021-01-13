@@ -725,197 +725,214 @@ $(function() {
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : intg) intg_sort.push_back(item);</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            <a class="code" href="namespace_hep_lib.html#ab3fb75be8b0bd9d69eda7576c4a304a0">sort_vec</a>(intg_sort);</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        }</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                </div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        lst repls;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keyword">auto</span> sps = <a class="code" href="namespace_hep_lib.html#a219cca41ccc5784b14b4f237dce01402">sp_map</a>();</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : sps) repls.append(kv.first == kv.second);</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        </div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        lst loops, exts;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> li : loops_exts.op(0)) {</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;Vector&gt;(li)) loops.append(ex_to&lt;Vector&gt;(li).name);</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">else</span> loops.append(li);</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        <span class="comment">// we need clearSP, otherwise cut will become 0</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keywordflow">if</span>(cut_props.nops()&gt;0) {</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            <span class="keyword">auto</span> loops = loops_exts.op(0);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            <span class="keyword">auto</span> exts = loops_exts.op(1);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> v1 : loops) {</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> v2 : loops) <a class="code" href="namespace_hep_lib.html#ad7b260134ae80f759950fa8187c828ab">clearSP</a>(v1,v2);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> v2 : exts) <a class="code" href="namespace_hep_lib.html#ad7b260134ae80f759950fa8187c828ab">clearSP</a>(v1,v2);</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            }</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        }</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> li : loops_exts.op(1)) {</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;Vector&gt;(li)) exts.append(ex_to&lt;Vector&gt;(li).name);</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;            <span class="keywordflow">else</span> exts.append(li);</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        }</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        </div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        exmap IR2F;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        std::map&lt;ex, IBP::Base*, ex_is_less&gt; p2IBP;</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        vector&lt;IBP::Base*&gt; ibp_vec;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <span class="keywordtype">int</span> pn=1;</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : intg_sort) {</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            <span class="keyword">auto</span> mat = ex_to&lt;matrix&gt;(item.op(0));</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            <span class="keyword">auto</span> vars = ex_to&lt;lst&gt;(item.op(1));</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            lst pns;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            <span class="keywordtype">int</span> nrow = mat.rows();</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;mat.cols(); c++) {</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                ex pc = 0;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nrow-2; r++) pc += mat(r,c) * vars.op(r);</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                pc += mat(nrow-2,c);</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                pc = <a class="code" href="namespace_hep_lib.html#a046a92e3e7e211cfac84ec5e131a5536">SP2sp</a>(pc);</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                pns.append(lst{ pc, ex(0)-mat(nrow-1,c) }); <span class="comment">// note the convension</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;            }</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(pns); <span class="comment">// sort before cuts</span></div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> cut : cut_props) pns.prepend(lst{ <a class="code" href="namespace_hep_lib.html#a046a92e3e7e211cfac84ec5e131a5536">SP2sp</a>(item.subs(<a class="code" href="namespace_hep_lib.html#a3e6a15aa7da8ea1f08f8f9f056e27fe7">SP_map</a>)), 1 });</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;            </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            lst props, ns;</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pns) {</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                props.append(item.op(0));</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                ns.append(item.op(1));</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;            }</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            <span class="keywordflow">if</span>(p2IBP[props]==NULL) {</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                IBP::Base* ibp;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                <span class="keywordflow">if</span>(IBPmethod==0) ibp = <span class="keyword">new</span> Base();</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(IBPmethod==1) ibp = <span class="keyword">new</span> FIRE();</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(IBPmethod==2) ibp = <span class="keyword">new</span> KIRA();</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                    ibp = <span class="keyword">new</span> Base();</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                    IBPmethod = 0;</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                }</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                </div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                p2IBP[props] = ibp;</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                ibp-&gt;Propagators = props;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                ibp-&gt;Internal = loops;</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                ibp-&gt;External = exts;</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                ibp-&gt;Replacements = repls;</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                ibp-&gt;Pairs = ex_to&lt;lst&gt;(<a class="code" href="namespace_hep_lib.html#a046a92e3e7e211cfac84ec5e131a5536">SP2sp</a>(<a class="code" href="class_hep_lib_1_1_pair.html#a7c5e29f8ab24c8c53dc62bc4ccf1c8b6">Pair::all</a>(vars)));</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                ibp-&gt;WorkingDir = wdir;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;                ibp-&gt;ProblemNumber = pn++;</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                <span class="keywordflow">if</span>(cut_props.nops()&gt;0) {</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;cut_props.nops(); i++) ibp-&gt;Cuts.append(i+1);</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                }</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                ibp_vec.push_back(ibp);</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;            }</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;            IBP::Base* ibp = p2IBP[props];</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            ibp-&gt;Integrals.append(ns);</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            IR2F[item] = F(ibp-&gt;ProblemNumber, ns);</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        }</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        </div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;0) cout &lt;&lt; <span class="stringliteral">&quot;  \\--Total Ints/Pros: &quot;</span> &lt;&lt; intg_sort.size() &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; ibp_vec.size() &lt;&lt; <span class="stringliteral">&quot; @ &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">now</a>(<span class="keyword">false</span>) &lt;&lt; endl;</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        </div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        vector&lt;Base*&gt; base_vec;</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> ibp : ibp_vec) base_vec.push_back(ibp);</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        <span class="keyword">auto</span> rules_ints = <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a16651fe2257cd1020988dbb9ffccb0b2">FindRules</a>(base_vec, <span class="keyword">false</span>, uf);</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160; </div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        map&lt;int,lst&gt; pn_ints_map;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : rules_ints.second) {</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;            <span class="keywordtype">int</span> pn = ex_to&lt;numeric&gt;(item.op(0)).to_int();</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;            pn_ints_map[pn].append(item.op(1));</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        }</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        vector&lt;IBP::Base*&gt; ibp_vec_re;</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordtype">int</span> nints = 0;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> pi : pn_ints_map) {</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            <span class="keyword">auto</span> ibp = ibp_vec[pi.first-1];</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;            ibp-&gt;Integrals = pi.second;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;            nints += ibp-&gt;Integrals.nops();</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            ibp_vec_re.push_back(ibp);</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        }</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160; </div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;0) cout &lt;&lt; <span class="stringliteral">&quot;  \\--Refined Ints/Pros: &quot;</span> &lt;&lt; nints &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; ibp_vec_re.size() &lt;&lt; <span class="stringliteral">&quot; @ &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">now</a>(<span class="keyword">false</span>) &lt;&lt; endl;</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        </div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        MapFunction _F2ex([ibp_vec](<span class="keyword">const</span> ex &amp;e, MapFunction &amp;<span class="keyword">self</span>)-&gt;ex {</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            <span class="keywordflow">if</span>(!e.has(F(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>))) <span class="keywordflow">return</span> e;</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(e.match(F(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>))) {</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                <span class="keywordtype">int</span> idx = ex_to&lt;numeric&gt;(e.op(0)).to_int();</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                <span class="keyword">auto</span> pso = ex_to&lt;lst&gt;(ibp_vec[idx-1]-&gt;Propagators);</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                <span class="keyword">auto</span> nso = ex_to&lt;lst&gt;(e.op(1));</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                lst ps, ns;</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;pso.nops(); i++) {</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                    <span class="keywordflow">if</span>(nso.op(i).is_zero()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                    ps.append(pso.op(i));</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                    ns.append(nso.op(i));</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                }</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                <span class="keywordflow">return</span> F(ps,ns);</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">return</span> e.map(<span class="keyword">self</span>);</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        });</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        </div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keywordflow">if</span>(IBPmethod==0) {</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            <span class="keyword">auto</span> air_res =</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">GiNaC_Parallel</a>(air_vec.size(), 1, [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                auto air = air_vec[idx];</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                air = subs_naive(air,IR2F);</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                air = subs_naive(air,rules_ints.first);</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                air = _F2ex(air);</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                auto cv_lst = mma_collect_lst(air, F(w1,w2));</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                air = 0;</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                for(auto cv : cv_lst) air += cv.op(1) * fermat_normal(cv.op(0));</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                return air;</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            }, <span class="stringliteral">&quot;A2F&quot;</span>);</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            </div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> fp : ibp_vec) <span class="keyword">delete</span> fp;</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            system((<span class="stringliteral">&quot;rm -rf &quot;</span>+wdir).c_str());</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;air_vec.size(); i++) air_vec[i] = air_res[i];   </div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        }</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        </div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        <span class="keywordflow">if</span>(IBPmethod==1) {</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ibp : ibp_vec_re) ibp-&gt;Export();</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            <span class="keyword">auto</span> nproc = 2*<a class="code" href="namespace_hep_lib.html#a8021ec426600ae28f6bae7635c7ba10f">CpuCores</a>()/<a class="code" href="class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#aada1c9d2b41e7990691f8499180e5511">FIRE::Threads</a>;</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;            <span class="keywordtype">int</span> cproc = 0;</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            <span class="keywordflow">if</span>(nproc&lt;2) nproc = 2;</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;<span class="preprocessor">            #pragma omp parallel for num_threads(nproc) schedule(dynamic, 1)</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> pi=0; pi&lt;ibp_vec_re.size(); pi++) {</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;1) {</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;<span class="preprocessor">                    #pragma omp critical</span></div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;                    cout &lt;&lt; <span class="stringliteral">&quot;\r                                        \r&quot;</span> &lt;&lt; <span class="stringliteral">&quot;  \\--FIRE Reduction [&quot;</span> &lt;&lt; (++cproc) &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; ibp_vec_re.size() &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; flush;</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                }</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                ibp_vec_re[pi]-&gt;Run();</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            }</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;1) cout &lt;&lt; <span class="stringliteral">&quot;@&quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">now</a>(<span class="keyword">false</span>) &lt;&lt; endl;</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ibp_vec_re) item-&gt;Import();</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            system((<span class="stringliteral">&quot;rm -rf &quot;</span>+wdir).c_str());</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(IBPmethod==2) {</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ibp : ibp_vec_re) ibp-&gt;Reduce();</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            system((<span class="stringliteral">&quot;rm -rf &quot;</span>+wdir).c_str());</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        }</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        </div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;        vector&lt;Base*&gt; base_re;</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> f : ibp_vec_re) base_re.push_back(f);</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        <span class="keyword">auto</span> mi_rules = <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a16651fe2257cd1020988dbb9ffccb0b2">FindRules</a>(base_re, <span class="keyword">true</span>, uf);</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;                        </div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        <span class="keyword">auto</span> rules_vec =</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">GiNaC_Parallel</a>(ibp_vec_re.size(), 10, [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;            lst rules;</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            for(auto item : ibp_vec_re[idx]-&gt;Rules) {</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;                auto rr = item.op(1);</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                rr = subs_naive(rr,mi_rules.first);</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                auto cv_lst = mma_collect_lst(rr, F(w1,w2));</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                rr = 0;</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;                for(auto cv : cv_lst) rr += cv.op(1) * fermat_normal(cv.op(0));</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;                rules.append(item.op(0)==rr);</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            }</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;            <span class="keywordflow">return</span> rules;</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        }, <span class="stringliteral">&quot;F2F&quot;</span>);</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;                </div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        exmap F2F;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> rule : rules_vec) {</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> lr : rule) F2F[lr.op(0)] = lr.op(1);</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        }</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        </div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        <span class="keyword">auto</span> air_res =</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">GiNaC_Parallel</a>(air_vec.size(), 1, [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;            auto air = air_vec[idx];</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;            air = subs_naive(air,IR2F);</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            air = subs_naive(air,rules_ints.first);</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            air = subs_naive(air,mi_rules.first);</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;            air = subs_naive(air,F2F);</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;            air = _F2ex(air);</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            auto cv_lst = mma_collect_lst(air, F(w1,w2));</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;            air = 0;</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;            for(auto cv : cv_lst) air += cv.op(1) * fermat_normal(cv.op(0));</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            return air;</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        }, <span class="stringliteral">&quot;A2F&quot;</span>);</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;            </div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> fp : ibp_vec) <span class="keyword">delete</span> fp;</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160; </div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;air_vec.size(); i++) air_vec[i] = air_res[i];        </div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    }</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160; </div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;}</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        </div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <span class="comment">// from here, Vector will be replaced by its name Symbol</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        lst repls;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keyword">auto</span> sps = <a class="code" href="namespace_hep_lib.html#a219cca41ccc5784b14b4f237dce01402">sp_map</a>();</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : sps) repls.append(kv.first == kv.second);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        lst loops, exts;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> li : loops_exts.op(0)) {</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;Vector&gt;(li)) loops.append(ex_to&lt;Vector&gt;(li).name);</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            <span class="keywordflow">else</span> loops.append(li);</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        }</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> li : loops_exts.op(1)) {</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;Vector&gt;(li)) exts.append(ex_to&lt;Vector&gt;(li).name);</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <span class="keywordflow">else</span> exts.append(li);</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        }</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        </div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        exmap IR2F;</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        std::map&lt;ex, IBP::Base*, ex_is_less&gt; p2IBP;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        vector&lt;IBP::Base*&gt; ibp_vec;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keywordtype">int</span> pn=1;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> ir : intg_sort) {</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            <span class="keyword">auto</span> mat = ex_to&lt;matrix&gt;(ir.op(0));</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;            <span class="keyword">auto</span> vars = ex_to&lt;lst&gt;(ir.op(1));</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            lst pns;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            <span class="keywordtype">int</span> nrow = mat.rows();</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;mat.cols(); c++) {</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                ex pc = 0;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nrow-2; r++) pc += mat(r,c) * vars.op(r);</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                pc += mat(nrow-2,c);</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                pc = <a class="code" href="namespace_hep_lib.html#a046a92e3e7e211cfac84ec5e131a5536">SP2sp</a>(pc);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                pns.append(lst{ pc, ex(0)-mat(nrow-1,c) }); <span class="comment">// note the convension</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            }</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;            <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(pns); <span class="comment">// sort before cuts</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;            <span class="keywordflow">if</span>(cut_props.nops()&gt;0) {</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                ex cuts = cut_props;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                cuts = cuts.subs(<a class="code" href="namespace_hep_lib.html#a3e6a15aa7da8ea1f08f8f9f056e27fe7">SP_map</a>);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> cut : cut_props) pns.prepend(lst{ <a class="code" href="namespace_hep_lib.html#a046a92e3e7e211cfac84ec5e131a5536">SP2sp</a>(cut), 1 });</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                vars.append(cuts);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            }</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;            </div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            lst props, ns;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pns) {</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                props.append(item.op(0));</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                ns.append(item.op(1));</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            }</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            <span class="keywordflow">if</span>(p2IBP[props]==NULL) {</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                IBP::Base* ibp;</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                <span class="keywordflow">if</span>(IBPmethod==0) ibp = <span class="keyword">new</span> Base();</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(IBPmethod==1) ibp = <span class="keyword">new</span> FIRE();</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(IBPmethod==2) ibp = <span class="keyword">new</span> KIRA();</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                    ibp = <span class="keyword">new</span> Base();</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                    IBPmethod = 0;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                }</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                </div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;                p2IBP[props] = ibp;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                ibp-&gt;Propagators = props;</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                ibp-&gt;Internal = loops;</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                ibp-&gt;External = exts;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                ibp-&gt;Replacements = repls;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                ibp-&gt;Pairs = ex_to&lt;lst&gt;(<a class="code" href="namespace_hep_lib.html#a046a92e3e7e211cfac84ec5e131a5536">SP2sp</a>(<a class="code" href="class_hep_lib_1_1_pair.html#a7c5e29f8ab24c8c53dc62bc4ccf1c8b6">Pair::all</a>(vars)));</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                ibp-&gt;WorkingDir = wdir;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                ibp-&gt;ProblemNumber = pn++;</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                <span class="keywordflow">if</span>(cut_props.nops()&gt;0) {</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;cut_props.nops(); i++) ibp-&gt;Cuts.append(i+1);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                }</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                ibp_vec.push_back(ibp);</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;            }</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;            IBP::Base* ibp = p2IBP[props];</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;            ibp-&gt;Integrals.append(ns);</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;            IR2F[ir] = F(ibp-&gt;ProblemNumber, ns);</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        }</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;0) cout &lt;&lt; <span class="stringliteral">&quot;  \\--Total Ints/Pros: &quot;</span> &lt;&lt; intg_sort.size() &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; ibp_vec.size() &lt;&lt; <span class="stringliteral">&quot; @ &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">now</a>(<span class="keyword">false</span>) &lt;&lt; endl;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        </div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        vector&lt;Base*&gt; base_vec;</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> ibp : ibp_vec) base_vec.push_back(ibp);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keyword">auto</span> rules_ints = <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a16651fe2257cd1020988dbb9ffccb0b2">FindRules</a>(base_vec, <span class="keyword">false</span>, uf);</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160; </div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        map&lt;int,lst&gt; pn_ints_map;</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : rules_ints.second) {</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;            <span class="keywordtype">int</span> pn = ex_to&lt;numeric&gt;(item.op(0)).to_int();</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;            pn_ints_map[pn].append(item.op(1));</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        }</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160; </div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        vector&lt;IBP::Base*&gt; ibp_vec_re;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordtype">int</span> nints = 0;</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> pi : pn_ints_map) {</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <span class="keyword">auto</span> ibp = ibp_vec[pi.first-1];</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            ibp-&gt;Integrals = pi.second;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            nints += ibp-&gt;Integrals.nops();</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            ibp_vec_re.push_back(ibp);</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        }</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160; </div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;0) cout &lt;&lt; <span class="stringliteral">&quot;  \\--Refined Ints/Pros: &quot;</span> &lt;&lt; nints &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; ibp_vec_re.size() &lt;&lt; <span class="stringliteral">&quot; @ &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">now</a>(<span class="keyword">false</span>) &lt;&lt; endl;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        </div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        MapFunction _F2ex([ibp_vec](<span class="keyword">const</span> ex &amp;e, MapFunction &amp;<span class="keyword">self</span>)-&gt;ex {</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            <span class="keywordflow">if</span>(!e.has(F(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>))) <span class="keywordflow">return</span> e;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(e.match(F(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>))) {</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                <span class="keywordtype">int</span> idx = ex_to&lt;numeric&gt;(e.op(0)).to_int();</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                <span class="keyword">auto</span> pso = ex_to&lt;lst&gt;(ibp_vec[idx-1]-&gt;Propagators);</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                <span class="keyword">auto</span> nso = ex_to&lt;lst&gt;(e.op(1));</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                lst ps, ns;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;pso.nops(); i++) {</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                    <span class="keywordflow">if</span>(nso.op(i).is_zero()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                    ps.append(pso.op(i));</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    ns.append(nso.op(i));</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                }</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                <span class="keywordflow">return</span> F(ps,ns);</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">return</span> e.map(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        });</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        </div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        <span class="keywordflow">if</span>(IBPmethod==0) {</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            <span class="keyword">auto</span> air_res =</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;            <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">GiNaC_Parallel</a>(air_vec.size(), 1, [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                auto air = air_vec[idx];</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;                air = subs_naive(air,IR2F);</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;                air = subs_naive(air,rules_ints.first);</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;                air = _F2ex(air);</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;                auto cv_lst = mma_collect_lst(air, F(w1,w2));</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;                air = 0;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;                for(auto cv : cv_lst) air += cv.op(1) * fermat_normal(cv.op(0));</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;                return air;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            }, <span class="stringliteral">&quot;A2F&quot;</span>);</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            </div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> fp : ibp_vec) <span class="keyword">delete</span> fp;</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            system((<span class="stringliteral">&quot;rm -rf &quot;</span>+wdir).c_str());</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160; </div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;air_vec.size(); i++) air_vec[i] = air_res[i];   </div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        }</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        </div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        <span class="keywordflow">if</span>(IBPmethod==1) {</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ibp : ibp_vec_re) ibp-&gt;Export();</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;            <span class="keyword">auto</span> nproc = 2*<a class="code" href="namespace_hep_lib.html#a8021ec426600ae28f6bae7635c7ba10f">CpuCores</a>()/<a class="code" href="class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#aada1c9d2b41e7990691f8499180e5511">FIRE::Threads</a>;</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            <span class="keywordtype">int</span> cproc = 0;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            <span class="keywordflow">if</span>(nproc&lt;2) nproc = 2;</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;<span class="preprocessor">            #pragma omp parallel for num_threads(nproc) schedule(dynamic, 1)</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> pi=0; pi&lt;ibp_vec_re.size(); pi++) {</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;1) {</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;<span class="preprocessor">                    #pragma omp critical</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;                    cout &lt;&lt; <span class="stringliteral">&quot;\r                                        \r&quot;</span> &lt;&lt; <span class="stringliteral">&quot;  \\--FIRE Reduction [&quot;</span> &lt;&lt; (++cproc) &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; ibp_vec_re.size() &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; flush;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;                }</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                ibp_vec_re[pi]-&gt;Run();</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            }</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;1) cout &lt;&lt; <span class="stringliteral">&quot;@&quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">now</a>(<span class="keyword">false</span>) &lt;&lt; endl;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ibp_vec_re) item-&gt;Import();</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;            system((<span class="stringliteral">&quot;rm -rf &quot;</span>+wdir).c_str());</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(IBPmethod==2) {</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ibp : ibp_vec_re) ibp-&gt;Reduce();</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            system((<span class="stringliteral">&quot;rm -rf &quot;</span>+wdir).c_str());</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        }</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        </div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        vector&lt;Base*&gt; base_re;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> f : ibp_vec_re) base_re.push_back(f);</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;        <span class="keyword">auto</span> mi_rules = <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a16651fe2257cd1020988dbb9ffccb0b2">FindRules</a>(base_re, <span class="keyword">true</span>, uf);</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;                        </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        <span class="keyword">auto</span> rules_vec =</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">GiNaC_Parallel</a>(ibp_vec_re.size(), 10, [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;            lst rules;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            for(auto item : ibp_vec_re[idx]-&gt;Rules) {</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                auto rr = item.op(1);</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                rr = subs_naive(rr,mi_rules.first);</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;                auto cv_lst = mma_collect_lst(rr, F(w1,w2));</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;                rr = 0;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                for(auto cv : cv_lst) rr += cv.op(1) * fermat_normal(cv.op(0));</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;                rules.append(item.op(0)==rr);</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            }</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;            <span class="keywordflow">return</span> rules;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        }, <span class="stringliteral">&quot;F2F&quot;</span>);</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;                </div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        exmap F2F;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> rule : rules_vec) {</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> lr : rule) F2F[lr.op(0)] = lr.op(1);</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        }</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        </div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;        <span class="keyword">auto</span> air_res =</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">GiNaC_Parallel</a>(air_vec.size(), 1, [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;            auto air = air_vec[idx];</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;            air = subs_naive(air,IR2F);</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;            air = subs_naive(air,rules_ints.first);</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;            air = subs_naive(air,mi_rules.first);</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;            air = subs_naive(air,F2F);</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;            air = _F2ex(air);</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;            auto cv_lst = mma_collect_lst(air, F(w1,w2));</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            air = 0;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;            for(auto cv : cv_lst) air += cv.op(1) * fermat_normal(cv.op(0));</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;            return air;</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        }, <span class="stringliteral">&quot;A2F&quot;</span>);</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            </div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> fp : ibp_vec) <span class="keyword">delete</span> fp;</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160; </div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;air_vec.size(); i++) air_vec[i] = air_res[i];        </div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    }</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160; </div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;}</div>
 <div class="ttc" id="a_h_e_p_8h_html"><div class="ttname"><a href="_h_e_p_8h.html">HEP.h</a></div><div class="ttdoc">HEP header file.</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_error_html"><div class="ttname"><a href="class_hep_lib_1_1_error.html">HepLib::Error</a></div><div class="ttdoc">class used to wrap error message</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00135">BASIC.h:135</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_fermat_html"><div class="ttname"><a href="class_hep_lib_1_1_fermat.html">HepLib::Fermat</a></div><div class="ttdoc">interface to communicate with Fermat program</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00614">BASIC.h:614</a></div></div>
@@ -956,6 +973,7 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_html_aca2d497a0977682390504dadde529ab9"><div class="ttname"><a href="namespace_hep_lib.html#aca2d497a0977682390504dadde529ab9">HepLib::Apart</a></div><div class="ttdeci">ex Apart(const matrix &amp;mat)</div><div class="ttdoc">Apart on matrix.</div><div class="ttdef"><b>Definition:</b> <a href="_apart_8cpp_source.html#l00118">Apart.cpp:118</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_acd7a1d43f12ad5f7b40923978174b125"><div class="ttname"><a href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">HepLib::w1</a></div><div class="ttdeci">ex w1</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00377">BASIC.h:377</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ad203849c9a7d4624cac6465c9a44ed6e"><div class="ttname"><a href="namespace_hep_lib.html#ad203849c9a7d4624cac6465c9a44ed6e">HepLib::fermat_normal</a></div><div class="ttdeci">ex fermat_normal(const ex &amp;expr, bool factor)</div><div class="ttdoc">return the normalizatied expression, using fermat_numer_denom</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02070">BASIC.cpp:2070</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_ad7b260134ae80f759950fa8187c828ab"><div class="ttname"><a href="namespace_hep_lib.html#ad7b260134ae80f759950fa8187c828ab">HepLib::clearSP</a></div><div class="ttdeci">void clearSP(const ex &amp;p1, const ex &amp;p2)</div><div class="ttdoc">delete the assignment of p1.p2</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8cpp_source.html#l00262">Pair.cpp:262</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_aeac89cafae8fc78b08ab9cc251402335"><div class="ttname"><a href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">HepLib::w2</a></div><div class="ttdeci">ex w2</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00377">BASIC.h:377</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_af4fe6312af5f71448e243b9c1b8b831c"><div class="ttname"><a href="namespace_hep_lib.html#af4fe6312af5f71448e243b9c1b8b831c">HepLib::string_trim</a></div><div class="ttdeci">void string_trim(string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00163">Functions.cpp:163</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_afa5eebd5683e2d2437b47ab9df57a20d"><div class="ttname"><a href="namespace_hep_lib.html#afa5eebd5683e2d2437b47ab9df57a20d">HepLib::SP</a></div><div class="ttdeci">ex SP(const ex &amp;a, bool use_map=false)</div><div class="ttdef"><b>Definition:</b> <a href="_pair_8cpp_source.html#l00154">Pair.cpp:154</a></div></div>
