@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['index_657',['Index',['../class_hep_lib_1_1_index.html',1,'HepLib']]],
-  ['integratorbase_658',['IntegratorBase',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html',1,'HepLib::SD']]],
-  ['isymbol_659',['iSymbol',['../class_hep_lib_1_1i_symbol.html',1,'HepLib']]]
+  ['hcubature_671',['HCubature',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html',1,'HepLib::SD']]],
+  ['hepformat_672',['HepFormat',['../class_hep_lib_1_1_hep_format.html',1,'HepLib']]],
+  ['hookejeeves_673',['HookeJeeves',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html',1,'HepLib::SD']]]
 ];

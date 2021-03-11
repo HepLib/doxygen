@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['laporta_661',['Laporta',['../class_hep_lib_1_1_i_b_p_1_1_laporta.html',1,'HepLib::IBP']]],
-  ['lsthelper_662',['lstHelper',['../class_hep_lib_1_1lst_helper.html',1,'HepLib']]]
+  ['kira_677',['KIRA',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html',1,'HepLib::IBP']]]
 ];

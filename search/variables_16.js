@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zerovalue_1275',['ZeroValue',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html#a3fac12ad2562a2429b0e3d89e09a55e8',1,'HepLib::SD::MinimizeBase']]]
+  ['x_1300',['x',['../exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d',1,'exfactor.cpp']]],
+  ['xdim_1301',['XDim',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#aaafeabc492207ac32177e36ea2e99e4f',1,'HepLib::SD::IntegratorBase']]]
 ];

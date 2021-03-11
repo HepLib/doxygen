@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['w_1260',['w',['../namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b',1,'HepLib']]],
-  ['w0_1261',['w0',['../namespace_hep_lib.html#a3b61f9c75c719b193c95236dd6536ae5',1,'HepLib']]],
-  ['w1_1262',['w1',['../namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125',1,'HepLib']]],
-  ['w2_1263',['w2',['../namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335',1,'HepLib']]],
-  ['w3_1264',['w3',['../namespace_hep_lib.html#ad0a7e10f9389fb13a0827868ba471a97',1,'HepLib']]],
-  ['w4_1265',['w4',['../namespace_hep_lib.html#a587fe2df4eed2b7c179f3a6a4bd8b566',1,'HepLib']]],
-  ['w5_1266',['w5',['../namespace_hep_lib.html#a1e6b22e2c4b206c23bcf4df122eaabca',1,'HepLib']]],
-  ['w6_1267',['w6',['../namespace_hep_lib.html#ad52852288af7633299d4dca9915a0e28',1,'HepLib']]],
-  ['w7_1268',['w7',['../namespace_hep_lib.html#a19ad4db5af10c48955b6fb8c705b1c00',1,'HepLib']]],
-  ['w8_1269',['w8',['../namespace_hep_lib.html#a102a837964107cbcb42c6b5cd05be775',1,'HepLib']]],
-  ['w9_1270',['w9',['../namespace_hep_lib.html#a0f196e5e7902d18faebcdf299a0dcf2a',1,'HepLib']]],
-  ['warncolor_1271',['WarnColor',['../namespace_hep_lib.html#a60fe8997beb0da16a87e9b428de98dd8',1,'HepLib']]],
-  ['workingdir_1272',['WorkingDir',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a1299a65a4410d354a369314c6c5d4dcc',1,'HepLib::IBP::Base']]]
+  ['vegas_5fnbatch_1274',['VEGAS_NBATCH',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a11c528cb4faa10d044addc25124148c8',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fnincrease_1275',['VEGAS_NINCREASE',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a4b8e391b5a513eb5039768787237fd1b',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fnstart_1276',['VEGAS_NSTART',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a5411369115b45bfbd2750b0a381e10bf',1,'HepLib::SD::CUBA']]],
+  ['vegas_5fseed_1277',['VEGAS_SEED',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#acaad18387674ec77492706f85ac07da4',1,'HepLib::SD::CUBA']]],
+  ['verbose_1278',['VERBOSE',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a777f200197f04b688f67e25b8c2c0d81',1,'HepLib::SD::CUBA']]],
+  ['verbose_1279',['Verbose',['../namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1',1,'HepLib']]],
+  ['version_1280',['Version',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a8d472ac05777c3cce5b84f032071d9f0',1,'HepLib::IBP::FIRE']]],
+  ['vertex_1281',['VerTeX',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a94c41fa396e24fd2c1e06eded9fb44e3',1,'HepLib::QGRAF']]],
+  ['vmap_1282',['vmap',['../class_hep_lib_1_1_symbol.html#adf389eda730f9726281619dd784361ef',1,'HepLib::Symbol']]],
+  ['vs_1283',['vs',['../namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164',1,'HepLib::SD']]],
+  ['vs_5fbefore_5fep_1284',['vs_before_ep',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#aa21852816a07b144200fad2103ce488e',1,'HepLib::SD::SecDec']]],
+  ['vsn_1285',['vsN',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a403fcd800e6a46cce891892d656ef4de',1,'HepLib::SD::SecDec']]],
+  ['vz_1286',['vz',['../namespace_hep_lib_1_1_s_d.html#a84557ef62307c3303329bebacf374cd9',1,'HepLib::SD']]]
 ];

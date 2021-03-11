@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['pair_668',['Pair',['../class_hep_lib_1_1_pair.html',1,'HepLib']]],
-  ['parser_669',['Parser',['../class_hep_lib_1_1_parser.html',1,'HepLib']]],
-  ['process_670',['Process',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html',1,'HepLib::QGRAF']]]
+  ['mapfunction_680',['MapFunction',['../class_hep_lib_1_1_map_function.html',1,'HepLib']]],
+  ['mathelper_681',['MatHelper',['../class_hep_lib_1_1_mat_helper.html',1,'HepLib']]],
+  ['minimizebase_682',['MinimizeBase',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html',1,'HepLib::SD']]],
+  ['minuit_683',['MinUit',['../class_hep_lib_1_1_s_d_1_1_min_uit.html',1,'HepLib::SD']]],
+  ['mmaformat_684',['MMAFormat',['../class_hep_lib_1_1_m_m_a_format.html',1,'HepLib']]]
 ];
