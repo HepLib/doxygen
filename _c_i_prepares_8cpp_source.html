@@ -1234,72 +1234,75 @@ $(function() {
 <div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;            ar.archive_ex(gar_res, <span class="stringliteral">&quot;res&quot;</span>);</div>
 <div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;            ar.archive_ex(19790923, <span class="stringliteral">&quot;c&quot;</span>);</div>
 <div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;            ar.archive_ex(FT_N_XN, <span class="stringliteral">&quot;ftnxn&quot;</span>);</div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;            ofstream out(garfn.str());</div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;            out &lt;&lt; ar;</div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;            out.close();</div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;            cmd.clear();</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot;rm -f &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;X*.so&quot;</span>;</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;            system(cmd.str().c_str());</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;            fsofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;F.so&quot;</span>;</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;item : res) ciResult.push_back(ex_to&lt;lst&gt;(item));</div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;            cmd.clear();</div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot;rm -f &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;X*.so&quot;</span>;</div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;            system(cmd.str().c_str());</div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;        }</div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;        </div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;        <span class="keywordtype">int</span> res_size = res.size();</div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;        <span class="keywordflow">if</span>(GccLimit&lt;100) GccLimit = 100;</div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;        <span class="keywordflow">if</span>(res_size&gt;GccLimit) {</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;            cmd.clear();</div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; 0 &quot;</span> &lt;&lt; (GccLimit-1) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;            system(cmd.str().c_str());</div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;            </div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1; <span class="keyword">true</span>; n++) {</div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;                <span class="keywordtype">int</span> start = n*GccLimit;</div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                <span class="keywordtype">int</span> end = (n+1)*GccLimit-1;</div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                <span class="keywordflow">if</span>(end&gt;res_size-1) end = res_size-1;</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                sofn.clear();</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                sofn.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;                <span class="keywordflow">if</span>(key != <span class="stringliteral">&quot;&quot;</span>) sofn &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;X&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;                <span class="keywordflow">else</span> sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;X&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;                cmd.clear();</div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;                cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; &quot;</span> &lt;&lt; start &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; end &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot; -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;                system(cmd.str().c_str());</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;                <span class="keywordflow">if</span>(end&gt;=res_size-1) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;            }</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;            cmd.clear();</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/*.o&quot;</span>;</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;            system(cmd.str().c_str());</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;        }</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;        cmd.clear();</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;        cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;        <span class="keywordflow">if</span>(debug) cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;mv -f &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;rm -f &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug/*.o&quot;</span>;</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;        <span class="keywordflow">else</span> cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; pid;</div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;        system(cmd.str().c_str());</div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160; </div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;    }</div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;    </div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;            ar.archive_ex(soLimit,<span class="stringliteral">&quot;soLimit&quot;</span>);</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;            ar.archive_ex(epN,<span class="stringliteral">&quot;epN&quot;</span>);</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;            ar.archive_ex(epsN,<span class="stringliteral">&quot;epsN&quot;</span>);</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;            ofstream out(garfn.str());</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;            out &lt;&lt; ar;</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;            out.close();</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;            cmd.clear();</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot;rm -f &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;X*.so&quot;</span>;</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            system(cmd.str().c_str());</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;            fsofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;F.so&quot;</span>;</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;            sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;item : res) ciResult.push_back(ex_to&lt;lst&gt;(item));</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;            cmd.clear();</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot;rm -f &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;X*.so&quot;</span>;</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;            system(cmd.str().c_str());</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;        }</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;        </div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;        <span class="keywordtype">int</span> res_size = res.size();</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;        <span class="keywordflow">if</span>(soLimit&lt;100) soLimit = 100;</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;        <span class="keywordflow">if</span>(res_size&gt;soLimit) {</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;            cmd.clear();</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; 0 &quot;</span> &lt;&lt; (soLimit-1) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;            system(cmd.str().c_str());</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;            </div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=1; <span class="keyword">true</span>; n++) {</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                <span class="keywordtype">int</span> start = n*soLimit;</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                <span class="keywordtype">int</span> end = (n+1)*soLimit-1;</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;                <span class="keywordflow">if</span>(end&gt;res_size-1) end = res_size-1;</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;                sofn.clear();</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;                sofn.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                <span class="keywordflow">if</span>(key != <span class="stringliteral">&quot;&quot;</span>) sofn &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;X&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;                <span class="keywordflow">else</span> sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;X&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;                cmd.clear();</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;                cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;                cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; &quot;</span> &lt;&lt; start &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; end &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot; -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;                system(cmd.str().c_str());</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;                <span class="keywordflow">if</span>(end&gt;=res_size-1) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;            }</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;            cmd.clear();</div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/*.o&quot;</span>;</div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -lHepLib -lquadmath -lmpfr -lgmp&quot;</span>;</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;            system(cmd.str().c_str());</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;        }</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;        cmd.clear();</div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;        cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;        <span class="keywordflow">if</span>(debug) cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;mv -f &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;rm -f &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug/*.o&quot;</span>;</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;        <span class="keywordflow">else</span> cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; pid;</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;        system(cmd.str().c_str());</div>
 <div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;}</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;    }</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;    </div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160; </div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;}</div>
 <div class="ttc" id="a_b_a_s_i_c_8h_html_ab702106cf3b3e96750b6845ded4e0299"><div class="ttname"><a href="_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a></div><div class="ttdeci">#define RESET</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00057">BASIC.h:57</a></div></div>
 <div class="ttc" id="a_s_d_8h_html"><div class="ttname"><a href="_s_d_8h.html">SD.h</a></div><div class="ttdoc">SecDec header file.</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_error_html"><div class="ttname"><a href="class_hep_lib_1_1_error.html">HepLib::Error</a></div><div class="ttdoc">class used to wrap error message</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00139">BASIC.h:139</a></div></div>
