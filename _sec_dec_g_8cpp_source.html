@@ -87,7 +87,7 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    ex imax = -1;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;npts; r++) {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;dim; c++) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span>(imax&lt;abs(pts(r,c))) imax = abs(pts(r,c));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span>(imax&lt;<a class="code" href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a>(pts(r,c))) imax = <a class="code" href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a>(pts(r,c));</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
@@ -241,7 +241,7 @@ $(function() {
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        vec = tmat.inverse().mul(vec);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        det = 0;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;vec.rows(); r++) {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            det = gcd(det, vec(r,0));</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            det = <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(det, vec(r,0));</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;vec.rows(); r++) {</div>
@@ -266,7 +266,7 @@ $(function() {
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nvs.rows(); r++) {</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        sum_vec[r] = 0;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;nvs.cols(); c++) sum_vec[r] += nvs(r,c);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        sum_lcm = lcm(sum_lcm, sum_vec[r]);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        sum_lcm = <a class="code" href="_gi_na_c_w_8cpp.html#a0359ad06067786c2a96bdc67cb8578af">lcm</a>(sum_lcm, sum_vec[r]);</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    </div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    matrix ret(nvs.rows(), nvs.cols());</div>
@@ -323,7 +323,7 @@ $(function() {
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    ex all_lcm = 1;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;mdc.rows(); r++) {</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;mdc.cols(); c++) {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            all_lcm = lcm(all_lcm, <a class="code" href="namespace_hep_lib.html#a6e1a5df6d4c9d5d1530fe849a7855092">numer_denom_fermat</a>(mdc(r,c)).op(1));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            all_lcm = <a class="code" href="_gi_na_c_w_8cpp.html#a0359ad06067786c2a96bdc67cb8578af">lcm</a>(all_lcm, <a class="code" href="namespace_hep_lib.html#a6e1a5df6d4c9d5d1530fe849a7855092">numer_denom_fermat</a>(mdc(r,c)).op(1));</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    mdc = mdc.mul_scalar(all_lcm);</div>
@@ -422,9 +422,9 @@ $(function() {
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">if</span>(xpol.has(y(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;SecDecG::x2y failed with y(w) found.&quot;</span>);</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keyword">auto</span> cvs = <a class="code" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1">collect_lst</a>(xpol, <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>));</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    vector&lt;ex&gt; vpols;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    lst xpol2;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> xpol2;</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> cv : cvs) {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span>(is_zero(expand(cv.op(0)))) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span>(is_zero(<a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(cv.op(0)))) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        vpols.push_back(cv.op(1));</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        xpol2.append(cv.op(1));</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
@@ -500,7 +500,7 @@ $(function() {
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        matrix &amp;tmp = vmat[vi];</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;tmp.rows(); r++) {</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            ex row_gcd = 0;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;tmp.cols(); c++) row_gcd = gcd(row_gcd, tmp(r, c));</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;tmp.cols(); c++) row_gcd = <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(row_gcd, tmp(r, c));</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;tmp.cols(); c++) tmp(r, c) = tmp(r, c)/row_gcd;</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        }</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">if</span>(tmp.determinant()&lt;0) {</div>
@@ -518,7 +518,7 @@ $(function() {
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> n=0; n&lt;nx; n++) {</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            ex tt = 1;</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> m=0; m&lt;nx; m++) {</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                tt = tt*pow(y(m), tmp(n,m));</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                tt = tt*<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(y(m), tmp(n,m));</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            }</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            transmap[xs[n]] = tt;</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> m=0; m&lt;nx; m++) Dxy(n, m) = <a class="code" href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">diff_ex</a>(tt, y(m));</div>
@@ -537,6 +537,12 @@ $(function() {
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;}</div>
 <div class="ttc" id="a_b_a_s_i_c_2_functions_8cpp_html_ab561f3b42e49eecbec26c4266a6deaea"><div class="ttname"><a href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a></div><div class="ttdeci">int * a</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00221">Functions.cpp:221</a></div></div>
 <div class="ttc" id="a_b_a_s_i_c_8h_html_ab702106cf3b3e96750b6845ded4e0299"><div class="ttname"><a href="_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a></div><div class="ttdeci">#define RESET</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00057">BASIC.h:57</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a0359ad06067786c2a96bdc67cb8578af"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a0359ad06067786c2a96bdc67cb8578af">lcm</a></div><div class="ttdeci">expr lcm(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00319">GiNaCW.cpp:319</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a313a1ef21d69577fc09220d1580666eb"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a></div><div class="ttdeci">expr gcd(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00315">GiNaCW.cpp:315</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a53767bef88dff8c43999603dc9b91866"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a></div><div class="ttdeci">expr pow(const expr &amp;e1, const expr &amp;e2)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00153">GiNaCW.cpp:153</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a72232f396bfa4d6f3b7e36daca0dc594"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a></div><div class="ttdeci">expr lst(const std::vector&lt; expr &gt; &amp;ev)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00347">GiNaCW.cpp:347</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a9ad48c5ab416ac7295c554002193f366"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a></div><div class="ttdeci">expr expand(const expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00126">GiNaCW.cpp:126</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_aa2ee40e9770b5864683d9777e0a20b27"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a></div><div class="ttdeci">expr abs(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00157">GiNaCW.cpp:157</a></div></div>
 <div class="ttc" id="a_s_d_8h_html"><div class="ttname"><a href="_s_d_8h.html">SD.h</a></div><div class="ttdoc">SecDec header file.</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_error_html"><div class="ttname"><a href="class_hep_lib_1_1_error.html">HepLib::Error</a></div><div class="ttdoc">class used to wrap error message</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00139">BASIC.h:139</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_mat_helper_html_a1e0371ffc00e231f8807517aff342079"><div class="ttname"><a href="class_hep_lib_1_1_mat_helper.html#a1e0371ffc00e231f8807517aff342079">HepLib::MatHelper::remove_zero_rows</a></div><div class="ttdeci">static matrix remove_zero_rows(const matrix &amp;mat)</div><div class="ttdoc">remove the zero row</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00371">BASIC.cpp:371</a></div></div>

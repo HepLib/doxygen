@@ -107,7 +107,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        inherited::archive(n);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_symbol.html#aeed3b8fa6d115792f221733fe76140ae">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_symbol.html#aeed3b8fa6d115792f221733fe76140ae">Symbol::read_archive</a>(<span class="keyword">const</span> archive_node&amp; n, lst&amp; sym_lst) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_symbol.html#aeed3b8fa6d115792f221733fe76140ae">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_symbol.html#aeed3b8fa6d115792f221733fe76140ae">Symbol::read_archive</a>(<span class="keyword">const</span> archive_node&amp; n, <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&amp; sym_lst) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        inherited::read_archive(n, sym_lst);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> is_real;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        *<span class="keyword">this</span> = <a class="code" href="class_hep_lib_1_1_symbol.html#acfe660122bfbe069fd78a61c3d569156">Symbol</a>(get_name());</div>
@@ -164,7 +164,7 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        inherited::archive(n);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    </div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1i_symbol.html#ac53c807a42f356a850c6cb3174e2bd16">  130</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1i_symbol.html#ac53c807a42f356a850c6cb3174e2bd16">iSymbol::read_archive</a>(<span class="keyword">const</span> archive_node&amp; n, lst&amp; sym_lst) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1i_symbol.html#ac53c807a42f356a850c6cb3174e2bd16">  130</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1i_symbol.html#ac53c807a42f356a850c6cb3174e2bd16">iSymbol::read_archive</a>(<span class="keyword">const</span> archive_node&amp; n, <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&amp; sym_lst) {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        inherited::read_archive(n, sym_lst);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        *<span class="keyword">this</span> = <a class="code" href="class_hep_lib_1_1i_symbol.html#a48c0707bb771c101484a0cff5c937b13">iSymbol</a>(get_name());</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
@@ -246,7 +246,7 @@ $(function() {
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="comment">// pid = 0, child process</span></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            GiNaC_Parallel_Level++;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                lst res_lst;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> res_lst;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ri=0; ri&lt;nbatch; ri++) {</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <span class="keywordtype">int</span> i = bi*nbatch + ri;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="keywordflow">if</span>(i&lt;ntotal) res_lst.append(f(i));</div>
@@ -390,7 +390,7 @@ $(function() {
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1lst_helper.html#a9399bd30aa77398e76a9eab142ac02d5">  412</a></span>&#160;    ex <a class="code" href="class_hep_lib_1_1lst_helper.html#a9399bd30aa77398e76a9eab142ac02d5">lstHelper::sum</a>(lst m) {</div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1lst_helper.html#a9399bd30aa77398e76a9eab142ac02d5">  412</a></span>&#160;    ex <a class="code" href="class_hep_lib_1_1lst_helper.html#a9399bd30aa77398e76a9eab142ac02d5">lstHelper::sum</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> m) {</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        ex ret = 0;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m.nops(); i++) ret += m.op(i);</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">return</span> ret;</div>
@@ -405,8 +405,8 @@ $(function() {
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
-<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">  437</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">gather_symbols</a>(<span class="keyword">const</span> ex &amp; e) {</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        lst sym_lst;</div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">  437</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">gather_symbols</a>(<span class="keyword">const</span> ex &amp; e) {</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> sym_lst;</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">for</span>(const_preorder_iterator i = e.preorder_begin(); i != e.preorder_end(); ++i) {</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;symbol&gt;(*i)) sym_lst.append(*i);</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        }</div>
@@ -415,8 +415,8 @@ $(function() {
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">return</span> sym_lst;</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    }</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00452"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a3fc38bca4fcf757769c9c4a179934770">  452</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">gather_symbols</a>(<span class="keyword">const</span> vector&lt;ex&gt; &amp; ve) {</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        lst sym_lst;</div>
+<div class="line"><a name="l00452"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a3fc38bca4fcf757769c9c4a179934770">  452</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">gather_symbols</a>(<span class="keyword">const</span> vector&lt;ex&gt; &amp; ve) {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> sym_lst;</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> e : ve) {</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            <span class="keywordflow">for</span>(const_preorder_iterator i = e.preorder_begin(); i != e.preorder_end(); ++i) {</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                <span class="keywordflow">if</span>(is_a&lt;symbol&gt;(*i)) sym_lst.append(*i);</div>
@@ -515,13 +515,13 @@ $(function() {
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    }</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
-<div class="line"><a name="l00600"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">  600</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">str2lst</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;expr, symtab stab) {</div>
+<div class="line"><a name="l00600"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">  600</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">str2lst</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;expr, symtab stab) {</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;        <a class="code" href="class_hep_lib_1_1_parser.html">Parser</a> par(stab);</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        ex ret = par.<a class="code" href="class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39">Read</a>(expr);</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        <span class="keywordflow">return</span> ex_to&lt;lst&gt;(ret);</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    }</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    </div>
-<div class="line"><a name="l00611"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a971d6f26de92f35d259dcd611ef6507e">  611</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">str2lst</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;expr) {</div>
+<div class="line"><a name="l00611"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a971d6f26de92f35d259dcd611ef6507e">  611</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">str2lst</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;expr) {</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        <a class="code" href="class_hep_lib_1_1_parser.html">Parser</a> par;</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        ex ret = par.<a class="code" href="class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39">Read</a>(expr);</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="keywordflow">return</span> ex_to&lt;lst&gt;(ret);</div>
@@ -609,39 +609,39 @@ $(function() {
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        <span class="keywordflow">return</span> ex_to&lt;numeric&gt;(num).to_int();</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    </div>
-<div class="line"><a name="l00767"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#add51fc701b9f47e43a9f57e0bb9dff7c">  767</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#add51fc701b9f47e43a9f57e0bb9dff7c">vec2lst</a>(<span class="keyword">const</span> exvector &amp; exvec) {</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        lst ret;</div>
+<div class="line"><a name="l00767"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#add51fc701b9f47e43a9f57e0bb9dff7c">  767</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#add51fc701b9f47e43a9f57e0bb9dff7c">vec2lst</a>(<span class="keyword">const</span> exvector &amp; exvec) {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ret;</div>
 <div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : exvec) ret.append(item);</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    }</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    </div>
-<div class="line"><a name="l00778"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e">  778</a></span>&#160;    exvector <a class="code" href="namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e">lst2vec</a>(<span class="keyword">const</span> lst &amp; alst) {</div>
+<div class="line"><a name="l00778"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e">  778</a></span>&#160;    exvector <a class="code" href="namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e">lst2vec</a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; alst) {</div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        exvector ret;</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : alst) ret.push_back(item);</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    }</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    </div>
-<div class="line"><a name="l00789"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">  789</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;add&gt;(expr)) <span class="keywordflow">return</span> lst{expr};</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        lst ret;</div>
+<div class="line"><a name="l00789"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">  789</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;add&gt;(expr)) <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{expr};</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ret;</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr) ret.append(item);</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    }</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    </div>
-<div class="line"><a name="l00801"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">  801</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">mul2lst</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;mul&gt;(expr)) <span class="keywordflow">return</span> lst{expr};</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        lst ret;</div>
+<div class="line"><a name="l00801"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">  801</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">mul2lst</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;mul&gt;(expr)) <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{expr};</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ret;</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr) ret.append(item);</div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    }</div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160; </div>
-<div class="line"><a name="l00814"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">  814</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">xlst</a>(<span class="keywordtype">int</span> bi, <span class="keywordtype">int</span> ei) {</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        lst ret;</div>
+<div class="line"><a name="l00814"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">  814</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">xlst</a>(<span class="keywordtype">int</span> bi, <span class="keywordtype">int</span> ei) {</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ret;</div>
 <div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=bi; i&lt;=ei; i++) ret.append(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(i));</div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    }</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    </div>
-<div class="line"><a name="l00825"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a2641d2da4ebebd87ccc557cc90ee5733">  825</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">xlst</a>(<span class="keywordtype">int</span> ei) {</div>
+<div class="line"><a name="l00825"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a2641d2da4ebebd87ccc557cc90ee5733">  825</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">xlst</a>(<span class="keywordtype">int</span> ei) {</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0">xlst</a>(0, ei);</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    }</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160; </div>
@@ -650,11 +650,11 @@ $(function() {
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <span class="keywordflow">if</span>(!expr.has(s0)) <span class="keywordflow">return</span> expr;</div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        </div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        exset sset;</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        expr.find(pow(s0, <a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), sset);</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        expr.find(<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s0, <a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), sset);</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        numeric sn_lcm = 1;</div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        exmap repl1st, repl2nd;</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> pi : sset) {</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keyword">auto</span> sn = expand(pi.op(1));</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keyword">auto</span> sn = <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(pi.op(1));</div>
 <div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <span class="keywordflow">if</span>(!is_a&lt;numeric&gt;(sn)) {</div>
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                ex ex1 = 0, ex2 = 0;</div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(sn)) {</div>
@@ -663,24 +663,24 @@ $(function() {
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                }</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                sn = ex2;</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                <span class="keyword">static</span> symbol sss;</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                repl1st[pi] = sss * pow(s0, sn);</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                repl2nd[sss] = pow(s0, ex1);</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                repl1st[pi] = sss * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s0, sn);</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                repl2nd[sss] = <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s0, ex1);</div>
 <div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            }</div>
 <div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            <span class="keywordflow">if</span>(!(is_a&lt;numeric&gt;(sn) &amp;&amp; ex_to&lt;numeric&gt;(sn).is_rational())) {</div>
 <div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;s = &quot;</span> &lt;&lt; s0 &lt;&lt; endl;</div>
 <div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;expr_in = &quot;</span> &lt;&lt; expr_in &lt;&lt; endl;</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;series_ex: Not rational sn = &quot;</span> + <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">ex2str</a>(sn));</div>
 <div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            }</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            sn_lcm = lcm(sn_lcm, ex_to&lt;numeric&gt;(sn).denom());</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            sn_lcm = <a class="code" href="_gi_na_c_w_8cpp.html#a0359ad06067786c2a96bdc67cb8578af">lcm</a>(sn_lcm, ex_to&lt;numeric&gt;(sn).<a class="code" href="_gi_na_c_w_8cpp.html#a360f00fa2af78494154eb67dbd8621c1">denom</a>());</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        }</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <span class="keywordflow">if</span>(expr.has(sqrt(s0))) sn_lcm = lcm(sn_lcm, numeric(2));</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <span class="keywordflow">if</span>(expr.has(<a class="code" href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">sqrt</a>(s0))) sn_lcm = <a class="code" href="_gi_na_c_w_8cpp.html#a0359ad06067786c2a96bdc67cb8578af">lcm</a>(sn_lcm, numeric(2));</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        expr = expr.subs(repl1st);</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        </div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        <span class="keyword">static</span> symbol s(<span class="stringliteral">&quot;s&quot;</span>);</div>
 <div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="keywordflow">if</span>(!sn_lcm.is_integer()) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;series_ex: Not integer with &quot;</span> + <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">ex2str</a>(sn_lcm));</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keywordflow">if</span>(sn_lcm&lt;0) sn_lcm = numeric(0)-sn_lcm;</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordtype">int</span> sn = sn0 * sn_lcm.to_int();</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        expr = expr.subs(pow(s0,<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==pow(s,<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>*sn_lcm)).subs(sqrt(s0)==pow(s,sn_lcm/2)).subs(s0==pow(s,sn_lcm));</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        expr = expr.subs(<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s0,<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s,<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>*sn_lcm)).subs(<a class="code" href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">sqrt</a>(s0)==<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s,sn_lcm/2)).subs(s0==<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s,sn_lcm));</div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        </div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        ex cvs = <a class="code" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1">collect_lst</a>(expr,s);</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        ex ret = 0;</div>
@@ -688,7 +688,7 @@ $(function() {
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;            <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>; </div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;            <span class="keywordtype">int</span> exN = 1;</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;            <span class="keywordflow">while</span>(exN&lt;10) {</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                expr = cv.op(1) + pow(s,sn+exN+2)+pow(s,sn+exN+3);</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                expr = cv.op(1) + <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s,sn+exN+2)+<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s,sn+exN+3);</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                expr = expr.series(s,sn+exN);</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;                ex ot = 0;</div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;expr.nops(); i++) {</div>
@@ -705,7 +705,7 @@ $(function() {
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;                    expr = series_to_poly(expr);</div>
 <div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;                    expr = <a class="code" href="namespace_hep_lib.html#a262b9ad6711f38106bddb2fd64e1dcb6">collect_ex</a>(expr,s);</div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=expr.ldegree(s); (i&lt;=expr.degree(s) &amp;&amp; i&lt;=sn); i++) {</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;                        ret += cv.op(0) * expr.coeff(s,i) * pow(s0,ex(i)/sn_lcm);</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;                        ret += cv.op(0) * expr.coeff(s,i) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s0,ex(i)/sn_lcm);</div>
 <div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;                    }</div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;                    ok = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;                    <span class="keywordflow">break</span>;</div>
@@ -715,16 +715,16 @@ $(function() {
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;            }</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;            <span class="keywordflow">if</span>(!ok) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;series_ex seems not working!&quot;</span>);</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        }</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        ret = ret.subs(s==pow(s0,ex(1)/sn_lcm)); <span class="comment">// need this for log-terms</span></div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        ret = ret.subs(s==<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(s0,ex(1)/sn_lcm)); <span class="comment">// need this for log-terms</span></div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        ret = ret.subs(repl2nd);</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        ret = <a class="code" href="namespace_hep_lib.html#a262b9ad6711f38106bddb2fd64e1dcb6">collect_ex</a>(ret,s0);</div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    }</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160; </div>
-<div class="line"><a name="l00920"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">  920</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">diff_ex</a>(ex <span class="keyword">const</span> expr, ex <span class="keyword">const</span> xp, <span class="keywordtype">unsigned</span> nth, <span class="keywordtype">bool</span> expand) {</div>
+<div class="line"><a name="l00920"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">  920</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">diff_ex</a>(ex <span class="keyword">const</span> expr, ex <span class="keyword">const</span> xp, <span class="keywordtype">unsigned</span> nth, <span class="keywordtype">bool</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>) {</div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;        symbol s;</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        ex res = expr.subs(xp==s);</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;        <span class="keywordflow">if</span>(!expand) <span class="keywordflow">return</span> res.diff(s,nth).subs(s==xp);</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>) <span class="keywordflow">return</span> res.diff(s,nth).subs(s==xp);</div>
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;        <span class="keyword">auto</span> cvs = <a class="code" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1">collect_lst</a>(res, s);</div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        res = 0;</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> cv : cvs) {</div>
@@ -829,17 +829,17 @@ $(function() {
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;        <span class="keywordflow">return</span> res;</div>
 <div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    }</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    </div>
-<div class="line"><a name="l01050"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1"> 1050</a></span>&#160;    lst <a class="code" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1">collect_lst</a>(ex <span class="keyword">const</span> &amp;expr_in, std::function&lt;<span class="keywordtype">bool</span>(<span class="keyword">const</span> ex &amp;)&gt; has_func, <span class="keywordtype">int</span> opt) {</div>
+<div class="line"><a name="l01050"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1"> 1050</a></span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="namespace_hep_lib.html#ab30d571be541a4f4ef4549f87b37f7d1">collect_lst</a>(ex <span class="keyword">const</span> &amp;expr_in, std::function&lt;<span class="keywordtype">bool</span>(<span class="keyword">const</span> ex &amp;)&gt; has_func, <span class="keywordtype">int</span> opt) {</div>
 <div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;        <span class="keyword">auto</span> co_epv = <a class="code" href="namespace_hep_lib.html#ac57e11b281dc3e3837cfd1b0ecbd1488">inner_expand_collect</a>(expr_in, has_func);</div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;        ex cf = co_epv.first;</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;        lst res_lst;</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;        <span class="keywordflow">if</span>(!is_zero(cf)) res_lst.append(lst{cf,1});</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> res_lst;</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;        <span class="keywordflow">if</span>(!is_zero(cf)) res_lst.append(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{cf,1});</div>
 <div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> <a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a> : co_epv.second) {</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;            ex vv = <a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a>.first;</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;            ex cc = <a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a>.second;</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;            <span class="keywordflow">if</span>(opt==1) cc = <a class="code" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54">exnormal</a>(cc);</div>
 <div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(opt==2) cc = <a class="code" href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036">exfactor</a>(cc);</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;            <span class="keywordflow">if</span>(!is_zero(cc)) res_lst.append(lst{cc, vv});</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;            <span class="keywordflow">if</span>(!is_zero(cc)) res_lst.append(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{cc, vv});</div>
 <div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;        }</div>
 <div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;        <span class="keywordflow">return</span> res_lst;</div>
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    }</div>
@@ -847,27 +847,27 @@ $(function() {
 <div class="line"><a name="l01070"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1a05013354fdf62cccc7c86f6883c89a"> 1070</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a1a05013354fdf62cccc7c86f6883c89a">EvalF</a>(ex expr) {</div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;        exset zs;</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;        <span class="comment">//patterns needing evalf()</span></div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;        expr.find(zeta(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), zs);</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;        expr.find(zeta(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>,<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), zs);</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;        expr.find(<a class="code" href="_gi_na_c_w_8cpp.html#a92515dc18d7d5fa7b145320b753982e6">zeta</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), zs);</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;        expr.find(<a class="code" href="_gi_na_c_w_8cpp.html#a92515dc18d7d5fa7b145320b753982e6">zeta</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>,<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), zs);</div>
 <div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;        </div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;        lst repl;</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> repl;</div>
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> zi : zs) repl.append(zi==<a class="code" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">NN</a>(zi));</div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;        <span class="keywordflow">return</span> expr.subs(repl);</div>
 <div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    }</div>
 <div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    </div>
 <div class="line"><a name="l01081"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a223a8e82534cc68e0f773ffb07ceb03e"> 1081</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a223a8e82534cc68e0f773ffb07ceb03e">EvalL</a>(ex expr) {</div>
 <div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;        <span class="keyword">static</span> symbol sPi(<span class="stringliteral">&quot;dPi&quot;</span>), sEuler(<span class="stringliteral">&quot;dEuler&quot;</span>), siEpsilon(<span class="stringliteral">&quot;diEpsilon&quot;</span>);</div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;        lst repl = lst{Pi==sPi, Euler==sEuler,<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==siEpsilon};</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> repl = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{Pi==sPi, Euler==sEuler,<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==siEpsilon};</div>
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a1a05013354fdf62cccc7c86f6883c89a">EvalF</a>(expr.subs(repl));</div>
 <div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    }</div>
 <div class="line"><a name="l01086"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a4b24518fb3855fffc8f86fe50911a630"> 1086</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a4b24518fb3855fffc8f86fe50911a630">EvalQ</a>(ex expr) {</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;        <span class="keyword">static</span> symbol sPi(<span class="stringliteral">&quot;qPi&quot;</span>), sEuler(<span class="stringliteral">&quot;qEuler&quot;</span>), siEpsilon(<span class="stringliteral">&quot;qiEpsilon&quot;</span>);</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;        lst repl = lst{Pi==sPi, Euler==sEuler,<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==siEpsilon};</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> repl = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{Pi==sPi, Euler==sEuler,<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==siEpsilon};</div>
 <div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a1a05013354fdf62cccc7c86f6883c89a">EvalF</a>(expr.subs(repl));</div>
 <div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    }</div>
 <div class="line"><a name="l01091"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a9d2a97e91ff71668b3515a9a1d400c79"> 1091</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a9d2a97e91ff71668b3515a9a1d400c79">EvalMP</a>(ex expr) {</div>
 <div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;        <span class="keyword">static</span> symbol sPi(<span class="stringliteral">&quot;mpPi&quot;</span>), sEuler(<span class="stringliteral">&quot;mpEuler&quot;</span>), siEpsilon(<span class="stringliteral">&quot;mpiEpsilon&quot;</span>);</div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;        lst repl = lst{Pi==sPi, Euler==sEuler,<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==siEpsilon};</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> repl = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{Pi==sPi, Euler==sEuler,<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==siEpsilon};</div>
 <div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a1a05013354fdf62cccc7c86f6883c89a">EvalF</a>(expr.subs(repl));</div>
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    }</div>
 <div class="line"><a name="l01096"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1"> 1096</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">NN</a>(ex expr, <span class="keywordtype">int</span> digits) {</div>
@@ -879,17 +879,17 @@ $(function() {
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;    }</div>
 <div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160; </div>
 <div class="line"><a name="l01109"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a2bab64cb52f109321f0300cd68e3a1df"> 1109</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespace_hep_lib.html#a2bab64cb52f109321f0300cd68e3a1df">xPositive</a>(ex <span class="keyword">const</span> expr) {</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;        <span class="keyword">auto</span> tmp = expand(expr);</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;        <span class="keyword">auto</span> tmp = <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;        <span class="keywordflow">if</span>(tmp.is_zero()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;        <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;        <span class="keywordflow">if</span>(is_a&lt;add&gt;(tmp)) {</div>
 <div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : tmp) {</div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;                <span class="keyword">auto</span> nit = <a class="code" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">NN</a>(item.subs(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1).normal());</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;                <span class="keyword">auto</span> nit = <a class="code" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">NN</a>(item.subs(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1).<a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>());</div>
 <div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;                <span class="keywordflow">if</span>(!is_a&lt;numeric&gt;(nit) || nit&lt;0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;            }</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;            ret = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;            <span class="keyword">auto</span> ntmp = <a class="code" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">NN</a>(tmp.subs(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1).normal());</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;            <span class="keyword">auto</span> ntmp = <a class="code" href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">NN</a>(tmp.subs(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1).<a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>());</div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;            ret = (is_a&lt;numeric&gt;(ntmp) &amp;&amp; ntmp&gt;0);</div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;        }</div>
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;        <span class="keywordflow">return</span> ret;</div>
@@ -932,7 +932,7 @@ $(function() {
 <div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;        ex_in.let_op(index) = tmp;</div>
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;    }</div>
 <div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    </div>
-<div class="line"><a name="l01198"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a911bd625e7fec17a2d6084beda08764a"> 1198</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#abe52ec1557d2e1b89d8d5422b3c53287">let_op_append</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index, ex <span class="keyword">const</span> item) {</div>
+<div class="line"><a name="l01198"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a911bd625e7fec17a2d6084beda08764a"> 1198</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#abe52ec1557d2e1b89d8d5422b3c53287">let_op_append</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index, ex <span class="keyword">const</span> item) {</div>
 <div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index));</div>
 <div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;        tmp.append(item);</div>
 <div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;        ex_in.let_op(index) = tmp;</div>
@@ -944,7 +944,7 @@ $(function() {
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
 <div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    }</div>
 <div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    </div>
-<div class="line"><a name="l01224"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a141716bebb9cd247054ae73afca3023d"> 1224</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#abe52ec1557d2e1b89d8d5422b3c53287">let_op_append</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, ex <span class="keyword">const</span> item) {</div>
+<div class="line"><a name="l01224"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a141716bebb9cd247054ae73afca3023d"> 1224</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#abe52ec1557d2e1b89d8d5422b3c53287">let_op_append</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, ex <span class="keyword">const</span> item) {</div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index1).op(index2));</div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;        tmp.append(item);</div>
 <div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
@@ -956,7 +956,7 @@ $(function() {
 <div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;        ex_in.let_op(index) = tmp;</div>
 <div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;    }</div>
 <div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;    </div>
-<div class="line"><a name="l01248"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a33bd6c1e23214f189018c8853e0e7a13"> 1248</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a1fa0c3f74240ea9656e4e31269af3c80">let_op_prepend</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index, ex <span class="keyword">const</span> item) {</div>
+<div class="line"><a name="l01248"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a33bd6c1e23214f189018c8853e0e7a13"> 1248</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a1fa0c3f74240ea9656e4e31269af3c80">let_op_prepend</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index, ex <span class="keyword">const</span> item) {</div>
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index));</div>
 <div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;        tmp.prepend(item);</div>
 <div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;        ex_in.let_op(index) = tmp;</div>
@@ -968,7 +968,7 @@ $(function() {
 <div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
 <div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    }</div>
 <div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;    </div>
-<div class="line"><a name="l01274"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a82d35652048f19755c7c2bf61adbae60"> 1274</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a1fa0c3f74240ea9656e4e31269af3c80">let_op_prepend</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, ex <span class="keyword">const</span> item) {</div>
+<div class="line"><a name="l01274"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a82d35652048f19755c7c2bf61adbae60"> 1274</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a1fa0c3f74240ea9656e4e31269af3c80">let_op_prepend</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, ex <span class="keyword">const</span> item) {</div>
 <div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index1).op(index2));</div>
 <div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;        tmp.prepend(item);</div>
 <div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
@@ -980,7 +980,7 @@ $(function() {
 <div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;        ex_in.let_op(index) = tmp;</div>
 <div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;    }</div>
 <div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;    </div>
-<div class="line"><a name="l01296"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a60c1b2c4c422483130637cae1a698f97"> 1296</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ae3d6d415e88038901d36c41e30802134">let_op_remove_last</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l01296"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a60c1b2c4c422483130637cae1a698f97"> 1296</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ae3d6d415e88038901d36c41e30802134">let_op_remove_last</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index) {</div>
 <div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index));</div>
 <div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;        tmp.remove_last();</div>
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;        ex_in.let_op(index) = tmp;</div>
@@ -992,7 +992,7 @@ $(function() {
 <div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
 <div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;    }</div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;    </div>
-<div class="line"><a name="l01320"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1f0830d763f640b1e2d005db417416f9"> 1320</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ae3d6d415e88038901d36c41e30802134">let_op_remove_last</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) {</div>
+<div class="line"><a name="l01320"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1f0830d763f640b1e2d005db417416f9"> 1320</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ae3d6d415e88038901d36c41e30802134">let_op_remove_last</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) {</div>
 <div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index1).op(index2));</div>
 <div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;        tmp.remove_last();</div>
 <div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
@@ -1004,7 +1004,7 @@ $(function() {
 <div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;        ex_in.let_op(index) = tmp;</div>
 <div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;    }</div>
 <div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;    </div>
-<div class="line"><a name="l01342"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a84fdcc7dc73a99b61e0b2c63010985fe"> 1342</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ac1fb2eaa26265b14be15b575d34f2c5f">let_op_remove_first</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l01342"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a84fdcc7dc73a99b61e0b2c63010985fe"> 1342</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ac1fb2eaa26265b14be15b575d34f2c5f">let_op_remove_first</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index) {</div>
 <div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index));</div>
 <div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;        tmp.remove_first();</div>
 <div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;        ex_in.let_op(index) = tmp;</div>
@@ -1016,7 +1016,7 @@ $(function() {
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
 <div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;    }</div>
 <div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;    </div>
-<div class="line"><a name="l01366"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a55cb6357698a78f975c2c257328ef953"> 1366</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ac1fb2eaa26265b14be15b575d34f2c5f">let_op_remove_first</a>(lst &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) {</div>
+<div class="line"><a name="l01366"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a55cb6357698a78f975c2c257328ef953"> 1366</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ac1fb2eaa26265b14be15b575d34f2c5f">let_op_remove_first</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) {</div>
 <div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;        <span class="keyword">auto</span> tmp = ex_to&lt;lst&gt;(ex_in.op(index1).op(index2));</div>
 <div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;        tmp.remove_first();</div>
 <div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;        ex_in.let_op(index1).let_op(index2) = tmp;</div>
@@ -1026,7 +1026,7 @@ $(function() {
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;        ex_in.let_op(index1).let_op(index2) = item;</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;    }</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;    </div>
-<div class="line"><a name="l01390"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a37f8fa8a059b49f2d436cfadd250c8e7"> 1390</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a22a69a641b107b6f4baf60d5cbcce420">let_op</a>(lst &amp;ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, <span class="keyword">const</span> ex item) {</div>
+<div class="line"><a name="l01390"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a37f8fa8a059b49f2d436cfadd250c8e7"> 1390</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a22a69a641b107b6f4baf60d5cbcce420">let_op</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, <span class="keyword">const</span> ex item) {</div>
 <div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;        ex_in.let_op(index1).let_op(index2) = item;</div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;    }</div>
 <div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;    </div>
@@ -1034,7 +1034,7 @@ $(function() {
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;        ex_in.let_op(index1).let_op(index2).let_op(index3) = item;</div>
 <div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;    }</div>
 <div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160;    </div>
-<div class="line"><a name="l01414"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a54b3e05190b1ee927c62091a8b78e544"> 1414</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a22a69a641b107b6f4baf60d5cbcce420">let_op</a>(lst &amp;ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, <span class="keywordtype">int</span> index3, <span class="keyword">const</span> ex item) {</div>
+<div class="line"><a name="l01414"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a54b3e05190b1ee927c62091a8b78e544"> 1414</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#a22a69a641b107b6f4baf60d5cbcce420">let_op</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, <span class="keywordtype">int</span> index3, <span class="keyword">const</span> ex item) {</div>
 <div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;        ex_in.let_op(index1).let_op(index2).let_op(index3) = item;</div>
 <div class="line"><a name="l01416"></a><span class="lineno"> 1416</span>&#160;    }</div>
 <div class="line"><a name="l01417"></a><span class="lineno"> 1417</span>&#160; </div>
@@ -1042,7 +1042,7 @@ $(function() {
 <div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;        <span class="keywordflow">return</span> ex_in.op(index1).op(index2);</div>
 <div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;    }</div>
 <div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;    </div>
-<div class="line"><a name="l01436"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aebefce0597c037412991e3086f3be7ec"> 1436</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a8d407817a376bd000c7da59f2f2a8bb2">get_op</a>(<span class="keyword">const</span> lst ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) {</div>
+<div class="line"><a name="l01436"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aebefce0597c037412991e3086f3be7ec"> 1436</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a8d407817a376bd000c7da59f2f2a8bb2">get_op</a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) {</div>
 <div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;        <span class="keywordflow">return</span> ex_in.op(index1).op(index2);</div>
 <div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;    }</div>
 <div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;    </div>
@@ -1050,7 +1050,7 @@ $(function() {
 <div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;        <span class="keywordflow">return</span> ex_in.op(index1).op(index2).op(index3);</div>
 <div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;    }</div>
 <div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;    </div>
-<div class="line"><a name="l01460"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#afbe188eb11523b5deb6a01fc61f141c7"> 1460</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a8d407817a376bd000c7da59f2f2a8bb2">get_op</a>(<span class="keyword">const</span> lst ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, <span class="keywordtype">int</span> index3) {</div>
+<div class="line"><a name="l01460"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#afbe188eb11523b5deb6a01fc61f141c7"> 1460</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a8d407817a376bd000c7da59f2f2a8bb2">get_op</a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ex_in, <span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2, <span class="keywordtype">int</span> index3) {</div>
 <div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;        <span class="keywordflow">return</span> ex_in.op(index1).op(index2).op(index3);</div>
 <div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;    }</div>
 <div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;    </div>
@@ -1134,7 +1134,7 @@ $(function() {
 <div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;                bn = b.op(1);</div>
 <div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;            }</div>
 <div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;            <span class="keywordflow">if</span>(!ae.is_equal(be)) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a>(ae,be);</div>
-<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;            <span class="keywordflow">if</span>(an.info(info_flags::real) &amp;&amp; bn.info(info_flags::real)) <span class="keywordflow">return</span> (an&lt;bn);</div>
+<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;            <span class="keywordflow">if</span>(an.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; bn.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>)) <span class="keywordflow">return</span> (an&lt;bn);</div>
 <div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;            <span class="keywordflow">if</span>(!is_zero(an-bn)) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a>(an,bn);</div>
 <div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;        }</div>
@@ -1214,7 +1214,7 @@ $(function() {
 <div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">ex2str</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>) &lt; <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">ex2str</a>(b));</div>
 <div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;    }</div>
 <div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;     </div>
-<div class="line"><a name="l01629"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084"> 1629</a></span>&#160;     <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(lst &amp; ilst, <span class="keywordtype">bool</span> less) {</div>
+<div class="line"><a name="l01629"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084"> 1629</a></span>&#160;     <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ilst, <span class="keywordtype">bool</span> less) {</div>
 <div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;        <span class="keyword">auto</span> ivec = <a class="code" href="namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e">lst2vec</a>(ilst);</div>
 <div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;        std::sort(ivec.begin(), ivec.end(), <a class="code" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a>);</div>
 <div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;        <span class="keyword">auto</span> n = ivec.size();</div>
@@ -1222,7 +1222,7 @@ $(function() {
 <div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;n; i++) ilst.let_op(i) = ivec[n-1-i];</div>
 <div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;     }</div>
 <div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;     </div>
-<div class="line"><a name="l01643"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c"> 1643</a></span>&#160;     <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">sort_lst_by</a>(lst &amp; ilst, <span class="keywordtype">int</span> ki, <span class="keywordtype">bool</span> less) {</div>
+<div class="line"><a name="l01643"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c"> 1643</a></span>&#160;     <span class="keywordtype">void</span> <a class="code" href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">sort_lst_by</a>(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; ilst, <span class="keywordtype">int</span> ki, <span class="keywordtype">bool</span> less) {</div>
 <div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;        <span class="keyword">auto</span> ivec = <a class="code" href="namespace_hep_lib.html#a895901421956cf07a866f9f325e5fb3e">lst2vec</a>(ilst);</div>
 <div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;        std::sort(ivec.begin(), ivec.end(), [ki](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;bs){</div>
 <div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;            return ex_less(as.op(ki),bs.op(ki));</div>
@@ -1298,7 +1298,7 @@ $(function() {
 <div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160;        n.add_ex(<span class="stringliteral">&quot;Deltas&quot;</span>, <a class="code" href="class_hep_lib_1_1_x_integral.html#a83511898d2f68379cb9f1c46a21fa7e8">Deltas</a>);</div>
 <div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;    }</div>
 <div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;    </div>
-<div class="line"><a name="l01730"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_x_integral.html#a6936c60c0605cf017af4ec742d538594"> 1730</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_x_integral.html#a6936c60c0605cf017af4ec742d538594">XIntegral::read_archive</a>(<span class="keyword">const</span> archive_node&amp; n, lst&amp; sym_lst) {</div>
+<div class="line"><a name="l01730"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_x_integral.html#a6936c60c0605cf017af4ec742d538594"> 1730</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_x_integral.html#a6936c60c0605cf017af4ec742d538594">XIntegral::read_archive</a>(<span class="keyword">const</span> archive_node&amp; n, <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&amp; sym_lst) {</div>
 <div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;        inherited::read_archive(n, sym_lst);</div>
 <div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;        n.find_ex(<span class="stringliteral">&quot;Functions&quot;</span>, <a class="code" href="class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc">Functions</a>, sym_lst);</div>
 <div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;        n.find_ex(<span class="stringliteral">&quot;Exponents&quot;</span>, <a class="code" href="class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92">Exponents</a>, sym_lst);</div>
@@ -1315,9 +1315,9 @@ $(function() {
 <div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;        ex <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a> = 0;</div>
 <div class="line"><a name="l01745"></a><span class="lineno"> 1745</span>&#160;        ex pre = 1;</div>
 <div class="line"><a name="l01746"></a><span class="lineno"> 1746</span>&#160;        ex rem = 0;</div>
-<div class="line"><a name="l01747"></a><span class="lineno"> 1747</span>&#160;        lst delta;</div>
+<div class="line"><a name="l01747"></a><span class="lineno"> 1747</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> delta;</div>
 <div class="line"><a name="l01748"></a><span class="lineno"> 1748</span>&#160;        <span class="keywordtype">int</span> xni = 0;</div>
-<div class="line"><a name="l01749"></a><span class="lineno"> 1749</span>&#160;        lst funs, exps;</div>
+<div class="line"><a name="l01749"></a><span class="lineno"> 1749</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> funs, exps;</div>
 <div class="line"><a name="l01750"></a><span class="lineno"> 1750</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;ps.nops(); i++) {</div>
 <div class="line"><a name="l01751"></a><span class="lineno"> 1751</span>&#160;            <span class="keywordflow">if</span>(is_zero(ns.op(i))) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l01752"></a><span class="lineno"> 1752</span>&#160;            <span class="keyword">auto</span> cpi = <a class="code" href="class_hep_lib_1_1_symbol.html#a6268b5d0fcb14330e009b987241399c4">Symbol::set_all</a>(ps.op(i).expand());</div>
@@ -1331,7 +1331,7 @@ $(function() {
 <div class="line"><a name="l01760"></a><span class="lineno"> 1760</span>&#160;            </div>
 <div class="line"><a name="l01761"></a><span class="lineno"> 1761</span>&#160;            ex sgn = 0;</div>
 <div class="line"><a name="l01762"></a><span class="lineno"> 1762</span>&#160;            <span class="keywordflow">if</span>(!ltQ) {</div>
-<div class="line"><a name="l01763"></a><span class="lineno"> 1763</span>&#160;                pre *= pow(<a class="code" href="class_hep_lib_1_1_symbol.html#a6268b5d0fcb14330e009b987241399c4">Symbol::set_all</a>(ps.op(i).expand()), ex(0)-ns.op(i));</div>
+<div class="line"><a name="l01763"></a><span class="lineno"> 1763</span>&#160;                pre *= <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="class_hep_lib_1_1_symbol.html#a6268b5d0fcb14330e009b987241399c4">Symbol::set_all</a>(ps.op(i).expand()), ex(0)-ns.op(i));</div>
 <div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;                ns.let_op(i) = 0;</div>
 <div class="line"><a name="l01765"></a><span class="lineno"> 1765</span>&#160;                ps.let_op(i) = 1;</div>
 <div class="line"><a name="l01766"></a><span class="lineno"> 1766</span>&#160;                <span class="keywordflow">continue</span>;</div>
@@ -1360,8 +1360,8 @@ $(function() {
 <div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;                <span class="keywordflow">else</span> sgn = 1;</div>
 <div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;            }</div>
 <div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;            </div>
-<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;            cpi = (ps.op(i)*sgn).subs(<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==0);</div>
-<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;            <span class="keywordflow">if</span>(sgn==-1) pre *= exp(I * Pi * ns.op(i));</div>
+<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;            cpi = (ps.op(i)*sgn).<a class="code" href="_gi_na_c_w_8cpp.html#a42860230e57879d9ceea44bf42cc536d">subs</a>(<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>==0);</div>
+<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;            <span class="keywordflow">if</span>(sgn==-1) pre *= <a class="code" href="_gi_na_c_w_8cpp.html#afa1126ee1186d06092ad7b1f87b01973">exp</a>(I * Pi * ns.op(i));</div>
 <div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;            <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a> += ns.op(i);</div>
 <div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;            <span class="keyword">auto</span> xi = <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>(xni);</div>
 <div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;            rem += xi * cpi;</div>
@@ -1370,12 +1370,12 @@ $(function() {
 <div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;                funs.append(xi);</div>
 <div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;                exps.append(ns.op(i)-1);</div>
 <div class="line"><a name="l01801"></a><span class="lineno"> 1801</span>&#160;            }</div>
-<div class="line"><a name="l01802"></a><span class="lineno"> 1802</span>&#160;            pre /= tgamma(ns.op(i));</div>
+<div class="line"><a name="l01802"></a><span class="lineno"> 1802</span>&#160;            pre /= <a class="code" href="_gi_na_c_w_8cpp.html#a95a5c8e9c25fe5adb0b1f14830c5de00">tgamma</a>(ns.op(i));</div>
 <div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;            xni++;</div>
 <div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160;        }</div>
 <div class="line"><a name="l01805"></a><span class="lineno"> 1805</span>&#160;        rem = <a class="code" href="class_hep_lib_1_1_symbol.html#a6268b5d0fcb14330e009b987241399c4">Symbol::set_all</a>(rem.expand());</div>
 <div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;        ex dl2 = loops.nops()*(4-2*<a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a>)/2;</div>
-<div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;        pre *= tgamma(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>-dl2) * pow(I,loops.nops()) * pow(Pi,dl2) * pow(2*Pi,loops.nops()*(2*<a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a>-4));</div>
+<div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;        pre *= <a class="code" href="_gi_na_c_w_8cpp.html#a95a5c8e9c25fe5adb0b1f14830c5de00">tgamma</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>-dl2) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(I,loops.nops()) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(Pi,dl2) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(2*Pi,loops.nops()*(2*<a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a>-4));</div>
 <div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160;        </div>
 <div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;        <span class="comment">// Loop</span></div>
 <div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;        ex u=1;</div>
@@ -1385,15 +1385,15 @@ $(function() {
 <div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;            ex t0 = rem.coeff(loops.op(i),0);</div>
 <div class="line"><a name="l01815"></a><span class="lineno"> 1815</span>&#160;            u *= (-t2);</div>
 <div class="line"><a name="l01816"></a><span class="lineno"> 1816</span>&#160;            <span class="keywordflow">if</span>(t2==0) {</div>
-<div class="line"><a name="l01817"></a><span class="lineno"> 1817</span>&#160;                <a class="code" href="class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc">Functions</a> = lst{0};</div>
-<div class="line"><a name="l01818"></a><span class="lineno"> 1818</span>&#160;                <a class="code" href="class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92">Exponents</a> = lst{1};</div>
+<div class="line"><a name="l01817"></a><span class="lineno"> 1817</span>&#160;                <a class="code" href="class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc">Functions</a> = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{0};</div>
+<div class="line"><a name="l01818"></a><span class="lineno"> 1818</span>&#160;                <a class="code" href="class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92">Exponents</a> = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{1};</div>
 <div class="line"><a name="l01819"></a><span class="lineno"> 1819</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l01820"></a><span class="lineno"> 1820</span>&#160;            }</div>
-<div class="line"><a name="l01821"></a><span class="lineno"> 1821</span>&#160;            rem = (t0 - pow(t1,2)/(4*t2)).expand();</div>
+<div class="line"><a name="l01821"></a><span class="lineno"> 1821</span>&#160;            rem = (t0 - <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(t1,2)/(4*t2)).expand();</div>
 <div class="line"><a name="l01822"></a><span class="lineno"> 1822</span>&#160;        }</div>
 <div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160;        rem = <a class="code" href="class_hep_lib_1_1_symbol.html#a6268b5d0fcb14330e009b987241399c4">Symbol::set_all</a>(rem).normal();</div>
 <div class="line"><a name="l01824"></a><span class="lineno"> 1824</span>&#160;        u = <a class="code" href="class_hep_lib_1_1_symbol.html#a6268b5d0fcb14330e009b987241399c4">Symbol::set_all</a>(u).normal();</div>
-<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;        rem = (rem * u).normal();</div>
+<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;        rem = (rem * u).<a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>();</div>
 <div class="line"><a name="l01826"></a><span class="lineno"> 1826</span>&#160;        </div>
 <div class="line"><a name="l01827"></a><span class="lineno"> 1827</span>&#160;        funs.prepend(rem);</div>
 <div class="line"><a name="l01828"></a><span class="lineno"> 1828</span>&#160;        exps.prepend(dl2-<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>);</div>
@@ -1409,7 +1409,7 @@ $(function() {
 <div class="line"><a name="l01838"></a><span class="lineno"> 1838</span>&#160;        </div>
 <div class="line"><a name="l01839"></a><span class="lineno"> 1839</span>&#160;        <a class="code" href="class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc">Functions</a> = funs;</div>
 <div class="line"><a name="l01840"></a><span class="lineno"> 1840</span>&#160;        <a class="code" href="class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92">Exponents</a> = exps;</div>
-<div class="line"><a name="l01841"></a><span class="lineno"> 1841</span>&#160;        <a class="code" href="class_hep_lib_1_1_x_integral.html#a83511898d2f68379cb9f1c46a21fa7e8">Deltas</a> = lst{delta};</div>
+<div class="line"><a name="l01841"></a><span class="lineno"> 1841</span>&#160;        <a class="code" href="class_hep_lib_1_1_x_integral.html#a83511898d2f68379cb9f1c46a21fa7e8">Deltas</a> = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{delta};</div>
 <div class="line"><a name="l01842"></a><span class="lineno"> 1842</span>&#160;    }</div>
 <div class="line"><a name="l01843"></a><span class="lineno"> 1843</span>&#160;    </div>
 <div class="line"><a name="l01848"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a8021ec426600ae28f6bae7635c7ba10f"> 1848</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespace_hep_lib.html#a8021ec426600ae28f6bae7635c7ba10f">CpuCores</a>() {</div>
@@ -1432,7 +1432,7 @@ $(function() {
 <div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160;        exmap map_rat;</div>
 <div class="line"><a name="l01872"></a><span class="lineno"> 1872</span>&#160;        expr_in = expr_in.to_rational(map_rat);</div>
 <div class="line"><a name="l01873"></a><span class="lineno"> 1873</span>&#160;        </div>
-<div class="line"><a name="l01874"></a><span class="lineno"> 1874</span>&#160;        lst rep_vs;</div>
+<div class="line"><a name="l01874"></a><span class="lineno"> 1874</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> rep_vs;</div>
 <div class="line"><a name="l01875"></a><span class="lineno"> 1875</span>&#160;        map&lt;ex,long long,ex_is_less&gt; s2c;</div>
 <div class="line"><a name="l01876"></a><span class="lineno"> 1876</span>&#160;        <span class="keywordflow">for</span>(const_preorder_iterator i = expr_in.preorder_begin(); i != expr_in.preorder_end(); ++i) {</div>
 <div class="line"><a name="l01877"></a><span class="lineno"> 1877</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;symbol&gt;(*i)) {</div>
@@ -1447,7 +1447,7 @@ $(function() {
 <div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;        <span class="keyword">auto</span> rep_vs_tot = rep_vs.nops();</div>
 <div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;rep_vs_tot; i++) {</div>
 <div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;            <span class="keyword">auto</span> ss = rep_vs.op(i);</div>
-<div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;            vs_vec_sort.push_back(lst{ s2c[ss], ss.subs(map_rat), ss });</div>
+<div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;            vs_vec_sort.push_back(<a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{ s2c[ss], ss.subs(map_rat), ss });</div>
 <div class="line"><a name="l01890"></a><span class="lineno"> 1890</span>&#160;        }</div>
 <div class="line"><a name="l01891"></a><span class="lineno"> 1891</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab3fb75be8b0bd9d69eda7576c4a304a0">sort_vec</a>(vs_vec_sort);</div>
 <div class="line"><a name="l01892"></a><span class="lineno"> 1892</span>&#160;        rep_vs.remove_all();</div>
@@ -1481,9 +1481,9 @@ $(function() {
 <div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;        }</div>
 <div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;        </div>
 <div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160;        ex nn_chk(1), num(1), den(1);</div>
-<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;mul&gt;(expr_in)) expr_in = lst{expr_in};</div>
+<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;mul&gt;(expr_in)) expr_in = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{expr_in};</div>
 <div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr_in) {</div>
-<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;            <span class="keywordflow">if</span>(!is_a&lt;add&gt;(item)) item = lst{item};</div>
+<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;            <span class="keywordflow">if</span>(!is_a&lt;add&gt;(item)) item = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{item};</div>
 <div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;Array m[&quot;</span> &lt;&lt; item.nops() &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;            <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;res:=0;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
@@ -1546,7 +1546,7 @@ $(function() {
 <div class="line"><a name="l01985"></a><span class="lineno"> 1985</span>&#160;        }</div>
 <div class="line"><a name="l01986"></a><span class="lineno"> 1986</span>&#160;        <span class="comment">//fermat.Exit();</span></div>
 <div class="line"><a name="l01987"></a><span class="lineno"> 1987</span>&#160;                </div>
-<div class="line"><a name="l01988"></a><span class="lineno"> 1988</span>&#160;        <span class="keyword">auto</span> nn_ret = subs(num/den,nn_map);</div>
+<div class="line"><a name="l01988"></a><span class="lineno"> 1988</span>&#160;        <span class="keyword">auto</span> nn_ret = <a class="code" href="_gi_na_c_w_8cpp.html#a42860230e57879d9ceea44bf42cc536d">subs</a>(num/den,nn_map);</div>
 <div class="line"><a name="l01989"></a><span class="lineno"> 1989</span>&#160;        <span class="keywordflow">if</span>(nn_chk-nn_ret!=0) {</div>
 <div class="line"><a name="l01990"></a><span class="lineno"> 1990</span>&#160;            cout &lt;&lt; nn_chk &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; nn_ret &lt;&lt; endl;</div>
 <div class="line"><a name="l01991"></a><span class="lineno"> 1991</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;fermat_together: N Check Failed.&quot;</span>);</div>
@@ -1554,7 +1554,7 @@ $(function() {
 <div class="line"><a name="l01993"></a><span class="lineno"> 1993</span>&#160;        </div>
 <div class="line"><a name="l01994"></a><span class="lineno"> 1994</span>&#160;        num = num.subs(f2v).subs(map_rat);</div>
 <div class="line"><a name="l01995"></a><span class="lineno"> 1995</span>&#160;        den = den.subs(f2v).subs(map_rat);</div>
-<div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;        <span class="keywordflow">return</span> lst{num, den};</div>
+<div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{num, den};</div>
 <div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;    }</div>
 <div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;    </div>
 <div class="line"><a name="l02005"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5"> 2005</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">normal_fermat</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">bool</span> dfactor) {</div>
@@ -1575,13 +1575,13 @@ $(function() {
 <div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;    }</div>
 <div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;    </div>
 <div class="line"><a name="l02039"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a"> 2039</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a">exexpand</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
-<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> expand(expr);</div>
-<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> expand(expr);</div>
+<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
+<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
 <div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;    }</div>
 <div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160;    </div>
 <div class="line"><a name="l02050"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54"> 2050</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54">exnormal</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
 <div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">normal_fermat</a>(expr,<span class="keyword">true</span>);</div>
-<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> normal(expr);</div>
+<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>(expr);</div>
 <div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;    }</div>
 <div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;    </div>
 <div class="line"><a name="l02061"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca"> 2061</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca">exnd</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
@@ -1665,7 +1665,7 @@ $(function() {
 <div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;    }</div>
-<div class="line"><a name="l02147"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a94b612c8585dc3a511f9194889b83911"> 2147</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> lst &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02147"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a94b612c8585dc3a511f9194889b83911"> 2147</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; v)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;    }</div>
@@ -1696,7 +1696,7 @@ $(function() {
 <div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;        <span class="comment">// handle negative number</span></div>
 <div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;        <span class="keywordtype">int</span> nn = ms.nops();</div>
 <div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;        <span class="keyword">auto</span> ex0 = ms.op(0);</div>
-<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(info_flags::real) &amp;&amp; ex0&lt;0) {</div>
+<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; ex0&lt;0) {</div>
 <div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;            ex exn = ms.op(nn-1);</div>
 <div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
 <div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;                exn = numeric(-1) * exn;</div>
@@ -1797,7 +1797,7 @@ $(function() {
 <div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;    }</div>
-<div class="line"><a name="l02279"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#ad4c162bb2aa832a30e55fc75482187ac"> 2279</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> lst &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02279"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#ad4c162bb2aa832a30e55fc75482187ac"> 2279</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; v)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;    }</div>
@@ -1828,7 +1828,7 @@ $(function() {
 <div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;        <span class="comment">// handle negative number</span></div>
 <div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;        <span class="keywordtype">int</span> nn = ms.nops();</div>
 <div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;        <span class="keyword">auto</span> ex0 = ms.op(0);</div>
-<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(info_flags::real) &amp;&amp; ex0&lt;0) {</div>
+<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; ex0&lt;0) {</div>
 <div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;            ex exn = ms.op(nn-1);</div>
 <div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
 <div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;                exn = numeric(-1) * exn;</div>
@@ -1924,6 +1924,18 @@ $(function() {
 <div class="ttc" id="a_b_a_s_i_c_8h_html_a962e54d7938d50d220caf1d7f645504c"><div class="ttname"><a href="_b_a_s_i_c_8h.html#a962e54d7938d50d220caf1d7f645504c">DEFAULT_CTOR</a></div><div class="ttdeci">#define DEFAULT_CTOR(classname)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00021">BASIC.h:21</a></div></div>
 <div class="ttc" id="a_b_a_s_i_c_8h_html_ab702106cf3b3e96750b6845ded4e0299"><div class="ttname"><a href="_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a></div><div class="ttdeci">#define RESET</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00057">BASIC.h:57</a></div></div>
 <div class="ttc" id="a_b_a_s_i_c_8h_html_afc8bb2aebfcd6750922307dcb5c22c51"><div class="ttname"><a href="_b_a_s_i_c_8h.html#afc8bb2aebfcd6750922307dcb5c22c51">IMPLEMENT_ALL</a></div><div class="ttdeci">#define IMPLEMENT_ALL(classname)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00030">BASIC.h:30</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a01bf335f548aac500ea6a0aa94a3e324"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">real</a></div><div class="ttdeci">expr real(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00161">GiNaCW.cpp:161</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a0359ad06067786c2a96bdc67cb8578af"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a0359ad06067786c2a96bdc67cb8578af">lcm</a></div><div class="ttdeci">expr lcm(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00319">GiNaCW.cpp:319</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a32d11e0af39786c01b1cdd3846a08ede"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">sqrt</a></div><div class="ttdeci">expr sqrt(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00185">GiNaCW.cpp:185</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a360f00fa2af78494154eb67dbd8621c1"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a360f00fa2af78494154eb67dbd8621c1">denom</a></div><div class="ttdeci">expr denom(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00181">GiNaCW.cpp:181</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a42860230e57879d9ceea44bf42cc536d"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a42860230e57879d9ceea44bf42cc536d">subs</a></div><div class="ttdeci">expr subs(const expr &amp;e, const std::vector&lt; expr &gt; &amp;ev)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00138">GiNaCW.cpp:138</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a53767bef88dff8c43999603dc9b91866"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a></div><div class="ttdeci">expr pow(const expr &amp;e1, const expr &amp;e2)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00153">GiNaCW.cpp:153</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a72232f396bfa4d6f3b7e36daca0dc594"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a></div><div class="ttdeci">expr lst(const std::vector&lt; expr &gt; &amp;ev)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00347">GiNaCW.cpp:347</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a92515dc18d7d5fa7b145320b753982e6"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a92515dc18d7d5fa7b145320b753982e6">zeta</a></div><div class="ttdeci">expr zeta(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00249">GiNaCW.cpp:249</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a95a5c8e9c25fe5adb0b1f14830c5de00"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a95a5c8e9c25fe5adb0b1f14830c5de00">tgamma</a></div><div class="ttdeci">expr tgamma(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00253">GiNaCW.cpp:253</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a9ad48c5ab416ac7295c554002193f366"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a></div><div class="ttdeci">expr expand(const expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00126">GiNaCW.cpp:126</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_ab5f00283ab752d49f1329c366c202450"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a></div><div class="ttdeci">expr normal(const expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00130">GiNaCW.cpp:130</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_afa1126ee1186d06092ad7b1f87b01973"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#afa1126ee1186d06092ad7b1f87b01973">exp</a></div><div class="ttdeci">expr exp(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00237">GiNaCW.cpp:237</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_error_html"><div class="ttname"><a href="class_hep_lib_1_1_error.html">HepLib::Error</a></div><div class="ttdoc">class used to wrap error message</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00139">BASIC.h:139</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_error_html_a749e61dbdbc54f1de0d0f86f27e7dce7"><div class="ttname"><a href="class_hep_lib_1_1_error.html#a749e61dbdbc54f1de0d0f86f27e7dce7">HepLib::Error::msg</a></div><div class="ttdeci">string msg</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00141">BASIC.h:141</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_error_html_a888b0e82ff2e1bd80283476568f806ba"><div class="ttname"><a href="class_hep_lib_1_1_error.html#a888b0e82ff2e1bd80283476568f806ba">HepLib::Error::what</a></div><div class="ttdeci">const char * what() const</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00020">BASIC.cpp:20</a></div></div>

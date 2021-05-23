@@ -396,7 +396,7 @@ $(function() {
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.empty() ) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    ex e;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=degree(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>); i&gt;=0; --i ) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        e += numeric(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]) * pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        e += numeric(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span> e;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
@@ -405,15 +405,15 @@ $(function() {
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.empty() ) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    cl_modint_ring <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a> = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[0].ring();</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    cl_I mod = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;modulus;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    cl_I halfmod = (mod-1) &gt;&gt; 1;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    cl_I <a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a> = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;modulus;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    cl_I halfmod = (<a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>-1) &gt;&gt; 1;</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    ex e;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=degree(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>); i&gt;=0; --i ) {</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        cl_I n = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;retract(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">if</span> ( n &gt; halfmod ) {</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            e += numeric(n-mod) * pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            e += numeric(n-<a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            e += numeric(n) * pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            e += numeric(n) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i);</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        }</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">return</span> e;</div>
@@ -424,12 +424,12 @@ $(function() {
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    upoly e(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.size());</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.empty() ) <span class="keywordflow">return</span> e;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    cl_modint_ring <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a> = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[0].ring();</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    cl_I mod = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;modulus;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    cl_I halfmod = (mod-1) &gt;&gt; 1;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    cl_I <a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a> = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;modulus;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    cl_I halfmod = (<a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>-1) &gt;&gt; 1;</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=degree(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>); i&gt;=0; --i ) {</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        cl_I n = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;retract(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">if</span> ( n &gt; halfmod ) {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            e[i] = n-mod;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            e[i] = n-<a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>;</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            e[i] = n;</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
@@ -535,9 +535,9 @@ $(function() {
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    canonicalize(q);</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;}</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> gcd(<span class="keyword">const</span> umodpoly&amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> umodpoly&amp; b, umodpoly&amp; c)</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(<span class="keyword">const</span> umodpoly&amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> umodpoly&amp; b, umodpoly&amp; c)</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;{</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">if</span> ( degree(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>) &lt; degree(b) ) <span class="keywordflow">return</span> gcd(b, <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, c);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">if</span> ( degree(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>) &lt; degree(b) ) <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(b, <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, c);</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    c = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>;</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    normalize_in_field(c);</div>
@@ -584,7 +584,7 @@ $(function() {
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    }</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    umodpoly c;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    gcd(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, b, c);</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, b, c);</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordflow">return</span> equal_one(c);</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;}</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
@@ -827,7 +827,7 @@ $(function() {
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            nur[0] = nur[0] - cl_MI(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>, s);</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            canonicalize(nur);</div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            umodpoly g;</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            gcd(nur, *u, g);</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(nur, *u, g);</div>
 <div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;            <span class="keywordflow">if</span> ( unequal_one(g) &amp;&amp; g != *u ) {</div>
 <div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                umodpoly uo;</div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;                div(*u, g, uo);</div>
@@ -879,12 +879,12 @@ $(function() {
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    deriv(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, b);</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="keywordflow">if</span> ( b.size() ) {</div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        umodpoly c;</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        gcd(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, b, c);</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, b, c);</div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        umodpoly <a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>;</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        div(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, c, <a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>);</div>
 <div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;        <span class="keywordflow">while</span> ( unequal_one(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>) ) {</div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;            umodpoly y;</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;            gcd(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>, c, y);</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;            <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>, c, y);</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;            umodpoly z;</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;            div(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>, y, z);</div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;            factors.push_back(z);</div>
@@ -937,7 +937,7 @@ $(function() {
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;        rem(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>, <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, buf);</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;        <a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a> = buf;</div>
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;        umodpoly wx = <a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a> - <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>;</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;        gcd(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, wx, buf);</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;        <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, wx, buf);</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;        <span class="keywordflow">if</span> ( unequal_one(buf) ) {</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;            degrees.push_back(i);</div>
 <div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;            ddfactors.push_back(buf);</div>
@@ -1040,11 +1040,11 @@ $(function() {
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;    cl_I maxcoeff = 0;</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;    cl_R coeff = 0;</div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.degree(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>); i&gt;=<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.ldegree(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>); --i ) {</div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;        cl_I aa = abs(the&lt;cl_I&gt;(ex_to&lt;numeric&gt;(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.coeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i)).to_cl_N()));</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;        cl_I aa = <a class="code" href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a>(the&lt;cl_I&gt;(ex_to&lt;numeric&gt;(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.coeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, i)).to_cl_N()));</div>
 <div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;        <span class="keywordflow">if</span> ( aa &gt; maxcoeff ) maxcoeff = aa;</div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;        coeff = coeff + square(aa);</div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;    }</div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;    cl_I coeffnorm = ceiling1(the&lt;cl_R&gt;(cln::sqrt(coeff)));</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;    cl_I coeffnorm = ceiling1(the&lt;cl_R&gt;(<a class="code" href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">cln::sqrt</a>(coeff)));</div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;    cl_I B = coeffnorm * expt_pos(cl_I(2), cl_I(maxdeg));</div>
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    <span class="keywordflow">return</span> ( B &gt; maxcoeff ) ? B : maxcoeff;</div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;}</div>
@@ -1054,11 +1054,11 @@ $(function() {
 <div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;    cl_I maxcoeff = 0;</div>
 <div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;    cl_R coeff = 0;</div>
 <div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=degree(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>); i&gt;=0; --i ) {</div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;        cl_I aa = abs(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;        cl_I aa = <a class="code" href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
 <div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;        <span class="keywordflow">if</span> ( aa &gt; maxcoeff ) maxcoeff = aa;</div>
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;        coeff = coeff + square(aa);</div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;    }</div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;    cl_I coeffnorm = ceiling1(the&lt;cl_R&gt;(cln::sqrt(coeff)));</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;    cl_I coeffnorm = ceiling1(the&lt;cl_R&gt;(<a class="code" href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">cln::sqrt</a>(coeff)));</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;    cl_I B = coeffnorm * expt_pos(cl_I(2), cl_I(maxdeg));</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;    <span class="keywordflow">return</span> ( B &gt; maxcoeff ) ? B : maxcoeff;</div>
 <div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;}</div>
@@ -1123,7 +1123,7 @@ $(function() {
 <div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;    <span class="keywordflow">if</span> ( e.empty() ) {</div>
 <div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;        cl_I g = u[0];</div>
 <div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=1; i&lt;u.size(); ++i ) {</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;            g = gcd(g, u[i]);</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;            g = <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(g, u[i]);</div>
 <div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;            <span class="keywordflow">if</span> ( g == 1 ) <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;        }</div>
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;        <span class="keywordflow">if</span> ( g != 1 ) {</div>
@@ -1495,12 +1495,12 @@ $(function() {
 <div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;    umodpoly bmod = b;</div>
 <div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;    change_modulus(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>, bmod);</div>
 <div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160; </div>
-<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;    umodpoly smod;</div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;    umodpoly <a class="code" href="_gi_na_c_w_8cpp.html#a3fe7613c32be1ed1ea8b6bb0eb8caafe">smod</a>;</div>
 <div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;    umodpoly tmod;</div>
-<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;    exteuclid(amod, bmod, smod, tmod);</div>
+<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;    exteuclid(amod, bmod, <a class="code" href="_gi_na_c_w_8cpp.html#a3fe7613c32be1ed1ea8b6bb0eb8caafe">smod</a>, tmod);</div>
 <div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160; </div>
 <div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;    cl_modint_ring Rpk = find_modint_ring(expt_pos(cl_I(p),k));</div>
-<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;    umodpoly s = smod;</div>
+<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;    umodpoly s = <a class="code" href="_gi_na_c_w_8cpp.html#a3fe7613c32be1ed1ea8b6bb0eb8caafe">smod</a>;</div>
 <div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;    change_modulus(Rpk, s);</div>
 <div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;    umodpoly t = tmod;</div>
 <div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;    change_modulus(Rpk, t);</div>
@@ -1512,7 +1512,7 @@ $(function() {
 <div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;        reduce_coeff(e, modulus);</div>
 <div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;        umodpoly c = e;</div>
 <div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;        change_modulus(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>, c);</div>
-<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;        umodpoly sigmabar = smod * c;</div>
+<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;        umodpoly sigmabar = <a class="code" href="_gi_na_c_w_8cpp.html#a3fe7613c32be1ed1ea8b6bb0eb8caafe">smod</a> * c;</div>
 <div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;        umodpoly taubar = tmod * c;</div>
 <div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;        umodpoly sigma, q;</div>
 <div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;        remdiv(sigmabar, bmod, sigma, q);</div>
@@ -1568,12 +1568,12 @@ $(function() {
 <div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;            <span class="keywordflow">return</span> e.map(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;        }</div>
 <div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( is_a&lt;numeric&gt;(e) ) {</div>
-<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;            numeric mod(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;modulus);</div>
-<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;            numeric halfmod = (mod-1)/2;</div>
+<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;            numeric <a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;modulus);</div>
+<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;            numeric halfmod = (<a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>-1)/2;</div>
 <div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;            cl_MI emod = <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;canonhom(the&lt;cl_I&gt;(ex_to&lt;numeric&gt;(e).to_cl_N()));</div>
 <div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;            numeric n(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;retract(emod));</div>
 <div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;            <span class="keywordflow">if</span> ( n &gt; halfmod ) {</div>
-<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;                <span class="keywordflow">return</span> n-mod;</div>
+<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;                <span class="keywordflow">return</span> n-<a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>;</div>
 <div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;                <span class="keywordflow">return</span> n;</div>
 <div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;            }</div>
@@ -1609,7 +1609,7 @@ $(function() {
 <div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;        }</div>
 <div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;        vector&lt;ex&gt; b(r);</div>
 <div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;r; ++i ) {</div>
-<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;            b[i] = normal(A / <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
+<div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;            b[i] = <a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>(A / <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
 <div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;        }</div>
 <div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160; </div>
 <div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;        vector&lt;ex&gt; anew = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>;</div>
@@ -1630,8 +1630,8 @@ $(function() {
 <div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;        ex monomial = 1;</div>
 <div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> m=1; !e.is_zero() &amp;&amp; e.has(xnu) &amp;&amp; m&lt;=<a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>; ++m ) {</div>
 <div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;            monomial *= (xnu - alphanu);</div>
-<div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;            monomial = expand(monomial);</div>
-<div class="line"><a name="l01815"></a><span class="lineno"> 1815</span>&#160;            ex cm = e.diff(ex_to&lt;symbol&gt;(xnu), m).subs(xnu==alphanu) / factorial(m);</div>
+<div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160;            monomial = <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(monomial);</div>
+<div class="line"><a name="l01815"></a><span class="lineno"> 1815</span>&#160;            ex cm = e.diff(ex_to&lt;symbol&gt;(xnu), m).subs(xnu==alphanu) / <a class="code" href="_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a">factorial</a>(m);</div>
 <div class="line"><a name="l01816"></a><span class="lineno"> 1816</span>&#160;            cm = make_modular(cm, <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>);</div>
 <div class="line"><a name="l01817"></a><span class="lineno"> 1817</span>&#160;            <span class="keywordflow">if</span> ( !cm.is_zero() ) {</div>
 <div class="line"><a name="l01818"></a><span class="lineno"> 1818</span>&#160;                vector&lt;ex&gt; delta_s = multivar_diophant(anew, <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, cm, Inew, <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>, p, k);</div>
@@ -1667,7 +1667,7 @@ $(function() {
 <div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160;            cl_I cm = the&lt;cl_I&gt;(ex_to&lt;numeric&gt;(z.lcoeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>)).to_cl_N());</div>
 <div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;            upvec delta_s = univar_diophant(amod, <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, m, p, k);</div>
 <div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;            cl_MI modcm;</div>
-<div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;            cl_I poscm = plusp(cm) ? cm : mod(cm, modulus);</div>
+<div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;            cl_I poscm = plusp(cm) ? cm : <a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>(cm, modulus);</div>
 <div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;            modcm = cl_MI(<a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>, poscm);</div>
 <div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> j=0; j&lt;delta_s.size(); ++j ) {</div>
 <div class="line"><a name="l01854"></a><span class="lineno"> 1854</span>&#160;                delta_s[j] = delta_s[j] * modcm;</div>
@@ -1725,14 +1725,14 @@ $(function() {
 <div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160;                }</div>
 <div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;                coef = make_modular(coef, <a class="code" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>);</div>
 <div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;                <span class="keywordtype">int</span> deg = U[m].degree(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
-<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;                U[m] = U[m] - U[m].lcoeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>) * pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>,deg) + coef * pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>,deg);</div>
+<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;                U[m] = U[m] - U[m].lcoeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>) * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>,deg) + coef * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>,deg);</div>
 <div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;            }</div>
 <div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;        }</div>
 <div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;        ex Uprod = 1;</div>
 <div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;n; ++i ) {</div>
 <div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;            Uprod *= U[i];</div>
 <div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;        }</div>
-<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;        ex e = expand(A[j-1] - Uprod);</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;        ex e = <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(A[j-1] - Uprod);</div>
 <div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160; </div>
 <div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;        vector&lt;EvalPoint&gt; newI;</div>
 <div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=1; i&lt;=j-2; ++i ) {</div>
@@ -1745,9 +1745,9 @@ $(function() {
 <div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> k=1; k&lt;=deg; ++k ) {</div>
 <div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;            <span class="keywordflow">if</span> ( !e.is_zero() ) {</div>
 <div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;                monomial *= (xj - alphaj);</div>
-<div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;                monomial = expand(monomial);</div>
+<div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;                monomial = <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(monomial);</div>
 <div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;                ex dif = e.diff(ex_to&lt;symbol&gt;(xj), k);</div>
-<div class="line"><a name="l01947"></a><span class="lineno"> 1947</span>&#160;                ex c = dif.subs(xj==alphaj) / factorial(k);</div>
+<div class="line"><a name="l01947"></a><span class="lineno"> 1947</span>&#160;                ex c = dif.subs(xj==alphaj) / <a class="code" href="_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a">factorial</a>(k);</div>
 <div class="line"><a name="l01948"></a><span class="lineno"> 1948</span>&#160;                <span class="keywordflow">if</span> ( !c.is_zero() ) {</div>
 <div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;                    vector&lt;ex&gt; deltaU = multivar_diophant(U1, <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, c, newI, maxdeg, p, cl_I_to_uint(l));</div>
 <div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;n; ++i ) {</div>
@@ -1770,16 +1770,16 @@ $(function() {
 <div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;U.size(); ++i ) {</div>
 <div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;        acand *= U[i];</div>
 <div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;    }</div>
-<div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160;    <span class="keywordflow">if</span> ( expand(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>-acand).is_zero() ) {</div>
-<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;        <span class="keywordflow">return</span> lst(U.begin(), U.end());</div>
+<div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>-acand).is_zero() ) {</div>
+<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>(U.begin(), U.end());</div>
 <div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;        <span class="keywordflow">return</span> lst{};</div>
+<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{};</div>
 <div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160;    }</div>
 <div class="line"><a name="l01975"></a><span class="lineno"> 1975</span>&#160;}</div>
 <div class="line"><a name="l01976"></a><span class="lineno"> 1976</span>&#160; </div>
 <div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160;<span class="keyword">static</span> ex put_factors_into_lst(<span class="keyword">const</span> ex&amp; e)</div>
 <div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;{</div>
-<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;    lst result;</div>
+<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> result;</div>
 <div class="line"><a name="l01984"></a><span class="lineno"> 1984</span>&#160;    <span class="keywordflow">if</span> ( is_a&lt;numeric&gt;(e) ) {</div>
 <div class="line"><a name="l01985"></a><span class="lineno"> 1985</span>&#160;        result.append(e);</div>
 <div class="line"><a name="l01986"></a><span class="lineno"> 1986</span>&#160;        <span class="keywordflow">return</span> result;</div>
@@ -1815,18 +1815,18 @@ $(function() {
 <div class="line"><a name="l02016"></a><span class="lineno"> 2016</span>&#160;    <span class="keywordflow">throw</span> runtime_error(<span class="stringliteral">&quot;put_factors_into_lst: bad term.&quot;</span>);</div>
 <div class="line"><a name="l02017"></a><span class="lineno"> 2017</span>&#160;}</div>
 <div class="line"><a name="l02018"></a><span class="lineno"> 2018</span>&#160; </div>
-<div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> checkdivisors(<span class="keyword">const</span> lst&amp; f)</div>
+<div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> checkdivisors(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&amp; f)</div>
 <div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160;{</div>
 <div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k = f.nops();</div>
 <div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;    numeric q, r;</div>
 <div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;    vector&lt;numeric&gt; <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>(k);</div>
-<div class="line"><a name="l02030"></a><span class="lineno"> 2030</span>&#160;    <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>[0] = ex_to&lt;numeric&gt;(abs(f.op(0)));</div>
+<div class="line"><a name="l02030"></a><span class="lineno"> 2030</span>&#160;    <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>[0] = ex_to&lt;numeric&gt;(<a class="code" href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a>(f.op(0)));</div>
 <div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=1; i&lt;k; ++i ) {</div>
-<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;        q = ex_to&lt;numeric&gt;(abs(f.op(i)));</div>
+<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;        q = ex_to&lt;numeric&gt;(<a class="code" href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a>(f.op(i)));</div>
 <div class="line"><a name="l02033"></a><span class="lineno"> 2033</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j=i-1; j&gt;=0; --j ) {</div>
 <div class="line"><a name="l02034"></a><span class="lineno"> 2034</span>&#160;            r = <a class="code" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>[j];</div>
 <div class="line"><a name="l02035"></a><span class="lineno"> 2035</span>&#160;            <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l02036"></a><span class="lineno"> 2036</span>&#160;                r = gcd(r, q);</div>
+<div class="line"><a name="l02036"></a><span class="lineno"> 2036</span>&#160;                r = <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(r, q);</div>
 <div class="line"><a name="l02037"></a><span class="lineno"> 2037</span>&#160;                q = q/r;</div>
 <div class="line"><a name="l02038"></a><span class="lineno"> 2038</span>&#160;            } <span class="keywordflow">while</span> ( r != 1 );</div>
 <div class="line"><a name="l02039"></a><span class="lineno"> 2039</span>&#160;            <span class="keywordflow">if</span> ( q == 1 ) {</div>
@@ -1838,7 +1838,7 @@ $(function() {
 <div class="line"><a name="l02045"></a><span class="lineno"> 2045</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l02046"></a><span class="lineno"> 2046</span>&#160;}</div>
 <div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160; </div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> generate_set(<span class="keyword">const</span> ex&amp; u, <span class="keyword">const</span> ex&amp; vn, <span class="keyword">const</span> exset&amp; <a class="code" href="exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58">syms</a>, <span class="keyword">const</span> lst&amp; f,</div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> generate_set(<span class="keyword">const</span> ex&amp; u, <span class="keyword">const</span> ex&amp; vn, <span class="keyword">const</span> exset&amp; <a class="code" href="exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58">syms</a>, <span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&amp; f,</div>
 <div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;                         numeric&amp; modulus, ex&amp; u0, vector&lt;numeric&gt;&amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>)</div>
 <div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;{</div>
 <div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    <span class="keyword">const</span> ex&amp; <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a> = *<a class="code" href="exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58">syms</a>.begin();</div>
@@ -1852,7 +1852,7 @@ $(function() {
 <div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160;        ++s;</div>
 <div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.size(); ++i ) {</div>
 <div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;            <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;                <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i] = mod(numeric(rand()), 2*modulus) - modulus;</div>
+<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;                <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i] = <a class="code" href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a>(numeric(rand()), 2*modulus) - modulus;</div>
 <div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;                vnatry = vna.subs(*s == <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
 <div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;                <span class="comment">// ... for which the leading coefficient doesn&#39;t vanish ...</span></div>
 <div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;            } <span class="keywordflow">while</span> ( vnatry == 0 );</div>
@@ -1861,13 +1861,13 @@ $(function() {
 <div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;            ++s;</div>
 <div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;        }</div>
 <div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;        <span class="comment">// ... for which u0 is square free ...</span></div>
-<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;        ex g = gcd(u0, u0.diff(ex_to&lt;symbol&gt;(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>)));</div>
+<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;        ex g = <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(u0, u0.diff(ex_to&lt;symbol&gt;(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>)));</div>
 <div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;        <span class="keywordflow">if</span> ( !is_a&lt;numeric&gt;(g) ) {</div>
 <div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;        }</div>
 <div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;        <span class="keywordflow">if</span> ( !is_a&lt;numeric&gt;(vn) ) {</div>
 <div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;            <span class="comment">// ... and for which the evaluated factors have each an unique prime factor</span></div>
-<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;            lst fnum = f;</div>
+<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;            <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> fnum = f;</div>
 <div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;            fnum.let_op(0) = fnum.op(0) * u0.content(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=1; i&lt;fnum.nops(); ++i ) {</div>
 <div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;                <span class="keywordflow">if</span> ( !is_a&lt;numeric&gt;(fnum.op(i)) ) {</div>
@@ -1905,7 +1905,7 @@ $(function() {
 <div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;    ex vn = pp.collect(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>).lcoeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;    ex vnlst;</div>
 <div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    <span class="keywordflow">if</span> ( is_a&lt;numeric&gt;(vn) ) {</div>
-<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;        vnlst = lst{vn};</div>
+<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;        vnlst = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{vn};</div>
 <div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;    }</div>
 <div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;    <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;        ex vnfactors = <a class="code" href="namespace_gi_na_c.html#a5740af86589b0d1632bae5c001fcecda">ginac_factor</a>(vn);</div>
@@ -1988,13 +1988,13 @@ $(function() {
 <div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;                    numeric prefac = ex_to&lt;numeric&gt;(ufaclst.op(i+1).lcoeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>));</div>
 <div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j=ftilde.size()-1; j&gt;=0; --j ) {</div>
 <div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;                        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;                        <span class="keywordflow">while</span> ( irem(prefac, ftilde[j]) == 0 ) {</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;                            prefac = iquo(prefac, ftilde[j]);</div>
+<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;                        <span class="keywordflow">while</span> ( <a class="code" href="_gi_na_c_w_8cpp.html#a32efa36ffeab32c10059da294f6060d9">irem</a>(prefac, ftilde[j]) == 0 ) {</div>
+<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;                            prefac = <a class="code" href="_gi_na_c_w_8cpp.html#af7f1d75771e0703879cf202e7ebadd5f">iquo</a>(prefac, ftilde[j]);</div>
 <div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;                            ++count;</div>
 <div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;                        }</div>
 <div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;                        <span class="keywordflow">if</span> ( count ) {</div>
 <div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;                            used_flag[j] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;                            <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] = <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] * pow(vnlst.op(j+1), count);</div>
+<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;                            <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] = <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(vnlst.op(j+1), count);</div>
 <div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;                        }</div>
 <div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;                    }</div>
 <div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;                    C[i] = <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] * prefac;</div>
@@ -2004,20 +2004,20 @@ $(function() {
 <div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;                    numeric prefac = ex_to&lt;numeric&gt;(ufaclst.op(i+1).lcoeff(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>));</div>
 <div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;                    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> j=ftilde.size()-1; j&gt;=0; --j ) {</div>
 <div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;                        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;                        <span class="keywordflow">while</span> ( irem(prefac, ftilde[j]) == 0 ) {</div>
-<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;                            prefac = iquo(prefac, ftilde[j]);</div>
+<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;                        <span class="keywordflow">while</span> ( <a class="code" href="_gi_na_c_w_8cpp.html#a32efa36ffeab32c10059da294f6060d9">irem</a>(prefac, ftilde[j]) == 0 ) {</div>
+<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;                            prefac = <a class="code" href="_gi_na_c_w_8cpp.html#af7f1d75771e0703879cf202e7ebadd5f">iquo</a>(prefac, ftilde[j]);</div>
 <div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;                            ++count;</div>
 <div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;                        }</div>
-<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;                        <span class="keywordflow">while</span> ( irem(ex_to&lt;numeric&gt;(delta)*prefac, ftilde[j]) == 0 ) {</div>
-<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;                            numeric g = gcd(prefac, ex_to&lt;numeric&gt;(ftilde[j]));</div>
-<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;                            prefac = iquo(prefac, g);</div>
+<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;                        <span class="keywordflow">while</span> ( <a class="code" href="_gi_na_c_w_8cpp.html#a32efa36ffeab32c10059da294f6060d9">irem</a>(ex_to&lt;numeric&gt;(delta)*prefac, ftilde[j]) == 0 ) {</div>
+<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;                            numeric g = <a class="code" href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a>(prefac, ex_to&lt;numeric&gt;(ftilde[j]));</div>
+<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;                            prefac = <a class="code" href="_gi_na_c_w_8cpp.html#af7f1d75771e0703879cf202e7ebadd5f">iquo</a>(prefac, g);</div>
 <div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;                            delta = delta / (ftilde[j]/g);</div>
 <div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;                            ufaclst.let_op(i+1) = ufaclst.op(i+1) * (ftilde[j]/g);</div>
 <div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;                            ++count;</div>
 <div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;                        }</div>
 <div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;                        <span class="keywordflow">if</span> ( count ) {</div>
 <div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;                            used_flag[j] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;                            <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] = <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] * pow(vnlst.op(j+1), count);</div>
+<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;                            <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] = <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(vnlst.op(j+1), count);</div>
 <div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;                        }</div>
 <div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;                    }</div>
 <div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;                    C[i] = <a class="code" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>[i] * prefac;</div>
@@ -2078,7 +2078,7 @@ $(function() {
 <div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160; </div>
 <div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;        <span class="comment">// try Hensel lifting</span></div>
 <div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;        ex res = hensel_multivar(pp, <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, epv, prime, l, modfactors, C);</div>
-<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;        <span class="keywordflow">if</span> ( res != lst{} ) {</div>
+<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;        <span class="keywordflow">if</span> ( res != <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{} ) {</div>
 <div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;            ex result = cont * unit;</div>
 <div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;res.nops(); ++i ) {</div>
 <div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;                result *= res.op(i).content(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>) * res.op(i).unit(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
@@ -2117,8 +2117,8 @@ $(function() {
 <div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;        <span class="keywordtype">int</span> ld = <a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>.ldegree(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        <span class="keywordflow">if</span> ( ld &gt; 0 ) {</div>
 <div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;            <span class="comment">// pull out direct factors</span></div>
-<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;            ex res = factor_univariate(expand(<a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>/pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, ld)), <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
-<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;            <span class="keywordflow">return</span> res * pow(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>,ld);</div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;            ex res = factor_univariate(<a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(<a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>/<a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, ld)), <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
+<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;            <span class="keywordflow">return</span> res * <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(<a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>,ld);</div>
 <div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;            ex res = factor_univariate(<a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>, <a class="code" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;            <span class="keywordflow">return</span> res;</div>
@@ -2232,7 +2232,7 @@ $(function() {
 <div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;    <span class="keywordflow">if</span> ( findsymbols.syms.size() == 0 ) {</div>
 <div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>;</div>
 <div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;    }</div>
-<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;    lst <a class="code" href="exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58">syms</a>;</div>
+<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;    <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> <a class="code" href="exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58">syms</a>;</div>
 <div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; i : findsymbols.syms ) {</div>
 <div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;        <a class="code" href="exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58">syms</a>.append(i);</div>
 <div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;    }</div>
@@ -2245,10 +2245,10 @@ $(function() {
 <div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;    factor_iter(sfpoly,</div>
 <div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;        [&amp;res](<span class="keyword">const</span> ex &amp;f, <span class="keyword">const</span> ex &amp;k) {</div>
 <div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;            <span class="keywordflow">if</span> ( is_a&lt;add&gt;(f) ) {</div>
-<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;                res *= pow(factor_sqrfree(f), k);</div>
+<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;                res *= <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(factor_sqrfree(f), k);</div>
 <div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;                <span class="comment">// simple case: (monomial)^exponent</span></div>
-<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;                res *= pow(f, k);</div>
+<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;                res *= <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(f, k);</div>
 <div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;            }</div>
 <div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;        });</div>
 <div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;    <span class="keywordflow">return</span> res;</div>
@@ -2263,7 +2263,7 @@ $(function() {
 <div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;        [&amp;result,&amp;<a class="code" href="exfactor_8cpp.html#a38d7865c032f7a7380c57cdf435a4cca">options</a>](<span class="keyword">const</span> ex &amp;f1, <span class="keyword">const</span> ex &amp;k1) {</div>
 <div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;            factor_iter(factor1(f1, <a class="code" href="exfactor_8cpp.html#a38d7865c032f7a7380c57cdf435a4cca">options</a>),</div>
 <div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;                [&amp;result,&amp;k1](<span class="keyword">const</span> ex &amp;f2, <span class="keyword">const</span> ex &amp;k2) {</div>
-<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;                    result *= pow(f2, k1*k2);</div>
+<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;                    result *= <a class="code" href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a>(f2, k1*k2);</div>
 <div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;                });</div>
 <div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;        });</div>
 <div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;    </div>
@@ -2275,7 +2275,7 @@ $(function() {
 <div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;        nmap[sym] = 1/numeric(nn_pi);</div>
 <div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;        nn_pi = cln::nextprobprime(nn_pi);</div>
 <div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;    }</div>
-<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;    <span class="keywordflow">if</span>(!is_zero(normal(<a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>.subs(nmap)-result.subs(nmap)))) {</div>
+<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;    <span class="keywordflow">if</span>(!is_zero(<a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>(<a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a>.subs(nmap)-result.subs(nmap)))) {</div>
 <div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160;        cout &lt;&lt; <a class="code" href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a> &lt;&lt; endl;</div>
 <div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160;        cout &lt;&lt; result &lt;&lt; endl;</div>
 <div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160;        <span class="keywordflow">throw</span> runtime_error(<span class="stringliteral">&quot;ginac_factor failed, check details above.&quot;</span>);</div>
@@ -2287,6 +2287,18 @@ $(function() {
 <div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;} <span class="comment">// namespace GiNaC</span></div>
 <div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160; </div>
 <div class="ttc" id="a_b_a_s_i_c_2_functions_8cpp_html_ab561f3b42e49eecbec26c4266a6deaea"><div class="ttname"><a href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a></div><div class="ttdeci">int * a</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00221">Functions.cpp:221</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a27aa507097755f878b7e0a1ab8bedad7"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a></div><div class="ttdeci">expr mod(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00289">GiNaCW.cpp:289</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a313a1ef21d69577fc09220d1580666eb"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a></div><div class="ttdeci">expr gcd(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00315">GiNaCW.cpp:315</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a32d11e0af39786c01b1cdd3846a08ede"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">sqrt</a></div><div class="ttdeci">expr sqrt(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00185">GiNaCW.cpp:185</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a32efa36ffeab32c10059da294f6060d9"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a32efa36ffeab32c10059da294f6060d9">irem</a></div><div class="ttdeci">expr irem(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00297">GiNaCW.cpp:297</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a3fe7613c32be1ed1ea8b6bb0eb8caafe"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a3fe7613c32be1ed1ea8b6bb0eb8caafe">smod</a></div><div class="ttdeci">expr smod(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00293">GiNaCW.cpp:293</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a53767bef88dff8c43999603dc9b91866"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a></div><div class="ttdeci">expr pow(const expr &amp;e1, const expr &amp;e2)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00153">GiNaCW.cpp:153</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a72232f396bfa4d6f3b7e36daca0dc594"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a></div><div class="ttdeci">expr lst(const std::vector&lt; expr &gt; &amp;ev)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00347">GiNaCW.cpp:347</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a9ad48c5ab416ac7295c554002193f366"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a></div><div class="ttdeci">expr expand(const expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00126">GiNaCW.cpp:126</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_aa2ee40e9770b5864683d9777e0a20b27"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#aa2ee40e9770b5864683d9777e0a20b27">abs</a></div><div class="ttdeci">expr abs(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00157">GiNaCW.cpp:157</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_ab5f00283ab752d49f1329c366c202450"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a></div><div class="ttdeci">expr normal(const expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00130">GiNaCW.cpp:130</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_ae360a21bc4fd8682e2e3db6dcde1bc8a"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a">factorial</a></div><div class="ttdeci">expr factorial(const expr &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00269">GiNaCW.cpp:269</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_af7f1d75771e0703879cf202e7ebadd5f"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#af7f1d75771e0703879cf202e7ebadd5f">iquo</a></div><div class="ttdeci">expr iquo(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00306">GiNaCW.cpp:306</a></div></div>
 <div class="ttc" id="aexfactor_8cpp_html_a1611dfa0aca3f5214c31b22344d07bd4"><div class="ttname"><a href="exfactor_8cpp.html#a1611dfa0aca3f5214c31b22344d07bd4">poly</a></div><div class="ttdeci">upoly poly</div><div class="ttdef"><b>Definition:</b> <a href="exfactor_8cpp_source.html#l01372">exfactor.cpp:1372</a></div></div>
 <div class="ttc" id="aexfactor_8cpp_html_a29bd984ec1434a0123d5291130221977"><div class="ttname"><a href="exfactor_8cpp.html#a29bd984ec1434a0123d5291130221977">evalpoint</a></div><div class="ttdeci">int evalpoint</div><div class="ttdef"><b>Definition:</b> <a href="exfactor_8cpp_source.html#l01540">exfactor.cpp:1540</a></div></div>
 <div class="ttc" id="aexfactor_8cpp_html_a38d7865c032f7a7380c57cdf435a4cca"><div class="ttname"><a href="exfactor_8cpp.html#a38d7865c032f7a7380c57cdf435a4cca">options</a></div><div class="ttdeci">unsigned options</div><div class="ttdef"><b>Definition:</b> <a href="exfactor_8cpp_source.html#l02421">exfactor.cpp:2421</a></div></div>
