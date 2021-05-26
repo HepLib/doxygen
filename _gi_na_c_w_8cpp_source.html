@@ -435,116 +435,128 @@ $(function() {
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : e._expr) _g.push_back(it);</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keywordtype">void</span> exvec::push_back(expr e) {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    _g.push_back(e._expr);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;exvec::exvec(GiNaC::exvector es) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : es) _g.push_back(it);</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;}</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;expr exvec::__getitem__(<span class="keyword">const</span> <span class="keywordtype">int</span> i) {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">return</span> expr(_g[i]);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="keywordtype">void</span> exvec::push_back(expr e) {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    _g.push_back(e._expr);</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="keywordtype">int</span> exvec::size() {</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span> _g.size();</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;expr exvec::__getitem__(<span class="keyword">const</span> <span class="keywordtype">int</span> i) {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span> expr(_g[i]);</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;std::string exvec::str() {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a>(_g);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="keywordtype">int</span> exvec::size() {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">return</span> _g.size();</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;}</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;std::string exvec::__str__() {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">return</span> str();</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;};</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;std::string exvec::str() {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a>(_g);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;exmap::exmap() { }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;exmap::exmap(std::map&lt;expr,expr,expr_is_less&gt; es) {</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : es) _g[it.first._expr] = it.second._expr;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;}</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;expr exmap::__getitem__(expr e) {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">return</span> _g[e._expr];</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;std::string exvec::__str__() {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">return</span> str();</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;};</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;exmap::exmap() { }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;exmap::exmap(std::map&lt;expr,expr,expr_is_less&gt; es) {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : es) _g[it.first._expr] = it.second._expr;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="keywordtype">void</span> exmap::__setitem__(expr k, expr v) {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    _g[k._expr] = v._expr;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;expr exmap::__getitem__(expr e) {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> _g[e._expr];</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;}</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="keywordtype">int</span> exmap::size() {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">return</span> _g.size();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="keywordtype">void</span> exmap::__setitem__(expr k, expr v) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    _g[k._expr] = v._expr;</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;std::string exmap::str() {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a>(_g);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="keywordtype">int</span> exmap::size() {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">return</span> _g.size();</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;}</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;std::string exmap::__str__() {</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> str();</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;std::string exmap::str() {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a>(_g);</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;exset::exset() { }</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;exset::exset(std::vector&lt;expr&gt; es) {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : es) _g.insert(it._expr);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;exset::exset(expr e) {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : e._expr) _g.insert(it);</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;std::string exmap::__str__() {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">return</span> str();</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;}</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;exmap::exmap(GiNaC::exmap es) {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : es) _g[kv.first] = kv.second;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;exset::exset() { }</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="keywordtype">void</span> exset::insert(expr e) {</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    _g.insert(e._expr);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;exset::exset(std::vector&lt;expr&gt; es) {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : es) _g.insert(it._expr);</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="keywordtype">int</span> exset::size() {</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">return</span> _g.size();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;exset::exset(expr e) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : e._expr) _g.insert(it);</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;}</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;std::string exset::str() {</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a>(_g);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="keywordtype">void</span> exset::insert(expr e) {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    _g.insert(e._expr);</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;}</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;std::string exset::__str__() {</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> str();</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keywordtype">int</span> exset::size() {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> _g.size();</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;Function::Function() { }</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;Function::~Function() { }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e) { <span class="keywordflow">return</span> expr(0); }</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2) { <span class="keywordflow">return</span> expr(0); }</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2,<span class="keyword">const</span> expr &amp;e3) { <span class="keywordflow">return</span> expr(0); }</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2,<span class="keyword">const</span> expr &amp;e3,<span class="keyword">const</span> expr &amp;e4) { <span class="keywordflow">return</span> expr(0); }</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2,<span class="keyword">const</span> expr &amp;e3,<span class="keyword">const</span> expr &amp;e4,<span class="keyword">const</span> expr &amp;e5) { <span class="keywordflow">return</span> expr(0); }</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;std::string exset::str() {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a>(_g);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;std::string exset::__str__() {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keywordflow">return</span> str();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;}</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;ParFun::ParFun() { }</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;ParFun::~ParFun() { }</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;expr ParFun::__call__(<span class="keyword">const</span> <span class="keywordtype">int</span> i) { <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">HepLib::Error</a>(<span class="stringliteral">&quot;Not implemented yet!&quot;</span>); <span class="keywordflow">return</span> expr(1979); }</div>
-<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">  453</a></span>&#160;exvec <a class="code" href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">Parallel</a>(<span class="keywordtype">int</span> ntotal, <span class="keywordtype">int</span> nbatch,</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        ParFun &amp;f,</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        <span class="keyword">const</span> std::string &amp; key,</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <span class="keywordtype">bool</span> rm,</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <span class="keyword">const</span> std::string &amp; pre) {</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keyword">auto</span> ret = <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">HepLib::GiNaC_Parallel</a>(ntotal, nbatch,</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        [&amp;f](<span class="keywordtype">int</span> i)-&gt;GiNaC::ex{ <span class="keywordflow">return</span> f.__call__(i)._expr; },</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        key, rm, pre);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    exvec res;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ret) res._g.push_back(item);</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
-<div class="line"><a name="l00465"></a><span class="lineno"><a class="line" href="_gi_na_c_w_8cpp.html#a25c981b13560c35d992219e1039bf0da">  465</a></span>&#160;exvec <a class="code" href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">Parallel</a>(<span class="keywordtype">int</span> ntotal,</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;exset::exset(GiNaC::exset es) {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : es) _g.insert(it);</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;Function::Function() { }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;Function::~Function() { }</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e) { <span class="keywordflow">return</span> expr(0); }</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2) { <span class="keywordflow">return</span> expr(0); }</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2,<span class="keyword">const</span> expr &amp;e3) { <span class="keywordflow">return</span> expr(0); }</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2,<span class="keyword">const</span> expr &amp;e3,<span class="keyword">const</span> expr &amp;e4) { <span class="keywordflow">return</span> expr(0); }</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;expr Function::operator()(<span class="keyword">const</span> expr &amp;e1,<span class="keyword">const</span> expr &amp;e2,<span class="keyword">const</span> expr &amp;e3,<span class="keyword">const</span> expr &amp;e4,<span class="keyword">const</span> expr &amp;e5) { <span class="keywordflow">return</span> expr(0); }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;ParFun::ParFun() { }</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;ParFun::~ParFun() { }</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;expr ParFun::__call__(<span class="keyword">const</span> <span class="keywordtype">int</span> i) { <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">HepLib::Error</a>(<span class="stringliteral">&quot;Not implemented yet!&quot;</span>); <span class="keywordflow">return</span> expr(1979); }</div>
+<div class="line"><a name="l00465"></a><span class="lineno"><a class="line" href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">  465</a></span>&#160;exvec <a class="code" href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">Parallel</a>(<span class="keywordtype">int</span> ntotal, <span class="keywordtype">int</span> nbatch,</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        ParFun &amp;f,</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keyword">const</span> std::string &amp; key,</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordtype">bool</span> rm,</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keyword">const</span> std::string &amp; pre) {</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keyword">auto</span> ret = <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">HepLib::GiNaC_Parallel</a>(ntotal,</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keyword">auto</span> ret = <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">HepLib::GiNaC_Parallel</a>(ntotal, nbatch,</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        [&amp;f](<span class="keywordtype">int</span> i)-&gt;GiNaC::ex{ <span class="keywordflow">return</span> f.__call__(i)._expr; },</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        key, rm, pre);</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    exvec res;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ret) res._g.push_back(item);</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keywordflow">return</span> res;</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;}</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
-<div class="line"><a name="l00478"></a><span class="lineno"><a class="line" href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">  478</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">isFunction</a>(<span class="keyword">const</span> expr &amp;e, std::string sf) {</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a86122cad0a0940bab6ecda9bd3b4ad51">HepLib::isFunction</a>(e._expr, sf);</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="line" href="_gi_na_c_w_8cpp.html#a25c981b13560c35d992219e1039bf0da">  477</a></span>&#160;exvec <a class="code" href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">Parallel</a>(<span class="keywordtype">int</span> ntotal,</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        ParFun &amp;f,</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keyword">const</span> std::string &amp; key,</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keywordtype">bool</span> rm,</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <span class="keyword">const</span> std::string &amp; pre) {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keyword">auto</span> ret = <a class="code" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">HepLib::GiNaC_Parallel</a>(ntotal,</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        [&amp;f](<span class="keywordtype">int</span> i)-&gt;GiNaC::ex{ <span class="keywordflow">return</span> f.__call__(i)._expr; },</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        key, rm, pre);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    exvec res;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ret) res._g.push_back(item);</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;}</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160; </div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">  490</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">isFunction</a>(<span class="keyword">const</span> expr &amp;e, std::string sf) {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a86122cad0a0940bab6ecda9bd3b4ad51">HepLib::isFunction</a>(e._expr, sf);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;}</div>
 <div class="ttc" id="a_b_a_s_i_c_2_functions_8cpp_html_ab561f3b42e49eecbec26c4266a6deaea"><div class="ttname"><a href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a></div><div class="ttdeci">int * a</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00221">Functions.cpp:221</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a0109dc8da729bdf4f36ffa89d239dc9a"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a0109dc8da729bdf4f36ffa89d239dc9a">log</a></div><div class="ttdeci">expr log(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00251">GiNaCW.cpp:251</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a0121afa0b4766cd5146057112d2b3d2a"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a0121afa0b4766cd5146057112d2b3d2a">binomial</a></div><div class="ttdeci">expr binomial(const expr &amp;n, const expr &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00287">GiNaCW.cpp:287</a></div></div>
@@ -566,7 +578,7 @@ $(function() {
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a52406fa5de76527381e31d77178e8e99"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a52406fa5de76527381e31d77178e8e99">factor</a></div><div class="ttdeci">expr factor(const expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00144">GiNaCW.cpp:144</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a53767bef88dff8c43999603dc9b91866"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a53767bef88dff8c43999603dc9b91866">pow</a></div><div class="ttdeci">expr pow(const expr &amp;e1, const expr &amp;e2)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00163">GiNaCW.cpp:163</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a55c990f95cbe0630b6cc71ed557992df"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a55c990f95cbe0630b6cc71ed557992df">series</a></div><div class="ttdeci">expr series(const expr &amp;e, const expr &amp;s, int o)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00158">GiNaCW.cpp:158</a></div></div>
-<div class="ttc" id="a_gi_na_c_w_8cpp_html_a56fc63ee7bd4c5d8db189506cce7ba22"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">isFunction</a></div><div class="ttdeci">bool isFunction(const expr &amp;e, std::string sf)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00478">GiNaCW.cpp:478</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_a56fc63ee7bd4c5d8db189506cce7ba22"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">isFunction</a></div><div class="ttdeci">bool isFunction(const expr &amp;e, std::string sf)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00490">GiNaCW.cpp:490</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a72232f396bfa4d6f3b7e36daca0dc594"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a></div><div class="ttdeci">expr lst(const std::vector&lt; expr &gt; &amp;ev)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00357">GiNaCW.cpp:357</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a722bee3cbe63c8a7038cd14101121023"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a722bee3cbe63c8a7038cd14101121023">cos</a></div><div class="ttdeci">expr cos(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00203">GiNaCW.cpp:203</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a740a4fa7bc3ac20d04c653b8ceaef7a7"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a740a4fa7bc3ac20d04c653b8ceaef7a7">numer</a></div><div class="ttdeci">expr numer(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00187">GiNaCW.cpp:187</a></div></div>
@@ -591,7 +603,7 @@ $(function() {
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_ac7d126e93f32a458d48888945ca3f549"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#ac7d126e93f32a458d48888945ca3f549">step</a></div><div class="ttdeci">expr step(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00183">GiNaCW.cpp:183</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_ad6e53144de118f47159b3e7011135e2d"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#ad6e53144de118f47159b3e7011135e2d">fibonacci</a></div><div class="ttdeci">expr fibonacci(const expr &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00295">GiNaCW.cpp:295</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_ae360a21bc4fd8682e2e3db6dcde1bc8a"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a">factorial</a></div><div class="ttdeci">expr factorial(const expr &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00279">GiNaCW.cpp:279</a></div></div>
-<div class="ttc" id="a_gi_na_c_w_8cpp_html_aebb820fbcdc91e2210ddb603fb60b297"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">Parallel</a></div><div class="ttdeci">exvec Parallel(int ntotal, int nbatch, ParFun &amp;f, const std::string &amp;key, bool rm, const std::string &amp;pre)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00453">GiNaCW.cpp:453</a></div></div>
+<div class="ttc" id="a_gi_na_c_w_8cpp_html_aebb820fbcdc91e2210ddb603fb60b297"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#aebb820fbcdc91e2210ddb603fb60b297">Parallel</a></div><div class="ttdeci">exvec Parallel(int ntotal, int nbatch, ParFun &amp;f, const std::string &amp;key, bool rm, const std::string &amp;pre)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00465">GiNaCW.cpp:465</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_aeeca3c3bd4476f10cec17a4b6218908c"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#aeeca3c3bd4476f10cec17a4b6218908c">call</a></div><div class="ttdeci">expr call(const std::string func, const std::vector&lt; expr &gt; &amp;ev)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00337">GiNaCW.cpp:337</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_af12ede10cfe0e998183c9daa090b3315"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#af12ede10cfe0e998183c9daa090b3315">lgamma</a></div><div class="ttdeci">expr lgamma(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00267">GiNaCW.cpp:267</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_af7f1d75771e0703879cf202e7ebadd5f"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#af7f1d75771e0703879cf202e7ebadd5f">iquo</a></div><div class="ttdeci">expr iquo(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00316">GiNaCW.cpp:316</a></div></div>
