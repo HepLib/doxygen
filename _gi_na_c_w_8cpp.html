@@ -198,6 +198,20 @@ Functions</h2></td></tr>
 <tr class="separator:a25c981b13560c35d992219e1039bf0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56fc63ee7bd4c5d8db189506cce7ba22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#a56fc63ee7bd4c5d8db189506cce7ba22">isFunction</a> (const expr &amp;e, std::string sf)</td></tr>
 <tr class="separator:a56fc63ee7bd4c5d8db189506cce7ba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a4ea24d4faa5715df1f45e7845e7d0"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, expr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#ad2a4ea24d4faa5715df1f45e7845e7d0">garReadAll</a> (const std::string &amp;garfn)</td></tr>
+<tr class="separator:ad2a4ea24d4faa5715df1f45e7845e7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b71478015fed29395f0765ee05ca531"><td class="memItemLeft" align="right" valign="top">expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#a2b71478015fed29395f0765ee05ca531">garRead</a> (const std::string &amp;garfn, const char *key)</td></tr>
+<tr class="separator:a2b71478015fed29395f0765ee05ca531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed4d94afa6a70b4a17b93bff64c0c30"><td class="memItemLeft" align="right" valign="top">expr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#a7ed4d94afa6a70b4a17b93bff64c0c30">garRead</a> (const std::string &amp;garfn)</td></tr>
+<tr class="separator:a7ed4d94afa6a70b4a17b93bff64c0c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76869255d858905ba8319e4d8f5978b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#a76869255d858905ba8319e4d8f5978b8">garWrite</a> (const std::string &amp;garfn, const std::map&lt; std::string, expr &gt; &amp;resMap)</td></tr>
+<tr class="separator:a76869255d858905ba8319e4d8f5978b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffccfdedbff366cbdbf16d995f220c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#a7ffccfdedbff366cbdbf16d995f220c3">garWrite</a> (const std::map&lt; std::string, expr &gt; &amp;resMap, const std::string &amp;garfn)</td></tr>
+<tr class="separator:a7ffccfdedbff366cbdbf16d995f220c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91824ad1607e804f667b68ab717127b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#aa91824ad1607e804f667b68ab717127b">garWrite</a> (const std::string &amp;garfn, const expr &amp;res)</td></tr>
+<tr class="separator:aa91824ad1607e804f667b68ab717127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092ad722750af082434fc7c7ed21a997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gi_na_c_w_8cpp.html#a092ad722750af082434fc7c7ed21a997">garWrite</a> (const expr &amp;res, const std::string &amp;garfn)</td></tr>
+<tr class="separator:a092ad722750af082434fc7c7ed21a997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wrap Class for SWIG. </p>
@@ -681,6 +695,196 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00303">303</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7ed4d94afa6a70b4a17b93bff64c0c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed4d94afa6a70b4a17b93bff64c0c30">&#9670;&nbsp;</a></span>garRead() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">expr garRead </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00530">530</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2b71478015fed29395f0765ee05ca531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b71478015fed29395f0765ee05ca531">&#9670;&nbsp;</a></span>garRead() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">expr garRead </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00526">526</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad2a4ea24d4faa5715df1f45e7845e7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a4ea24d4faa5715df1f45e7845e7d0">&#9670;&nbsp;</a></span>garReadAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string,expr&gt; garReadAll </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00518">518</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a092ad722750af082434fc7c7ed21a997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092ad722750af082434fc7c7ed21a997">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void garWrite </td>
+          <td>(</td>
+          <td class="paramtype">const expr &amp;&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00548">548</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7ffccfdedbff366cbdbf16d995f220c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ffccfdedbff366cbdbf16d995f220c3">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void garWrite </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, expr &gt; &amp;&#160;</td>
+          <td class="paramname"><em>resMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00540">540</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa91824ad1607e804f667b68ab717127b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91824ad1607e804f667b68ab717127b">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void garWrite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const expr &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00544">544</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a76869255d858905ba8319e4d8f5978b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76869255d858905ba8319e4d8f5978b8">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void garWrite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>garfn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, expr &gt; &amp;&#160;</td>
+          <td class="paramname"><em>resMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_gi_na_c_w_8cpp_source.html#l00534">534</a> of file <a class="el" href="_gi_na_c_w_8cpp_source.html">GiNaCW.cpp</a>.</p>
 
 </div>
 </div>
