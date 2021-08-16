@@ -542,6 +542,9 @@ Functions</h2></td></tr>
 <tr class="separator:a1e5e87bc5f7d2612e847d3684777a10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d36286484544c7c13d01d7f79a9df4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2d36286484544c7c13d01d7f79a9df4b">GINAC_DECLARE_UNARCHIVER</a> (<a class="el" href="class_hep_lib_1_1_x_integral.html">XIntegral</a>)</td></tr>
 <tr class="separator:a2d36286484544c7c13d01d7f79a9df4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadec2367f85a2820013cb5c83f87259b"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aadec2367f85a2820013cb5c83f87259b">A0</a> (const ex m2, int n, ex d)</td></tr>
+<tr class="memdesc:aadec2367f85a2820013cb5c83f87259b"><td class="mdescLeft">&#160;</td><td class="mdescRight">scalar integral A0, devided by (2pi)^(4-2ep)  <a href="namespace_hep_lib.html#aadec2367f85a2820013cb5c83f87259b">More...</a><br /></td></tr>
+<tr class="separator:aadec2367f85a2820013cb5c83f87259b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6226ccc32b4bdf14ac68d481497d5dc2"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6226ccc32b4bdf14ac68d481497d5dc2">ApartIR2ex</a> (const ex &amp;expr_in)</td></tr>
 <tr class="memdesc:a6226ccc32b4bdf14ac68d481497d5dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ApartIR to ex  <a href="namespace_hep_lib.html#a6226ccc32b4bdf14ac68d481497d5dc2">More...</a><br /></td></tr>
 <tr class="separator:a6226ccc32b4bdf14ac68d481497d5dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -836,6 +839,52 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aadec2367f85a2820013cb5c83f87259b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadec2367f85a2820013cb5c83f87259b">&#9670;&nbsp;</a></span>A0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ex HepLib::A0 </td>
+          <td>(</td>
+          <td class="paramtype">const ex&#160;</td>
+          <td class="paramname"><em>m2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ex&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>scalar integral A0, devided by (2pi)^(4-2ep) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m2</td><td>mass squared </td></tr>
+    <tr><td class="paramname">n</td><td>exponent for the propagator l^2-m^2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A0 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_a_b_c_d_8cpp_source.html#l00017">17</a> of file <a class="el" href="_a_b_c_d_8cpp_source.html">ABCD.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a836cec82302f2157fbac85d444c2f0a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a836cec82302f2157fbac85d444c2f0a9">&#9670;&nbsp;</a></span>ACSort() <span class="overload">[1/2]</span></h2>
 
@@ -1920,7 +1969,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>collect_common_factors result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02015">2015</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02017">2017</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2972,7 +3021,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02039">2039</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02041">2041</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3012,7 +3061,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02028">2028</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02030">2030</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3052,7 +3101,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst of { num, den } </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02061">2061</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02063">2063</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3092,7 +3141,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02050">2050</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02052">2052</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3294,7 +3343,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02126">2126</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02128">2128</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5219,7 +5268,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02067">2067</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02069">2069</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6921,7 +6970,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the normalized expression: numer/denom </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02005">2005</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02007">2007</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>

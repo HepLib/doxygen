@@ -1455,466 +1455,468 @@ $(function() {
 <div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;                </div>
 <div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;        exmap v2f, f2v;</div>
 <div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;        exmap nn_map;</div>
-<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;        <span class="keyword">auto</span> nn_pi = cln::nextprobprime(3);</div>
-<div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;        <span class="keywordtype">int</span> fvi = 0;</div>
-<div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> vi : rep_vs) {</div>
-<div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;            <span class="keyword">auto</span> name = <span class="stringliteral">&quot;v&quot;</span> + to_string(fvi);</div>
-<div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;            <a class="code" href="class_hep_lib_1_1_symbol.html">Symbol</a> s(name);</div>
-<div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160;            v2f[vi] = s;</div>
-<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;            f2v[s] = vi;</div>
-<div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;            fvi++;</div>
-<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;            nn_pi = cln::nextprobprime(nn_pi+1);</div>
-<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;            nn_map[s] = ex(1)/numeric(nn_pi);</div>
-<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;        }</div>
-<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;        </div>
-<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;        stringstream ss;</div>
-<div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;        <span class="keywordflow">if</span>(fvi&gt;111) {</div>
-<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;            cout &lt;&lt; rep_vs &lt;&lt; endl;</div>
-<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;Fermat: Too many variables.&quot;</span>);</div>
-<div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160;        }</div>
-<div class="line"><a name="l01914"></a><span class="lineno"> 1914</span>&#160;        <span class="keywordflow">if</span>(fvi&gt;v_max) {</div>
-<div class="line"><a name="l01915"></a><span class="lineno"> 1915</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=v_max; i&lt;fvi; i++) ss &lt;&lt; <span class="stringliteral">&quot;&amp;(J=v&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;);&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01916"></a><span class="lineno"> 1916</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
-<div class="line"><a name="l01917"></a><span class="lineno"> 1917</span>&#160;            ss.clear();</div>
-<div class="line"><a name="l01918"></a><span class="lineno"> 1918</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160;            v_max = fvi;</div>
-<div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;        }</div>
-<div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;        </div>
-<div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160;        ex nn_chk(1), num(1), den(1);</div>
-<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;mul&gt;(expr_in)) expr_in = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{expr_in};</div>
-<div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr_in) {</div>
-<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;            <span class="keywordflow">if</span>(!is_a&lt;add&gt;(item)) item = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{item};</div>
-<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;Array m[&quot;</span> &lt;&lt; item.nops() &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;            <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;res:=0;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
-<div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;            ss.clear();</div>
-<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;            </div>
-<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;            ex nn_chk2=0;</div>
-<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;item.nops(); i++) {</div>
-<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;                ex tt = item.op(i).subs(v2f);</div>
-<div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;                nn_chk2 += tt.subs(nn_map);</div>
-<div class="line"><a name="l01936"></a><span class="lineno"> 1936</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;m[&quot;</span> &lt;&lt; (i+1) &lt;&lt; <span class="stringliteral">&quot;]:=&quot;</span>;</div>
-<div class="line"><a name="l01937"></a><span class="lineno"> 1937</span>&#160;                <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;item:=&quot;</span>;</div>
-<div class="line"><a name="l01938"></a><span class="lineno"> 1938</span>&#160;                ss &lt;&lt; tt &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01939"></a><span class="lineno"> 1939</span>&#160;                <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;res:=res+item;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;                fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
-<div class="line"><a name="l01941"></a><span class="lineno"> 1941</span>&#160;                ss.clear();</div>
-<div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;                ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;            }</div>
-<div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) {</div>
-<div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;                ss &lt;&lt; <span class="stringliteral">&quot;res:=Sumup([m]);&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;                fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
-<div class="line"><a name="l01947"></a><span class="lineno"> 1947</span>&#160;                ss.clear();</div>
-<div class="line"><a name="l01948"></a><span class="lineno"> 1948</span>&#160;                ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;            }</div>
-<div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;            nn_chk *= nn_chk2;</div>
-<div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;            </div>
-<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">string</span> bstr(<span class="stringliteral">&quot;[-begin-]&quot;</span>), estr(<span class="stringliteral">&quot;[-end-]&quot;</span>);</div>
-<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;&amp;(U=1);&quot;</span> &lt;&lt; endl; <span class="comment">// ugly printing, the whitespace matters</span></div>
-<div class="line"><a name="l01954"></a><span class="lineno"> 1954</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;!(&#39;&quot;</span> &lt;&lt;bstr&lt;&lt; <span class="stringliteral">&quot;&#39;,&#39;{&#39;,Numer(res),&#39;,&#39;,Denom(res),&#39;}&#39;,&#39;&quot;</span> &lt;&lt;estr&lt;&lt; <span class="stringliteral">&quot;&#39;)&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;            <span class="keyword">auto</span> ostr = fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
-<div class="line"><a name="l01956"></a><span class="lineno"> 1956</span>&#160;            ss.clear();</div>
-<div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;            </div>
-<div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;            <span class="comment">// note the order,(normal_fermat will be called again in factor_form)</span></div>
-<div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;&amp;(U=0);&quot;</span> &lt;&lt; endl; <span class="comment">// disable ugly printing</span></div>
-<div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;@(res,[m]);&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;            <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;@(res,item);&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;&amp;_G;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
-<div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;            ss.clear();</div>
-<div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160; </div>
-<div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;            <span class="comment">// make sure last char is 0</span></div>
-<div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;            <span class="keywordflow">if</span>(ostr[ostr.length()-1]!=<span class="charliteral">&#39;0&#39;</span>) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;fermat_together: last char is NOT 0.&quot;</span>);</div>
-<div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160;            ostr = ostr.substr(0, ostr.length()-1);</div>
-<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;            <span class="keyword">auto</span> cpos = ostr.find(bstr);</div>
-<div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;            <span class="keywordflow">if</span>(cpos==string::npos) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(bstr+<span class="stringliteral">&quot; NOT Found.&quot;</span>);</div>
-<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;            ostr = ostr.substr(cpos+bstr.length(),string::npos);</div>
-<div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160;            cpos = ostr.find(estr);</div>
-<div class="line"><a name="l01975"></a><span class="lineno"> 1975</span>&#160;            <span class="keywordflow">if</span>(cpos==string::npos) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(estr+<span class="stringliteral">&quot; NOT Found.&quot;</span>);</div>
-<div class="line"><a name="l01976"></a><span class="lineno"> 1976</span>&#160;            ostr = ostr.substr(0,cpos);</div>
-<div class="line"><a name="l01977"></a><span class="lineno"> 1977</span>&#160;            <a class="code" href="namespace_hep_lib.html#af4fe6312af5f71448e243b9c1b8b831c">string_trim</a>(ostr);</div>
-<div class="line"><a name="l01978"></a><span class="lineno"> 1978</span>&#160; </div>
-<div class="line"><a name="l01979"></a><span class="lineno"> 1979</span>&#160;            symtab st;</div>
-<div class="line"><a name="l01980"></a><span class="lineno"> 1980</span>&#160;            <a class="code" href="class_hep_lib_1_1_parser.html">Parser</a> fp(st);</div>
-<div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160;            <span class="keyword">auto</span> ret = fp.<a class="code" href="class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39">Read</a>(ostr);</div>
-<div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;            num *= ret.op(0);</div>
-<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;            <span class="keywordflow">if</span>(dfactor) den *= <a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(ret.op(1));</div>
-<div class="line"><a name="l01984"></a><span class="lineno"> 1984</span>&#160;            <span class="keywordflow">else</span> den *= ret.op(1);</div>
-<div class="line"><a name="l01985"></a><span class="lineno"> 1985</span>&#160;        }</div>
-<div class="line"><a name="l01986"></a><span class="lineno"> 1986</span>&#160;        <span class="comment">//fermat.Exit();</span></div>
-<div class="line"><a name="l01987"></a><span class="lineno"> 1987</span>&#160;                </div>
-<div class="line"><a name="l01988"></a><span class="lineno"> 1988</span>&#160;        <span class="keyword">auto</span> nn_ret = <a class="code" href="_gi_na_c_w_8cpp.html#a42860230e57879d9ceea44bf42cc536d">subs</a>(num/den,nn_map);</div>
-<div class="line"><a name="l01989"></a><span class="lineno"> 1989</span>&#160;        <span class="keywordflow">if</span>(nn_chk-nn_ret!=0) {</div>
-<div class="line"><a name="l01990"></a><span class="lineno"> 1990</span>&#160;            cout &lt;&lt; nn_chk &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; nn_ret &lt;&lt; endl;</div>
-<div class="line"><a name="l01991"></a><span class="lineno"> 1991</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;fermat_together: N Check Failed.&quot;</span>);</div>
-<div class="line"><a name="l01992"></a><span class="lineno"> 1992</span>&#160;        }</div>
-<div class="line"><a name="l01993"></a><span class="lineno"> 1993</span>&#160;        </div>
-<div class="line"><a name="l01994"></a><span class="lineno"> 1994</span>&#160;        num = num.subs(f2v).subs(map_rat);</div>
-<div class="line"><a name="l01995"></a><span class="lineno"> 1995</span>&#160;        den = den.subs(f2v).subs(map_rat);</div>
-<div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{num, den};</div>
-<div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;    }</div>
-<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;    </div>
-<div class="line"><a name="l02005"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5"> 2005</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">normal_fermat</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">bool</span> dfactor) {</div>
-<div class="line"><a name="l02006"></a><span class="lineno"> 2006</span>&#160;        <span class="keyword">auto</span> nd = <a class="code" href="namespace_hep_lib.html#af964a2222e1e6abc4704675b1f06642d">fermat_numer_denom</a>(expr, dfactor);</div>
-<div class="line"><a name="l02007"></a><span class="lineno"> 2007</span>&#160;        <span class="keywordflow">return</span> nd.op(0)/nd.op(1);</div>
-<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;    }</div>
-<div class="line"><a name="l02009"></a><span class="lineno"> 2009</span>&#160;    </div>
-<div class="line"><a name="l02015"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a0cc2a28a763dbb04e362a301a6793209"> 2015</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a0cc2a28a763dbb04e362a301a6793209">collect_factors</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
-<div class="line"><a name="l02016"></a><span class="lineno"> 2016</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l02017"></a><span class="lineno"> 2017</span>&#160;            <span class="keywordflow">return</span> collect_common_factors(expr);</div>
-<div class="line"><a name="l02018"></a><span class="lineno"> 2018</span>&#160;        } <span class="keywordflow">catch</span>(...) { }</div>
-<div class="line"><a name="l02019"></a><span class="lineno"> 2019</span>&#160;        <span class="keywordflow">return</span> expr;</div>
-<div class="line"><a name="l02020"></a><span class="lineno"> 2020</span>&#160;    }</div>
-<div class="line"><a name="l02021"></a><span class="lineno"> 2021</span>&#160;    </div>
-<div class="line"><a name="l02028"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036"> 2028</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036">exfactor</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
-<div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(expr);</div>
-<div class="line"><a name="l02030"></a><span class="lineno"> 2030</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="namespace_gi_na_c.html#a5740af86589b0d1632bae5c001fcecda">ginac_factor</a>(expr);</div>
-<div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;    }</div>
-<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;    </div>
-<div class="line"><a name="l02039"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a"> 2039</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a">exexpand</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
-<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
-<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
-<div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;    }</div>
-<div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160;    </div>
-<div class="line"><a name="l02050"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54"> 2050</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54">exnormal</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
-<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">normal_fermat</a>(expr,<span class="keyword">true</span>);</div>
-<div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>(expr);</div>
-<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;    }</div>
-<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;    </div>
-<div class="line"><a name="l02061"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca"> 2061</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca">exnd</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
-<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> numer_denom(<a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(expr));</div>
-<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(opt==2) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a6e1a5df6d4c9d5d1530fe849a7855092">numer_denom_fermat</a>(expr);</div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> numer_denom(expr);</div>
-<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;    }</div>
-<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;    </div>
-<div class="line"><a name="l02067"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03"> 2067</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
-<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;        <span class="keyword">static</span> map&lt;pid_t, Form&gt; form_map;</div>
-<div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;        <span class="keyword">auto</span> pid = getpid();</div>
-<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;        <span class="keywordflow">if</span>((form_map.find(pid)==form_map.end())) { <span class="comment">// init section</span></div>
-<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;            ostringstream ss;</div>
-<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;AutoDeclare Symbols viff;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;            form_map[pid].Init(<span class="stringliteral">&quot;form&quot;</span>);</div>
-<div class="line"><a name="l02074"></a><span class="lineno"> 2074</span>&#160;            form_map[pid].Execute(ss.str());</div>
-<div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160;        }</div>
-<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;        <a class="code" href="class_hep_lib_1_1_form.html">Form</a> &amp;fprc = form_map[pid];</div>
-<div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;        </div>
-<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;        <span class="keyword">auto</span> expr_in = expr;</div>
-<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;        exmap map_rat;</div>
-<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;        expr_in = expr_in.to_polynomial(map_rat);</div>
-<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;        </div>
-<div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160;        exvector <a class="code" href="namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164">vs</a>;</div>
-<div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;        <span class="keywordflow">for</span>(const_preorder_iterator i = expr_in.preorder_begin(); i != expr_in.preorder_end(); ++i) {</div>
-<div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;            <span class="keyword">auto</span> e = (*i);</div>
-<div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;symbol&gt;(e)) <a class="code" href="namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164">vs</a>.push_back(e);</div>
-<div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;        }</div>
-<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;        </div>
-<div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;        exmap s2v;</div>
-<div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;        symtab st;</div>
-<div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;        <span class="keywordtype">int</span> cid = 0;</div>
-<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> ss : <a class="code" href="namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164">vs</a>) {</div>
-<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;            cid++;</div>
-<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;            <span class="keywordtype">string</span> cvv = <span class="stringliteral">&quot;viff&quot;</span>+to_string(cid);</div>
-<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;            s2v[ss] = <a class="code" href="class_hep_lib_1_1_symbol.html">Symbol</a>(cvv);</div>
-<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;            st[cvv] = ss.subs(map_rat);</div>
-<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;        }</div>
-<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;        ostringstream oss;</div>
-<div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;        expr_in = expr_in.subs(s2v);</div>
-<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;        oss &lt;&lt; <span class="stringliteral">&quot;Local ff = &quot;</span> &lt;&lt; expr_in &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;        oss &lt;&lt; <span class="stringliteral">&quot;Factorize ff;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;        oss &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;            <span class="keyword">auto</span> ostr = fprc.<a class="code" href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">Execute</a>(oss.str(), <span class="stringliteral">&quot;ff&quot;</span>);</div>
-<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot;[&quot;</span>, <span class="stringliteral">&quot;(&quot;</span>);</div>
-<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot;]&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot;\\\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot; &quot;</span>,<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;            <a class="code" href="class_hep_lib_1_1_parser.html">Parser</a> fp(st);</div>
-<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;            ex ret = fp.<a class="code" href="class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39">Read</a>(ostr);</div>
-<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;            ex res = 1;</div>
-<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;            <a class="code" href="class_hep_lib_1_1_symbol.html">Symbol</a> sfac(<span class="stringliteral">&quot;factor_&quot;</span>);</div>
-<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(ret)) res *= item.subs(sfac==1);</div>
-<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;            <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="class_hep_lib_1_1_error.html">Error</a>&amp; err) {</div>
-<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;            cout &lt;&lt; oss.str() &lt;&lt; endl;</div>
-<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;            form_map.erase(pid);</div>
-<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;            <span class="keywordflow">throw</span>;</div>
-<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;        }</div>
-<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    }</div>
-<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    </div>
-<div class="line"><a name="l02126"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87"> 2126</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
-<div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160;        <span class="keyword">auto</span> num_den = <a class="code" href="namespace_hep_lib.html#af964a2222e1e6abc4704675b1f06642d">fermat_numer_denom</a>(expr);</div>
-<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;        <span class="keywordflow">if</span>(is_zero(num_den.op(1)-1)) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(num_den.op(0));</div>
-<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(num_den.op(0))/<a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(num_den.op(1));</div>
-<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;    }</div>
-<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;    </div>
-<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;    <span class="comment">//-----------------------------------------------------------</span></div>
-<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;    <span class="comment">// HepFormat Output</span></div>
+<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;        <span class="keyword">auto</span> nn_pi1 = cln::nextprobprime(3);</div>
+<div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;        <span class="keyword">auto</span> nn_pi2 = cln::nextprobprime(3);</div>
+<div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;        <span class="keywordtype">int</span> fvi = 0;</div>
+<div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> vi : rep_vs) {</div>
+<div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;            <span class="keyword">auto</span> name = <span class="stringliteral">&quot;v&quot;</span> + to_string(fvi);</div>
+<div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160;            <a class="code" href="class_hep_lib_1_1_symbol.html">Symbol</a> s(name);</div>
+<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;            v2f[vi] = s;</div>
+<div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;            f2v[s] = vi;</div>
+<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;            fvi++;</div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;            nn_pi1 = cln::nextprobprime(nn_pi2+1);</div>
+<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;            nn_pi2 = cln::nextprobprime(nn_pi1+1);</div>
+<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;            nn_map[s] = numeric(nn_pi1)/numeric(nn_pi2);</div>
+<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;        }</div>
+<div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;        </div>
+<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;        stringstream ss;</div>
+<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;        <span class="keywordflow">if</span>(fvi&gt;111) {</div>
+<div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160;            cout &lt;&lt; rep_vs &lt;&lt; endl;</div>
+<div class="line"><a name="l01914"></a><span class="lineno"> 1914</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;Fermat: Too many variables.&quot;</span>);</div>
+<div class="line"><a name="l01915"></a><span class="lineno"> 1915</span>&#160;        }</div>
+<div class="line"><a name="l01916"></a><span class="lineno"> 1916</span>&#160;        <span class="keywordflow">if</span>(fvi&gt;v_max) {</div>
+<div class="line"><a name="l01917"></a><span class="lineno"> 1917</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=v_max; i&lt;fvi; i++) ss &lt;&lt; <span class="stringliteral">&quot;&amp;(J=v&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;);&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01918"></a><span class="lineno"> 1918</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
+<div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160;            ss.clear();</div>
+<div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;            v_max = fvi;</div>
+<div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160;        }</div>
+<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;        </div>
+<div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;        ex nn_chk(1), num(1), den(1);</div>
+<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;        <span class="keywordflow">if</span>(!is_a&lt;mul&gt;(expr_in)) expr_in = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{expr_in};</div>
+<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : expr_in) {</div>
+<div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;            <span class="keywordflow">if</span>(!is_a&lt;add&gt;(item)) item = <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{item};</div>
+<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;Array m[&quot;</span> &lt;&lt; item.nops() &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;            <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;res:=0;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
+<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;            ss.clear();</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;            </div>
+<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;            ex nn_chk2=0;</div>
+<div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;item.nops(); i++) {</div>
+<div class="line"><a name="l01936"></a><span class="lineno"> 1936</span>&#160;                ex tt = item.op(i).subs(v2f);</div>
+<div class="line"><a name="l01937"></a><span class="lineno"> 1937</span>&#160;                nn_chk2 += tt.subs(nn_map);</div>
+<div class="line"><a name="l01938"></a><span class="lineno"> 1938</span>&#160;                <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;m[&quot;</span> &lt;&lt; (i+1) &lt;&lt; <span class="stringliteral">&quot;]:=&quot;</span>;</div>
+<div class="line"><a name="l01939"></a><span class="lineno"> 1939</span>&#160;                <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;item:=&quot;</span>;</div>
+<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;                ss &lt;&lt; tt &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01941"></a><span class="lineno"> 1941</span>&#160;                <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;res:=res+item;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;                fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
+<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;                ss.clear();</div>
+<div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;                ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;            }</div>
+<div class="line"><a name="l01946"></a><span class="lineno"> 1946</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) {</div>
+<div class="line"><a name="l01947"></a><span class="lineno"> 1947</span>&#160;                ss &lt;&lt; <span class="stringliteral">&quot;res:=Sumup([m]);&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01948"></a><span class="lineno"> 1948</span>&#160;                fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
+<div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;                ss.clear();</div>
+<div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;                ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;            }</div>
+<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;            nn_chk *= nn_chk2;</div>
+<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;            </div>
+<div class="line"><a name="l01954"></a><span class="lineno"> 1954</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">string</span> bstr(<span class="stringliteral">&quot;[-begin-]&quot;</span>), estr(<span class="stringliteral">&quot;[-end-]&quot;</span>);</div>
+<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;&amp;(U=1);&quot;</span> &lt;&lt; endl; <span class="comment">// ugly printing, the whitespace matters</span></div>
+<div class="line"><a name="l01956"></a><span class="lineno"> 1956</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;!(&#39;&quot;</span> &lt;&lt;bstr&lt;&lt; <span class="stringliteral">&quot;&#39;,&#39;{&#39;,Numer(res),&#39;,&#39;,Denom(res),&#39;}&#39;,&#39;&quot;</span> &lt;&lt;estr&lt;&lt; <span class="stringliteral">&quot;&#39;)&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;            <span class="keyword">auto</span> ostr = fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
+<div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;            ss.clear();</div>
+<div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;            </div>
+<div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;            <span class="comment">// note the order,(normal_fermat will be called again in factor_form)</span></div>
+<div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;&amp;(U=0);&quot;</span> &lt;&lt; endl; <span class="comment">// disable ugly printing</span></div>
+<div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a>) ss &lt;&lt; <span class="stringliteral">&quot;@(res,[m]);&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;            <span class="keywordflow">else</span> ss &lt;&lt; <span class="stringliteral">&quot;@(res,item);&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;&amp;_G;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;            fermat.<a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(ss.str());</div>
+<div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;            ss.clear();</div>
+<div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;            ss.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160; </div>
+<div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160;            <span class="comment">// make sure last char is 0</span></div>
+<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;            <span class="keywordflow">if</span>(ostr[ostr.length()-1]!=<span class="charliteral">&#39;0&#39;</span>) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;fermat_together: last char is NOT 0.&quot;</span>);</div>
+<div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;            ostr = ostr.substr(0, ostr.length()-1);</div>
+<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;            <span class="keyword">auto</span> cpos = ostr.find(bstr);</div>
+<div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160;            <span class="keywordflow">if</span>(cpos==string::npos) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(bstr+<span class="stringliteral">&quot; NOT Found.&quot;</span>);</div>
+<div class="line"><a name="l01975"></a><span class="lineno"> 1975</span>&#160;            ostr = ostr.substr(cpos+bstr.length(),string::npos);</div>
+<div class="line"><a name="l01976"></a><span class="lineno"> 1976</span>&#160;            cpos = ostr.find(estr);</div>
+<div class="line"><a name="l01977"></a><span class="lineno"> 1977</span>&#160;            <span class="keywordflow">if</span>(cpos==string::npos) <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(estr+<span class="stringliteral">&quot; NOT Found.&quot;</span>);</div>
+<div class="line"><a name="l01978"></a><span class="lineno"> 1978</span>&#160;            ostr = ostr.substr(0,cpos);</div>
+<div class="line"><a name="l01979"></a><span class="lineno"> 1979</span>&#160;            <a class="code" href="namespace_hep_lib.html#af4fe6312af5f71448e243b9c1b8b831c">string_trim</a>(ostr);</div>
+<div class="line"><a name="l01980"></a><span class="lineno"> 1980</span>&#160; </div>
+<div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160;            symtab st;</div>
+<div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;            <a class="code" href="class_hep_lib_1_1_parser.html">Parser</a> fp(st);</div>
+<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;            <span class="keyword">auto</span> ret = fp.<a class="code" href="class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39">Read</a>(ostr);</div>
+<div class="line"><a name="l01984"></a><span class="lineno"> 1984</span>&#160;            num *= ret.op(0);</div>
+<div class="line"><a name="l01985"></a><span class="lineno"> 1985</span>&#160;            <span class="keywordflow">if</span>(dfactor) den *= <a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(ret.op(1));</div>
+<div class="line"><a name="l01986"></a><span class="lineno"> 1986</span>&#160;            <span class="keywordflow">else</span> den *= ret.op(1);</div>
+<div class="line"><a name="l01987"></a><span class="lineno"> 1987</span>&#160;        }</div>
+<div class="line"><a name="l01988"></a><span class="lineno"> 1988</span>&#160;        <span class="comment">//fermat.Exit();</span></div>
+<div class="line"><a name="l01989"></a><span class="lineno"> 1989</span>&#160;        </div>
+<div class="line"><a name="l01990"></a><span class="lineno"> 1990</span>&#160;        <span class="keyword">auto</span> nn_ret = <a class="code" href="_gi_na_c_w_8cpp.html#a42860230e57879d9ceea44bf42cc536d">subs</a>(num/den,nn_map);</div>
+<div class="line"><a name="l01991"></a><span class="lineno"> 1991</span>&#160;        <span class="keywordflow">if</span>(nn_chk-nn_ret!=0) {</div>
+<div class="line"><a name="l01992"></a><span class="lineno"> 1992</span>&#160;            cout &lt;&lt; nn_chk &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; nn_ret &lt;&lt; endl;</div>
+<div class="line"><a name="l01993"></a><span class="lineno"> 1993</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;fermat_together: N Check Failed.&quot;</span>);</div>
+<div class="line"><a name="l01994"></a><span class="lineno"> 1994</span>&#160;        }</div>
+<div class="line"><a name="l01995"></a><span class="lineno"> 1995</span>&#160;        </div>
+<div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;        num = num.subs(f2v).subs(map_rat);</div>
+<div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;        den = den.subs(f2v).subs(map_rat);</div>
+<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{num, den};</div>
+<div class="line"><a name="l01999"></a><span class="lineno"> 1999</span>&#160;    }</div>
+<div class="line"><a name="l02000"></a><span class="lineno"> 2000</span>&#160;    </div>
+<div class="line"><a name="l02007"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5"> 2007</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">normal_fermat</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">bool</span> dfactor) {</div>
+<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;        <span class="keyword">auto</span> nd = <a class="code" href="namespace_hep_lib.html#af964a2222e1e6abc4704675b1f06642d">fermat_numer_denom</a>(expr, dfactor);</div>
+<div class="line"><a name="l02009"></a><span class="lineno"> 2009</span>&#160;        <span class="keywordflow">return</span> nd.op(0)/nd.op(1);</div>
+<div class="line"><a name="l02010"></a><span class="lineno"> 2010</span>&#160;    }</div>
+<div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160;    </div>
+<div class="line"><a name="l02017"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a0cc2a28a763dbb04e362a301a6793209"> 2017</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a0cc2a28a763dbb04e362a301a6793209">collect_factors</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
+<div class="line"><a name="l02018"></a><span class="lineno"> 2018</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l02019"></a><span class="lineno"> 2019</span>&#160;            <span class="keywordflow">return</span> collect_common_factors(expr);</div>
+<div class="line"><a name="l02020"></a><span class="lineno"> 2020</span>&#160;        } <span class="keywordflow">catch</span>(...) { }</div>
+<div class="line"><a name="l02021"></a><span class="lineno"> 2021</span>&#160;        <span class="keywordflow">return</span> expr;</div>
+<div class="line"><a name="l02022"></a><span class="lineno"> 2022</span>&#160;    }</div>
+<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;    </div>
+<div class="line"><a name="l02030"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036"> 2030</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036">exfactor</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
+<div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(expr);</div>
+<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="namespace_gi_na_c.html#a5740af86589b0d1632bae5c001fcecda">ginac_factor</a>(expr);</div>
+<div class="line"><a name="l02033"></a><span class="lineno"> 2033</span>&#160;    }</div>
+<div class="line"><a name="l02034"></a><span class="lineno"> 2034</span>&#160;    </div>
+<div class="line"><a name="l02041"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a"> 2041</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a">exexpand</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
+<div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
+<div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>(expr);</div>
+<div class="line"><a name="l02044"></a><span class="lineno"> 2044</span>&#160;    }</div>
+<div class="line"><a name="l02045"></a><span class="lineno"> 2045</span>&#160;    </div>
+<div class="line"><a name="l02052"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54"> 2052</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54">exnormal</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
+<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">normal_fermat</a>(expr,<span class="keyword">true</span>);</div>
+<div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>(expr);</div>
+<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;    }</div>
+<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;    </div>
+<div class="line"><a name="l02063"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca"> 2063</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca">exnd</a>(<span class="keyword">const</span> ex &amp; expr, <span class="keywordtype">int</span> opt) {</div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;        <span class="keywordflow">if</span>(opt==1) <span class="keywordflow">return</span> numer_denom(<a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(expr));</div>
+<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(opt==2) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#a6e1a5df6d4c9d5d1530fe849a7855092">numer_denom_fermat</a>(expr);</div>
+<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> numer_denom(expr);</div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    }</div>
+<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;    </div>
+<div class="line"><a name="l02069"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03"> 2069</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
+<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;        <span class="keyword">static</span> map&lt;pid_t, Form&gt; form_map;</div>
+<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;        <span class="keyword">auto</span> pid = getpid();</div>
+<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;        <span class="keywordflow">if</span>((form_map.find(pid)==form_map.end())) { <span class="comment">// init section</span></div>
+<div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;            ostringstream ss;</div>
+<div class="line"><a name="l02074"></a><span class="lineno"> 2074</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;AutoDeclare Symbols viff;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160;            form_map[pid].Init(<span class="stringliteral">&quot;form&quot;</span>);</div>
+<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;            form_map[pid].Execute(ss.str());</div>
+<div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;        }</div>
+<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;        <a class="code" href="class_hep_lib_1_1_form.html">Form</a> &amp;fprc = form_map[pid];</div>
+<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;        </div>
+<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;        <span class="keyword">auto</span> expr_in = expr;</div>
+<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;        exmap map_rat;</div>
+<div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160;        expr_in = expr_in.to_polynomial(map_rat);</div>
+<div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;        </div>
+<div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;        exvector <a class="code" href="namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164">vs</a>;</div>
+<div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;        <span class="keywordflow">for</span>(const_preorder_iterator i = expr_in.preorder_begin(); i != expr_in.preorder_end(); ++i) {</div>
+<div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;            <span class="keyword">auto</span> e = (*i);</div>
+<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;symbol&gt;(e)) <a class="code" href="namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164">vs</a>.push_back(e);</div>
+<div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;        }</div>
+<div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;        </div>
+<div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;        exmap s2v;</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;        symtab st;</div>
+<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;        <span class="keywordtype">int</span> cid = 0;</div>
+<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> ss : <a class="code" href="namespace_hep_lib_1_1_s_d.html#aa8248aab81072d2be82c7e2725241164">vs</a>) {</div>
+<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;            cid++;</div>
+<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;            <span class="keywordtype">string</span> cvv = <span class="stringliteral">&quot;viff&quot;</span>+to_string(cid);</div>
+<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;            s2v[ss] = <a class="code" href="class_hep_lib_1_1_symbol.html">Symbol</a>(cvv);</div>
+<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;            st[cvv] = ss.subs(map_rat);</div>
+<div class="line"><a name="l02098"></a><span class="lineno"> 2098</span>&#160;        }</div>
+<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;        ostringstream oss;</div>
+<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;        expr_in = expr_in.subs(s2v);</div>
+<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;        oss &lt;&lt; <span class="stringliteral">&quot;Local ff = &quot;</span> &lt;&lt; expr_in &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;        oss &lt;&lt; <span class="stringliteral">&quot;Factorize ff;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;        oss &lt;&lt; <span class="stringliteral">&quot;.sort&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;            <span class="keyword">auto</span> ostr = fprc.<a class="code" href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">Execute</a>(oss.str(), <span class="stringliteral">&quot;ff&quot;</span>);</div>
+<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot;[&quot;</span>, <span class="stringliteral">&quot;(&quot;</span>);</div>
+<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot;]&quot;</span>, <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot;\\\n&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;            <a class="code" href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">string_replace_all</a>(ostr, <span class="stringliteral">&quot; &quot;</span>,<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;            <a class="code" href="class_hep_lib_1_1_parser.html">Parser</a> fp(st);</div>
+<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;            ex ret = fp.<a class="code" href="class_hep_lib_1_1_parser.html#a2fc7af4e9f6817364d2a63f5bd6f0e39">Read</a>(ostr);</div>
+<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;            ex res = 1;</div>
+<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;            <a class="code" href="class_hep_lib_1_1_symbol.html">Symbol</a> sfac(<span class="stringliteral">&quot;factor_&quot;</span>);</div>
+<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(ret)) res *= item.subs(sfac==1);</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;            <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="class_hep_lib_1_1_error.html">Error</a>&amp; err) {</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;            cout &lt;&lt; oss.str() &lt;&lt; endl;</div>
+<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;            form_map.erase(pid);</div>
+<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;            <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;        }</div>
+<div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;    }</div>
+<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;    </div>
+<div class="line"><a name="l02128"></a><span class="lineno"><a class="line" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87"> 2128</a></span>&#160;    ex <a class="code" href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">factor_form</a>(<span class="keyword">const</span> ex &amp; expr) {</div>
+<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;        <span class="keyword">auto</span> num_den = <a class="code" href="namespace_hep_lib.html#af964a2222e1e6abc4704675b1f06642d">fermat_numer_denom</a>(expr);</div>
+<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;        <span class="keywordflow">if</span>(is_zero(num_den.op(1)-1)) <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(num_den.op(0));</div>
+<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(num_den.op(0))/<a class="code" href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">inner_factor_form</a>(num_den.op(1));</div>
+<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;    }</div>
+<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;    </div>
 <div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;    <span class="comment">//-----------------------------------------------------------</span></div>
-<div class="line"><a name="l02135"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839"> 2135</a></span>&#160;    <a class="code" href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839">HepFormat::HepFormat</a>(ostream &amp;os, <span class="keywordtype">unsigned</span> opt) : print_dflt(os, opt) {}</div>
-<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;    <a class="code" href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839">HepFormat::HepFormat</a>() : print_dflt(std::cout) {}</div>
-<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;    GINAC_IMPLEMENT_PRINT_CONTEXT(HepFormat, print_dflt)</div>
-<div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;    </div>
-<div class="line"><a name="l02139"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a5410ae3146ab78f3751032c5879ae0a7"> 2139</a></span>&#160;    const <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a>::operator &lt;&lt; (const basic &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;    }</div>
-<div class="line"><a name="l02143"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#aca73bb850c66ad5e774aafb525447dbb"> 2143</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> ex &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;    }</div>
-<div class="line"><a name="l02147"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a94b612c8585dc3a511f9194889b83911"> 2147</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;    }</div>
-<div class="line"><a name="l02151"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a9e84a1daa998e7df78b2bc622083cbbf"> 2151</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator&lt;&lt;</a>(std::ostream&amp; (*v)(std::ostream&amp;))<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;        s &lt;&lt; v;</div>
-<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;    }</div>
-<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;        </div>
-<div class="line"><a name="l02156"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a6b46c146280c4cc3238d7236742c6731"> 2156</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_hep_format.html#a6b46c146280c4cc3238d7236742c6731">HepFormat::add_print</a>(<span class="keyword">const</span> add &amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
-<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;        <span class="keyword">auto</span> <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a> = <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>);</div>
-<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(<a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>);</div>
-<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;        <span class="keyword">auto</span> cl = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence();</div>
-<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
-<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>) {</div>
-<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;+&quot;</span>;</div>
-<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;            item.print(c, cl);</div>
-<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;            first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;        }</div>
-<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence()&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;    }</div>
-<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;    </div>
-<div class="line"><a name="l02170"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744"> 2170</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744">HepFormat::mul_print</a>(<span class="keyword">const</span> mul &amp; m, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
-<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;        <span class="keyword">auto</span> ms = <a class="code" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">mul2lst</a>(m);</div>
-<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(ms);</div>
-<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;        <span class="keyword">auto</span> cl = m.precedence();</div>
-<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;        </div>
-<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;        <span class="comment">// handle negative number</span></div>
-<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;        <span class="keywordtype">int</span> nn = ms.nops();</div>
-<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;        <span class="keyword">auto</span> ex0 = ms.op(0);</div>
-<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; ex0&lt;0) {</div>
-<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;            ex exn = ms.op(nn-1);</div>
-<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
-<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;                exn = numeric(-1) * exn;</div>
-<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;                <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
-<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;                    ms.let_op(0) = numeric(-1) * ms.op(0);</div>
-<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;                    ms.let_op(nn-1) = exn;</div>
-<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;                }</div>
-<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;            }</div>
-<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;        }</div>
-<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;        </div>
-<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
-<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ms) {</div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;numeric&gt;(item) &amp;&amp; is_zero(item-1)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;*&quot;</span>;</div>
-<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;            item.print(c, cl);</div>
-<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;            first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;        }</div>
-<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;    }</div>
-<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;    </div>
-<div class="line"><a name="l02200"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a63f945178981de0e1bce378b47df644f"> 2200</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> matrix &amp; mat)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;        <span class="keywordtype">int</span> nr = mat.rows();</div>
-<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;        <span class="keywordtype">int</span> nc = mat.cols();</div>
-<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nr; r++) {</div>
-<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;nc; c++) {</div>
-<div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160;                mat(r,c).print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;                <span class="keywordflow">if</span>(c+1!=nc) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;            }</div>
-<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;            <span class="keywordflow">if</span>(r+1!=nr) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;        }</div>
-<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;    }</div>
-<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;    </div>
-<div class="line"><a name="l02217"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#af4f2b9d6d15b4d3bd4fa995c22a9e84f"> 2217</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exvector &amp; e)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
-<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;        <span class="keyword">auto</span> vend = e.end();</div>
-<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;        <span class="keywordflow">if</span> (i==vend) { s &lt;&lt; <span class="stringliteral">&quot;[]&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;            ++i;</div>
-<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;            <span class="keywordflow">if</span>(i==vend) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;        }</div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;    }</div>
-<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160; </div>
-<div class="line"><a name="l02232"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#ad70ece50d87785b6f50b96c10f5039cc"> 2232</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exset &amp; e)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
-<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;        <span class="keyword">auto</span> send = e.end();</div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;        <span class="keywordflow">if</span> (i==send) { s &lt;&lt; <span class="stringliteral">&quot;&lt;&gt;&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;&lt;&quot;</span>;</div>
-<div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;            ++i;</div>
-<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;            <span class="keywordflow">if</span>(i==send) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;        }</div>
-<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
-<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;    }</div>
-<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160; </div>
-<div class="line"><a name="l02247"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#adde7b15189a034749c205890e0a197b2"> 2247</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exmap &amp; e)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
-<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;        <span class="keyword">auto</span> mend = e.end();</div>
-<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;        <span class="keywordflow">if</span> (i==mend) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;            i-&gt;first.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;==&quot;</span>;</div>
-<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;            i-&gt;second.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;            ++i;</div>
-<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;            <span class="keywordflow">if</span>(i==mend) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;        }</div>
-<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;    }</div>
-<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;    </div>
-<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;    <span class="comment">//-----------------------------------------------------------</span></div>
-<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;    <span class="comment">// MMAFormat Output</span></div>
+<div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;    <span class="comment">// HepFormat Output</span></div>
+<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a name="l02137"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839"> 2137</a></span>&#160;    <a class="code" href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839">HepFormat::HepFormat</a>(ostream &amp;os, <span class="keywordtype">unsigned</span> opt) : print_dflt(os, opt) {}</div>
+<div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;    <a class="code" href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839">HepFormat::HepFormat</a>() : print_dflt(std::cout) {}</div>
+<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;    GINAC_IMPLEMENT_PRINT_CONTEXT(HepFormat, print_dflt)</div>
+<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;    </div>
+<div class="line"><a name="l02141"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a5410ae3146ab78f3751032c5879ae0a7"> 2141</a></span>&#160;    const <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a>::operator &lt;&lt; (const basic &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;    }</div>
+<div class="line"><a name="l02145"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#aca73bb850c66ad5e774aafb525447dbb"> 2145</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> ex &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;    }</div>
+<div class="line"><a name="l02149"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a94b612c8585dc3a511f9194889b83911"> 2149</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;    }</div>
+<div class="line"><a name="l02153"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a9e84a1daa998e7df78b2bc622083cbbf"> 2153</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator&lt;&lt;</a>(std::ostream&amp; (*v)(std::ostream&amp;))<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;        s &lt;&lt; v;</div>
+<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;    }</div>
+<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;        </div>
+<div class="line"><a name="l02158"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a6b46c146280c4cc3238d7236742c6731"> 2158</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_hep_format.html#a6b46c146280c4cc3238d7236742c6731">HepFormat::add_print</a>(<span class="keyword">const</span> add &amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
+<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;        <span class="keyword">auto</span> <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a> = <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>);</div>
+<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(<a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>);</div>
+<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;        <span class="keyword">auto</span> cl = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence();</div>
+<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>) {</div>
+<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;+&quot;</span>;</div>
+<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;            item.print(c, cl);</div>
+<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;            first = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;        }</div>
+<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence()&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;    }</div>
+<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;    </div>
+<div class="line"><a name="l02172"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744"> 2172</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744">HepFormat::mul_print</a>(<span class="keyword">const</span> mul &amp; m, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
+<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;        <span class="keyword">auto</span> ms = <a class="code" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">mul2lst</a>(m);</div>
+<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(ms);</div>
+<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;        <span class="keyword">auto</span> cl = m.precedence();</div>
+<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;        </div>
+<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;        <span class="comment">// handle negative number</span></div>
+<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;        <span class="keywordtype">int</span> nn = ms.nops();</div>
+<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;        <span class="keyword">auto</span> ex0 = ms.op(0);</div>
+<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; ex0&lt;0) {</div>
+<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;            ex exn = ms.op(nn-1);</div>
+<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
+<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;                exn = numeric(-1) * exn;</div>
+<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;                <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
+<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;                    ms.let_op(0) = numeric(-1) * ms.op(0);</div>
+<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;                    ms.let_op(nn-1) = exn;</div>
+<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;                }</div>
+<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;            }</div>
+<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;        }</div>
+<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;        </div>
+<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ms) {</div>
+<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;numeric&gt;(item) &amp;&amp; is_zero(item-1)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;*&quot;</span>;</div>
+<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;            item.print(c, cl);</div>
+<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;            first = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;        }</div>
+<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;    }</div>
+<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;    </div>
+<div class="line"><a name="l02202"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#a63f945178981de0e1bce378b47df644f"> 2202</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> matrix &amp; mat)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;        <span class="keywordtype">int</span> nr = mat.rows();</div>
+<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;        <span class="keywordtype">int</span> nc = mat.cols();</div>
+<div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nr; r++) {</div>
+<div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;nc; c++) {</div>
+<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;                mat(r,c).print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;                <span class="keywordflow">if</span>(c+1!=nc) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;            }</div>
+<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;            <span class="keywordflow">if</span>(r+1!=nr) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;        }</div>
+<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;    }</div>
+<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;    </div>
+<div class="line"><a name="l02219"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#af4f2b9d6d15b4d3bd4fa995c22a9e84f"> 2219</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exvector &amp; e)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
+<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;        <span class="keyword">auto</span> vend = e.end();</div>
+<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;        <span class="keywordflow">if</span> (i==vend) { s &lt;&lt; <span class="stringliteral">&quot;[]&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;            ++i;</div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;            <span class="keywordflow">if</span>(i==vend) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;        }</div>
+<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;    }</div>
+<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160; </div>
+<div class="line"><a name="l02234"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#ad70ece50d87785b6f50b96c10f5039cc"> 2234</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exset &amp; e)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;        <span class="keyword">auto</span> send = e.end();</div>
+<div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;        <span class="keywordflow">if</span> (i==send) { s &lt;&lt; <span class="stringliteral">&quot;&lt;&gt;&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;&lt;&quot;</span>;</div>
+<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;            ++i;</div>
+<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;            <span class="keywordflow">if</span>(i==send) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;        }</div>
+<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;    }</div>
+<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160; </div>
+<div class="line"><a name="l02249"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_hep_format.html#adde7b15189a034749c205890e0a197b2"> 2249</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_hep_format.html">HepFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exmap &amp; e)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
+<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;        <span class="keyword">auto</span> mend = e.end();</div>
+<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;        <span class="keywordflow">if</span> (i==mend) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
+<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;            i-&gt;first.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;==&quot;</span>;</div>
+<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;            i-&gt;second.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;            ++i;</div>
+<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;            <span class="keywordflow">if</span>(i==mend) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;        }</div>
+<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;    }</div>
+<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;    </div>
 <div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;    <span class="comment">//-----------------------------------------------------------</span></div>
-<div class="line"><a name="l02267"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c"> 2267</a></span>&#160;    <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c">MMAFormat::MMAFormat</a>(ostream &amp;os, <span class="keywordtype">unsigned</span> opt) : print_dflt(os, opt) {}</div>
-<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;    <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c">MMAFormat::MMAFormat</a>() : print_dflt(std::cout) {}</div>
-<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;    GINAC_IMPLEMENT_PRINT_CONTEXT(MMAFormat, print_dflt)</div>
-<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;    </div>
-<div class="line"><a name="l02271"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a2bb796fe395efc019c287b203e8e879b"> 2271</a></span>&#160;    const <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a>::operator &lt;&lt; (const basic &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;    }</div>
-<div class="line"><a name="l02275"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#ac20e687caee55216cfd5953d064452ee"> 2275</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> ex &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;    }</div>
-<div class="line"><a name="l02279"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#ad4c162bb2aa832a30e55fc75482187ac"> 2279</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; v)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;    }</div>
-<div class="line"><a name="l02283"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#afc999948cd17a725ff56830c2ec1bd5f"> 2283</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator&lt;&lt;</a>(std::ostream&amp; (*v)(std::ostream&amp;))<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;        s &lt;&lt; v;</div>
-<div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;    }</div>
-<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;        </div>
-<div class="line"><a name="l02288"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a865d5b9ff64f6164ede63b1e307362b7"> 2288</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a865d5b9ff64f6164ede63b1e307362b7">MMAFormat::add_print</a>(<span class="keyword">const</span> add &amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
-<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;        <span class="keyword">auto</span> <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a> = <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>);</div>
-<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(<a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>);</div>
-<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;        <span class="keyword">auto</span> cl = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence();</div>
-<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
-<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>) {</div>
-<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;+&quot;</span>;</div>
-<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;            item.print(c, cl);</div>
-<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;            first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;        }</div>
-<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence()&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;    }</div>
-<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;    </div>
-<div class="line"><a name="l02302"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851"> 2302</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851">MMAFormat::mul_print</a>(<span class="keyword">const</span> mul &amp; m, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
-<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;        <span class="keyword">auto</span> ms = <a class="code" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">mul2lst</a>(m);</div>
-<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(ms);</div>
-<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;        <span class="keyword">auto</span> cl = m.precedence();</div>
-<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;        </div>
-<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;        <span class="comment">// handle negative number</span></div>
-<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;        <span class="keywordtype">int</span> nn = ms.nops();</div>
-<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;        <span class="keyword">auto</span> ex0 = ms.op(0);</div>
-<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; ex0&lt;0) {</div>
-<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;            ex exn = ms.op(nn-1);</div>
-<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
-<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;                exn = numeric(-1) * exn;</div>
-<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;                <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
-<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;                    ms.let_op(0) = numeric(-1) * ms.op(0);</div>
-<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;                    ms.let_op(nn-1) = exn;</div>
-<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;                }</div>
-<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;            }</div>
-<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;        }</div>
-<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;        </div>
-<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
-<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ms) {</div>
-<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;numeric&gt;(item) &amp;&amp; is_zero(item-1)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;*&quot;</span>;</div>
-<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;            item.print(c, cl);</div>
-<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;            first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;        }</div>
-<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;    }</div>
-<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;    </div>
-<div class="line"><a name="l02332"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a91106e4b5f310227ca405bedfff5c459"> 2332</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> matrix &amp; mat)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;        <span class="keywordtype">int</span> nr = mat.rows();</div>
-<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;        <span class="keywordtype">int</span> nc = mat.cols();</div>
-<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nr; r++) {</div>
-<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;nc; c++) {</div>
-<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;                mat(r,c).print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;                <span class="keywordflow">if</span>(c+1!=nc) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;            }</div>
-<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;            <span class="keywordflow">if</span>(r+1!=nr) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;        }</div>
-<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;    }</div>
-<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;    </div>
-<div class="line"><a name="l02349"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#afa54127dcd1278131970cf2a11f82edb"> 2349</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exvector &amp; e)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
-<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;        <span class="keyword">auto</span> vend = e.end();</div>
-<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;        <span class="keywordflow">if</span> (i==vend) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;            ++i;</div>
-<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;            <span class="keywordflow">if</span>(i==vend) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;        }</div>
-<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;    }</div>
-<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160; </div>
-<div class="line"><a name="l02364"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a0cb56d4ac19009f205fefbcd83b8eab9"> 2364</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exset &amp; e)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
-<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;        <span class="keyword">auto</span> send = e.end();</div>
-<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;        <span class="keywordflow">if</span> (i==send) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;            ++i;</div>
-<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;            <span class="keywordflow">if</span>(i==send) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;        }</div>
-<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;    }</div>
-<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160; </div>
-<div class="line"><a name="l02379"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a081650cd891f10b858baecc5b4bf0c87"> 2379</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exmap &amp; e)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
-<div class="line"><a name="l02381"></a><span class="lineno"> 2381</span>&#160;        <span class="keyword">auto</span> mend = e.end();</div>
-<div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;        <span class="keywordflow">if</span> (i==mend) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l02384"></a><span class="lineno"> 2384</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l02385"></a><span class="lineno"> 2385</span>&#160;            i-&gt;first.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02386"></a><span class="lineno"> 2386</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span>;</div>
-<div class="line"><a name="l02387"></a><span class="lineno"> 2387</span>&#160;            i-&gt;second.print(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02388"></a><span class="lineno"> 2388</span>&#160;            ++i;</div>
-<div class="line"><a name="l02389"></a><span class="lineno"> 2389</span>&#160;            <span class="keywordflow">if</span>(i==mend) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
-<div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;        }</div>
-<div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;    }</div>
-<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;    </div>
-<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;}</div>
+<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;    <span class="comment">// MMAFormat Output</span></div>
+<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a name="l02269"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c"> 2269</a></span>&#160;    <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c">MMAFormat::MMAFormat</a>(ostream &amp;os, <span class="keywordtype">unsigned</span> opt) : print_dflt(os, opt) {}</div>
+<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;    <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c">MMAFormat::MMAFormat</a>() : print_dflt(std::cout) {}</div>
+<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;    GINAC_IMPLEMENT_PRINT_CONTEXT(MMAFormat, print_dflt)</div>
+<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;    </div>
+<div class="line"><a name="l02273"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a2bb796fe395efc019c287b203e8e879b"> 2273</a></span>&#160;    const <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a>::operator &lt;&lt; (const basic &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;    }</div>
+<div class="line"><a name="l02277"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#ac20e687caee55216cfd5953d064452ee"> 2277</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> ex &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;    }</div>
+<div class="line"><a name="l02281"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#ad4c162bb2aa832a30e55fc75482187ac"> 2281</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;        v.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;    }</div>
+<div class="line"><a name="l02285"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#afc999948cd17a725ff56830c2ec1bd5f"> 2285</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator&lt;&lt;</a>(std::ostream&amp; (*v)(std::ostream&amp;))<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;        s &lt;&lt; v;</div>
+<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;    }</div>
+<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;        </div>
+<div class="line"><a name="l02290"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a865d5b9ff64f6164ede63b1e307362b7"> 2290</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a865d5b9ff64f6164ede63b1e307362b7">MMAFormat::add_print</a>(<span class="keyword">const</span> add &amp; <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
+<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;        <span class="keyword">auto</span> <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a> = <a class="code" href="namespace_hep_lib.html#a750b6586e3e75b548ba78925f7cd89c5">add2lst</a>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>);</div>
+<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(<a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>);</div>
+<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;        <span class="keyword">auto</span> cl = <a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence();</div>
+<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : <a class="code" href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">as</a>) {</div>
+<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;+&quot;</span>;</div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;            item.print(c, cl);</div>
+<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;            first = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;        }</div>
+<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.precedence()&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;    }</div>
+<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;    </div>
+<div class="line"><a name="l02304"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851"> 2304</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851">MMAFormat::mul_print</a>(<span class="keyword">const</span> mul &amp; m, <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; c, <span class="keywordtype">unsigned</span> level) {</div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;        <span class="keyword">auto</span> ms = <a class="code" href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">mul2lst</a>(m);</div>
+<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;        <a class="code" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a>(ms);</div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;        <span class="keyword">auto</span> cl = m.precedence();</div>
+<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;        </div>
+<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;        <span class="comment">// handle negative number</span></div>
+<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;        <span class="keywordtype">int</span> nn = ms.nops();</div>
+<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;        <span class="keyword">auto</span> ex0 = ms.op(0);</div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;        <span class="keywordflow">if</span>(nn&gt;1 &amp;&amp; ex0.info(<a class="code" href="_gi_na_c_w_8cpp.html#a01bf335f548aac500ea6a0aa94a3e324">info_flags::real</a>) &amp;&amp; ex0&lt;0) {</div>
+<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;            ex exn = ms.op(nn-1);</div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
+<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;                exn = numeric(-1) * exn;</div>
+<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;                <span class="keywordflow">if</span>(is_a&lt;add&gt;(exn)) {</div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;                    ms.let_op(0) = numeric(-1) * ms.op(0);</div>
+<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;                    ms.let_op(nn-1) = exn;</div>
+<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;                }</div>
+<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;            }</div>
+<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;        }</div>
+<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;        </div>
+<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ms) {</div>
+<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;            <span class="keywordflow">if</span>(is_a&lt;numeric&gt;(item) &amp;&amp; is_zero(item-1)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;            <span class="keywordflow">if</span>(!first) c.s &lt;&lt; <span class="stringliteral">&quot;*&quot;</span>;</div>
+<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;            item.print(c, cl);</div>
+<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;            first = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;        }</div>
+<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;        <span class="keywordflow">if</span>(cl&lt;=level) c.s &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160;    }</div>
+<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;    </div>
+<div class="line"><a name="l02334"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a91106e4b5f310227ca405bedfff5c459"> 2334</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> matrix &amp; mat)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
+<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;        <span class="keywordtype">int</span> nr = mat.rows();</div>
+<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;        <span class="keywordtype">int</span> nc = mat.cols();</div>
+<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;nr; r++) {</div>
+<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
+<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;nc; c++) {</div>
+<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;                mat(r,c).print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;                <span class="keywordflow">if</span>(c+1!=nc) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;            }</div>
+<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;            <span class="keywordflow">if</span>(r+1!=nr) s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;        }</div>
+<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;    }</div>
+<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;    </div>
+<div class="line"><a name="l02351"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#afa54127dcd1278131970cf2a11f82edb"> 2351</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exvector &amp; e)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;        <span class="keyword">auto</span> vend = e.end();</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;        <span class="keywordflow">if</span> (i==vend) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
+<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;            ++i;</div>
+<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;            <span class="keywordflow">if</span>(i==vend) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        }</div>
+<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;    }</div>
+<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160; </div>
+<div class="line"><a name="l02366"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a0cb56d4ac19009f205fefbcd83b8eab9"> 2366</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exset &amp; e)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
+<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;        <span class="keyword">auto</span> send = e.end();</div>
+<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;        <span class="keywordflow">if</span> (i==send) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
+<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;            i-&gt;print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;            ++i;</div>
+<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;            <span class="keywordflow">if</span>(i==send) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;        }</div>
+<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;    }</div>
+<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160; </div>
+<div class="line"><a name="l02381"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_m_m_a_format.html#a081650cd891f10b858baecc5b4bf0c87"> 2381</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a> &amp; <a class="code" href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">MMAFormat::operator &lt;&lt; </a>(<span class="keyword">const</span> exmap &amp; e)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;        <span class="keyword">auto</span> i = e.begin();</div>
+<div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;        <span class="keyword">auto</span> mend = e.end();</div>
+<div class="line"><a name="l02384"></a><span class="lineno"> 2384</span>&#160;        <span class="keywordflow">if</span> (i==mend) { s &lt;&lt; <span class="stringliteral">&quot;{}&quot;</span>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l02385"></a><span class="lineno"> 2385</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;{&quot;</span>;</div>
+<div class="line"><a name="l02386"></a><span class="lineno"> 2386</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l02387"></a><span class="lineno"> 2387</span>&#160;            i-&gt;first.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02388"></a><span class="lineno"> 2388</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span>;</div>
+<div class="line"><a name="l02389"></a><span class="lineno"> 2389</span>&#160;            i-&gt;second.print(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;            ++i;</div>
+<div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;            <span class="keywordflow">if</span>(i==mend) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;        }</div>
+<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;        s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;    }</div>
+<div class="line"><a name="l02397"></a><span class="lineno"> 2397</span>&#160;    </div>
+<div class="line"><a name="l02398"></a><span class="lineno"> 2398</span>&#160;}</div>
 <div class="ttc" id="a_b_a_s_i_c_2_functions_8cpp_html_ab561f3b42e49eecbec26c4266a6deaea"><div class="ttname"><a href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a></div><div class="ttdeci">int * a</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00221">Functions.cpp:221</a></div></div>
 <div class="ttc" id="a_b_a_s_i_c_8h_html"><div class="ttname"><a href="_b_a_s_i_c_8h.html">BASIC.h</a></div><div class="ttdoc">Basic header file.</div></div>
 <div class="ttc" id="a_b_a_s_i_c_8h_html_a407081b6488173e6305c46562c960e3c"><div class="ttname"><a href="_b_a_s_i_c_8h.html#a407081b6488173e6305c46562c960e3c">IMPLEMENT_HAS</a></div><div class="ttdeci">#define IMPLEMENT_HAS(classname)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00024">BASIC.h:24</a></div></div>
@@ -1947,14 +1949,14 @@ $(function() {
 <div class="ttc" id="aclass_hep_lib_1_1_form_html_af4951707501e93938bfa6d384c190e2e"><div class="ttname"><a href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">HepLib::Form::Execute</a></div><div class="ttdeci">string Execute(string script, const string &amp;out_var=&quot;[o]&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_process_8cpp_source.html#l00267">Process.cpp:267</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_hep_format_html"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html">HepLib::HepFormat</a></div><div class="ttdoc">class for HepLib Format Output</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00735">BASIC.h:735</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a0176434299aa599fa9ad3f3daca88c59"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a0176434299aa599fa9ad3f3daca88c59">HepLib::HepFormat::operator&lt;&lt;</a></div><div class="ttdeci">const HepFormat &amp; operator&lt;&lt;(const T &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00742">BASIC.h:742</a></div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a4eb4daf2a7626b1cb5a1639ca1f0e839"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839">HepLib::HepFormat::HepFormat</a></div><div class="ttdeci">HepFormat(ostream &amp;os, unsigned opt=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02135">BASIC.cpp:2135</a></div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a6b46c146280c4cc3238d7236742c6731"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a6b46c146280c4cc3238d7236742c6731">HepLib::HepFormat::add_print</a></div><div class="ttdeci">static void add_print(const add &amp;a, const HepFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02156">BASIC.cpp:2156</a></div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a879ee3590950b8b0dfbfe1b8606b4744"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744">HepLib::HepFormat::mul_print</a></div><div class="ttdeci">static void mul_print(const mul &amp;m, const HepFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02170">BASIC.cpp:2170</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a4eb4daf2a7626b1cb5a1639ca1f0e839"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839">HepLib::HepFormat::HepFormat</a></div><div class="ttdeci">HepFormat(ostream &amp;os, unsigned opt=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02137">BASIC.cpp:2137</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a6b46c146280c4cc3238d7236742c6731"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a6b46c146280c4cc3238d7236742c6731">HepLib::HepFormat::add_print</a></div><div class="ttdeci">static void add_print(const add &amp;a, const HepFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02158">BASIC.cpp:2158</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_hep_format_html_a879ee3590950b8b0dfbfe1b8606b4744"><div class="ttname"><a href="class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744">HepLib::HepFormat::mul_print</a></div><div class="ttdeci">static void mul_print(const mul &amp;m, const HepFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02172">BASIC.cpp:2172</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html">HepLib::MMAFormat</a></div><div class="ttdoc">class for Mathematica Format Output</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00768">BASIC.h:768</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_a55bdae1c38afed06bd51aef647a2cc77"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#a55bdae1c38afed06bd51aef647a2cc77">HepLib::MMAFormat::operator&lt;&lt;</a></div><div class="ttdeci">const MMAFormat &amp; operator&lt;&lt;(const T &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00775">BASIC.h:775</a></div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_a73725557e1d7cb75aa20fa8e3ab51851"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851">HepLib::MMAFormat::mul_print</a></div><div class="ttdeci">static void mul_print(const mul &amp;m, const MMAFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02302">BASIC.cpp:2302</a></div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_a865d5b9ff64f6164ede63b1e307362b7"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#a865d5b9ff64f6164ede63b1e307362b7">HepLib::MMAFormat::add_print</a></div><div class="ttdeci">static void add_print(const add &amp;a, const MMAFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02288">BASIC.cpp:2288</a></div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_afe59b9f26ab9d72be3dc6eb619feb23c"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c">HepLib::MMAFormat::MMAFormat</a></div><div class="ttdeci">MMAFormat(ostream &amp;os, unsigned opt=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02267">BASIC.cpp:2267</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_a73725557e1d7cb75aa20fa8e3ab51851"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851">HepLib::MMAFormat::mul_print</a></div><div class="ttdeci">static void mul_print(const mul &amp;m, const MMAFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02304">BASIC.cpp:2304</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_a865d5b9ff64f6164ede63b1e307362b7"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#a865d5b9ff64f6164ede63b1e307362b7">HepLib::MMAFormat::add_print</a></div><div class="ttdeci">static void add_print(const add &amp;a, const MMAFormat &amp;c, unsigned level=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02290">BASIC.cpp:2290</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_m_m_a_format_html_afe59b9f26ab9d72be3dc6eb619feb23c"><div class="ttname"><a href="class_hep_lib_1_1_m_m_a_format.html#afe59b9f26ab9d72be3dc6eb619feb23c">HepLib::MMAFormat::MMAFormat</a></div><div class="ttdeci">MMAFormat(ostream &amp;os, unsigned opt=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02269">BASIC.cpp:2269</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_mat_helper_html_a1e0371ffc00e231f8807517aff342079"><div class="ttname"><a href="class_hep_lib_1_1_mat_helper.html#a1e0371ffc00e231f8807517aff342079">HepLib::MatHelper::remove_zero_rows</a></div><div class="ttdeci">static matrix remove_zero_rows(const matrix &amp;mat)</div><div class="ttdoc">remove the zero row</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00371">BASIC.cpp:371</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_mat_helper_html_a4e877c251cb3a2c4c2634a279841309b"><div class="ttname"><a href="class_hep_lib_1_1_mat_helper.html#a4e877c251cb3a2c4c2634a279841309b">HepLib::MatHelper::zero_row_index</a></div><div class="ttdeci">static vector&lt; int &gt; zero_row_index(const matrix &amp;mat)</div><div class="ttdoc">the all zero row's index, start from 0</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00351">BASIC.cpp:351</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_mat_helper_html_a5b0db8f65778a8980279123f070e9f43"><div class="ttname"><a href="class_hep_lib_1_1_mat_helper.html#a5b0db8f65778a8980279123f070e9f43">HepLib::MatHelper::has_zero_row</a></div><div class="ttdeci">static bool has_zero_row(const matrix &amp;mat)</div><div class="ttdoc">chech matrix has zero row</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00318">BASIC.cpp:318</a></div></div>
@@ -2004,13 +2006,13 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_html"><div class="ttname"><a href="namespace_hep_lib.html">HepLib</a></div><div class="ttdoc">HepLib namespace.</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00013">BASIC.cpp:13</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a025b983a8d24cde81cfdfe67804dbbe0"><div class="ttname"><a href="namespace_hep_lib.html#a025b983a8d24cde81cfdfe67804dbbe0">HepLib::expand_ex</a></div><div class="ttdeci">ex expand_ex(ex const &amp;expr_in, std::function&lt; bool(const ex &amp;)&gt; has_func)</div><div class="ttdoc">the expand like Mathematica</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01014">BASIC.cpp:1014</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a036f5d54867d7e07018c60045f691d30"><div class="ttname"><a href="namespace_hep_lib.html#a036f5d54867d7e07018c60045f691d30">HepLib::Color_HighLight</a></div><div class="ttdeci">const char * Color_HighLight</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00147">BASIC.cpp:147</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a0cc2a28a763dbb04e362a301a6793209"><div class="ttname"><a href="namespace_hep_lib.html#a0cc2a28a763dbb04e362a301a6793209">HepLib::collect_factors</a></div><div class="ttdeci">ex collect_factors(const ex &amp;expr)</div><div class="ttdoc">a wrapper for collect_common_factors, catch errors</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02015">BASIC.cpp:2015</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_a0cc2a28a763dbb04e362a301a6793209"><div class="ttname"><a href="namespace_hep_lib.html#a0cc2a28a763dbb04e362a301a6793209">HepLib::collect_factors</a></div><div class="ttdeci">ex collect_factors(const ex &amp;expr)</div><div class="ttdoc">a wrapper for collect_common_factors, catch errors</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02017">BASIC.cpp:2017</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a12af63150d93a138d75ce79e04905441"><div class="ttname"><a href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">HepLib::ex_less</a></div><div class="ttdeci">bool ex_less(const ex &amp;a, const ex &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01471">BASIC.cpp:1471</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a167e436fe694bcf59bef6d17fe0fdda0"><div class="ttname"><a href="namespace_hep_lib.html#a167e436fe694bcf59bef6d17fe0fdda0">HepLib::ex2q</a></div><div class="ttdeci">__float128 ex2q(ex num)</div><div class="ttdoc">ex of numeric to __float128</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00743">BASIC.cpp:743</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a16bb1155283dad164e492aef11cc6ce3"><div class="ttname"><a href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">HepLib::iEpsilon</a></div><div class="ttdeci">const iSymbol iEpsilon</div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a1a05013354fdf62cccc7c86f6883c89a"><div class="ttname"><a href="namespace_hep_lib.html#a1a05013354fdf62cccc7c86f6883c89a">HepLib::EvalF</a></div><div class="ttdeci">ex EvalF(ex expr)</div><div class="ttdoc">the nuerical evaluation, Digits=100 will be used</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01070">BASIC.cpp:1070</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a1a06457e12ce9bbee0d2df31046af031"><div class="ttname"><a href="namespace_hep_lib.html#a1a06457e12ce9bbee0d2df31046af031">HepLib::str2lst</a></div><div class="ttdeci">lst str2lst(const string &amp;expr, symtab stab)</div><div class="ttdoc">convert string to the lst, using Parser internally</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00600">BASIC.cpp:600</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a1aa5fc67794a47b45796cf8ca33166ca"><div class="ttname"><a href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca">HepLib::exnd</a></div><div class="ttdeci">ex exnd(const ex &amp;expr, int opt)</div><div class="ttdoc">num_den a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02061">BASIC.cpp:2061</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_a1aa5fc67794a47b45796cf8ca33166ca"><div class="ttname"><a href="namespace_hep_lib.html#a1aa5fc67794a47b45796cf8ca33166ca">HepLib::exnd</a></div><div class="ttdeci">ex exnd(const ex &amp;expr, int opt)</div><div class="ttdoc">num_den a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02063">BASIC.cpp:2063</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a1d8543cef7fac72b54620d3707248a82"><div class="ttname"><a href="namespace_hep_lib.html#a1d8543cef7fac72b54620d3707248a82">HepLib::gather_symbols</a></div><div class="ttdeci">lst gather_symbols(const ex &amp;e)</div><div class="ttdoc">get all symbols from input expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00437">BASIC.cpp:437</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a1fa0c3f74240ea9656e4e31269af3c80"><div class="ttname"><a href="namespace_hep_lib.html#a1fa0c3f74240ea9656e4e31269af3c80">HepLib::let_op_prepend</a></div><div class="ttdeci">void let_op_prepend(ex &amp;ex_in, const ex item)</div><div class="ttdoc">preppend item into expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01154">BASIC.cpp:1154</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a223a8e82534cc68e0f773ffb07ceb03e"><div class="ttname"><a href="namespace_hep_lib.html#a223a8e82534cc68e0f773ffb07ceb03e">HepLib::EvalL</a></div><div class="ttdeci">ex EvalL(ex expr)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01081">BASIC.cpp:1081</a></div></div>
@@ -2023,7 +2025,7 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_html_a2bab64cb52f109321f0300cd68e3a1df"><div class="ttname"><a href="namespace_hep_lib.html#a2bab64cb52f109321f0300cd68e3a1df">HepLib::xPositive</a></div><div class="ttdeci">bool xPositive(ex const expr)</div><div class="ttdoc">check the expr is xPositive, i.e., each x-monomial item is postive</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01109">BASIC.cpp:1109</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a2de89960f6bac28057cdea76f7d73c48"><div class="ttname"><a href="namespace_hep_lib.html#a2de89960f6bac28057cdea76f7d73c48">HepLib::NNDigits</a></div><div class="ttdeci">int NNDigits</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00047">Init.cpp:47</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a308104bb494242e1bdf839cb03af1bcb"><div class="ttname"><a href="namespace_hep_lib.html#a308104bb494242e1bdf839cb03af1bcb">HepLib::ex2file</a></div><div class="ttdeci">void ex2file(const ex &amp;expr, string filename)</div><div class="ttdoc">export expression file</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00715">BASIC.cpp:715</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a32c3e929ba2e787bc76889a09ed021b5"><div class="ttname"><a href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">HepLib::normal_fermat</a></div><div class="ttdeci">ex normal_fermat(const ex &amp;expr, bool dfactor)</div><div class="ttdoc">return the normalizatied expression, using fermat_numer_denom</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02005">BASIC.cpp:2005</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_a32c3e929ba2e787bc76889a09ed021b5"><div class="ttname"><a href="namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5">HepLib::normal_fermat</a></div><div class="ttdeci">ex normal_fermat(const ex &amp;expr, bool dfactor)</div><div class="ttdoc">return the normalizatied expression, using fermat_numer_denom</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02007">BASIC.cpp:2007</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a3324ae978119d1fd78107ecd6f9efef1"><div class="ttname"><a href="namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1">HepLib::NN</a></div><div class="ttdeci">ex NN(ex expr, int digits)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01096">BASIC.cpp:1096</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a43297ece03d696d2568f590139eddcae"><div class="ttname"><a href="namespace_hep_lib.html#a43297ece03d696d2568f590139eddcae">HepLib::ErrColor</a></div><div class="ttdeci">const char * ErrColor</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00145">BASIC.cpp:145</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a441c90e44abfc8b5d08502ec73c83a5c"><div class="ttname"><a href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">HepLib::ep</a></div><div class="ttdeci">const Symbol ep</div></div>
@@ -2047,10 +2049,10 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_html_a8d407817a376bd000c7da59f2f2a8bb2"><div class="ttname"><a href="namespace_hep_lib.html#a8d407817a376bd000c7da59f2f2a8bb2">HepLib::get_op</a></div><div class="ttdeci">ex get_op(const ex ex_in, int index1, int index2)</div><div class="ttdoc">return index1-th.index2-th of expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01425">BASIC.cpp:1425</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a8f5b083d9cc957aa8522df0ab5d6cda5"><div class="ttname"><a href="namespace_hep_lib.html#a8f5b083d9cc957aa8522df0ab5d6cda5">HepLib::file2strvec</a></div><div class="ttdeci">vector&lt; string &gt; file2strvec(string filename, bool skip_empty)</div><div class="ttdoc">read file content to string vector</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00679">BASIC.cpp:679</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a962843eb1f2946ac60ab9a659d152f37"><div class="ttname"><a href="namespace_hep_lib.html#a962843eb1f2946ac60ab9a659d152f37">HepLib::file2ex</a></div><div class="ttdeci">ex file2ex(string filename)</div><div class="ttdoc">read file content to ex</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00695">BASIC.cpp:695</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a98078c688747fed67bda34ee3d8bdb54"><div class="ttname"><a href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54">HepLib::exnormal</a></div><div class="ttdeci">ex exnormal(const ex &amp;expr, int opt)</div><div class="ttdoc">normalize a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02050">BASIC.cpp:2050</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_a98078c688747fed67bda34ee3d8bdb54"><div class="ttname"><a href="namespace_hep_lib.html#a98078c688747fed67bda34ee3d8bdb54">HepLib::exnormal</a></div><div class="ttdeci">ex exnormal(const ex &amp;expr, int opt)</div><div class="ttdoc">normalize a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02052">BASIC.cpp:2052</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a9d2a97e91ff71668b3515a9a1d400c79"><div class="ttname"><a href="namespace_hep_lib.html#a9d2a97e91ff71668b3515a9a1d400c79">HepLib::EvalMP</a></div><div class="ttdeci">ex EvalMP(ex expr)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01091">BASIC.cpp:1091</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_aa211ca1f92c501b472cfc10e79d6060c"><div class="ttname"><a href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">HepLib::sort_lst_by</a></div><div class="ttdeci">void sort_lst_by(lst &amp;ilst, int ki, bool less)</div><div class="ttdoc">sort the list in less order, or the reverse</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01643">BASIC.cpp:1643</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_aa3b0ece52e69bf689b048885300f8d03"><div class="ttname"><a href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">HepLib::inner_factor_form</a></div><div class="ttdeci">ex inner_factor_form(const ex &amp;expr)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02067">BASIC.cpp:2067</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_aa3b0ece52e69bf689b048885300f8d03"><div class="ttname"><a href="namespace_hep_lib.html#aa3b0ece52e69bf689b048885300f8d03">HepLib::inner_factor_form</a></div><div class="ttdeci">ex inner_factor_form(const ex &amp;expr)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02069">BASIC.cpp:2069</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_aa9accb230931feda004cf696a8bfcafb"><div class="ttname"><a href="namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb">HepLib::mul2lst</a></div><div class="ttdeci">lst mul2lst(const ex &amp;expr)</div><div class="ttdoc">convert mul to lst</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00801">BASIC.cpp:801</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_aa9c9adf4392a1f6a67d37de1d08179d5"><div class="ttname"><a href="namespace_hep_lib.html#aa9c9adf4392a1f6a67d37de1d08179d5">HepLib::series_ex</a></div><div class="ttdeci">ex series_ex(ex const &amp;expr_in, symbol const &amp;s0, int sn0)</div><div class="ttdoc">the series like Mathematica, include s^n</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00836">BASIC.cpp:836</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_aad97de50a27d5cebeb08a55aae9ac91d"><div class="ttname"><a href="namespace_hep_lib.html#aad97de50a27d5cebeb08a55aae9ac91d">HepLib::as</a></div><div class="ttdeci">const Symbol as</div></div>
@@ -2061,16 +2063,16 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_html_ab868f1b276fdfd8b62d5dc36f6c877c1"><div class="ttname"><a href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">HepLib::Verbose</a></div><div class="ttdeci">int Verbose</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00043">Init.cpp:43</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ab9d74ea9a66010acd5eab6c83ead9084"><div class="ttname"><a href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">HepLib::sort_lst</a></div><div class="ttdeci">void sort_lst(lst &amp;ilst, bool less)</div><div class="ttdoc">sort the list in less order, or the reverse</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01629">BASIC.cpp:1629</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_abb9aa689533fe5cb6c6e2ab3a8ff9bde"><div class="ttname"><a href="namespace_hep_lib.html#abb9aa689533fe5cb6c6e2ab3a8ff9bde">HepLib::string_replace_all</a></div><div class="ttdeci">void string_replace_all(string &amp;str, const string &amp;from, const string &amp;to)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00155">Functions.cpp:155</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_abbbb15a69d3616ff46c180ba86fcbb8a"><div class="ttname"><a href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a">HepLib::exexpand</a></div><div class="ttdeci">ex exexpand(const ex &amp;expr, int opt)</div><div class="ttdoc">factorize a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02039">BASIC.cpp:2039</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_abbbb15a69d3616ff46c180ba86fcbb8a"><div class="ttname"><a href="namespace_hep_lib.html#abbbb15a69d3616ff46c180ba86fcbb8a">HepLib::exexpand</a></div><div class="ttdeci">ex exexpand(const ex &amp;expr, int opt)</div><div class="ttdoc">factorize a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02041">BASIC.cpp:2041</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_abd0e1797a16e7a14915c9d5e04306bb2"><div class="ttname"><a href="namespace_hep_lib.html#abd0e1797a16e7a14915c9d5e04306bb2">HepLib::garWrite</a></div><div class="ttdeci">void garWrite(const string &amp;garfn, const map&lt; string, ex &gt; &amp;resMap)</div><div class="ttdoc">garWrite to write the string-key map to the archive</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00546">BASIC.cpp:546</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_abe52ec1557d2e1b89d8d5422b3c53287"><div class="ttname"><a href="namespace_hep_lib.html#abe52ec1557d2e1b89d8d5422b3c53287">HepLib::let_op_append</a></div><div class="ttdeci">void let_op_append(ex &amp;ex_in, const ex item)</div><div class="ttdoc">append item into expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01143">BASIC.cpp:1143</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ac1db5a50669ce842368f5403d43bcf9d"><div class="ttname"><a href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a></div><div class="ttdeci">string ex2str(const ex &amp;expr)</div><div class="ttdoc">convert ex to output string, the defalut printer format will be used</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00622">BASIC.cpp:622</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ac1fb2eaa26265b14be15b575d34f2c5f"><div class="ttname"><a href="namespace_hep_lib.html#ac1fb2eaa26265b14be15b575d34f2c5f">HepLib::let_op_remove_first</a></div><div class="ttdeci">void let_op_remove_first(ex &amp;ex_in)</div><div class="ttdoc">remove first from expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01174">BASIC.cpp:1174</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_ac3d3520479a2eabf7e18d518c954f036"><div class="ttname"><a href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036">HepLib::exfactor</a></div><div class="ttdeci">ex exfactor(const ex &amp;expr, int opt)</div><div class="ttdoc">factorize a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02028">BASIC.cpp:2028</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_ac3d3520479a2eabf7e18d518c954f036"><div class="ttname"><a href="namespace_hep_lib.html#ac3d3520479a2eabf7e18d518c954f036">HepLib::exfactor</a></div><div class="ttdeci">ex exfactor(const ex &amp;expr, int opt)</div><div class="ttdoc">factorize a expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02030">BASIC.cpp:2030</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ac4edb7e1b0b8398f8e263cecd4ff2421"><div class="ttname"><a href="namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421">HepLib::dir_exists</a></div><div class="ttdeci">bool dir_exists(string dir)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00227">BASIC.h:227</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ac57e11b281dc3e3837cfd1b0ecbd1488"><div class="ttname"><a href="namespace_hep_lib.html#ac57e11b281dc3e3837cfd1b0ecbd1488">HepLib::inner_expand_collect</a></div><div class="ttdeci">pair&lt; ex, epvec_t &gt; inner_expand_collect(ex const &amp;expr_in, std::function&lt; bool(const ex &amp;)&gt; has_func, int depth=0)</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00933">BASIC.cpp:933</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ad7af55b48a643624ab2a7b0f47a2c09b"><div class="ttname"><a href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">HepLib::sort_vec_by</a></div><div class="ttdeci">void sort_vec_by(exvector &amp;ivec, int ki, bool less)</div><div class="ttdoc">sort the list in less order, or the reverse</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01671">BASIC.cpp:1671</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_adad5cba4bdf406e82680443eaf1cbd87"><div class="ttname"><a href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">HepLib::factor_form</a></div><div class="ttdeci">ex factor_form(const ex &amp;expr)</div><div class="ttdoc">factorize a expression using FORM</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02126">BASIC.cpp:2126</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_adad5cba4bdf406e82680443eaf1cbd87"><div class="ttname"><a href="namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87">HepLib::factor_form</a></div><div class="ttdeci">ex factor_form(const ex &amp;expr)</div><div class="ttdoc">factorize a expression using FORM</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02128">BASIC.cpp:2128</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_adcc0b054971a98b2b47ed8f086e60763"><div class="ttname"><a href="namespace_hep_lib.html#adcc0b054971a98b2b47ed8f086e60763">HepLib::xSign</a></div><div class="ttdeci">int xSign(ex const expr)</div><div class="ttdoc">the always sign for expr</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01131">BASIC.cpp:1131</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_add51fc701b9f47e43a9f57e0bb9dff7c"><div class="ttname"><a href="namespace_hep_lib.html#add51fc701b9f47e43a9f57e0bb9dff7c">HepLib::vec2lst</a></div><div class="ttdeci">lst vec2lst(const exvector &amp;exvec)</div><div class="ttdoc">convert exvector to lst</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00767">BASIC.cpp:767</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_html_ae3d6d415e88038901d36c41e30802134"><div class="ttname"><a href="namespace_hep_lib.html#ae3d6d415e88038901d36c41e30802134">HepLib::let_op_remove_last</a></div><div class="ttdeci">void let_op_remove_last(ex &amp;ex_in)</div><div class="ttdoc">remove last from expression</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01164">BASIC.cpp:1164</a></div></div>
