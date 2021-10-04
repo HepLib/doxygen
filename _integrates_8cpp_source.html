@@ -283,7 +283,7 @@ $(function() {
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        plRepl.unique();</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        </div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordtype">int</span> total = ciResult.size(), current = 0;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> stot = sqrtq(total*1.Q);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> stot = sqrtl(total*1.L);</div>
@@ -490,7 +490,7 @@ $(function() {
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>                <span class="keywordtype">int</span> smin = -1;</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                ex min_err, min_res;</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> min_eval;</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> log_lamax = log10q(lamax);</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>                <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> log_lamin = log_lamax-1.Q;</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="preprocessor">#else</span></div>
@@ -531,7 +531,7 @@ $(function() {
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>                                cout &lt;&lt; <span class="stringliteral">&quot;     ------------------------------&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>                        }</div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span>                        <span class="keyword">auto</span> log_cla = (log_lamin + s * (log_lamax-log_lamin) / <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9">LambdaSplit</a>);</div>
-<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>                        <span class="keyword">auto</span> cla = powq(10.Q, log_cla);</div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>                        <span class="keyword">auto</span> cla = powl(10.L, log_cla);</div>
@@ -597,7 +597,7 @@ $(function() {
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                    <span class="keywordflow">if</span>(smin &lt;= 0) {</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                        <span class="keywordflow">if</span>((!err_break) &amp;&amp; (ctryL &gt;= <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#abdaff6a4d204bf100a9212cb57723da3">CTryLeft</a> || ctryR&gt;0)) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                        log_lamax = log_lamin;</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                        log_lamin -= 1.Q;</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                        log_lamin -= 1.L;</div>
@@ -606,7 +606,7 @@ $(function() {
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(smin &gt;= <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9">LambdaSplit</a>) {</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                        <span class="keywordflow">if</span>(ctryR &gt;= <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#aef258bae05055765f94e5a12b4e9683a">CTryRight</a> || ctryL&gt;0) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                        log_lamin = log_lamax;</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                        log_lamax += log10q(<a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a3cfca1964fc1c9215224dea3cb5edbd2">CTryRightRatio</a>);</div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                        log_lamax += log10l(<a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a3cfca1964fc1c9215224dea3cb5edbd2">CTryRightRatio</a>);</div>
@@ -628,7 +628,7 @@ $(function() {
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>                }</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>                </div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                <span class="keyword">auto</span> log_cla = (log_lamin + smin * (log_lamax-log_lamin) / <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9">LambdaSplit</a>);</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>                <span class="keyword">auto</span> cla = powq(10.Q, log_cla);</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>                <span class="keyword">auto</span> cla = powl(10.L, log_cla);</div>
@@ -666,7 +666,7 @@ $(function() {
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>                    <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;5) {</div>
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>                        cout &lt;&lt; <a class="code hl_variable" href="namespace_hep_lib.html#a036f5d54867d7e07018c60045f691d30">Color_HighLight</a> &lt;&lt; <span class="stringliteral">&quot;     Final λs: &quot;</span> &lt;&lt; <a class="code hl_define" href="_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a>;</div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;xsize; i++) {</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                            <span class="keywordtype">char</span> buffer[128];</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                            quadmath_snprintf(buffer, <span class="keyword">sizeof</span> buffer, <span class="stringliteral">&quot;%.6QG&quot;</span>, lambda[i]);</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>                            cout &lt;&lt; buffer &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
@@ -853,7 +853,7 @@ $(function() {
 <div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        plRepl.unique();</div>
 <div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        </div>
 <div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        <span class="keywordtype">int</span> total = ciResult.size(), current = 0;</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> stot = sqrtq(total*1.Q);</div>
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> stot = sqrtl(total*1.L);</div>
@@ -866,7 +866,7 @@ $(function() {
 <div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>            <span class="keyword">auto</span> cmerr = <a class="code hl_function" href="namespace_hep_lib.html#a62f77c9958eac224113fc56841d82cf4">ex2q</a>(<a class="code hl_function" href="namespace_hep_lib_1_1_s_d.html#a700ce1d39a2aef53456560192c0d4ffa">VEMaxErr</a>(lstRE.op(current-1)));</div>
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>            <span class="keywordflow">if</span>(cmerr &lt; err) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;10) {</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>                <span class="keywordtype">char</span> es[64];</div>
 <div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>                quadmath_snprintf(es, <span class="keyword">sizeof</span> es, <span class="stringliteral">&quot;%.10QG&quot;</span>, cmerr);</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>                cout &lt;&lt; <span class="stringliteral">&quot;  \\--Current Err: &quot;</span> &lt;&lt; es &lt;&lt; endl;</div>
@@ -1063,7 +1063,7 @@ $(function() {
 <div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>                <span class="keywordtype">int</span> smin = -1;</div>
 <div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>                ex min_err, min_res;</div>
 <div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> min_eval;</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>                <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> log_lamax = log10q(lamax);</div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>                <a class="code hl_typedef" href="namespace_hep_lib_1_1_s_d.html#a10f040c0d7247b7d5401cbd72c92cd09">qREAL</a> log_lamin = log_lamax-1.Q;</div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span><span class="preprocessor">#else</span></div>
@@ -1104,7 +1104,7 @@ $(function() {
 <div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>                                cout &lt;&lt; <span class="stringliteral">&quot;     ------------------------------&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>                        }</div>
 <div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>                        <span class="keyword">auto</span> log_cla = (log_lamin + s * (log_lamax-log_lamin) / <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9">LambdaSplit</a>);</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>                        <span class="keyword">auto</span> cla = powq(10.Q, log_cla);</div>
 <div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>                        <span class="keyword">auto</span> cla = powl(10.L, log_cla);</div>
@@ -1169,7 +1169,7 @@ $(function() {
 <div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>                    <span class="keywordflow">if</span>(smin &lt;= 0) {</div>
 <div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>                        <span class="keywordflow">if</span>((!err_break) &amp;&amp; (ctryL &gt;= <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#abdaff6a4d204bf100a9212cb57723da3">CTryLeft</a> || ctryR&gt;0)) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>                        log_lamax = log_lamin;</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>                        log_lamin -= 1.Q;</div>
 <div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>                        log_lamin -= 1.L;</div>
@@ -1178,7 +1178,7 @@ $(function() {
 <div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(smin &gt;= <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9">LambdaSplit</a>) {</div>
 <div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>                        <span class="keywordflow">if</span>(ctryR &gt;= <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#aef258bae05055765f94e5a12b4e9683a">CTryRight</a> || ctryL&gt;0) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>                        log_lamin = log_lamax;</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>                        log_lamax += log10q(<a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a3cfca1964fc1c9215224dea3cb5edbd2">CTryRightRatio</a>);</div>
 <div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>                        log_lamax += log10l(<a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a3cfca1964fc1c9215224dea3cb5edbd2">CTryRightRatio</a>);</div>
@@ -1197,7 +1197,7 @@ $(function() {
 <div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>                <span class="keywordflow">if</span>(smin == -2) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>                </div>
 <div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>                <span class="keyword">auto</span> log_cla = (log_lamin + smin * (log_lamax-log_lamin) / <a class="code hl_variable" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9">LambdaSplit</a>);</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>                <span class="keyword">auto</span> cla = powq(10.Q, log_cla);</div>
 <div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>                <span class="keyword">auto</span> cla = powl(10.L, log_cla);</div>
@@ -1235,7 +1235,7 @@ $(function() {
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>                    <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a>&gt;5) {</div>
 <div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>                        cout &lt;&lt; <a class="code hl_variable" href="namespace_hep_lib.html#a036f5d54867d7e07018c60045f691d30">Color_HighLight</a> &lt;&lt; <span class="stringliteral">&quot;     Final λs: &quot;</span> &lt;&lt; <a class="code hl_define" href="_b_a_s_i_c_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a>;</div>
 <div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;xsize; i++) {</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span><span class="preprocessor">#ifdef _GLIBCXX_USE_FLOAT128</span></div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span><span class="preprocessor">#ifdef _USE_FLOAT128</span></div>
 <div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>                            <span class="keywordtype">char</span> buffer[128];</div>
 <div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>                            quadmath_snprintf(buffer, <span class="keyword">sizeof</span> buffer, <span class="stringliteral">&quot;%.6QG&quot;</span>, lambda[i]);</div>
 <div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>                            cout &lt;&lt; buffer &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
