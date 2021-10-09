@@ -100,6 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4aebab053f1799b17dcff97de799c38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a2f88b1a345ebd2d9fc83a55dfe51c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html#a8a2f88b1a345ebd2d9fc83a55dfe51c2">Import</a> ()</td></tr>
 <tr class="separator:a8a2f88b1a345ebd2d9fc83a55dfe51c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1870e96a0bd75c6cb68b0f9f687def"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html#aaf1870e96a0bd75c6cb68b0f9f687def">IsZero</a> (ex sector)</td></tr>
+<tr class="separator:aaf1870e96a0bd75c6cb68b0f9f687def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a0f5854468e761018aa071a839f56b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html#a4a0f5854468e761018aa071a839f56b6">Reduce</a> ()</td></tr>
 <tr class="separator:a4a0f5854468e761018aa071a839f56b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -135,6 +137,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ab7da24541999091938adf3a6d3c42b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa372dd0f62befbf1fab7f4d73e5d4ae5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html#aa372dd0f62befbf1fab7f4d73e5d4ae5">Rules</a></td></tr>
 <tr class="separator:aa372dd0f62befbf1fab7f4d73e5d4ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc4f49a7ebd697c29ac13b8d3d1fd44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html#a2cc4f49a7ebd697c29ac13b8d3d1fd44">IsAlwaysZero</a> = false</td></tr>
+<tr class="separator:a2cc4f49a7ebd697c29ac13b8d3d1fd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html" title="Base class for IBP reduction.">Base</a> class for <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction. </p>
@@ -166,7 +170,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#af8a6276178682e7ea4880466ba42cac0">HepLib::IBP::FIRE</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#a5fc687d00c92c52e548e8e479c7a3beb">HepLib::IBP::KIRA</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#ac48c7c5122c72800e3f647608975d951">HepLib::IBP::UKIRA</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_direct.html#ac0a3832885576beea3022c9b40a3e5f2">HepLib::IBP::Direct</a>, and <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_laporta.html#a4f673826d73a5575bf7945d011aa6c0a">HepLib::IBP::Laporta</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00044">44</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00045">45</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +199,27 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a15205a138657ee91cbd4b8682a14dde2">HepLib::IBP::FIRE</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#ada476dc171dca0ec0dfdd3722b1428ad">HepLib::IBP::KIRA</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a638494ca1ab552497b4c8a7574d89802">HepLib::IBP::UKIRA</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_direct.html#a0f643c7e4fba4e5d375afcffe433c7de">HepLib::IBP::Direct</a>, and <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_laporta.html#a02c4da1204d9ca9efb84bb1f4a14f229">HepLib::IBP::Laporta</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00046">46</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00047">47</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
+
+</div>
+</div>
+<a id="aaf1870e96a0bd75c6cb68b0f9f687def" name="aaf1870e96a0bd75c6cb68b0f9f687def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1870e96a0bd75c6cb68b0f9f687def">&#9670;&nbsp;</a></span>IsZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HepLib::IBP::Base::IsZero </td>
+          <td>(</td>
+          <td class="paramtype">ex&#160;</td>
+          <td class="paramname"><em>sector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_base_8cpp_source.html#l00427">427</a> of file <a class="el" href="_base_8cpp_source.html">Base.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +265,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#aaf2f70a2f4b8dfdb093252a098b0cb8a">HepLib::IBP::FIRE</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#af725f76676ad6cc2335f3dd1217c95b0">HepLib::IBP::KIRA</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a6751c53fd9a5dfd14713843b9f3a90f0">HepLib::IBP::UKIRA</a>, <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_direct.html#ab59e5d9370673594ff75d87862801387">HepLib::IBP::Direct</a>, and <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_laporta.html#a566cbe5c5b33184bdde8f8bb1bbebe28">HepLib::IBP::Laporta</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00045">45</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00046">46</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
 
 </div>
 </div>
@@ -323,6 +347,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00027">27</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
+
+</div>
+</div>
+<a id="a2cc4f49a7ebd697c29ac13b8d3d1fd44" name="a2cc4f49a7ebd697c29ac13b8d3d1fd44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc4f49a7ebd697c29ac13b8d3d1fd44">&#9670;&nbsp;</a></span>IsAlwaysZero</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HepLib::IBP::Base::IsAlwaysZero = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_b_p_8h_source.html#l00043">43</a> of file <a class="el" href="_i_b_p_8h_source.html">IBP.h</a>.</p>
 
 </div>
 </div>
@@ -486,8 +526,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Volumes/DATA/CUMTB/Research/CPC/HepLib/archive/HepLib/src/IBP/<a class="el" href="_i_b_p_8h_source.html">IBP.h</a></li>
+<li>/Volumes/DATA/CUMTB/Research/CPC/HepLib/archive/HepLib/src/IBP/<a class="el" href="_base_8cpp_source.html">Base.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

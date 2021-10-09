@@ -27,5 +27,5 @@ var searchData=
   ['isprojective_24',['isProjective',['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#ae26534eea860ce435e3155b38f487edd',1,'HepLib::SD::ChengWu']]],
   ['issorted_25',['isSorted',['../namespace_hep_lib.html#a3d9d4b2fbb420324379735d293990cee',1,'HepLib::isSorted(const lst &amp;exs)'],['../namespace_hep_lib.html#ac2f6ac0247115f5d5e58372b8d17b0d7',1,'HepLib::isSorted(int n, const ex exs[])']]],
   ['isymbol_26',['iSymbol',['../class_hep_lib_1_1i_symbol.html#a48c0707bb771c101484a0cff5c937b13',1,'HepLib::iSymbol']]],
-  ['iszero_27',['IsZero',['../namespace_hep_lib.html#ac8b5e75964505bf13d7761e77a1ee72e',1,'HepLib']]]
+  ['iszero_27',['IsZero',['../class_hep_lib_1_1_i_b_p_1_1_base.html#aaf1870e96a0bd75c6cb68b0f9f687def',1,'HepLib::IBP::Base::IsZero()'],['../namespace_hep_lib.html#ac8b5e75964505bf13d7761e77a1ee72e',1,'HepLib::IsZero()']]]
 ];

@@ -16,8 +16,9 @@ var searchData=
   ['integrator_13',['Integrator',['../class_hep_lib_1_1_s_d_1_1_err_min.html#a27c6a0fc70f14a5d15f48b3ca4cb9f05',1,'HepLib::SD::ErrMin::Integrator()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a492991446f5f269726be5200436ae2a7',1,'HepLib::SD::SecDec::Integrator()']]],
   ['internal_14',['Internal',['../struct_hep_lib_1_1_a_i_option.html#a311d1b0b65049e10c16390f7b7e71db3',1,'HepLib::AIOption::Internal()'],['../class_hep_lib_1_1_i_b_p_1_1_base.html#ad47eed59996e9e2b2f4a3e6145f7fd13',1,'HepLib::IBP::Base::Internal()']]],
   ['intlamax_15',['IntLaMax',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2291b384b40f0b914fd2cdc1fcea317d',1,'HepLib::SD::SecDec']]],
-  ['isasy_16',['isAsy',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a9c046c53059177b7c6e2fdd7670d8695',1,'HepLib::SD::FeynmanParameter::isAsy()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a0e6517026f1a3b2892218efe25e55224',1,'HepLib::SD::XIntegrand::isAsy()']]],
-  ['isp_17',['ISP',['../struct_hep_lib_1_1_a_i_option.html#ac77d3df650a173380bf2b0573939a060',1,'HepLib::AIOption::ISP()'],['../class_hep_lib_1_1_i_b_p_1_1_base.html#a8ed5a90882ade3536711d35dd6eea208',1,'HepLib::IBP::Base::ISP()']]],
-  ['isquasi_18',['isQuasi',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#abaad8e1b360660bde2011a785b15561d',1,'HepLib::SD::FeynmanParameter']]],
-  ['iszero_19',['IsZero',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7ea34e07604065d8fd08f9f265eac9b0',1,'HepLib::SD::SecDec']]]
+  ['isalwayszero_16',['IsAlwaysZero',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a2cc4f49a7ebd697c29ac13b8d3d1fd44',1,'HepLib::IBP::Base']]],
+  ['isasy_17',['isAsy',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a9c046c53059177b7c6e2fdd7670d8695',1,'HepLib::SD::FeynmanParameter::isAsy()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a0e6517026f1a3b2892218efe25e55224',1,'HepLib::SD::XIntegrand::isAsy()']]],
+  ['isp_18',['ISP',['../struct_hep_lib_1_1_a_i_option.html#ac77d3df650a173380bf2b0573939a060',1,'HepLib::AIOption::ISP()'],['../class_hep_lib_1_1_i_b_p_1_1_base.html#a8ed5a90882ade3536711d35dd6eea208',1,'HepLib::IBP::Base::ISP()']]],
+  ['isquasi_19',['isQuasi',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#abaad8e1b360660bde2011a785b15561d',1,'HepLib::SD::FeynmanParameter']]],
+  ['iszero_20',['IsZero',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7ea34e07604065d8fd08f9f265eac9b0',1,'HepLib::SD::SecDec']]]
 ];
