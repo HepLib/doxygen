@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['lambda_0',['lambda',['../class_hep_lib_1_1_s_d_1_1_err_min.html#adbbd281231f555b1f61e72aa9026033f',1,'HepLib::SD::ErrMin']]],
-  ['lambda_1',['Lambda',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a457dd48e6692306d7322fc3225ad375b',1,'HepLib::SD::IntegratorBase']]],
+  ['lambda_0',['Lambda',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a457dd48e6692306d7322fc3225ad375b',1,'HepLib::SD::IntegratorBase']]],
+  ['lambda_1',['lambda',['../class_hep_lib_1_1_s_d_1_1_err_min.html#adbbd281231f555b1f61e72aa9026033f',1,'HepLib::SD::ErrMin']]],
   ['lambdasplit_2',['LambdaSplit',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a43e06278b9a4c6b6d42e08d232b3cbc9',1,'HepLib::SD::SecDec']]],
   ['lastabserr_3',['LastAbsErr',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html#a1003a8a2fbd3c4d0a20454740631a260',1,'HepLib::SD::HCubature']]],
   ['lastnnan_4',['lastnNAN',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html#a476cbf21023aa08e241aa4ba264947e5',1,'HepLib::SD::HCubature']]],

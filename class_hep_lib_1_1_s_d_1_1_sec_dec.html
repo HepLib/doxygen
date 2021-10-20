@@ -87,6 +87,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a56c7407f9fcf30e358750284574e2f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0515df64dba0c5ed23d48c0bcaf32cbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a0515df64dba0c5ed23d48c0bcaf32cbf">Initialize</a> (<a class="el" href="struct_hep_lib_1_1_s_d_1_1_x_integrand.html">XIntegrand</a> xint)</td></tr>
 <tr class="separator:a0515df64dba0c5ed23d48c0bcaf32cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dbbe1131aa36c7dedea45b9c78b274"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#af2dbbe1131aa36c7dedea45b9c78b274">BiSection</a> (ex xi, ex x0)</td></tr>
+<tr class="separator:af2dbbe1131aa36c7dedea45b9c78b274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ecc277882917dcbb73487348bd7cf18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a5ecc277882917dcbb73487348bd7cf18">Normalizes</a> ()</td></tr>
 <tr class="separator:a5ecc277882917dcbb73487348bd7cf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace52b5a4ae67da2ae307080f967600be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#ace52b5a4ae67da2ae307080f967600be">Scalelesses</a> ()</td></tr>
@@ -252,8 +254,6 @@ Public Attributes</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a557d2aee7d90a66866d9c2674ecf4cbb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a557d2aee7d90a66866d9c2674ecf4cbb">use_dlclose</a> = true</td></tr>
 <tr class="separator:a557d2aee7d90a66866d9c2674ecf4cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf30c6441ce801dcd114be742bb8610b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#abf30c6441ce801dcd114be742bb8610b">debug</a> = false</td></tr>
-<tr class="separator:abf30c6441ce801dcd114be742bb8610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf49e000c61ec4ca3e464d27899ba89"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a9bf49e000c61ec4ca3e464d27899ba89">cpp</a> = &quot;g++&quot;</td></tr>
 <tr class="separator:a9bf49e000c61ec4ca3e464d27899ba89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -299,6 +299,36 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00199">199</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af2dbbe1131aa36c7dedea45b9c78b274" name="af2dbbe1131aa36c7dedea45b9c78b274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2dbbe1131aa36c7dedea45b9c78b274">&#9670;&nbsp;</a></span>BiSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::SD::SecDec::BiSection </td>
+          <td>(</td>
+          <td class="paramtype">ex&#160;</td>
+          <td class="paramname"><em>xi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ex&#160;</td>
+          <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00998">998</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +484,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l01328">1328</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l01397">1397</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -728,7 +758,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00638">638</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00692">692</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -906,7 +936,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00851">851</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00905">905</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -925,7 +955,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00766">766</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00820">820</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -944,7 +974,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00945">945</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l01014">1014</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1070,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00919">919</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00973">973</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -1059,7 +1089,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00722">722</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00776">776</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1164,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00618">618</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00672">672</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -1153,7 +1183,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00681">681</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00735">735</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1200,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00405">405</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00404">404</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1216,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00397">397</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00396">396</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1240,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00380">380</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00379">379</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1256,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00411">411</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00410">410</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1242,7 +1272,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00410">410</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00409">409</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1288,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00418">418</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00417">417</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1304,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00419">419</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00418">418</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1320,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00420">420</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00419">419</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1336,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00421">421</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00420">420</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1352,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00413">413</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00412">412</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1338,31 +1368,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00412">412</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
-
-</div>
-</div>
-<a id="abf30c6441ce801dcd114be742bb8610b" name="abf30c6441ce801dcd114be742bb8610b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf30c6441ce801dcd114be742bb8610b">&#9670;&nbsp;</a></span>debug</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool HepLib::SD::SecDec::debug = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00379">379</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00411">411</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1378,7 +1384,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00382">382</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00381">381</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1400,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00427">427</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00426">426</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1410,7 +1416,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00383">383</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00382">382</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1426,7 +1432,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00391">391</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00390">390</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1442,7 +1448,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00389">389</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00388">388</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1458,7 +1464,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00390">390</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00389">389</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1480,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00393">393</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00392">392</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1490,7 +1496,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00417">417</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00416">416</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1506,7 +1512,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00396">396</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00395">395</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1522,7 +1528,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00416">416</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00415">415</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1538,7 +1544,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00394">394</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00393">393</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1554,7 +1560,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00426">426</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00425">425</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1570,7 +1576,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00404">404</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00403">403</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1586,7 +1592,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00388">388</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00387">387</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1602,7 +1608,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00407">407</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00406">406</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1618,7 +1624,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00385">385</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00384">384</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1634,7 +1640,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00428">428</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00427">427</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1650,7 +1656,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00395">395</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00394">394</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1666,7 +1672,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00424">424</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00423">423</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1682,7 +1688,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00425">425</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00424">424</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1698,7 +1704,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00401">401</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00400">400</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1714,7 +1720,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00392">392</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00391">391</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1730,7 +1736,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00422">422</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00421">421</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1746,7 +1752,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00415">415</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00414">414</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1786,7 +1792,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00399">399</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00398">398</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1802,7 +1808,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00402">402</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00401">401</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1818,7 +1824,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00400">400</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00399">399</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +1840,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00387">387</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00386">386</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1850,7 +1856,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00403">403</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00402">402</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1866,7 +1872,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00386">386</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00385">385</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>
@@ -1882,7 +1888,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00384">384</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_d_8h_source.html#l00383">383</a> of file <a class="el" href="_s_d_8h_source.html">SD.h</a>.</p>
 
 </div>
 </div>

@@ -6,7 +6,7 @@ var searchData=
   ['secdec_3',['SecDec',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2142a9728aa9dfc777ea7311c2eb882f',1,'HepLib::SD::SecDec']]],
   ['seed_5foption_4',['seed_option',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#ae8695ddffdf3d30b7a02b8a00903e259',1,'HepLib::IBP::UKIRA::seed_option()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a851e8e8fac3f20914a36028c1e4d346a',1,'HepLib::IBP::Laporta::seed_option()']]],
   ['sentinel_5',['Sentinel',['../class_hep_lib_1_1_fermat.html#a76c3722ffe7451efbdd74b44d4dfd124',1,'HepLib::Fermat::Sentinel()'],['../class_hep_lib_1_1_form.html#a19c0c3182b330b0bd083b3e9cf2fe92e',1,'HepLib::Form::Sentinel()']]],
-  ['shift_6',['Shift',['../class_hep_lib_1_1_i_b_p_1_1_base.html#ad18327664da504f5b62efb06d444a77d',1,'HepLib::IBP::Base::Shift()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a2f6354c9f53ab52daea2ff60653bc013',1,'HepLib::IBP::Laporta::Shift()']]],
+  ['shift_6',['Shift',['../class_hep_lib_1_1_i_b_p_1_1_base.html#ad18327664da504f5b62efb06d444a77d',1,'HepLib::IBP::Base']]],
   ['smap_7',['smap',['../struct_hep_lib_1_1_a_i_option.html#a2e7e89865423f8673787a6445e4c7186',1,'HepLib::AIOption']]],
   ['solimit_8',['soLimit',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#abcb2c946951af9077e0499ca7ed502ae',1,'HepLib::SD::SecDec']]],
   ['sort_5foption_9',['sort_option',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#afc142dca4cbea04d175dff4bc411153b',1,'HepLib::IBP::UKIRA::sort_option()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#af6858df32bf3ec40fbb59565373fa771',1,'HepLib::IBP::Laporta::sort_option()']]],

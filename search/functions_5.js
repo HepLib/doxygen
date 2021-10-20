@@ -1,8 +1,8 @@
 var searchData=
 [
   ['f2ex_0',['F2ex',['../namespace_hep_lib.html#a713f5406a55ea6396d67130bef9383cb',1,'HepLib']]],
-  ['factor_1',['factor',['../_gi_na_c_w_8cpp.html#a52406fa5de76527381e31d77178e8e99',1,'GiNaCW.cpp']]],
-  ['factor_2',['Factor',['../namespace_hep_lib_1_1_s_d.html#ae3e0aa78d0f003e3025909bbb25eb64b',1,'HepLib::SD']]],
+  ['factor_1',['Factor',['../namespace_hep_lib_1_1_s_d.html#ae3e0aa78d0f003e3025909bbb25eb64b',1,'HepLib::SD']]],
+  ['factor_2',['factor',['../_gi_na_c_w_8cpp.html#a52406fa5de76527381e31d77178e8e99',1,'GiNaCW.cpp']]],
   ['factor_5fform_3',['factor_form',['../namespace_hep_lib.html#adad5cba4bdf406e82680443eaf1cbd87',1,'HepLib']]],
   ['factorial_4',['factorial',['../_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a',1,'GiNaCW.cpp']]],
   ['factoroutx_5',['FactorOutX',['../namespace_hep_lib_1_1_s_d.html#a01af25b85fc8b13abbc33cb9ef626967',1,'HepLib::SD']]],
