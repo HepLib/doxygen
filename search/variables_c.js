@@ -10,6 +10,5 @@ var searchData=
   ['nl_7',['nL',['../namespace_hep_lib.html#acabac7d0f5ac958b9684acfbcd9260f2',1,'HepLib']]],
   ['nnan_8',['nNAN',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a12b57dd928745006d707be7ef4b53316',1,'HepLib::SD::IntegratorBase']]],
   ['nndigits_9',['NNDigits',['../namespace_hep_lib.html#a2de89960f6bac28057cdea76f7d73c48',1,'HepLib']]],
-  ['nnn_10',['nnn',['../namespace_hep_lib_1_1_s_d.html#a0c55a637ef41d9023645d2fb99da46ad',1,'HepLib::SD']]],
-  ['nreplacements_11',['nReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4a5c77001804946c739c3d06abd56fa7',1,'HepLib::SD::FeynmanParameter::nReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a6dd5589abf31519eb8144323aa5ee522',1,'HepLib::SD::XIntegrand::nReplacements()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431',1,'HepLib::SD::SecDec::nReplacements()']]]
+  ['nreplacements_10',['nReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4a5c77001804946c739c3d06abd56fa7',1,'HepLib::SD::FeynmanParameter::nReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a6dd5589abf31519eb8144323aa5ee522',1,'HepLib::SD::XIntegrand::nReplacements()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431',1,'HepLib::SD::SecDec::nReplacements()']]]
 ];

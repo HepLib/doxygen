@@ -94,13 +94,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab35e7a2c1c1976cca150a02c974eef57"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; exmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#ab35e7a2c1c1976cca150a02c974eef57">x2y</a> (const ex &amp;xpol)=0</td></tr>
 <tr class="separator:ab35e7a2c1c1976cca150a02c974eef57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade180333c86f23946fad9edfdb853a8e"><td class="memItemLeft" align="right" valign="top">vector&lt; exmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#ade180333c86f23946fad9edfdb853a8e">x2y</a> (const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;xpols)</td></tr>
+<tr class="memdesc:ade180333c86f23946fad9edfdb853a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a general x2y procedure  <a href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#ade180333c86f23946fad9edfdb853a8e">More...</a><br /></td></tr>
 <tr class="separator:ade180333c86f23946fad9edfdb853a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c2b1729c41dbda42a64fbe38d663749"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#a9c2b1729c41dbda42a64fbe38d663749">VerifySD</a> (vector&lt; exmap &gt; vmap, bool quick=true)</td></tr>
+<tr class="memdesc:a9c2b1729c41dbda42a64fbe38d663749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the Sector Decompostion is valid.  <a href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#a9c2b1729c41dbda42a64fbe38d663749">More...</a><br /></td></tr>
 <tr class="separator:a9c2b1729c41dbda42a64fbe38d663749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae95b3bf915745d357e98701d2bea0f47"><td class="memItemLeft" align="right" valign="top">static ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#ae95b3bf915745d357e98701d2bea0f47">XMonomials</a> (const ex &amp;expr)</td></tr>
+<tr class="memdesc:ae95b3bf915745d357e98701d2bea0f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMonomials.  <a href="class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#ae95b3bf915745d357e98701d2bea0f47">More...</a><br /></td></tr>
 <tr class="separator:ae95b3bf915745d357e98701d2bea0f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -126,7 +129,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">bool HepLib::SD::SecDecBase::VerifySD </td>
           <td>(</td>
           <td class="paramtype">vector&lt; exmap &gt;&#160;</td>
-          <td class="paramname"><em>vmap</em>, </td>
+          <td class="paramname"><em>map_vec</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -147,7 +150,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00078">78</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p>Verify the Sector Decompostion is valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map_vec</td><td>x2y map </td></tr>
+    <tr><td class="paramname">quick</td><td>use numerical check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true for ok, false for invalid </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00088">88</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -189,13 +202,22 @@ Public Attributes</h2></td></tr>
           <td class="memname">vector&lt; exmap &gt; HepLib::SD::SecDecBase::x2y </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;&#160;</td>
-          <td class="paramname"><em>xpols</em></td><td>)</td>
+          <td class="paramname"><em>in_xpols</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00117">117</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p>a general x2y procedure </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_xpols</td><td>the input xpols </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of x2y map </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00132">132</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>
@@ -212,7 +234,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">ex HepLib::SD::SecDecBase::XMonomials </td>
           <td>(</td>
           <td class="paramtype">const ex &amp;&#160;</td>
-          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td class="paramname"><em>expr_in</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -223,7 +245,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00014">14</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
+<p>XMonomials. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expr_in</td><td>a expression </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>XMonomials with higher x^n droped </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_sec_dec_8cpp_source.html#l00018">18</a> of file <a class="el" href="_sec_dec_8cpp_source.html">SecDec.cpp</a>.</p>
 
 </div>
 </div>

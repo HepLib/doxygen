@@ -12,14 +12,13 @@ var searchData=
   ['nn_9',['NN',['../namespace_hep_lib.html#a3324ae978119d1fd78107ecd6f9efef1',1,'HepLib']]],
   ['nnan_10',['nNAN',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a12b57dd928745006d707be7ef4b53316',1,'HepLib::SD::IntegratorBase']]],
   ['nndigits_11',['NNDigits',['../namespace_hep_lib.html#a2de89960f6bac28057cdea76f7d73c48',1,'HepLib']]],
-  ['nnn_12',['nnn',['../namespace_hep_lib_1_1_s_d.html#a0c55a637ef41d9023645d2fb99da46ad',1,'HepLib::SD']]],
-  ['node_5fnumber_13',['node_number',['../namespace_hep_lib.html#a4a3daea54d403eea84f755935e7df406',1,'HepLib']]],
-  ['nops_14',['nops',['../class_hep_lib_1_1_s_u_n_t.html#a397f187e311eb4a7d9f038ea17c77fd5',1,'HepLib::SUNT::nops()'],['../class_hep_lib_1_1_s_u_n_f.html#aa636978b66d9163fef7946b98806356f',1,'HepLib::SUNF::nops()'],['../class_hep_lib_1_1_s_u_n_f4.html#a2170da9672cae2030c0a2d5e87343015',1,'HepLib::SUNF4::nops()'],['../class_hep_lib_1_1_pair.html#a75fe0b4444cfe3fc683d7e5e229c2191',1,'HepLib::Pair::nops()'],['../class_hep_lib_1_1_eps.html#ab812add9be59675680c9c0a3bfe73832',1,'HepLib::Eps::nops()'],['../class_hep_lib_1_1_d_gamma.html#a86f70576d86a0caafb6d84a83035dd66',1,'HepLib::DGamma::nops()'],['../class_hep_lib_1_1_x_integral.html#afa90e7ab536c6c1d72ba4d27a4f8d23a',1,'HepLib::XIntegral::nops()']]],
-  ['normal_15',['normal',['../_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450',1,'GiNaCW.cpp']]],
-  ['normal_5ffermat_16',['normal_fermat',['../namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5',1,'HepLib']]],
-  ['normalizes_17',['Normalizes',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a5ecc277882917dcbb73487348bd7cf18',1,'HepLib::SD::SecDec']]],
-  ['now_18',['now',['../namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2',1,'HepLib']]],
-  ['nreplacements_19',['nReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4a5c77001804946c739c3d06abd56fa7',1,'HepLib::SD::FeynmanParameter::nReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a6dd5589abf31519eb8144323aa5ee522',1,'HepLib::SD::XIntegrand::nReplacements()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431',1,'HepLib::SD::SecDec::nReplacements()']]],
-  ['numer_20',['numer',['../_gi_na_c_w_8cpp.html#a740a4fa7bc3ac20d04c653b8ceaef7a7',1,'GiNaCW.cpp']]],
-  ['numer_5fdenom_5ffermat_21',['numer_denom_fermat',['../namespace_hep_lib.html#a6e1a5df6d4c9d5d1530fe849a7855092',1,'HepLib']]]
+  ['node_5fnumber_12',['node_number',['../namespace_hep_lib.html#a4a3daea54d403eea84f755935e7df406',1,'HepLib']]],
+  ['nops_13',['nops',['../class_hep_lib_1_1_s_u_n_t.html#a397f187e311eb4a7d9f038ea17c77fd5',1,'HepLib::SUNT::nops()'],['../class_hep_lib_1_1_s_u_n_f.html#aa636978b66d9163fef7946b98806356f',1,'HepLib::SUNF::nops()'],['../class_hep_lib_1_1_s_u_n_f4.html#a2170da9672cae2030c0a2d5e87343015',1,'HepLib::SUNF4::nops()'],['../class_hep_lib_1_1_pair.html#a75fe0b4444cfe3fc683d7e5e229c2191',1,'HepLib::Pair::nops()'],['../class_hep_lib_1_1_eps.html#ab812add9be59675680c9c0a3bfe73832',1,'HepLib::Eps::nops()'],['../class_hep_lib_1_1_d_gamma.html#a86f70576d86a0caafb6d84a83035dd66',1,'HepLib::DGamma::nops()'],['../class_hep_lib_1_1_x_integral.html#afa90e7ab536c6c1d72ba4d27a4f8d23a',1,'HepLib::XIntegral::nops()']]],
+  ['normal_14',['normal',['../_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450',1,'GiNaCW.cpp']]],
+  ['normal_5ffermat_15',['normal_fermat',['../namespace_hep_lib.html#a32c3e929ba2e787bc76889a09ed021b5',1,'HepLib']]],
+  ['normalizes_16',['Normalizes',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a5ecc277882917dcbb73487348bd7cf18',1,'HepLib::SD::SecDec']]],
+  ['now_17',['now',['../namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2',1,'HepLib']]],
+  ['nreplacements_18',['nReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4a5c77001804946c739c3d06abd56fa7',1,'HepLib::SD::FeynmanParameter::nReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a6dd5589abf31519eb8144323aa5ee522',1,'HepLib::SD::XIntegrand::nReplacements()'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431',1,'HepLib::SD::SecDec::nReplacements()']]],
+  ['numer_19',['numer',['../_gi_na_c_w_8cpp.html#a740a4fa7bc3ac20d04c653b8ceaef7a7',1,'GiNaCW.cpp']]],
+  ['numer_5fdenom_5ffermat_20',['numer_denom_fermat',['../namespace_hep_lib.html#a6e1a5df6d4c9d5d1530fe849a7855092',1,'HepLib']]]
 ];
