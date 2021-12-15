@@ -159,6 +159,8 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a6cc06c1b4c1aa52e816b9d9c9bf98a76"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; pair&lt; ex, ex &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6cc06c1b4c1aa52e816b9d9c9bf98a76">epvec_t</a></td></tr>
 <tr class="separator:a6cc06c1b4c1aa52e816b9d9c9bf98a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a725277153c8ca7adced50ac96fa52"><td class="memItemLeft" align="right" valign="top">typedef ex(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a85a725277153c8ca7adced50ac96fa52">IParRun</a>) (int idx)</td></tr>
+<tr class="separator:a85a725277153c8ca7adced50ac96fa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -276,6 +278,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5110410b1dc8390960e15e657c25f71"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">diff_ex</a> (ex const expr, ex const xp, unsigned nth, bool <a class="el" href="_gi_na_c_w_8cpp.html#a9ad48c5ab416ac7295c554002193f366">expand</a>)</td></tr>
 <tr class="memdesc:ab5110410b1dc8390960e15e657c25f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">the differential like Mathematica  <a href="namespace_hep_lib.html#ab5110410b1dc8390960e15e657c25f71">More...</a><br /></td></tr>
 <tr class="separator:ab5110410b1dc8390960e15e657c25f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e91d8bef1832f4e4ef84aab3174cd04"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7e91d8bef1832f4e4ef84aab3174cd04">expand_using_map</a> (ex const &amp;expr_in, std::function&lt; bool(const ex &amp;)&gt; has_func)</td></tr>
+<tr class="separator:a7e91d8bef1832f4e4ef84aab3174cd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ffa3a0599fd0055222b8f1858dd1c1d"><td class="memItemLeft" align="right" valign="top">pair&lt; ex, <a class="el" href="namespace_hep_lib.html#a6cc06c1b4c1aa52e816b9d9c9bf98a76">epvec_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2ffa3a0599fd0055222b8f1858dd1c1d">inner_expand_collect</a> (ex const &amp;expr_in, std::function&lt; bool(const ex &amp;)&gt; has_func, int depth=0)</td></tr>
 <tr class="separator:a2ffa3a0599fd0055222b8f1858dd1c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025b983a8d24cde81cfdfe67804dbbe0"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a025b983a8d24cde81cfdfe67804dbbe0">expand_ex</a> (ex const &amp;expr_in, std::function&lt; bool(const ex &amp;)&gt; has_func)</td></tr>
@@ -388,22 +392,6 @@ Functions</h2></td></tr>
 <tr class="memitem:afbe188eb11523b5deb6a01fc61f141c7"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#afbe188eb11523b5deb6a01fc61f141c7">get_op</a> (const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ex_in, int index1, int index2, int index3)</td></tr>
 <tr class="memdesc:afbe188eb11523b5deb6a01fc61f141c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">return index1-th.index2-th.index3-th of expression  <a href="namespace_hep_lib.html#afbe188eb11523b5deb6a01fc61f141c7">More...</a><br /></td></tr>
 <tr class="separator:afbe188eb11523b5deb6a01fc61f141c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3daea54d403eea84f755935e7df406"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4a3daea54d403eea84f755935e7df406">node_number</a> (const ex &amp;expr, int level)</td></tr>
-<tr class="separator:a4a3daea54d403eea84f755935e7df406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12af63150d93a138d75ce79e04905441"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a> (const ex &amp;<a class="el" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, const ex &amp;b)</td></tr>
-<tr class="separator:a12af63150d93a138d75ce79e04905441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9d74ea9a66010acd5eab6c83ead9084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, bool less)</td></tr>
-<tr class="memdesc:ab9d74ea9a66010acd5eab6c83ead9084"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">More...</a><br /></td></tr>
-<tr class="separator:ab9d74ea9a66010acd5eab6c83ead9084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa211ca1f92c501b472cfc10e79d6060c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">sort_lst_by</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, int ki, bool less)</td></tr>
-<tr class="memdesc:aa211ca1f92c501b472cfc10e79d6060c"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">More...</a><br /></td></tr>
-<tr class="separator:aa211ca1f92c501b472cfc10e79d6060c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3fb75be8b0bd9d69eda7576c4a304a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab3fb75be8b0bd9d69eda7576c4a304a0">sort_vec</a> (exvector &amp;ivec, bool less)</td></tr>
-<tr class="memdesc:ab3fb75be8b0bd9d69eda7576c4a304a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ab3fb75be8b0bd9d69eda7576c4a304a0">More...</a><br /></td></tr>
-<tr class="separator:ab3fb75be8b0bd9d69eda7576c4a304a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">sort_vec_by</a> (exvector &amp;ivec, int ki, bool less)</td></tr>
-<tr class="memdesc:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">More...</a><br /></td></tr>
-<tr class="separator:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc208be02eb493696f4bc8176d23401"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7cc208be02eb493696f4bc8176d23401">GINAC_IMPLEMENT_REGISTERED_CLASS_OPT</a> (<a class="el" href="class_hep_lib_1_1_x_integral.html">XIntegral</a>, basic, print_func&lt; print_dflt &gt;(&amp;<a class="el" href="class_hep_lib_1_1_x_integral.html#a80ea774ba17934c004f4e0f00633e4d6">XIntegral::print</a>)) <a class="el" href="namespace_hep_lib.html#a6121a891165d160b79aceca888315d70">GINAC_BIND_UNARCHIVER</a>(<a class="el" href="class_hep_lib_1_1_x_integral.html">XIntegral</a>)</td></tr>
 <tr class="separator:a7cc208be02eb493696f4bc8176d23401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8021ec426600ae28f6bae7635c7ba10f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a8021ec426600ae28f6bae7635c7ba10f">CpuCores</a> ()</td></tr>
@@ -440,6 +428,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a5a072331cd5f4d78bfb89023a2560b01"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a5a072331cd5f4d78bfb89023a2560b01">factor_form</a> (const ex &amp;expr, bool nd)</td></tr>
 <tr class="memdesc:a5a072331cd5f4d78bfb89023a2560b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">factorize a expression using FORM  <a href="namespace_hep_lib.html#a5a072331cd5f4d78bfb89023a2560b01">More...</a><br /></td></tr>
 <tr class="separator:a5a072331cd5f4d78bfb89023a2560b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49095d4ee923f7cd2e947fc59b35bd75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a49095d4ee923f7cd2e947fc59b35bd75">garWrite</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:a49095d4ee923f7cd2e947fc59b35bd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8a64a5f3703b002fd820f1702ae4fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7b8a64a5f3703b002fd820f1702ae4fe">garRead</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:a7b8a64a5f3703b002fd820f1702ae4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e45457f3d734d5b6cf896f434cfb1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad2e45457f3d734d5b6cf896f434cfb1c">exVectorPut</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:ad2e45457f3d734d5b6cf896f434cfb1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bce348c8b5a9adc9673045dd9e478dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6bce348c8b5a9adc9673045dd9e478dc">exVectorGet</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:a6bce348c8b5a9adc9673045dd9e478dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57afadee1cdcaa0fe37874e33c798708"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a57afadee1cdcaa0fe37874e33c798708">add_collect_normal</a> (const exvector &amp;exv, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> const &amp;pats)</td></tr>
+<tr class="separator:a57afadee1cdcaa0fe37874e33c798708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e760355b94f98c8bea2731143ba55cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6e760355b94f98c8bea2731143ba55cf">has_any</a> (ex expr, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ps)</td></tr>
 <tr class="separator:a6e760355b94f98c8bea2731143ba55cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4259bf3977bcd8d7b795cf91c64a6265"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4259bf3977bcd8d7b795cf91c64a6265">has_all</a> (ex expr, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> ps)</td></tr>
@@ -546,6 +544,28 @@ Functions</h2></td></tr>
 <tr class="separator:a65d1de49c05ee1eeaa6a6bb9b811fbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a836cec82302f2157fbac85d444c2f0a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a836cec82302f2157fbac85d444c2f0a9">ACSort</a> (int n, ex exs[])</td></tr>
 <tr class="separator:a836cec82302f2157fbac85d444c2f0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55cb8187a641fd6852f0e839f81145d"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac55cb8187a641fd6852f0e839f81145d">node_number</a> (const ex &amp;expr, int level=0)</td></tr>
+<tr class="separator:ac55cb8187a641fd6852f0e839f81145d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12af63150d93a138d75ce79e04905441"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">ex_less</a> (const ex &amp;<a class="el" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, const ex &amp;b)</td></tr>
+<tr class="separator:a12af63150d93a138d75ce79e04905441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d74ea9a66010acd5eab6c83ead9084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">sort_lst</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, bool less)</td></tr>
+<tr class="memdesc:ab9d74ea9a66010acd5eab6c83ead9084"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">More...</a><br /></td></tr>
+<tr class="separator:ab9d74ea9a66010acd5eab6c83ead9084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa211ca1f92c501b472cfc10e79d6060c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">sort_lst_by</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, int ki, bool less)</td></tr>
+<tr class="memdesc:aa211ca1f92c501b472cfc10e79d6060c"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#aa211ca1f92c501b472cfc10e79d6060c">More...</a><br /></td></tr>
+<tr class="separator:aa211ca1f92c501b472cfc10e79d6060c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fb75be8b0bd9d69eda7576c4a304a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab3fb75be8b0bd9d69eda7576c4a304a0">sort_vec</a> (exvector &amp;ivec, bool less)</td></tr>
+<tr class="memdesc:ab3fb75be8b0bd9d69eda7576c4a304a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ab3fb75be8b0bd9d69eda7576c4a304a0">More...</a><br /></td></tr>
+<tr class="separator:ab3fb75be8b0bd9d69eda7576c4a304a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">sort_vec_by</a> (exvector &amp;ivec, int ki, bool less)</td></tr>
+<tr class="memdesc:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">More...</a><br /></td></tr>
+<tr class="separator:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b68656330adaac3ccd75ff96da2bd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a25b68656330adaac3ccd75ff96da2bd7">ex_less_cache</a> (const ex &amp;<a class="el" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, const ex &amp;b, map&lt; ex, bool, ex_is_less &gt; &amp;cache)</td></tr>
+<tr class="separator:a25b68656330adaac3ccd75ff96da2bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75df4f8c2e5f37b05978ffad5ee846e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a75df4f8c2e5f37b05978ffad5ee846e3">sort_lst</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, map&lt; ex, bool, ex_is_less &gt; &amp;cache, bool less=true)</td></tr>
+<tr class="separator:a75df4f8c2e5f37b05978ffad5ee846e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ed5ddb0ad6c18b193cfa8440bcd114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab4ed5ddb0ad6c18b193cfa8440bcd114">sort_vec</a> (exvector &amp;ivec, map&lt; ex, bool, ex_is_less &gt; &amp;cache, bool less=true)</td></tr>
+<tr class="separator:ab4ed5ddb0ad6c18b193cfa8440bcd114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10efc7977cbff6d005bb2c354fc8cca0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a10efc7977cbff6d005bb2c354fc8cca0">append_to</a> (const exvector &amp;exv, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;alst)</td></tr>
 <tr class="separator:a10efc7977cbff6d005bb2c354fc8cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58d3ea8e65aba8dd5cde4b769b14ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad58d3ea8e65aba8dd5cde4b769b14ff6">append_to</a> (const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;alst, exvector &amp;exv)</td></tr>
@@ -554,6 +574,14 @@ Functions</h2></td></tr>
 <tr class="separator:a1e5e87bc5f7d2612e847d3684777a10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d36286484544c7c13d01d7f79a9df4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2d36286484544c7c13d01d7f79a9df4b">GINAC_DECLARE_UNARCHIVER</a> (<a class="el" href="class_hep_lib_1_1_x_integral.html">XIntegral</a>)</td></tr>
 <tr class="separator:a2d36286484544c7c13d01d7f79a9df4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409128a134ac5959f4f706b4118f7662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a409128a134ac5959f4f706b4118f7662">garWrite</a> (string garfn, exvector &amp;exv)</td></tr>
+<tr class="separator:a409128a134ac5959f4f706b4118f7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fd2753757bb2088bb8801d29598ebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab3fd2753757bb2088bb8801d29598ebb">garRead</a> (string garfn, exvector &amp;exv)</td></tr>
+<tr class="separator:ab3fd2753757bb2088bb8801d29598ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0478365b925c61d0cae461320be8140"><td class="memItemLeft" align="right" valign="top">exvector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af0478365b925c61d0cae461320be8140">ParRun</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> elst, exvector input, string dll, string func)</td></tr>
+<tr class="separator:af0478365b925c61d0cae461320be8140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7640c449017d78e85efa025fbb6601fa"><td class="memItemLeft" align="right" valign="top">exvector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7640c449017d78e85efa025fbb6601fa">ParRun</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> elst, exvector input, string code_block)</td></tr>
+<tr class="separator:a7640c449017d78e85efa025fbb6601fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadec2367f85a2820013cb5c83f87259b"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aadec2367f85a2820013cb5c83f87259b">A0</a> (const ex m2, int n, ex d)</td></tr>
 <tr class="memdesc:aadec2367f85a2820013cb5c83f87259b"><td class="mdescLeft">&#160;</td><td class="mdescRight">scalar integral A0, devided by (2pi)^(4-2ep)  <a href="namespace_hep_lib.html#aadec2367f85a2820013cb5c83f87259b">More...</a><br /></td></tr>
 <tr class="separator:aadec2367f85a2820013cb5c83f87259b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -578,12 +606,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a4392f8b5a4d9ed8452d9c8a508aa9cc4"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4392f8b5a4d9ed8452d9c8a508aa9cc4">ApartIRC</a> (const ex &amp;expr_in)</td></tr>
 <tr class="memdesc:a4392f8b5a4d9ed8452d9c8a508aa9cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">complete the ApartIR elements  <a href="namespace_hep_lib.html#a4392f8b5a4d9ed8452d9c8a508aa9cc4">More...</a><br /></td></tr>
 <tr class="separator:a4392f8b5a4d9ed8452d9c8a508aa9cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34df4507a0aa698ce23cca77a44564bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a34df4507a0aa698ce23cca77a44564bc">ApartIBP</a> (int IBPmethod, exvector &amp;air_vec, <a class="el" href="struct_hep_lib_1_1_a_i_option.html">AIOption</a> aio)</td></tr>
-<tr class="memdesc:a34df4507a0aa698ce23cca77a44564bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input  <a href="namespace_hep_lib.html#a34df4507a0aa698ce23cca77a44564bc">More...</a><br /></td></tr>
-<tr class="separator:a34df4507a0aa698ce23cca77a44564bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0a4ff2125fa6dd43b6642d3bcfcc2e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aa0a4ff2125fa6dd43b6642d3bcfcc2e8">ApartIBP</a> (int IBPmethod, exvector &amp;air_vec, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;loops, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;exts, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;cut_props, std::function&lt; <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>(const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;, const ex &amp;)&gt; uf)</td></tr>
-<tr class="memdesc:aa0a4ff2125fa6dd43b6642d3bcfcc2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input  <a href="namespace_hep_lib.html#aa0a4ff2125fa6dd43b6642d3bcfcc2e8">More...</a><br /></td></tr>
-<tr class="separator:aa0a4ff2125fa6dd43b6642d3bcfcc2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d160c4bae2e2926e1b8f945445c935"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a45d160c4bae2e2926e1b8f945445c935">ApartIBP</a> (exvector &amp;air_vec, <a class="el" href="struct_hep_lib_1_1_a_i_option.html">AIOption</a> aio)</td></tr>
+<tr class="memdesc:a45d160c4bae2e2926e1b8f945445c935"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input  <a href="namespace_hep_lib.html#a45d160c4bae2e2926e1b8f945445c935">More...</a><br /></td></tr>
+<tr class="separator:a45d160c4bae2e2926e1b8f945445c935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170029bfa73898bf381e053ad16fb9a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a170029bfa73898bf381e053ad16fb9a5">ApartIBP</a> (exvector &amp;air_vec, int IBPmethod, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;loops, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;exts, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;cut_props, std::function&lt; <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>(const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;, const ex &amp;)&gt; uf)</td></tr>
+<tr class="memdesc:a170029bfa73898bf381e053ad16fb9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input  <a href="namespace_hep_lib.html#a170029bfa73898bf381e053ad16fb9a5">More...</a><br /></td></tr>
+<tr class="separator:a170029bfa73898bf381e053ad16fb9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3149890330c50fa50c53016ffe4c0ad7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a3149890330c50fa50c53016ffe4c0ad7">GINAC_BIND_UNARCHIVER</a> (<a class="el" href="class_hep_lib_1_1_index.html">Index</a>)</td></tr>
 <tr class="separator:a3149890330c50fa50c53016ffe4c0ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4276ce41ad5767a6d5eb32a2eab097bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4276ce41ad5767a6d5eb32a2eab097bd">GINAC_BIND_UNARCHIVER</a> (<a class="el" href="class_hep_lib_1_1_vector.html">Vector</a>)</td></tr>
@@ -685,6 +713,8 @@ Functions</h2></td></tr>
 <tr class="memitem:afa5111e19c13d1b20fa7446471d6bc84"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#afa5111e19c13d1b20fa7446471d6bc84">TIR</a> (const ex &amp;expr_in, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;loop_ps, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ext_ps)</td></tr>
 <tr class="memdesc:afa5111e19c13d1b20fa7446471d6bc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tensor <a class="el" href="class_hep_lib_1_1_index.html" title="class for index object">Index</a> Reduction.  <a href="namespace_hep_lib.html#afa5111e19c13d1b20fa7446471d6bc84">More...</a><br /></td></tr>
 <tr class="separator:afa5111e19c13d1b20fa7446471d6bc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d30d9083a317254775f6c64a289bc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a60d30d9083a317254775f6c64a289bc6">ApartIBP</a> (int IBPmethod, exvector &amp;io_vec, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;loops, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;exts, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;cut_props=<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{}, std::function&lt; <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>(const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;, const ex &amp;)&gt; uf=<a class="el" href="namespace_hep_lib_1_1_i_b_p.html#a6293a6aeb6af54d81fc4ecc5de2f80b6">IBP::LoopUF</a>)</td></tr>
+<tr class="separator:a60d30d9083a317254775f6c64a289bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b5e75964505bf13d7761e77a1ee72e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac8b5e75964505bf13d7761e77a1ee72e">IsZero</a> (const ex &amp;e)</td></tr>
 <tr class="separator:ac8b5e75964505bf13d7761e77a1ee72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a050009af760cbd8658e6544c1014a19c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a050009af760cbd8658e6544c1014a19c">GINAC_IMPLEMENT_REGISTERED_CLASS_OPT</a> (<a class="el" href="class_hep_lib_1_1_pair.html">Pair</a>, basic, print_func&lt; print_dflt &gt;(&amp;<a class="el" href="class_hep_lib_1_1_pair.html#ab8ede04e11c757304a97fe1d1150e02c">Pair::print</a>). print_func&lt; <a class="el" href="class_hep_lib_1_1_form_format.html">FormFormat</a> &gt;(&amp;<a class="el" href="class_hep_lib_1_1_pair.html#a9f75c7a994d3a956265bf1e76653e941">Pair::form_print</a>). print_func&lt; <a class="el" href="class_hep_lib_1_1_f_c_format.html">FCFormat</a> &gt;(&amp;<a class="el" href="class_hep_lib_1_1_pair.html#aec50bab4067e4023a39e4aa1cf706440">Pair::fc_print</a>)) <a class="el" href="namespace_hep_lib.html#a6121a891165d160b79aceca888315d70">GINAC_BIND_UNARCHIVER</a>(<a class="el" href="class_hep_lib_1_1_pair.html">Pair</a>)</td></tr>
@@ -728,6 +758,8 @@ Variables</h2></td></tr>
 <tr class="separator:a036f5d54867d7e07018c60045f691d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b01c2a70699d7f65f561cb32d481b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2b01c2a70699d7f65f561cb32d481b6b">GiNaC_archive_Symbols</a> = <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{}</td></tr>
 <tr class="separator:a2b01c2a70699d7f65f561cb32d481b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a8d67a3326ee758b8a340d8121f81b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6a8d67a3326ee758b8a340d8121f81b3">using_cache</a> = true</td></tr>
+<tr class="separator:a6a8d67a3326ee758b8a340d8121f81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58fe27ab5ad44aa64d08c74bb7fea4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">fermat_using_array</a> = false</td></tr>
 <tr class="separator:af58fe27ab5ad44aa64d08c74bb7fea4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2de89960f6bac28057cdea76f7d73c48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2de89960f6bac28057cdea76f7d73c48">NNDigits</a> = 100</td></tr>
@@ -774,12 +806,16 @@ Variables</h2></td></tr>
 <tr class="separator:a6c8acea92f3856b9760a4133c4d53bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a228518bab5aecf91891982bceeff44d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a228518bab5aecf91891982bceeff44d6">GiNaC_Parallel_Process</a> = -1</td></tr>
 <tr class="separator:a228518bab5aecf91891982bceeff44d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba22111dcd7d5dcfa03e3a0f7100e8e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aba22111dcd7d5dcfa03e3a0f7100e8e5">GiNaC_Parallel_BatchMax</a> = 100</td></tr>
+<tr class="separator:aba22111dcd7d5dcfa03e3a0f7100e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_map_function.html">MapFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a85149c6fb878bf26fefea55a68d7ec4e">Rationalize</a></td></tr>
 <tr class="separator:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac14f1046e0657b6b7520a97fec753a1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_hep_format.html">HepFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac14f1046e0657b6b7520a97fec753a1d">hout</a></td></tr>
 <tr class="separator:ac14f1046e0657b6b7520a97fec753a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c35718fe58a25c1980c75c91195a599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">MMAFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a1c35718fe58a25c1980c75c91195a599">mout</a></td></tr>
 <tr class="separator:a1c35718fe58a25c1980c75c91195a599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6efe062a9bb31c7e2af3811302787b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7f6efe062a9bb31c7e2af3811302787b">cpp</a> = &quot;c++&quot;</td></tr>
+<tr class="separator:a7f6efe062a9bb31c7e2af3811302787b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c51c5d66a1ae4141f4c68fbad412d93"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_hep_lib_1_1_symbol.html">Symbol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a0c51c5d66a1ae4141f4c68fbad412d93">NA</a></td></tr>
 <tr class="separator:a0c51c5d66a1ae4141f4c68fbad412d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bed2e41a135abce89abb487417aff79"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_hep_lib_1_1_symbol.html">Symbol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a3bed2e41a135abce89abb487417aff79">NF</a></td></tr>
@@ -818,8 +854,6 @@ Variables</h2></td></tr>
 <tr class="separator:ae3013881b4bdc4f42514727c28552b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81bea2946fb9c13ca956e36e7e1e4c5c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a81bea2946fb9c13ca956e36e7e1e4c5c">form_expand_all</a> = 4</td></tr>
 <tr class="separator:a81bea2946fb9c13ca956e36e7e1e4c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d135460890d2dbd636aaac7d26a1b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af4d135460890d2dbd636aaac7d26a1b4">Apart_using_cache</a> = true</td></tr>
-<tr class="separator:af4d135460890d2dbd636aaac7d26a1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c4685c6c2e55cc1f64f1a6a184bfdd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4c4685c6c2e55cc1f64f1a6a184bfdd7">Apart_using_fermat</a> = true</td></tr>
 <tr class="separator:a4c4685c6c2e55cc1f64f1a6a184bfdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66dc8fdb15263644bf0671a9efe742ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a66dc8fdb15263644bf0671a9efe742ca">form_using_su3</a> = true</td></tr>
@@ -848,7 +882,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00868">868</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00883">883</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a85a725277153c8ca7adced50ac96fa52" name="a85a725277153c8ca7adced50ac96fa52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a725277153c8ca7adced50ac96fa52">&#9670;&nbsp;</a></span>IParRun</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ex(* HepLib::IParRun) (int idx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00815">815</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -974,7 +1024,37 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00726">726</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00727">727</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a57afadee1cdcaa0fe37874e33c798708" name="a57afadee1cdcaa0fe37874e33c798708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57afadee1cdcaa0fe37874e33c798708">&#9670;&nbsp;</a></span>add_collect_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ex HepLib::add_collect_normal </td>
+          <td>(</td>
+          <td class="paramtype">const exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> const &amp;&#160;</td>
+          <td class="paramname"><em>pats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02319">2319</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1108,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>sum of coefficient * ApartIR </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00605">605</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00605">605</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1155,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>sum of coefficient * ApartIR </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00407">407</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00407">407</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
@@ -1104,12 +1184,12 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>sum of coefficient * ApartIR </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00115">115</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00115">115</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a34df4507a0aa698ce23cca77a44564bc" name="a34df4507a0aa698ce23cca77a44564bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34df4507a0aa698ce23cca77a44564bc">&#9670;&nbsp;</a></span>ApartIBP() <span class="overload">[1/2]</span></h2>
+<a id="a45d160c4bae2e2926e1b8f945445c935" name="a45d160c4bae2e2926e1b8f945445c935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d160c4bae2e2926e1b8f945445c935">&#9670;&nbsp;</a></span>ApartIBP() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1117,12 +1197,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void HepLib::ApartIBP </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>IBPmethod</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">exvector &amp;&#160;</td>
           <td class="paramname"><em>air_vec</em>, </td>
         </tr>
@@ -1151,12 +1225,12 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing returned, the input air_vec will be updated </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00713">713</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00747">747</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa0a4ff2125fa6dd43b6642d3bcfcc2e8" name="aa0a4ff2125fa6dd43b6642d3bcfcc2e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0a4ff2125fa6dd43b6642d3bcfcc2e8">&#9670;&nbsp;</a></span>ApartIBP() <span class="overload">[2/2]</span></h2>
+<a id="a170029bfa73898bf381e053ad16fb9a5" name="a170029bfa73898bf381e053ad16fb9a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170029bfa73898bf381e053ad16fb9a5">&#9670;&nbsp;</a></span>ApartIBP() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1164,14 +1238,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void HepLib::ApartIBP </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>IBPmethod</em>, </td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>air_vec</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">exvector &amp;&#160;</td>
-          <td class="paramname"><em>air_vec</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>IBPmethod</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1219,7 +1293,69 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing returned, the input air_vec will be updated </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l01001">1001</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l01083">1083</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a60d30d9083a317254775f6c64a289bc6" name="a60d30d9083a317254775f6c64a289bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d30d9083a317254775f6c64a289bc6">&#9670;&nbsp;</a></span>ApartIBP() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::ApartIBP </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>IBPmethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>io_vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;&#160;</td>
+          <td class="paramname"><em>loops</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;&#160;</td>
+          <td class="paramname"><em>exts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;&#160;</td>
+          <td class="paramname"><em>cut_props</em> = <code><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>(const <a class="el" href="class_hep_lib_1_1_i_b_p_1_1_base.html">Base</a> &amp;, const ex &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>uf</em> = <code><a class="el" href="namespace_hep_lib_1_1_i_b_p.html#a6293a6aeb6af54d81fc4ecc5de2f80b6">IBP::LoopUF</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_h_e_p_8h_source.html#l00347">347</a> of file <a class="el" href="_h_e_p_8h_source.html">HEP.h</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1384,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ApartIR converted into normal ex </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00036">36</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00036">36</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1413,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ApartIR converted into F(ps, ns) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00062">62</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00062">62</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1442,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ApartIR with complete matrix rank, ready for <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00661">661</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00661">661</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
@@ -1344,7 +1480,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00639">639</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00646">646</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1382,7 +1518,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00640">640</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00647">647</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1561,7 +1697,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00378">378</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00379">379</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1605,7 +1741,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00375">375</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00376">376</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1649,7 +1785,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00372">372</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00373">373</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1693,7 +1829,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00398">398</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00399">399</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1737,7 +1873,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00395">395</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00396">396</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1781,7 +1917,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00392">392</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00393">393</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1837,7 +1973,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00358">358</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00359">359</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1893,7 +2029,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00351">351</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00352">352</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -1954,7 +2090,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the collected expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00966">966</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00981">981</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +2119,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>collect_common_factors result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02057">2057</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01849">1849</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2027,7 +2163,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00412">412</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00413">413</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2071,7 +2207,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00404">404</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00405">405</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2118,7 +2254,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the collected expression in lst </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00986">986</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01001">1001</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2162,7 +2298,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00368">368</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00369">369</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2206,7 +2342,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00365">365</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00366">366</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2250,7 +2386,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00362">362</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00363">363</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2294,7 +2430,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00388">388</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00389">389</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2338,7 +2474,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00385">385</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00386">386</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2382,7 +2518,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00382">382</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00383">383</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2492,7 +2628,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00641">641</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00648">648</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -2514,7 +2650,7 @@ Variables</h2></td></tr>
 <p>return the cpu cores using OpenMP </p>
 <dl class="section return"><dt>Returns</dt><dd>the cpu cores </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01787">1787</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01584">1584</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2586,7 +2722,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding nth-derivative </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00856">856</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00857">857</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2661,7 +2797,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the nuerical expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01006">1006</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01021">1021</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2681,7 +2817,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01017">1017</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01032">1032</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2701,7 +2837,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01027">1027</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01042">1042</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2721,7 +2857,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01022">1022</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01037">1037</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2761,7 +2897,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the file content in ex </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00623">623</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00624">624</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2791,7 +2927,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00630">630</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00631">631</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2820,7 +2956,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the integer for the number </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00695">695</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00696">696</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2849,7 +2985,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a __float128 object for the number </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00679">679</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00680">680</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2878,7 +3014,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the output string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00530">530</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00531">531</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2907,7 +3043,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the output string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00552">552</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00553">553</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2936,7 +3072,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the output string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00563">563</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00564">564</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2965,7 +3101,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the output string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00541">541</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00542">542</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -2995,7 +3131,43 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01407">1407</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00017">17</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a25b68656330adaac3ccd75ff96da2bd7" name="a25b68656330adaac3ccd75ff96da2bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25b68656330adaac3ccd75ff96da2bd7">&#9670;&nbsp;</a></span>ex_less_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HepLib::ex_less_cache </td>
+          <td>(</td>
+          <td class="paramtype">const ex &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ex &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; ex, bool, ex_is_less &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00173">173</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
 
 </div>
 </div>
@@ -3035,7 +3207,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02081">2081</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01873">1873</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3075,7 +3247,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02070">2070</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01862">1862</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3115,7 +3287,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst of { num, den } </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02103">2103</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01895">1895</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3155,7 +3327,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02092">2092</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01884">1884</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3183,7 +3355,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00334">334</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00335">335</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -3221,7 +3393,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00345">345</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00346">346</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -3259,7 +3431,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00338">338</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00339">339</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -3299,7 +3471,97 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the expanded expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00950">950</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00965">965</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e91d8bef1832f4e4ef84aab3174cd04" name="a7e91d8bef1832f4e4ef84aab3174cd04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e91d8bef1832f4e4ef84aab3174cd04">&#9670;&nbsp;</a></span>expand_using_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ex HepLib::expand_using_map </td>
+          <td>(</td>
+          <td class="paramtype">ex const &amp;&#160;</td>
+          <td class="paramname"><em>expr_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool(const ex &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>has_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00869">869</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6bce348c8b5a9adc9673045dd9e478dc" name="a6bce348c8b5a9adc9673045dd9e478dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bce348c8b5a9adc9673045dd9e478dc">&#9670;&nbsp;</a></span>exVectorGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::exVectorGet </td>
+          <td>(</td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>garfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02309">2309</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad2e45457f3d734d5b6cf896f434cfb1c" name="ad2e45457f3d734d5b6cf896f434cfb1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e45457f3d734d5b6cf896f434cfb1c">&#9670;&nbsp;</a></span>exVectorPut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::exVectorPut </td>
+          <td>(</td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>garfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02301">2301</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3328,7 +3590,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>F(ps, ns) converted into normal expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00095">95</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00095">95</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
 
 </div>
 </div>
@@ -3367,7 +3629,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>factorized result </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02214">2214</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02006">2006</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3414,7 +3676,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>fermat evaluated expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01796">1796</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01593">1593</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3452,7 +3714,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00424">424</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00426">426</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -3490,7 +3752,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00421">421</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00423">423</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -3519,7 +3781,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the file content in ex </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00603">603</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00604">604</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3559,7 +3821,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the file content in ex </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00613">613</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00614">614</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3588,7 +3850,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the file content in string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00574">574</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00575">575</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3628,7 +3890,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the file content in string vector, lines in vector </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00587">587</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00588">588</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3716,7 +3978,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02109">2109</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01901">1901</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -3754,12 +4016,12 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00428">428</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00430">430</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
 <a id="aa1b40cfe1b982ff1cd57d63bdf2562ce" name="aa1b40cfe1b982ff1cd57d63bdf2562ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1b40cfe1b982ff1cd57d63bdf2562ce">&#9670;&nbsp;</a></span>garRead() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b40cfe1b982ff1cd57d63bdf2562ce">&#9670;&nbsp;</a></span>garRead() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3783,12 +4045,12 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the expression w.r.t. key "res" </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00435">435</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00436">436</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a2d78e3dabf3e197ee6fee510a5cc2f6a" name="a2d78e3dabf3e197ee6fee510a5cc2f6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d78e3dabf3e197ee6fee510a5cc2f6a">&#9670;&nbsp;</a></span>garRead() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d78e3dabf3e197ee6fee510a5cc2f6a">&#9670;&nbsp;</a></span>garRead() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3823,12 +4085,12 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the expression w.r.t. key </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00418">418</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00419">419</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a4bf90fb2b1d5617bd9d5cb2976f68eba" name="a4bf90fb2b1d5617bd9d5cb2976f68eba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bf90fb2b1d5617bd9d5cb2976f68eba">&#9670;&nbsp;</a></span>garRead() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf90fb2b1d5617bd9d5cb2976f68eba">&#9670;&nbsp;</a></span>garRead() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3862,12 +4124,80 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00397">397</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00398">398</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b8a64a5f3703b002fd820f1702ae4fe" name="a7b8a64a5f3703b002fd820f1702ae4fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8a64a5f3703b002fd820f1702ae4fe">&#9670;&nbsp;</a></span>garRead() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::garRead </td>
+          <td>(</td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>garfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02288">2288</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab3fd2753757bb2088bb8801d29598ebb" name="ab3fd2753757bb2088bb8801d29598ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fd2753757bb2088bb8801d29598ebb">&#9670;&nbsp;</a></span>garRead() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::garRead </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>garfn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00810">810</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
 <a id="a8fa596e81f26f5ec8d6be464c306af85" name="a8fa596e81f26f5ec8d6be464c306af85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fa596e81f26f5ec8d6be464c306af85">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa596e81f26f5ec8d6be464c306af85">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3905,7 +4235,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="aa536e88b9a7a2653dbab4ad99aed58d9" name="aa536e88b9a7a2653dbab4ad99aed58d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa536e88b9a7a2653dbab4ad99aed58d9">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa536e88b9a7a2653dbab4ad99aed58d9">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3943,7 +4273,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="af1478d7458a752422e4e12c961f0de42" name="af1478d7458a752422e4e12c961f0de42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1478d7458a752422e4e12c961f0de42">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1478d7458a752422e4e12c961f0de42">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3977,12 +4307,12 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00469">469</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00470">470</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
 <a id="abd0e1797a16e7a14915c9d5e04306bb2" name="abd0e1797a16e7a14915c9d5e04306bb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd0e1797a16e7a14915c9d5e04306bb2">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd0e1797a16e7a14915c9d5e04306bb2">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4016,7 +4346,75 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00454">454</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a49095d4ee923f7cd2e947fc59b35bd75" name="a49095d4ee923f7cd2e947fc59b35bd75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49095d4ee923f7cd2e947fc59b35bd75">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::garWrite </td>
+          <td>(</td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>garfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02277">2277</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a409128a134ac5959f4f706b4118f7662" name="a409128a134ac5959f4f706b4118f7662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409128a134ac5959f4f706b4118f7662">&#9670;&nbsp;</a></span>garWrite() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::garWrite </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>garfn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>exv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00808">808</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -4094,7 +4492,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_e_p_8h_source.html#l00332">332</a> of file <a class="el" href="_h_e_p_8h_source.html">HEP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_h_e_p_8h_source.html#l00331">331</a> of file <a class="el" href="_h_e_p_8h_source.html">HEP.h</a>.</p>
 
 </div>
 </div>
@@ -4132,7 +4530,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_e_p_8h_source.html#l00331">331</a> of file <a class="el" href="_h_e_p_8h_source.html">HEP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_h_e_p_8h_source.html#l00330">330</a> of file <a class="el" href="_h_e_p_8h_source.html">HEP.h</a>.</p>
 
 </div>
 </div>
@@ -4161,7 +4559,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>all symbols in the input </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00345">345</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00346">346</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -4190,7 +4588,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>all symbols in the input </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00360">360</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00361">361</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -4237,7 +4635,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the element </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01361">1361</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01376">1376</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -4291,7 +4689,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the element </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01384">1384</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01399">1399</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -4338,7 +4736,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the element </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01372">1372</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01387">1387</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -4392,7 +4790,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the element </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01396">1396</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01411">1411</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -4421,7 +4819,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return the found/created symbol </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00292">292</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00293">293</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5307,7 +5705,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00598">598</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00601">601</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5371,7 +5769,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00278">278</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00279">279</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5407,7 +5805,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00869">869</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00884">884</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5427,7 +5825,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02155">2155</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01947">1947</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5503,7 +5901,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00588">588</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00591">591</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5547,7 +5945,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00591">591</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00594">594</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -5760,7 +6158,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01315">1315</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01330">1330</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5820,7 +6218,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01338">1338</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01353">1353</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5873,7 +6271,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01326">1326</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01341">1341</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5933,7 +6331,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01350">1350</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01365">1365</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -5972,7 +6370,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01079">1079</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01094">1094</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6018,7 +6416,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01122">1122</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01137">1137</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6071,7 +6469,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01147">1147</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01162">1162</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6117,7 +6515,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01134">1134</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01149">1149</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6170,7 +6568,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01160">1160</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01175">1175</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6209,7 +6607,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01090">1090</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01105">1105</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6255,7 +6653,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01172">1172</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01187">1187</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6308,7 +6706,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01197">1197</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01212">1212</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6354,7 +6752,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01184">1184</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01199">1199</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6407,7 +6805,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01210">1210</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01225">1225</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6435,7 +6833,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01110">1110</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01125">1125</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6474,7 +6872,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01267">1267</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01282">1282</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6520,7 +6918,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01290">1290</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01305">1305</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6559,7 +6957,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01278">1278</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01293">1293</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6605,7 +7003,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01302">1302</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01317">1317</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6633,7 +7031,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01100">1100</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01115">1115</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6672,7 +7070,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01221">1221</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01236">1236</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6718,7 +7116,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01244">1244</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01259">1259</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6757,7 +7155,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01232">1232</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01247">1247</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6803,7 +7201,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01256">1256</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01271">1271</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -6901,7 +7299,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>exvector </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00715">715</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00716">716</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -7071,7 +7469,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00738">738</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00739">739</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -7173,12 +7571,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01032">1032</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01047">1047</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4a3daea54d403eea84f755935e7df406" name="a4a3daea54d403eea84f755935e7df406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a3daea54d403eea84f755935e7df406">&#9670;&nbsp;</a></span>node_number()</h2>
+<a id="ac55cb8187a641fd6852f0e839f81145d" name="ac55cb8187a641fd6852f0e839f81145d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55cb8187a641fd6852f0e839f81145d">&#9670;&nbsp;</a></span>node_number()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7193,7 +7591,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>level</em>&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7203,7 +7601,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01400">1400</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00010">10</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
 
 </div>
 </div>
@@ -7243,7 +7641,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the normalized expression: numer/denom </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l02047">2047</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01839">1839</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -7272,7 +7670,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return date/time string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00331">331</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00332">332</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -7312,7 +7710,83 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a list of { numer, denom } </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01892">1892</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01689">1689</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7640c449017d78e85efa025fbb6601fa" name="a7640c449017d78e85efa025fbb6601fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7640c449017d78e85efa025fbb6601fa">&#9670;&nbsp;</a></span>ParRun() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exvector HepLib::ParRun </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td>
+          <td class="paramname"><em>elst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exvector&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>code_block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_par_run_8cpp_source.html#l00011">11</a> of file <a class="el" href="_par_run_8cpp_source.html">ParRun.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af0478365b925c61d0cae461320be8140" name="af0478365b925c61d0cae461320be8140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0478365b925c61d0cae461320be8140">&#9670;&nbsp;</a></span>ParRun() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exvector HepLib::ParRun </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td>
+          <td class="paramname"><em>elst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exvector&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -7443,7 +7917,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a ex object for the number </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00667">667</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00668">668</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -7604,7 +8078,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the command output </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00377">377</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00378">378</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -7651,12 +8125,12 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the corresponding series </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00773">773</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00774">774</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ab9d74ea9a66010acd5eab6c83ead9084" name="ab9d74ea9a66010acd5eab6c83ead9084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9d74ea9a66010acd5eab6c83ead9084">&#9670;&nbsp;</a></span>sort_lst()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d74ea9a66010acd5eab6c83ead9084">&#9670;&nbsp;</a></span>sort_lst() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7690,7 +8164,43 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01568">1568</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00333">333</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a75df4f8c2e5f37b05978ffad5ee846e3" name="a75df4f8c2e5f37b05978ffad5ee846e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75df4f8c2e5f37b05978ffad5ee846e3">&#9670;&nbsp;</a></span>sort_lst() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::sort_lst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;&#160;</td>
+          <td class="paramname"><em>ilst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; ex, bool, ex_is_less &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>less</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00339">339</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
 
 </div>
 </div>
@@ -7736,12 +8246,12 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01582">1582</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00351">351</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ab3fb75be8b0bd9d69eda7576c4a304a0" name="ab3fb75be8b0bd9d69eda7576c4a304a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3fb75be8b0bd9d69eda7576c4a304a0">&#9670;&nbsp;</a></span>sort_vec()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fb75be8b0bd9d69eda7576c4a304a0">&#9670;&nbsp;</a></span>sort_vec() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7775,7 +8285,43 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01597">1597</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00366">366</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab4ed5ddb0ad6c18b193cfa8440bcd114" name="ab4ed5ddb0ad6c18b193cfa8440bcd114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4ed5ddb0ad6c18b193cfa8440bcd114">&#9670;&nbsp;</a></span>sort_vec() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::sort_vec </td>
+          <td>(</td>
+          <td class="paramtype">exvector &amp;&#160;</td>
+          <td class="paramname"><em>ivec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; ex, bool, ex_is_less &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>less</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00373">373</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
 
 </div>
 </div>
@@ -7821,7 +8367,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01610">1610</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sort_8cpp_source.html#l00386">386</a> of file <a class="el" href="_sort_8cpp_source.html">Sort.cpp</a>.</p>
 
 </div>
 </div>
@@ -8049,7 +8595,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return separated string vector </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00305">305</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00306">306</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8106,7 +8652,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00496">496</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00497">497</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8146,7 +8692,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00485">485</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00486">486</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8175,7 +8721,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00519">519</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00520">520</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8215,7 +8761,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed expression </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00508">508</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00509">509</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8423,7 +8969,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lst </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00704">704</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00705">705</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8463,7 +9009,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the x lst </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00751">751</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00752">752</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8492,7 +9038,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the x lst </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00762">762</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00763">763</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8521,7 +9067,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>xPositive or not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01045">1045</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01060">1060</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -8550,27 +9096,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 for xPositive exprs, -1 when -expr is xPositive, 0 for others </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01067">1067</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l01082">1082</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="af4d135460890d2dbd636aaac7d26a1b4" name="af4d135460890d2dbd636aaac7d26a1b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4d135460890d2dbd636aaac7d26a1b4">&#9670;&nbsp;</a></span>Apart_using_cache</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool HepLib::Apart_using_cache = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00138">138</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
-
-</div>
-</div>
 <a id="a4c4685c6c2e55cc1f64f1a6a184bfdd7" name="a4c4685c6c2e55cc1f64f1a6a184bfdd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c4685c6c2e55cc1f64f1a6a184bfdd7">&#9670;&nbsp;</a></span>Apart_using_fermat</h2>
 
@@ -8614,6 +9144,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00149">149</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f6efe062a9bb31c7e2af3811302787b" name="a7f6efe062a9bb31c7e2af3811302787b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6efe062a9bb31c7e2af3811302787b">&#9670;&nbsp;</a></span>cpp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string HepLib::cpp = &quot;c++&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_par_run_8cpp_source.html#l00009">9</a> of file <a class="el" href="_par_run_8cpp_source.html">ParRun.cpp</a>.</p>
 
 </div>
 </div>
@@ -8703,7 +9249,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00047">47</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00048">48</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8719,7 +9265,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00135">135</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00137">137</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8735,7 +9281,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00133">133</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00135">135</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8751,7 +9297,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00134">134</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00136">136</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8767,7 +9313,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00136">136</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00138">138</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8783,7 +9329,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00131">131</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00133">133</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8799,7 +9345,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00132">132</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00134">134</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8815,7 +9361,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00126">126</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00128">128</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8831,7 +9377,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00125">125</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00127">127</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8847,7 +9393,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00127">127</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00129">129</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8863,7 +9409,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00128">128</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00130">130</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8879,7 +9425,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00129">129</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00131">131</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8927,7 +9473,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00065">65</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00067">67</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aba22111dcd7d5dcfa03e3a0f7100e8e5" name="aba22111dcd7d5dcfa03e3a0f7100e8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba22111dcd7d5dcfa03e3a0f7100e8e5">&#9670;&nbsp;</a></span>GiNaC_Parallel_BatchMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int HepLib::GiNaC_Parallel_BatchMax = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00046">46</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -8973,7 +9535,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00054">54</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00056">56</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9033,7 +9595,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00067">67</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00069">69</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9049,7 +9611,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00066">66</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00068">68</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9065,7 +9627,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00068">68</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00070">70</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9081,7 +9643,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00062">62</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00064">64</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9181,7 +9743,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00048">48</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00050">50</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9211,7 +9773,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00109">109</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00111">111</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a8d67a3326ee758b8a340d8121f81b3" name="a6a8d67a3326ee758b8a340d8121f81b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8d67a3326ee758b8a340d8121f81b3">&#9670;&nbsp;</a></span>using_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HepLib::using_cache = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_init_8cpp_source.html#l00049">49</a> of file <a class="el" href="_init_8cpp_source.html">Init.cpp</a>.</p>
 
 </div>
 </div>
@@ -9259,7 +9837,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9275,7 +9853,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9291,7 +9869,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9307,7 +9885,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9323,7 +9901,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9339,7 +9917,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9355,7 +9933,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9371,7 +9949,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9387,7 +9965,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -9403,7 +9981,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00455">455</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00457">457</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['checkend_0',['CheckEnd',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#abee7a4f21dd433c3b6b08c806d34a58d',1,'HepLib::SD::SecDec']]],
   ['color_5fhighlight_1',['Color_HighLight',['../namespace_hep_lib.html#a036f5d54867d7e07018c60045f691d30',1,'HepLib']]],
-  ['cpp_2',['cpp',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a9bf49e000c61ec4ca3e464d27899ba89',1,'HepLib::SD::SecDec']]],
+  ['cpp_2',['cpp',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a9bf49e000c61ec4ca3e464d27899ba89',1,'HepLib::SD::SecDec::cpp()'],['../namespace_hep_lib.html#a7f6efe062a9bb31c7e2af3811302787b',1,'HepLib::cpp()']]],
   ['cs_3',['cs',['../class_hep_lib_1_1_i_b_p_1_1_direct_1_1_condition.html#aae37323c050a8ef04a67b5937a65208d',1,'HepLib::IBP::Direct::Condition']]],
   ['csp_4',['CSP',['../struct_hep_lib_1_1_a_i_option.html#a0abb7bb8dcd3ea06d08f67e4dbc0afbd',1,'HepLib::AIOption']]],
   ['ctlamax_5',['CTLaMax',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2b3f1d87d4b5bae7fe7a488ff6b16e8c',1,'HepLib::SD::SecDec']]],

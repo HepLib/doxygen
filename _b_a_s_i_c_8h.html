@@ -70,6 +70,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">BASIC.h File Reference</div></div>
@@ -180,6 +181,11 @@ Macros</h2></td></tr>
 <tr class="separator:ae87af5e6363eb1913b17f24dcb60a22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4ef051614aa0bd503b0a18ee158c5d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_b_a_s_i_c_8h.html#aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</a>&#160;&#160;&#160;&quot;\033[1m\033[37m&quot;</td></tr>
 <tr class="separator:aa4ef051614aa0bd503b0a18ee158c5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a85a725277153c8ca7adced50ac96fa52"><td class="memItemLeft" align="right" valign="top">typedef ex(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a85a725277153c8ca7adced50ac96fa52">HepLib::IParRun</a>) (int idx)</td></tr>
+<tr class="separator:a85a725277153c8ca7adced50ac96fa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -537,8 +543,8 @@ Functions</h2></td></tr>
 <tr class="separator:a65d1de49c05ee1eeaa6a6bb9b811fbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a836cec82302f2157fbac85d444c2f0a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a836cec82302f2157fbac85d444c2f0a9">HepLib::ACSort</a> (int n, ex exs[])</td></tr>
 <tr class="separator:a836cec82302f2157fbac85d444c2f0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3daea54d403eea84f755935e7df406"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4a3daea54d403eea84f755935e7df406">HepLib::node_number</a> (const ex &amp;expr, int level)</td></tr>
-<tr class="separator:a4a3daea54d403eea84f755935e7df406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55cb8187a641fd6852f0e839f81145d"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac55cb8187a641fd6852f0e839f81145d">HepLib::node_number</a> (const ex &amp;expr, int level=0)</td></tr>
+<tr class="separator:ac55cb8187a641fd6852f0e839f81145d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12af63150d93a138d75ce79e04905441"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441">HepLib::ex_less</a> (const ex &amp;<a class="el" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, const ex &amp;b)</td></tr>
 <tr class="separator:a12af63150d93a138d75ce79e04905441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9d74ea9a66010acd5eab6c83ead9084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab9d74ea9a66010acd5eab6c83ead9084">HepLib::sort_lst</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, bool less)</td></tr>
@@ -553,6 +559,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">HepLib::sort_vec_by</a> (exvector &amp;ivec, int ki, bool less)</td></tr>
 <tr class="memdesc:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the list in less order, or the reverse  <a href="namespace_hep_lib.html#ad7af55b48a643624ab2a7b0f47a2c09b">More...</a><br /></td></tr>
 <tr class="separator:ad7af55b48a643624ab2a7b0f47a2c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b68656330adaac3ccd75ff96da2bd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a25b68656330adaac3ccd75ff96da2bd7">HepLib::ex_less_cache</a> (const ex &amp;<a class="el" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, const ex &amp;b, map&lt; ex, bool, ex_is_less &gt; &amp;cache)</td></tr>
+<tr class="separator:a25b68656330adaac3ccd75ff96da2bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75df4f8c2e5f37b05978ffad5ee846e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a75df4f8c2e5f37b05978ffad5ee846e3">HepLib::sort_lst</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;ilst, map&lt; ex, bool, ex_is_less &gt; &amp;cache, bool less=true)</td></tr>
+<tr class="separator:a75df4f8c2e5f37b05978ffad5ee846e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ed5ddb0ad6c18b193cfa8440bcd114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab4ed5ddb0ad6c18b193cfa8440bcd114">HepLib::sort_vec</a> (exvector &amp;ivec, map&lt; ex, bool, ex_is_less &gt; &amp;cache, bool less=true)</td></tr>
+<tr class="separator:ab4ed5ddb0ad6c18b193cfa8440bcd114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10efc7977cbff6d005bb2c354fc8cca0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a10efc7977cbff6d005bb2c354fc8cca0">HepLib::append_to</a> (const exvector &amp;exv, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;alst)</td></tr>
 <tr class="separator:a10efc7977cbff6d005bb2c354fc8cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58d3ea8e65aba8dd5cde4b769b14ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad58d3ea8e65aba8dd5cde4b769b14ff6">HepLib::append_to</a> (const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;alst, exvector &amp;exv)</td></tr>
@@ -561,11 +573,29 @@ Functions</h2></td></tr>
 <tr class="separator:a1e5e87bc5f7d2612e847d3684777a10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d36286484544c7c13d01d7f79a9df4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2d36286484544c7c13d01d7f79a9df4b">HepLib::GINAC_DECLARE_UNARCHIVER</a> (XIntegral)</td></tr>
 <tr class="separator:a2d36286484544c7c13d01d7f79a9df4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49095d4ee923f7cd2e947fc59b35bd75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a49095d4ee923f7cd2e947fc59b35bd75">HepLib::garWrite</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:a49095d4ee923f7cd2e947fc59b35bd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409128a134ac5959f4f706b4118f7662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a409128a134ac5959f4f706b4118f7662">HepLib::garWrite</a> (string garfn, exvector &amp;exv)</td></tr>
+<tr class="separator:a409128a134ac5959f4f706b4118f7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8a64a5f3703b002fd820f1702ae4fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7b8a64a5f3703b002fd820f1702ae4fe">HepLib::garRead</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:a7b8a64a5f3703b002fd820f1702ae4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fd2753757bb2088bb8801d29598ebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab3fd2753757bb2088bb8801d29598ebb">HepLib::garRead</a> (string garfn, exvector &amp;exv)</td></tr>
+<tr class="separator:ab3fd2753757bb2088bb8801d29598ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e45457f3d734d5b6cf896f434cfb1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ad2e45457f3d734d5b6cf896f434cfb1c">HepLib::exVectorPut</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:ad2e45457f3d734d5b6cf896f434cfb1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bce348c8b5a9adc9673045dd9e478dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6bce348c8b5a9adc9673045dd9e478dc">HepLib::exVectorGet</a> (exvector &amp;exv, string garfn)</td></tr>
+<tr class="separator:a6bce348c8b5a9adc9673045dd9e478dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57afadee1cdcaa0fe37874e33c798708"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a57afadee1cdcaa0fe37874e33c798708">HepLib::add_collect_normal</a> (const exvector &amp;exv, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> const &amp;pats)</td></tr>
+<tr class="separator:a57afadee1cdcaa0fe37874e33c798708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0478365b925c61d0cae461320be8140"><td class="memItemLeft" align="right" valign="top">exvector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af0478365b925c61d0cae461320be8140">HepLib::ParRun</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> elst, exvector input, string dll, string func)</td></tr>
+<tr class="separator:af0478365b925c61d0cae461320be8140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a2b01c2a70699d7f65f561cb32d481b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2b01c2a70699d7f65f561cb32d481b6b">HepLib::GiNaC_archive_Symbols</a> = <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{}</td></tr>
 <tr class="separator:a2b01c2a70699d7f65f561cb32d481b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a8d67a3326ee758b8a340d8121f81b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6a8d67a3326ee758b8a340d8121f81b3">HepLib::using_cache</a> = true</td></tr>
+<tr class="separator:a6a8d67a3326ee758b8a340d8121f81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58fe27ab5ad44aa64d08c74bb7fea4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">HepLib::fermat_using_array</a> = false</td></tr>
 <tr class="separator:af58fe27ab5ad44aa64d08c74bb7fea4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2de89960f6bac28057cdea76f7d73c48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2de89960f6bac28057cdea76f7d73c48">HepLib::NNDigits</a> = 100</td></tr>
@@ -612,6 +642,8 @@ Variables</h2></td></tr>
 <tr class="separator:a6c8acea92f3856b9760a4133c4d53bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a228518bab5aecf91891982bceeff44d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a228518bab5aecf91891982bceeff44d6">HepLib::GiNaC_Parallel_Process</a> = -1</td></tr>
 <tr class="separator:a228518bab5aecf91891982bceeff44d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba22111dcd7d5dcfa03e3a0f7100e8e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aba22111dcd7d5dcfa03e3a0f7100e8e5">HepLib::GiNaC_Parallel_BatchMax</a> = 100</td></tr>
+<tr class="separator:aba22111dcd7d5dcfa03e3a0f7100e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memItemLeft" align="right" valign="top">MapFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a85149c6fb878bf26fefea55a68d7ec4e">HepLib::Rationalize</a></td></tr>
 <tr class="separator:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac14f1046e0657b6b7520a97fec753a1d"><td class="memItemLeft" align="right" valign="top">HepFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac14f1046e0657b6b7520a97fec753a1d">HepLib::hout</a></td></tr>
