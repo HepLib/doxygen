@@ -129,6 +129,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_m_m_a_format.html">HepLib::MMAFormat</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class for Mathematica Format Output  <a href="class_hep_lib_1_1_m_m_a_format.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_server.html">HepLib::Server</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -184,8 +186,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a85a725277153c8ca7adced50ac96fa52"><td class="memItemLeft" align="right" valign="top">typedef ex(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a85a725277153c8ca7adced50ac96fa52">HepLib::IParRun</a>) (int idx)</td></tr>
-<tr class="separator:a85a725277153c8ca7adced50ac96fa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add50d6fc85638f3c2d350c43c2b28907"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_b_a_s_i_c_8h.html#add50d6fc85638f3c2d350c43c2b28907">RUN</a>) (std::string dir_id)</td></tr>
+<tr class="separator:add50d6fc85638f3c2d350c43c2b28907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -205,9 +207,6 @@ Functions</h2></td></tr>
 <tr class="separator:aee6cf7552a548c9f952fcb14d6ad4d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e54a3b0bffc5d515e88e49d9ba62ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a19e54a3b0bffc5d515e88e49d9ba62ba">HepLib::GINAC_DECLARE_UNARCHIVER</a> (iSymbol)</td></tr>
 <tr class="separator:a19e54a3b0bffc5d515e88e49d9ba62ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2c92767951f989db0f1548fb51b0b9f"><td class="memItemLeft" align="right" valign="top">const symbol &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af2c92767951f989db0f1548fb51b0b9f">HepLib::get_symbol</a> (const string &amp;s)</td></tr>
-<tr class="memdesc:af2c92767951f989db0f1548fb51b0b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the symbol from symbol factory, if not exsit, a new one will be created  <a href="namespace_hep_lib.html#af2c92767951f989db0f1548fb51b0b9f">More...</a><br /></td></tr>
-<tr class="separator:af2c92767951f989db0f1548fb51b0b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab3153aae8bb92a43319a0b3029d612a"><td class="memItemLeft" align="right" valign="top">vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aab3153aae8bb92a43319a0b3029d612a">HepLib::split</a> (const string &amp;s, char delimiter)</td></tr>
 <tr class="separator:aab3153aae8bb92a43319a0b3029d612a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf1bb4366295934231aaed05e6eb5e2"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6bf1bb4366295934231aaed05e6eb5e2">HepLib::now</a> (bool use_date)</td></tr>
@@ -229,11 +228,9 @@ Functions</h2></td></tr>
 <tr class="separator:aae03e1dec4af2a369c1796dcb058739e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad6fbc9b4f530a82df6e93bdd100f639"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aad6fbc9b4f530a82df6e93bdd100f639">HepLib::subs_all</a> (const ex &amp;expr, const exmap &amp;repls)</td></tr>
 <tr class="separator:aad6fbc9b4f530a82df6e93bdd100f639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7152a308f6209822a07f0194fd34e8e8"><td class="memItemLeft" align="right" valign="top">vector&lt; ex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">HepLib::GiNaC_Parallel</a> (int ntotal, int nbatch, std::function&lt; ex(int)&gt; f, const string &amp;key, bool rm, const string &amp;pre)</td></tr>
-<tr class="memdesc:a7152a308f6209822a07f0194fd34e8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_gi_na_c.html" title="Extension to GiNaC.">GiNaC</a> Parallel Evaluation using fork.  <a href="namespace_hep_lib.html#a7152a308f6209822a07f0194fd34e8e8">More...</a><br /></td></tr>
-<tr class="separator:a7152a308f6209822a07f0194fd34e8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fb4e85230e91ee635e93a626eafce10"><td class="memItemLeft" align="right" valign="top">vector&lt; ex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a9fb4e85230e91ee635e93a626eafce10">HepLib::GiNaC_Parallel</a> (int ntotal, std::function&lt; ex(int)&gt; f, const string &amp;key=&quot;&quot;, bool rm=true, const string &amp;pre=&quot;  &quot;)</td></tr>
-<tr class="separator:a9fb4e85230e91ee635e93a626eafce10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08032f5436ea31a4b3708954a3d61b9"><td class="memItemLeft" align="right" valign="top">vector&lt; ex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ab08032f5436ea31a4b3708954a3d61b9">HepLib::GiNaC_Parallel</a> (int ntotal, std::function&lt; ex(int)&gt; f, const string &amp;key)</td></tr>
+<tr class="memdesc:ab08032f5436ea31a4b3708954a3d61b9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_gi_na_c.html" title="Extension to GiNaC.">GiNaC</a> Parallel Evaluation using fork.  <a href="namespace_hep_lib.html#ab08032f5436ea31a4b3708954a3d61b9">More...</a><br /></td></tr>
+<tr class="separator:ab08032f5436ea31a4b3708954a3d61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8a54612e162040af9d020d95668b7c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6f8a54612e162040af9d020d95668b7c">HepLib::RunOS</a> (const string &amp;cmd)</td></tr>
 <tr class="memdesc:a6f8a54612e162040af9d020d95668b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">run symtem command and return the output as string  <a href="namespace_hep_lib.html#a6f8a54612e162040af9d020d95668b7c">More...</a><br /></td></tr>
 <tr class="separator:a6f8a54612e162040af9d020d95668b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -587,13 +584,23 @@ Functions</h2></td></tr>
 <tr class="separator:a6bce348c8b5a9adc9673045dd9e478dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57afadee1cdcaa0fe37874e33c798708"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a57afadee1cdcaa0fe37874e33c798708">HepLib::add_collect_normal</a> (const exvector &amp;exv, <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> const &amp;pats)</td></tr>
 <tr class="separator:a57afadee1cdcaa0fe37874e33c798708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0478365b925c61d0cae461320be8140"><td class="memItemLeft" align="right" valign="top">exvector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af0478365b925c61d0cae461320be8140">HepLib::ParRun</a> (<a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> elst, exvector input, string dll, string func)</td></tr>
-<tr class="separator:af0478365b925c61d0cae461320be8140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a2b01c2a70699d7f65f561cb32d481b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a2b01c2a70699d7f65f561cb32d481b6b">HepLib::GiNaC_archive_Symbols</a> = <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>{}</td></tr>
 <tr class="separator:a2b01c2a70699d7f65f561cb32d481b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228518bab5aecf91891982bceeff44d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a228518bab5aecf91891982bceeff44d6">HepLib::GiNaC_Parallel_Process</a> = -1</td></tr>
+<tr class="separator:a228518bab5aecf91891982bceeff44d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812130157fcc229c9cef916f484e4ccd"><td class="memItemLeft" align="right" valign="top">map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a812130157fcc229c9cef916f484e4ccd">HepLib::GiNaC_Parallel_NP</a></td></tr>
+<tr class="separator:a812130157fcc229c9cef916f484e4ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe29f5d5bec35abdbf8120ca708bd24f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#afe29f5d5bec35abdbf8120ca708bd24f">HepLib::GiNaC_Parallel_Batch</a> = 0</td></tr>
+<tr class="separator:afe29f5d5bec35abdbf8120ca708bd24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbe0ecd4b3e345dd3e7c65c4d4a3421"><td class="memItemLeft" align="right" valign="top">map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4dbe0ecd4b3e345dd3e7c65c4d4a3421">HepLib::GiNaC_Parallel_NB</a></td></tr>
+<tr class="separator:a4dbe0ecd4b3e345dd3e7c65c4d4a3421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d041f863b06cfc29d5beb06d55dd594"><td class="memItemLeft" align="right" valign="top">map&lt; string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a3d041f863b06cfc29d5beb06d55dd594">HepLib::GiNaC_Parallel_RM</a></td></tr>
+<tr class="separator:a3d041f863b06cfc29d5beb06d55dd594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4a73631bd239f948bc5d8b2b618a6c"><td class="memItemLeft" align="right" valign="top">map&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ada4a73631bd239f948bc5d8b2b618a6c">HepLib::GiNaC_Parallel_PRE</a></td></tr>
+<tr class="separator:ada4a73631bd239f948bc5d8b2b618a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8d67a3326ee758b8a340d8121f81b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6a8d67a3326ee758b8a340d8121f81b3">HepLib::using_cache</a> = true</td></tr>
 <tr class="separator:a6a8d67a3326ee758b8a340d8121f81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58fe27ab5ad44aa64d08c74bb7fea4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af58fe27ab5ad44aa64d08c74bb7fea4d">HepLib::fermat_using_array</a> = false</td></tr>
@@ -640,10 +647,6 @@ Variables</h2></td></tr>
 <tr class="separator:ab868f1b276fdfd8b62d5dc36f6c877c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c8acea92f3856b9760a4133c4d53bb8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6c8acea92f3856b9760a4133c4d53bb8">HepLib::Debug</a> = false</td></tr>
 <tr class="separator:a6c8acea92f3856b9760a4133c4d53bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a228518bab5aecf91891982bceeff44d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a228518bab5aecf91891982bceeff44d6">HepLib::GiNaC_Parallel_Process</a> = -1</td></tr>
-<tr class="separator:a228518bab5aecf91891982bceeff44d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba22111dcd7d5dcfa03e3a0f7100e8e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aba22111dcd7d5dcfa03e3a0f7100e8e5">HepLib::GiNaC_Parallel_BatchMax</a> = 999</td></tr>
-<tr class="separator:aba22111dcd7d5dcfa03e3a0f7100e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memItemLeft" align="right" valign="top">MapFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a85149c6fb878bf26fefea55a68d7ec4e">HepLib::Rationalize</a></td></tr>
 <tr class="separator:a85149c6fb878bf26fefea55a68d7ec4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac14f1046e0657b6b7520a97fec753a1d"><td class="memItemLeft" align="right" valign="top">HepFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#ac14f1046e0657b6b7520a97fec753a1d">HepLib::hout</a></td></tr>
@@ -997,6 +1000,23 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00084">84</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="add50d6fc85638f3c2d350c43c2b28907" name="add50d6fc85638f3c2d350c43c2b28907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add50d6fc85638f3c2d350c43c2b28907">&#9670;&nbsp;</a></span>RUN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RUN) (std::string dir_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00811">811</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>

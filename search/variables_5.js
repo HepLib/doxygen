@@ -17,6 +17,7 @@ var searchData=
   ['form_5fusing_5fsu3_14',['form_using_su3',['../namespace_hep_lib.html#a66dc8fdb15263644bf0671a9efe742ca',1,'HepLib']]],
   ['ft_15',['FT',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a3cc67d6c7da5d9ea40d11dfc2f874100',1,'HepLib::SD::IntegratorBase']]],
   ['ftable_16',['FTable',['../class_hep_lib_1_1_parser.html#a03c2868fd3ece781e30ed4d314ecf224',1,'HepLib::Parser']]],
-  ['functions_17',['Functions',['../class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc',1,'HepLib::XIntegral::Functions()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a5b5b7feaf705e57727b6e33ac2d272fb',1,'HepLib::SD::XIntegrand::Functions()']]],
-  ['funexp_18',['FunExp',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7fed10364a1183df3b94cd8ba2483463',1,'HepLib::SD::SecDec']]]
+  ['func_17',['FUNC',['../class_hep_lib_1_1_server.html#a51f025e86aba2dfa7c5b7f904cb5b765',1,'HepLib::Server']]],
+  ['functions_18',['Functions',['../class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc',1,'HepLib::XIntegral::Functions()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a5b5b7feaf705e57727b6e33ac2d272fb',1,'HepLib::SD::XIntegrand::Functions()']]],
+  ['funexp_19',['FunExp',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7fed10364a1183df3b94cd8ba2483463',1,'HepLib::SD::SecDec']]]
 ];

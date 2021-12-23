@@ -10,8 +10,9 @@ var searchData=
   ['tir_2ecpp_7',['TIR.cpp',['../_t_i_r_8cpp.html',1,'']]],
   ['tloopmomenta_8',['tLoopMomenta',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a169d1c9fde9af0f30c7fa927439e24d0',1,'HepLib::SD::FeynmanParameter']]],
   ['topolines_9',['TopoLines',['../namespace_hep_lib_1_1_q_g_r_a_f.html#ae91c155600d79e46c57635a95ee0a71f',1,'HepLib::QGRAF']]],
-  ['treplacements_10',['tReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4c2e54d830034022fd0bce128ae06ae2',1,'HepLib::SD::FeynmanParameter']]],
-  ['trypts_11',['TryPTS',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a1aa3c0a1a4a895a42b4719e2e746e074',1,'HepLib::SD::SecDec']]],
-  ['type_12',['Type',['../class_hep_lib_1_1_index.html#a5ff586bf33dba51f5d5fd008efd18dc6',1,'HepLib::Index']]],
-  ['type_13',['type',['../class_hep_lib_1_1_index.html#a5eee75b521996a115ade0912f3c44860',1,'HepLib::Index']]]
+  ['total_10',['Total',['../class_hep_lib_1_1_server.html#a3bcc7435548c600b06258b15aa68d028',1,'HepLib::Server']]],
+  ['treplacements_11',['tReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a4c2e54d830034022fd0bce128ae06ae2',1,'HepLib::SD::FeynmanParameter']]],
+  ['trypts_12',['TryPTS',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a1aa3c0a1a4a895a42b4719e2e746e074',1,'HepLib::SD::SecDec']]],
+  ['type_13',['Type',['../class_hep_lib_1_1_index.html#a5ff586bf33dba51f5d5fd008efd18dc6',1,'HepLib::Index']]],
+  ['type_14',['type',['../class_hep_lib_1_1_index.html#a5eee75b521996a115ade0912f3c44860',1,'HepLib::Index']]]
 ];

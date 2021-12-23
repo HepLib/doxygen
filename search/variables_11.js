@@ -8,13 +8,14 @@ var searchData=
   ['seed_5foption_5',['seed_option',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#ae8695ddffdf3d30b7a02b8a00903e259',1,'HepLib::IBP::UKIRA::seed_option()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a851e8e8fac3f20914a36028c1e4d346a',1,'HepLib::IBP::Laporta::seed_option()']]],
   ['sentinel_6',['Sentinel',['../class_hep_lib_1_1_fermat.html#a76c3722ffe7451efbdd74b44d4dfd124',1,'HepLib::Fermat::Sentinel()'],['../class_hep_lib_1_1_form.html#a19c0c3182b330b0bd083b3e9cf2fe92e',1,'HepLib::Form::Sentinel()']]],
   ['shift_7',['Shift',['../class_hep_lib_1_1_i_b_p_1_1_base.html#ad18327664da504f5b62efb06d444a77d',1,'HepLib::IBP::Base']]],
-  ['smap_8',['smap',['../struct_hep_lib_1_1_a_i_option.html#a2e7e89865423f8673787a6445e4c7186',1,'HepLib::AIOption']]],
-  ['solimit_9',['soLimit',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#abcb2c946951af9077e0499ca7ed502ae',1,'HepLib::SD::SecDec']]],
-  ['sort_5foption_10',['sort_option',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#afc142dca4cbea04d175dff4bc411153b',1,'HepLib::IBP::UKIRA::sort_option()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#af6858df32bf3ec40fbb59565373fa771',1,'HepLib::IBP::Laporta::sort_option()']]],
-  ['sp_5fmap_11',['SP_map',['../namespace_hep_lib.html#a3e6a15aa7da8ea1f08f8f9f056e27fe7',1,'HepLib']]],
-  ['stable_12',['STable',['../class_hep_lib_1_1_parser.html#a5ef2f2c75520b5d8cba407421d3899f4',1,'HepLib::Parser']]],
-  ['starttimer_13',['StartTimer',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#ae477a85ee33973b309a43c3520ce7e6e',1,'HepLib::SD::IntegratorBase']]],
-  ['style_14',['Style',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html#a5c087a8e5f5ffebbd312b64946515c01',1,'HepLib::QGRAF::Process']]],
-  ['suffix_15',['suffix',['../class_hep_lib_1_1_s_d_1_1_cpp_format.html#a59a608a6e38a0ddd8f69c2a5a5b4f8b3',1,'HepLib::SD::CppFormat']]],
-  ['syms_16',['syms',['../exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58',1,'exfactor.cpp']]]
+  ['skip_8',['Skip',['../class_hep_lib_1_1_server.html#aa64d564b6f7e868e820cca224f114919',1,'HepLib::Server']]],
+  ['smap_9',['smap',['../struct_hep_lib_1_1_a_i_option.html#a2e7e89865423f8673787a6445e4c7186',1,'HepLib::AIOption']]],
+  ['solimit_10',['soLimit',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#abcb2c946951af9077e0499ca7ed502ae',1,'HepLib::SD::SecDec']]],
+  ['sort_5foption_11',['sort_option',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#afc142dca4cbea04d175dff4bc411153b',1,'HepLib::IBP::UKIRA::sort_option()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#af6858df32bf3ec40fbb59565373fa771',1,'HepLib::IBP::Laporta::sort_option()']]],
+  ['sp_5fmap_12',['SP_map',['../namespace_hep_lib.html#a3e6a15aa7da8ea1f08f8f9f056e27fe7',1,'HepLib']]],
+  ['stable_13',['STable',['../class_hep_lib_1_1_parser.html#a5ef2f2c75520b5d8cba407421d3899f4',1,'HepLib::Parser']]],
+  ['starttimer_14',['StartTimer',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#ae477a85ee33973b309a43c3520ce7e6e',1,'HepLib::SD::IntegratorBase']]],
+  ['style_15',['Style',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html#a5c087a8e5f5ffebbd312b64946515c01',1,'HepLib::QGRAF::Process']]],
+  ['suffix_16',['suffix',['../class_hep_lib_1_1_s_d_1_1_cpp_format.html#a59a608a6e38a0ddd8f69c2a5a5b4f8b3',1,'HepLib::SD::CppFormat']]],
+  ['syms_17',['syms',['../exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58',1,'exfactor.cpp']]]
 ];

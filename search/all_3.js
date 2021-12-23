@@ -17,11 +17,12 @@ var searchData=
   ['dir_5fexists_14',['dir_exists',['../namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421',1,'HepLib']]],
   ['direct_15',['Direct',['../class_hep_lib_1_1_i_b_p_1_1_direct.html',1,'HepLib::IBP']]],
   ['direct_2ecpp_16',['Direct.cpp',['../_direct_8cpp.html',1,'']]],
-  ['dmax_17',['dmax',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#a33d2d8eb28e7bebd28131c909c332162',1,'HepLib::IBP::KIRA']]],
-  ['do_5fnot_5fevalf_5fparams_18',['do_not_evalf_params',['../namespace_hep_lib_1_1_s_d.html#a46456a87922407dbb47af053ce5fb13c',1,'HepLib::SD']]],
-  ['doublefactorial_19',['doublefactorial',['../_gi_na_c_w_8cpp.html#a92af372de803b88f9cfcfdae1a229dae',1,'GiNaCW.cpp']]],
-  ['dqmp_20',['DQMP',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#afbe3ae33245b31bd0008cabba3e8cea7',1,'HepLib::SD::IntegratorBase']]],
-  ['drawpdf_21',['DrawPDF',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a475da47a787976fb0e4604aa00476744',1,'HepLib::QGRAF']]],
-  ['dreal_22',['dREAL',['../_c_u_b_a_8cpp.html#a9e6b9fff29f4a57af2dc6351581617d0',1,'dREAL():&#160;CUBA.cpp'],['../_h_cubature_8cpp.html#a9e6b9fff29f4a57af2dc6351581617d0',1,'dREAL():&#160;HCubature.cpp'],['../namespace_hep_lib_1_1_s_d.html#ace28028fd9a0066a8c863a6da4be14ef',1,'HepLib::SD::dREAL()']]],
-  ['dsp_23',['DSP',['../struct_hep_lib_1_1_a_i_option.html#a2cb601c72d1de0c92b24c96a201bc9f2',1,'HepLib::AIOption::DSP()'],['../class_hep_lib_1_1_i_b_p_1_1_base.html#a1e4af7f9dccaf68c4a5b3b6c61a2d19a',1,'HepLib::IBP::Base::DSP()']]]
+  ['dl_17',['DL',['../class_hep_lib_1_1_server.html#a7ec32638b01a4f4f38fcb6951a35f0dc',1,'HepLib::Server']]],
+  ['dmax_18',['dmax',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#a33d2d8eb28e7bebd28131c909c332162',1,'HepLib::IBP::KIRA']]],
+  ['do_5fnot_5fevalf_5fparams_19',['do_not_evalf_params',['../namespace_hep_lib_1_1_s_d.html#a46456a87922407dbb47af053ce5fb13c',1,'HepLib::SD']]],
+  ['doublefactorial_20',['doublefactorial',['../_gi_na_c_w_8cpp.html#a92af372de803b88f9cfcfdae1a229dae',1,'GiNaCW.cpp']]],
+  ['dqmp_21',['DQMP',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#afbe3ae33245b31bd0008cabba3e8cea7',1,'HepLib::SD::IntegratorBase']]],
+  ['drawpdf_22',['DrawPDF',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a475da47a787976fb0e4604aa00476744',1,'HepLib::QGRAF']]],
+  ['dreal_23',['dREAL',['../_c_u_b_a_8cpp.html#a9e6b9fff29f4a57af2dc6351581617d0',1,'dREAL():&#160;CUBA.cpp'],['../_h_cubature_8cpp.html#a9e6b9fff29f4a57af2dc6351581617d0',1,'dREAL():&#160;HCubature.cpp'],['../namespace_hep_lib_1_1_s_d.html#ace28028fd9a0066a8c863a6da4be14ef',1,'HepLib::SD::dREAL()']]],
+  ['dsp_24',['DSP',['../struct_hep_lib_1_1_a_i_option.html#a2cb601c72d1de0c92b24c96a201bc9f2',1,'HepLib::AIOption::DSP()'],['../class_hep_lib_1_1_i_b_p_1_1_base.html#a1e4af7f9dccaf68c4a5b3b6c61a2d19a',1,'HepLib::IBP::Base::DSP()']]]
 ];
