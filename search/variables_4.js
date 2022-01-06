@@ -13,6 +13,6 @@ var searchData=
   ['evalpoint_10',['evalpoint',['../exfactor_8cpp.html#a29bd984ec1434a0123d5291130221977',1,'exfactor.cpp']]],
   ['exit_11',['Exit',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html#ad7fd9fa5e5e4a6870fd017bef1c09dd5',1,'HepLib::SD::HookeJeeves']]],
   ['exponents_12',['Exponents',['../class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92',1,'HepLib::XIntegral::Exponents()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a28eb9ced2c59608f08cbada7e7012bdd',1,'HepLib::SD::FeynmanParameter::Exponents()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#ab8d8f4a98be1d5bba8af862cd92684f9',1,'HepLib::SD::XIntegrand::Exponents()']]],
-  ['expresult_13',['expResult',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ad921f0db320b81c875f5d8cd4432ed2c',1,'HepLib::SD::SecDec']]],
+  ['expresult_13',['expResult',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a0d9582651543681212ad410ae9bd09b9',1,'HepLib::SD::SecDec']]],
   ['external_14',['External',['../struct_hep_lib_1_1_a_i_option.html#abb2c11e3b0a22a0d4ec48c7f398e8bd7',1,'HepLib::AIOption::External()'],['../class_hep_lib_1_1_i_b_p_1_1_base.html#a457d7d643742e914b15fa7eb30b971f8',1,'HepLib::IBP::Base::External()']]]
 ];

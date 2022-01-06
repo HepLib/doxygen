@@ -67,9 +67,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_hep_lib_1_1i_symbol-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">HepLib::iSymbol Class Reference</div></div>
 </div><!--header-->
@@ -86,8 +90,30 @@ Inheritance diagram for HepLib::iSymbol:</div>
   <img src="class_hep_lib_1_1i_symbol.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol_1_1visitor.html">visitor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aa54149dde3f4b4c4b140bafb6b532ea8"><td class="memItemLeft" align="right" valign="top">typedef symbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#aa54149dde3f4b4c4b140bafb6b532ea8">inherited</a></td></tr>
+<tr class="separator:aa54149dde3f4b4c4b140bafb6b532ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a986e9251ca34b14847b91799ceebf215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a986e9251ca34b14847b91799ceebf215">iSymbol</a> ()</td></tr>
+<tr class="separator:a986e9251ca34b14847b91799ceebf215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e9deace861ad041db44e5e44e911ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hep_lib_1_1i_symbol.html">iSymbol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a60e9deace861ad041db44e5e44e911ac">duplicate</a> () const override</td></tr>
+<tr class="separator:a60e9deace861ad041db44e5e44e911ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cdd70cec08641c151864529079ae99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#aa2cdd70cec08641c151864529079ae99">accept</a> (GiNaC::visitor &amp;v) const override</td></tr>
+<tr class="separator:aa2cdd70cec08641c151864529079ae99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae70828f0f67a7558dbc1966c4f142f3"><td class="memItemLeft" align="right" valign="top">const GiNaC::registered_class_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#aae70828f0f67a7558dbc1966c4f142f3">get_class_info</a> () const override</td></tr>
+<tr class="separator:aae70828f0f67a7558dbc1966c4f142f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c6bf9345795e7671303624c4d34b5c"><td class="memItemLeft" align="right" valign="top">GiNaC::registered_class_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a86c6bf9345795e7671303624c4d34b5c">get_class_info</a> () override</td></tr>
+<tr class="separator:a86c6bf9345795e7671303624c4d34b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d382ae85469064d911873e288b89a7c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a9d382ae85469064d911873e288b89a7c">class_name</a> () const override</td></tr>
+<tr class="separator:a9d382ae85469064d911873e288b89a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48c0707bb771c101484a0cff5c937b13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a48c0707bb771c101484a0cff5c937b13">iSymbol</a> (const string &amp;s)</td></tr>
 <tr class="memdesc:a48c0707bb771c101484a0cff5c937b13"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_hep_lib_1_1_symbol.html" title="class extended to GiNaC symbol class, represent a positive symbol">Symbol</a> constructor.  <a href="class_hep_lib_1_1i_symbol.html#a48c0707bb771c101484a0cff5c937b13">More...</a><br /></td></tr>
 <tr class="separator:a48c0707bb771c101484a0cff5c937b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,9 +135,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85800dde9630656c02d5f45de9fd45e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa32a3369623a4379a2d8b03def10fab5"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#aa32a3369623a4379a2d8b03def10fab5">imag_part</a> () const override</td></tr>
 <tr class="separator:aa32a3369623a4379a2d8b03def10fab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb983834fa81bd4f8821dedbfef4abdf"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#afb983834fa81bd4f8821dedbfef4abdf">calchash</a> () const override</td></tr>
+<tr class="separator:afb983834fa81bd4f8821dedbfef4abdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db694a303b3462d174d368dfe81b192"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a0db694a303b3462d174d368dfe81b192">is_equal_same_type</a> (const basic &amp;other) const override</td></tr>
+<tr class="separator:a0db694a303b3462d174d368dfe81b192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab10e711303547068b5d8db485e4eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a5ab10e711303547068b5d8db485e4eec">set_name</a> (string n)</td></tr>
+<tr class="separator:a5ab10e711303547068b5d8db485e4eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8c30fa12d23077b93540fcbd19b80ca7"><td class="memItemLeft" align="right" valign="top">static GiNaC::registered_class_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a8c30fa12d23077b93540fcbd19b80ca7">get_class_info_static</a> ()</td></tr>
+<tr class="separator:a8c30fa12d23077b93540fcbd19b80ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac082ae2f44940234881cf598bd52e4af"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#ac082ae2f44940234881cf598bd52e4af">has</a> (const ex &amp;e)</td></tr>
 <tr class="separator:ac082ae2f44940234881cf598bd52e4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95abf1206f8aba0fb976ac62abbadb77"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a95abf1206f8aba0fb976ac62abbadb77">all</a> (const ex &amp;e)</td></tr>
@@ -121,14 +155,61 @@ Static Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a441d34e158fa2b6be6f79a0b0aec82ff"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, ex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#a441d34e158fa2b6be6f79a0b0aec82ff">Table</a></td></tr>
 <tr class="separator:a441d34e158fa2b6be6f79a0b0aec82ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab914ec2e0143421533614d05e2741bb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#ab914ec2e0143421533614d05e2741bb7">compare_same_type</a> (const GiNaC::basic &amp;other) const override</td></tr>
+<tr class="separator:ab914ec2e0143421533614d05e2741bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ac0cf42a92457d111372c791adc68c1d0"><td class="memTemplParams" colspan="2">template&lt;class B , typename... Args&gt; </td></tr>
+<tr class="memitem:ac0cf42a92457d111372c791adc68c1d0"><td class="memTemplItemLeft" align="right" valign="top">B &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1i_symbol.html#ac0cf42a92457d111372c791adc68c1d0">dynallocate</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="separator:ac0cf42a92457d111372c791adc68c1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >class extended to <a class="el" href="namespace_gi_na_c.html" title="Extension to GiNaC.">GiNaC</a> symbol class, pure imaginary symbol </p>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00137">137</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00159">159</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aa54149dde3f4b4c4b140bafb6b532ea8" name="aa54149dde3f4b4c4b140bafb6b532ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54149dde3f4b4c4b140bafb6b532ea8">&#9670;&nbsp;</a></span>inherited</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef symbol <a class="el" href="class_hep_lib_1_1i_symbol.html#aa54149dde3f4b4c4b140bafb6b532ea8">HepLib::iSymbol::inherited</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00171">171</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a986e9251ca34b14847b91799ceebf215" name="a986e9251ca34b14847b91799ceebf215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986e9251ca34b14847b91799ceebf215">&#9670;&nbsp;</a></span>iSymbol() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HepLib::iSymbol::iSymbol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00165">165</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a48c0707bb771c101484a0cff5c937b13" name="a48c0707bb771c101484a0cff5c937b13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48c0707bb771c101484a0cff5c937b13">&#9670;&nbsp;</a></span>iSymbol()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c0707bb771c101484a0cff5c937b13">&#9670;&nbsp;</a></span>iSymbol() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,11 +232,39 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00119">119</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00164">164</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa2cdd70cec08641c151864529079ae99" name="aa2cdd70cec08641c151864529079ae99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2cdd70cec08641c151864529079ae99">&#9670;&nbsp;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::iSymbol::accept </td>
+          <td>(</td>
+          <td class="paramtype">GiNaC::visitor &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00154">154</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a95abf1206f8aba0fb976ac62abbadb77" name="a95abf1206f8aba0fb976ac62abbadb77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95abf1206f8aba0fb976ac62abbadb77">&#9670;&nbsp;</a></span>all()</h2>
 
@@ -214,7 +323,89 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00132">132</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00191">191</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afb983834fa81bd4f8821dedbfef4abdf" name="afb983834fa81bd4f8821dedbfef4abdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb983834fa81bd4f8821dedbfef4abdf">&#9670;&nbsp;</a></span>calchash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned HepLib::iSymbol::calchash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00181">181</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9d382ae85469064d911873e288b89a7c" name="a9d382ae85469064d911873e288b89a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d382ae85469064d911873e288b89a7c">&#9670;&nbsp;</a></span>class_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * HepLib::iSymbol::class_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00157">157</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab914ec2e0143421533614d05e2741bb7" name="ab914ec2e0143421533614d05e2741bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab914ec2e0143421533614d05e2741bb7">&#9670;&nbsp;</a></span>compare_same_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int HepLib::iSymbol::compare_same_type </td>
+          <td>(</td>
+          <td class="paramtype">const GiNaC::basic &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00166">166</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +432,34 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00148">148</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00207">207</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a60e9deace861ad041db44e5e44e911ac" name="a60e9deace861ad041db44e5e44e911ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e9deace861ad041db44e5e44e911ac">&#9670;&nbsp;</a></span>duplicate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hep_lib_1_1i_symbol.html">iSymbol</a> * HepLib::iSymbol::duplicate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00153">153</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +486,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00146">146</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00205">205</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -295,7 +513,88 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00147">147</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00206">206</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aae70828f0f67a7558dbc1966c4f142f3" name="aae70828f0f67a7558dbc1966c4f142f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae70828f0f67a7558dbc1966c4f142f3">&#9670;&nbsp;</a></span>get_class_info() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const GiNaC::registered_class_info &amp; HepLib::iSymbol::get_class_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00155">155</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a86c6bf9345795e7671303624c4d34b5c" name="a86c6bf9345795e7671303624c4d34b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c6bf9345795e7671303624c4d34b5c">&#9670;&nbsp;</a></span>get_class_info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GiNaC::registered_class_info &amp; HepLib::iSymbol::get_class_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00156">156</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8c30fa12d23077b93540fcbd19b80ca7" name="a8c30fa12d23077b93540fcbd19b80ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c30fa12d23077b93540fcbd19b80ca7">&#9670;&nbsp;</a></span>get_class_info_static()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GiNaC::registered_class_info &amp; HepLib::iSymbol::get_class_info_static </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00151">151</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +621,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00144">144</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00187">187</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>
@@ -375,7 +674,35 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00150">150</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00209">209</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0db694a303b3462d174d368dfe81b192" name="a0db694a303b3462d174d368dfe81b192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db694a303b3462d174d368dfe81b192">&#9670;&nbsp;</a></span>is_equal_same_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HepLib::iSymbol::is_equal_same_type </td>
+          <td>(</td>
+          <td class="paramtype">const basic &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00174">174</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +749,7 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00141">141</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00200">200</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
 
 </div>
 </div>
@@ -449,7 +776,56 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00149">149</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00208">208</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5ab10e711303547068b5d8db485e4eec" name="a5ab10e711303547068b5d8db485e4eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab10e711303547068b5d8db485e4eec">&#9670;&nbsp;</a></span>set_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::iSymbol::set_name </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00179">179</a> of file <a class="el" href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html">BASIC.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ac0cf42a92457d111372c791adc68c1d0" name="ac0cf42a92457d111372c791adc68c1d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cf42a92457d111372c791adc68c1d0">&#9670;&nbsp;</a></span>dynallocate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">B &amp; dynallocate </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -474,7 +850,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00154">154</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_b_a_s_i_c_8h_source.html#l00200">200</a> of file <a class="el" href="_b_a_s_i_c_8h_source.html">BASIC.h</a>.</p>
 
 </div>
 </div>

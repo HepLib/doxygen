@@ -1447,7 +1447,7 @@ $(function() {
 <div class="line"><a id="l01551" name="l01551"></a><span class="lineno"> 1551</span><span class="preprocessor">#endif </span><span class="comment">// def DEBUGFACTOR</span></div>
 <div class="line"><a id="l01552" name="l01552"></a><span class="lineno"> 1552</span> </div>
 <div class="line"><a id="l01553" name="l01553"></a><span class="lineno"> 1553</span><span class="comment">// forward declaration</span></div>
-<div class="line"><a id="l01554" name="l01554"></a><span class="lineno"> 1554</span><span class="keyword">static</span> vector&lt;ex&gt; multivar_diophant(<span class="keyword">const</span> vector&lt;ex&gt;&amp; a_, <span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <span class="keyword">const</span> ex&amp; c, <span class="keyword">const</span> vector&lt;EvalPoint&gt;&amp; I, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k);</div>
+<div class="line"><a id="l01554" name="l01554"></a><span class="lineno"> 1554</span><span class="keyword">static</span> exvector multivar_diophant(<span class="keyword">const</span> exvector&amp; a_, <span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <span class="keyword">const</span> ex&amp; c, <span class="keyword">const</span> vector&lt;EvalPoint&gt;&amp; I, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k);</div>
 <div class="line"><a id="l01555" name="l01555"></a><span class="lineno"> 1555</span> </div>
 <div class="line"><a id="l01571" name="l01571"></a><span class="lineno"> 1571</span><span class="keyword">static</span> upvec multiterm_eea_lift(<span class="keyword">const</span> upvec&amp; <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k)</div>
 <div class="line"><a id="l01572" name="l01572"></a><span class="lineno"> 1572</span>{</div>
@@ -1461,11 +1461,11 @@ $(function() {
 <div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>    umodpoly beta(1, <a class="code hl_variable" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>-&gt;one());</div>
 <div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>    upvec s;</div>
 <div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> j=1; j&lt;r; ++j ) {</div>
-<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>        vector&lt;ex&gt; mdarg(2);</div>
+<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>        exvector mdarg(2);</div>
 <div class="line"><a id="l01584" name="l01584"></a><span class="lineno"> 1584</span>        mdarg[0] = umodpoly_to_ex(q[j-1], <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>        mdarg[1] = umodpoly_to_ex(<a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[j-1], <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a id="l01586" name="l01586"></a><span class="lineno"> 1586</span>        vector&lt;EvalPoint&gt; empty;</div>
-<div class="line"><a id="l01587" name="l01587"></a><span class="lineno"> 1587</span>        vector&lt;ex&gt; exsigma = multivar_diophant(mdarg, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, umodpoly_to_ex(beta, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>), empty, 0, p, k);</div>
+<div class="line"><a id="l01587" name="l01587"></a><span class="lineno"> 1587</span>        exvector exsigma = multivar_diophant(mdarg, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, umodpoly_to_ex(beta, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>), empty, 0, p, k);</div>
 <div class="line"><a id="l01588" name="l01588"></a><span class="lineno"> 1588</span>        umodpoly sigma1;</div>
 <div class="line"><a id="l01589" name="l01589"></a><span class="lineno"> 1589</span>        umodpoly_from_ex(sigma1, exsigma[0], <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <a class="code hl_variable" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>);</div>
 <div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>        umodpoly sigma2;</div>
@@ -1588,17 +1588,17 @@ $(function() {
 <div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>    <span class="keywordflow">return</span> map(e.expand());</div>
 <div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>}</div>
 <div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span> </div>
-<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span><span class="keyword">static</span> vector&lt;ex&gt; multivar_diophant(<span class="keyword">const</span> vector&lt;ex&gt;&amp; a_, <span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <span class="keyword">const</span> ex&amp; c, <span class="keyword">const</span> vector&lt;EvalPoint&gt;&amp; I,</div>
+<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span><span class="keyword">static</span> exvector multivar_diophant(<span class="keyword">const</span> exvector&amp; a_, <span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <span class="keyword">const</span> ex&amp; c, <span class="keyword">const</span> vector&lt;EvalPoint&gt;&amp; I,</div>
 <div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>                                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k)</div>
 <div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span>{</div>
-<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>    vector&lt;ex&gt; <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a> = a_;</div>
+<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>    exvector <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a> = a_;</div>
 <div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span> </div>
 <div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>    <span class="keyword">const</span> cl_I modulus = expt_pos(cl_I(p),k);</div>
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>    <span class="keyword">const</span> cl_modint_ring <a class="code hl_variable" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a> = find_modint_ring(modulus);</div>
 <div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> r = <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>.size();</div>
 <div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> nu = I.size() + 1;</div>
 <div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span> </div>
-<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>    vector&lt;ex&gt; sigma;</div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>    exvector sigma;</div>
 <div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>    <span class="keywordflow">if</span> ( nu &gt; 1 ) {</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>        ex xnu = I.back().x;</div>
 <div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>        <span class="keywordtype">int</span> alphanu = I.back().evalpoint;</div>
@@ -1607,12 +1607,12 @@ $(function() {
 <div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;r; ++i ) {</div>
 <div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>            A *= <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i];</div>
 <div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>        }</div>
-<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>        vector&lt;ex&gt; b(r);</div>
+<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>        exvector b(r);</div>
 <div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;r; ++i ) {</div>
 <div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>            b[i] = <a class="code hl_function" href="_gi_na_c_w_8cpp.html#ab5f00283ab752d49f1329c366c202450">normal</a>(A / <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>[i]);</div>
 <div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>        }</div>
 <div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span> </div>
-<div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>        vector&lt;ex&gt; anew = <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>;</div>
+<div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>        exvector anew = <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>;</div>
 <div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;r; ++i ) {</div>
 <div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>            anew[i] = anew[i].subs(xnu == alphanu);</div>
 <div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>        }</div>
@@ -1634,7 +1634,7 @@ $(function() {
 <div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>            ex cm = e.diff(ex_to&lt;symbol&gt;(xnu), m).subs(xnu==alphanu) / <a class="code hl_function" href="_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a">factorial</a>(m);</div>
 <div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>            cm = make_modular(cm, <a class="code hl_variable" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a>);</div>
 <div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>            <span class="keywordflow">if</span> ( !cm.is_zero() ) {</div>
-<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>                vector&lt;ex&gt; delta_s = multivar_diophant(anew, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, cm, Inew, <a class="code hl_variable" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>, p, k);</div>
+<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>                exvector delta_s = multivar_diophant(anew, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, cm, Inew, <a class="code hl_variable" href="namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd">d</a>, p, k);</div>
 <div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>                ex buf = e;</div>
 <div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>                <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> j=0; j&lt;delta_s.size(); ++j ) {</div>
 <div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>                    delta_s[j] *= monomial;</div>
@@ -1687,12 +1687,12 @@ $(function() {
 <div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>}</div>
 <div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span> </div>
 <div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span><span class="keyword">static</span> ex hensel_multivar(<span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>, <span class="keyword">const</span> ex&amp; <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, <span class="keyword">const</span> vector&lt;EvalPoint&gt;&amp; I,</div>
-<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p, <span class="keyword">const</span> cl_I&amp; l, <span class="keyword">const</span> upvec&amp; u, <span class="keyword">const</span> vector&lt;ex&gt;&amp; lcU)</div>
+<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p, <span class="keyword">const</span> cl_I&amp; l, <span class="keyword">const</span> upvec&amp; u, <span class="keyword">const</span> exvector&amp; lcU)</div>
 <div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>{</div>
 <div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> nu = I.size() + 1;</div>
 <div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>    <span class="keyword">const</span> cl_modint_ring <a class="code hl_variable" href="exfactor_8cpp.html#abd47d2c28d3ad98e4796652ba350284b">R</a> = find_modint_ring(expt_pos(cl_I(p),l));</div>
 <div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span> </div>
-<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>    vector&lt;ex&gt; A(nu);</div>
+<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>    exvector A(nu);</div>
 <div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>    A[nu-1] = <a class="code hl_variable" href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a>;</div>
 <div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span> </div>
 <div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> j=nu; j&gt;=2; --j ) {</div>
@@ -1709,13 +1709,13 @@ $(function() {
 <div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>    }</div>
 <div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span> </div>
 <div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> n = u.size();</div>
-<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>    vector&lt;ex&gt; U(n);</div>
+<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>    exvector U(n);</div>
 <div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;n; ++i ) {</div>
 <div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>        U[i] = umodpoly_to_ex(u[i], <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>);</div>
 <div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>    }</div>
 <div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span> </div>
 <div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> j=2; j&lt;=nu; ++j ) {</div>
-<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>        vector&lt;ex&gt; U1 = U;</div>
+<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>        exvector U1 = U;</div>
 <div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>        ex monomial = 1;</div>
 <div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>        <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> m=0; m&lt;n; ++m) {</div>
 <div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>            <span class="keywordflow">if</span> ( lcU[m] != 1 ) {</div>
@@ -1749,7 +1749,7 @@ $(function() {
 <div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>                ex dif = e.diff(ex_to&lt;symbol&gt;(xj), k);</div>
 <div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span>                ex c = dif.subs(xj==alphaj) / <a class="code hl_function" href="_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a">factorial</a>(k);</div>
 <div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>                <span class="keywordflow">if</span> ( !c.is_zero() ) {</div>
-<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>                    vector&lt;ex&gt; deltaU = multivar_diophant(U1, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, c, newI, maxdeg, p, cl_I_to_uint(l));</div>
+<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>                    exvector deltaU = multivar_diophant(U1, <a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>, c, newI, maxdeg, p, cl_I_to_uint(l));</div>
 <div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span>                    <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=0; i&lt;n; ++i ) {</div>
 <div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span>                        deltaU[i] *= monomial;</div>
 <div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span>                        U[i] += deltaU[i];</div>
@@ -1958,7 +1958,7 @@ $(function() {
 <div class="line"><a id="l02196" name="l02196"></a><span class="lineno"> 2196</span>        }</div>
 <div class="line"><a id="l02197" name="l02197"></a><span class="lineno"> 2197</span> </div>
 <div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span>        <span class="comment">// determine true leading coefficients for the Hensel lifting</span></div>
-<div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>        vector&lt;ex&gt; C(factor_count);</div>
+<div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>        exvector C(factor_count);</div>
 <div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>        <span class="keywordflow">if</span> ( is_a&lt;numeric&gt;(vn) ) {</div>
 <div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>            <span class="comment">// easy case</span></div>
 <div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>            <span class="keywordflow">for</span> ( <span class="keywordtype">size_t</span> i=1; i&lt;ufaclst.nops(); ++i ) {</div>
@@ -1982,7 +1982,7 @@ $(function() {
 <div class="line"><a id="l02220" name="l02220"></a><span class="lineno"> 2220</span>            }</div>
 <div class="line"><a id="l02221" name="l02221"></a><span class="lineno"> 2221</span>            <span class="comment">// calculate D and C</span></div>
 <div class="line"><a id="l02222" name="l02222"></a><span class="lineno"> 2222</span>            vector&lt;bool&gt; used_flag(ftilde.size(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l02223" name="l02223"></a><span class="lineno"> 2223</span>            vector&lt;ex&gt; <a class="code hl_variable" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>(factor_count, 1);</div>
+<div class="line"><a id="l02223" name="l02223"></a><span class="lineno"> 2223</span>            exvector <a class="code hl_variable" href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">D</a>(factor_count, 1);</div>
 <div class="line"><a id="l02224" name="l02224"></a><span class="lineno"> 2224</span>            <span class="keywordflow">if</span> ( delta == 1 ) {</div>
 <div class="line"><a id="l02225" name="l02225"></a><span class="lineno"> 2225</span>                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;factor_count; ++i ) {</div>
 <div class="line"><a id="l02226" name="l02226"></a><span class="lineno"> 2226</span>                    numeric prefac = ex_to&lt;numeric&gt;(ufaclst.op(i+1).lcoeff(<a class="code hl_variable" href="exfactor_8cpp.html#a3c8bb0832f6d9e0efc9644fcfeb6c85d">x</a>));</div>
@@ -2286,7 +2286,7 @@ $(function() {
 <div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span> </div>
 <div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>} <span class="comment">// namespace GiNaC</span></div>
 <div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span> </div>
-<div class="ttc" id="a_b_a_s_i_c_2_functions_8cpp_html_ab561f3b42e49eecbec26c4266a6deaea"><div class="ttname"><a href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a></div><div class="ttdeci">int * a</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00220">Functions.cpp:220</a></div></div>
+<div class="ttc" id="a_b_a_s_i_c_2_functions_8cpp_html_ab561f3b42e49eecbec26c4266a6deaea"><div class="ttname"><a href="_b_a_s_i_c_2_functions_8cpp.html#ab561f3b42e49eecbec26c4266a6deaea">a</a></div><div class="ttdeci">int * a</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_functions_8cpp_source.html#l00221">Functions.cpp:221</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a27aa507097755f878b7e0a1ab8bedad7"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7">mod</a></div><div class="ttdeci">expr mod(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00332">GiNaCW.cpp:332</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a313a1ef21d69577fc09220d1580666eb"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a313a1ef21d69577fc09220d1580666eb">gcd</a></div><div class="ttdeci">expr gcd(const expr &amp;a, const expr &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00358">GiNaCW.cpp:358</a></div></div>
 <div class="ttc" id="a_gi_na_c_w_8cpp_html_a32d11e0af39786c01b1cdd3846a08ede"><div class="ttname"><a href="_gi_na_c_w_8cpp.html#a32d11e0af39786c01b1cdd3846a08ede">sqrt</a></div><div class="ttdeci">expr sqrt(const expr &amp;z)</div><div class="ttdef"><b>Definition:</b> <a href="_gi_na_c_w_8cpp_source.html#l00228">GiNaCW.cpp:228</a></div></div>
@@ -2311,8 +2311,8 @@ $(function() {
 <div class="ttc" id="anamespace_hep_lib_html_a441c90e44abfc8b5d08502ec73c83a5c"><div class="ttname"><a href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">HepLib::ep</a></div><div class="ttdeci">const Symbol ep</div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a5d81b07ab0bf7779b2543453a46d5881"><div class="ttname"><a href="namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881">HepLib::D</a></div><div class="ttdeci">const Symbol D</div></div>
 <div class="ttc" id="anamespace_hep_lib_html_a752f07c16efe490fce76ed1a3a0b042b"><div class="ttname"><a href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">HepLib::w</a></div><div class="ttdeci">ex w</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00028">Init.cpp:28</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_acd7a1d43f12ad5f7b40923978174b125"><div class="ttname"><a href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">HepLib::w1</a></div><div class="ttdeci">ex w1</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00441">BASIC.h:441</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_adb372d7fbff136ae8543313371045389"><div class="ttname"><a href="namespace_hep_lib.html#adb372d7fbff136ae8543313371045389">HepLib::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, char delimiter)</div><div class="ttdoc">split the string into serveral part, separated by the delimiter</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00337">BASIC.cpp:337</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_acd7a1d43f12ad5f7b40923978174b125"><div class="ttname"><a href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">HepLib::w1</a></div><div class="ttdeci">ex w1</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_8h_source.html#l00488">BASIC.h:488</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_html_adb372d7fbff136ae8543313371045389"><div class="ttname"><a href="namespace_hep_lib.html#adb372d7fbff136ae8543313371045389">HepLib::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, char delimiter)</div><div class="ttdoc">split the string into serveral part, separated by the delimiter</div><div class="ttdef"><b>Definition:</b> <a href="_b_a_s_i_c_2_b_a_s_i_c_8cpp_source.html#l00422">BASIC.cpp:422</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

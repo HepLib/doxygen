@@ -15,6 +15,5 @@ var searchData=
   ['mod_12',['mod',['../_gi_na_c_w_8cpp.html#a27aa507097755f878b7e0a1ab8bedad7',1,'GiNaCW.cpp']]],
   ['mout_13',['mout',['../namespace_hep_lib.html#a38c76a303da407e1a54796927149f25b',1,'HepLib']]],
   ['mu_14',['mu',['../namespace_hep_lib.html#ab196e00b99794c29e7140f27f1e50f4b',1,'HepLib']]],
-  ['mul2lst_15',['mul2lst',['../namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb',1,'HepLib']]],
-  ['mul_5fprint_16',['mul_print',['../class_hep_lib_1_1_hep_format.html#a879ee3590950b8b0dfbfe1b8606b4744',1,'HepLib::HepFormat::mul_print()'],['../class_hep_lib_1_1_m_m_a_format.html#a73725557e1d7cb75aa20fa8e3ab51851',1,'HepLib::MMAFormat::mul_print()'],['../class_hep_lib_1_1_f_c_format.html#abd428df856914e34a80ce1ebb405adb1',1,'HepLib::FCFormat::mul_print()']]]
+  ['mul2lst_15',['mul2lst',['../namespace_hep_lib.html#aa9accb230931feda004cf696a8bfcafb',1,'HepLib']]]
 ];

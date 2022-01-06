@@ -16,6 +16,5 @@ var searchData=
   ['use_5fxreorders_13',['use_XReOrders',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a52307ed83c16ce0c48535070ca949857',1,'HepLib::SD::SecDec']]],
   ['usecpp_14',['UseCpp',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a805ffcbe3b1fc29afb0abbffb9857e0c',1,'HepLib::SD::IntegratorBase']]],
   ['using_5fcache_15',['using_cache',['../namespace_hep_lib.html#a6a8d67a3326ee758b8a340d8121f81b3',1,'HepLib']]],
-  ['using_5fsort_5fcache_16',['using_sort_cache',['../_base_8cpp.html#a73e8400de36c1cfbac518bd662683bcd',1,'Base.cpp']]],
-  ['using_5fuw_17',['using_uw',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a5365cbcd55ae3767e00d4e5d3fa42835',1,'HepLib::IBP::UKIRA::using_uw()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a021208bd654f7a3234eb322ddc400e42',1,'HepLib::IBP::Laporta::using_uw()']]]
+  ['using_5fuw_16',['using_uw',['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a5365cbcd55ae3767e00d4e5d3fa42835',1,'HepLib::IBP::UKIRA::using_uw()'],['../class_hep_lib_1_1_i_b_p_1_1_laporta.html#a021208bd654f7a3234eb322ddc400e42',1,'HepLib::IBP::Laporta::using_uw()']]]
 ];

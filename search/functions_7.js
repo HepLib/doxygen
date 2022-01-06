@@ -6,7 +6,5 @@ var searchData=
   ['has_5ffunction_3',['has_function',['../namespace_hep_lib.html#a1c854e391c8b82674c8f995dddcb8fbc',1,'HepLib']]],
   ['hasc_4',['hasc',['../class_hep_lib_1_1_index.html#a8fcc106245eb263f394d5bc792fadbe2',1,'HepLib::Index']]],
   ['hasloop_5',['HasLoop',['../namespace_hep_lib_1_1_q_g_r_a_f.html#a0d59b6572767ca67211a161c2e204ec8',1,'HepLib::QGRAF']]],
-  ['hasv_6',['hasv',['../class_hep_lib_1_1_index.html#a1c974a5b98252451ff133b05e54a6a38',1,'HepLib::Index']]],
-  ['hepformat_7',['HepFormat',['../class_hep_lib_1_1_hep_format.html#a4eb4daf2a7626b1cb5a1639ca1f0e839',1,'HepLib::HepFormat']]],
-  ['hout_8',['hout',['../namespace_hep_lib.html#a92a46efe4a8bd4f27a4f6238ca615106',1,'HepLib']]]
+  ['hasv_6',['hasv',['../class_hep_lib_1_1_index.html#a1c974a5b98252451ff133b05e54a6a38',1,'HepLib::Index']]]
 ];

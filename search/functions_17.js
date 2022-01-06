@@ -4,7 +4,7 @@ var searchData=
   ['x_5ffree_5findex_1',['x_free_index',['../namespace_hep_lib_1_1_s_d.html#a22f8f574261ecd417dfcd5a131ae1bc1',1,'HepLib::SD']]],
   ['xend_2',['XEnd',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2308a1b1c9d21983b452db09e2262907',1,'HepLib::SD::SecDec']]],
   ['xexpands_3',['XExpands',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ab6f6c8519be9dc215cce394982400fa3',1,'HepLib::SD::SecDec']]],
-  ['xintegral_4',['XIntegral',['../class_hep_lib_1_1_x_integral.html#ad80e0835ccef17ed38827843fa262e5a',1,'HepLib::XIntegral::XIntegral(ex fed)'],['../class_hep_lib_1_1_x_integral.html#a3e58df712bf83f983c819851f006cc27',1,'HepLib::XIntegral::XIntegral(ex loops, ex ps, ex ns)']]],
+  ['xintegral_4',['XIntegral',['../class_hep_lib_1_1_x_integral.html#a385fe8875e0769b7c6b98588949c9070',1,'HepLib::XIntegral::XIntegral()'],['../class_hep_lib_1_1_x_integral.html#ad80e0835ccef17ed38827843fa262e5a',1,'HepLib::XIntegral::XIntegral(ex fed)'],['../class_hep_lib_1_1_x_integral.html#a3e58df712bf83f983c819851f006cc27',1,'HepLib::XIntegral::XIntegral(ex loops, ex ps, ex ns)']]],
   ['xlst_5',['xlst',['../namespace_hep_lib.html#a223e20dd4f8b0c8dfd240b7f1d73a7a0',1,'HepLib::xlst(int bi, int ei)'],['../namespace_hep_lib.html#a2641d2da4ebebd87ccc557cc90ee5733',1,'HepLib::xlst(int ei)']]],
   ['xmonomials_6',['XMonomials',['../class_hep_lib_1_1_s_d_1_1_sec_dec_base.html#ae95b3bf915745d357e98701d2bea0f47',1,'HepLib::SD::SecDecBase']]],
   ['xpositive_7',['xPositive',['../namespace_hep_lib.html#a2bab64cb52f109321f0300cd68e3a1df',1,'HepLib']]],
