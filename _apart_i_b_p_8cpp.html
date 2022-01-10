@@ -68,8 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ApartIBP.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -77,7 +76,6 @@ $(function() {
 <p>Functions to perform partial fraction.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_h_e_p_8h_source.html">HEP.h</a>&quot;</code><br />
-<code>#include &quot;cln/cln.h&quot;</code><br />
 </div>
 <p><a href="_apart_i_b_p_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -89,61 +87,21 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6226ccc32b4bdf14ac68d481497d5dc2"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a6226ccc32b4bdf14ac68d481497d5dc2">HepLib::ApartIR2ex</a> (const ex &amp;expr_in)</td></tr>
-<tr class="memdesc:a6226ccc32b4bdf14ac68d481497d5dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ApartIR to ex  <a href="namespace_hep_lib.html#a6226ccc32b4bdf14ac68d481497d5dc2">More...</a><br /></td></tr>
-<tr class="separator:a6226ccc32b4bdf14ac68d481497d5dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43476da1ca317c75c467e9e385861f91"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a43476da1ca317c75c467e9e385861f91">HepLib::ApartIR2F</a> (const ex &amp;expr_in)</td></tr>
-<tr class="memdesc:a43476da1ca317c75c467e9e385861f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ApartIR to F(ps, ns), ns is like FIRE convention  <a href="namespace_hep_lib.html#a43476da1ca317c75c467e9e385861f91">More...</a><br /></td></tr>
-<tr class="separator:a43476da1ca317c75c467e9e385861f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a713f5406a55ea6396d67130bef9383cb"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a713f5406a55ea6396d67130bef9383cb">HepLib::F2ex</a> (const ex &amp;expr_in)</td></tr>
 <tr class="memdesc:a713f5406a55ea6396d67130bef9383cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert F(ps, ns) to normal ex, ns is like FIRE convention  <a href="namespace_hep_lib.html#a713f5406a55ea6396d67130bef9383cb">More...</a><br /></td></tr>
 <tr class="separator:a713f5406a55ea6396d67130bef9383cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca2d497a0977682390504dadde529ab9"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#aca2d497a0977682390504dadde529ab9">HepLib::Apart</a> (const matrix &amp;mat)</td></tr>
-<tr class="memdesc:aca2d497a0977682390504dadde529ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on matrix.  <a href="namespace_hep_lib.html#aca2d497a0977682390504dadde529ab9">More...</a><br /></td></tr>
-<tr class="separator:aca2d497a0977682390504dadde529ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af902911f1e70bf0bb70d4860ab0b048f"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#af902911f1e70bf0bb70d4860ab0b048f">HepLib::Apart</a> (const ex &amp;expr_ino, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;vars_in, exmap smap)</td></tr>
-<tr class="memdesc:af902911f1e70bf0bb70d4860ab0b048f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on ex.  <a href="namespace_hep_lib.html#af902911f1e70bf0bb70d4860ab0b048f">More...</a><br /></td></tr>
-<tr class="separator:af902911f1e70bf0bb70d4860ab0b048f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38a880f58bb4448846d2795c4e953ed9"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a38a880f58bb4448846d2795c4e953ed9">HepLib::Apart</a> (const ex &amp;expr_ino, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;loops, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;extps, exmap smap)</td></tr>
-<tr class="memdesc:a38a880f58bb4448846d2795c4e953ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apart on ex.  <a href="namespace_hep_lib.html#a38a880f58bb4448846d2795c4e953ed9">More...</a><br /></td></tr>
-<tr class="separator:a38a880f58bb4448846d2795c4e953ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4392f8b5a4d9ed8452d9c8a508aa9cc4"><td class="memItemLeft" align="right" valign="top">ex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a4392f8b5a4d9ed8452d9c8a508aa9cc4">HepLib::ApartIRC</a> (const ex &amp;expr_in)</td></tr>
-<tr class="memdesc:a4392f8b5a4d9ed8452d9c8a508aa9cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">complete the ApartIR elements  <a href="namespace_hep_lib.html#a4392f8b5a4d9ed8452d9c8a508aa9cc4">More...</a><br /></td></tr>
-<tr class="separator:a4392f8b5a4d9ed8452d9c8a508aa9cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45d160c4bae2e2926e1b8f945445c935"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a45d160c4bae2e2926e1b8f945445c935">HepLib::ApartIBP</a> (exvector &amp;air_vec, AIOption aio)</td></tr>
 <tr class="memdesc:a45d160c4bae2e2926e1b8f945445c935"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input  <a href="namespace_hep_lib.html#a45d160c4bae2e2926e1b8f945445c935">More...</a><br /></td></tr>
 <tr class="separator:a45d160c4bae2e2926e1b8f945445c935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a170029bfa73898bf381e053ad16fb9a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_hep_lib.html#a170029bfa73898bf381e053ad16fb9a5">HepLib::ApartIBP</a> (exvector &amp;air_vec, int IBPmethod, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;loops, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;exts, const <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a> &amp;cut_props, std::function&lt; <a class="el" href="_gi_na_c_w_8cpp.html#a72232f396bfa4d6f3b7e36daca0dc594">lst</a>(const Base &amp;, const ex &amp;)&gt; uf)</td></tr>
 <tr class="memdesc:a170029bfa73898bf381e053ad16fb9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input  <a href="namespace_hep_lib.html#a170029bfa73898bf381e053ad16fb9a5">More...</a><br /></td></tr>
 <tr class="separator:a170029bfa73898bf381e053ad16fb9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a84d435ed2caade4dc52b5502f3b359d5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_apart_i_b_p_8cpp.html#a84d435ed2caade4dc52b5502f3b359d5">nopat</a> = GiNaC::subs_options::no_pattern</td></tr>
-<tr class="separator:a84d435ed2caade4dc52b5502f3b359d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Functions to perform partial fraction. </p>
 
 <p class="definition">Definition in file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
-</div><h2 class="groupheader">Variable Documentation</h2>
-<a id="a84d435ed2caade4dc52b5502f3b359d5" name="a84d435ed2caade4dc52b5502f3b359d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84d435ed2caade4dc52b5502f3b359d5">&#9670;&nbsp;</a></span>nopat</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto nopat = GiNaC::subs_options::no_pattern</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_apart_i_b_p_8cpp_source.html#l00009">9</a> of file <a class="el" href="_apart_i_b_p_8cpp_source.html">ApartIBP.cpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

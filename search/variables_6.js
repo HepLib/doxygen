@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['ginac_5farchive_5fsymbols_0',['GiNaC_archive_Symbols',['../namespace_hep_lib.html#a2b01c2a70699d7f65f561cb32d481b6b',1,'HepLib']]],
-  ['ginac_5fparallel_5fbatch_1',['GiNaC_Parallel_Batch',['../namespace_hep_lib.html#afe29f5d5bec35abdbf8120ca708bd24f',1,'HepLib']]],
+  ['ginac_5fparallel_5fbatch_0',['GiNaC_Parallel_Batch',['../namespace_hep_lib.html#afe29f5d5bec35abdbf8120ca708bd24f',1,'HepLib']]],
+  ['ginac_5fparallel_5fms_1',['GiNaC_Parallel_MS',['../namespace_hep_lib.html#ac3d2867a919fd477cffc5a906055e594',1,'HepLib']]],
   ['ginac_5fparallel_5fnb_2',['GiNaC_Parallel_NB',['../namespace_hep_lib.html#a4dbe0ecd4b3e345dd3e7c65c4d4a3421',1,'HepLib']]],
   ['ginac_5fparallel_5fnp_3',['GiNaC_Parallel_NP',['../namespace_hep_lib.html#a812130157fcc229c9cef916f484e4ccd',1,'HepLib']]],
   ['ginac_5fparallel_5fpre_4',['GiNaC_Parallel_PRE',['../namespace_hep_lib.html#ada4a73631bd239f948bc5d8b2b618a6c',1,'HepLib']]],
