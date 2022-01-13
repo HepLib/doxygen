@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['d_0',['d',['../namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd',1,'HepLib::IBP']]],
-  ['d_1',['D',['../namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881',1,'HepLib::D()'],['../namespace_hep_lib.html#a2de7fae40f94cde4073a50d5501c89ee',1,'HepLib::D(&quot;D&quot;)']]],
+  ['d_0',['D',['../namespace_hep_lib.html#a5d81b07ab0bf7779b2543453a46d5881',1,'HepLib::D()'],['../namespace_hep_lib.html#a2de7fae40f94cde4073a50d5501c89ee',1,'HepLib::D(&quot;D&quot;)']]],
+  ['d_1',['d',['../namespace_hep_lib_1_1_i_b_p.html#a7d1dd84ccc51e73e3511fa57bef26acd',1,'HepLib::IBP']]],
   ['dcomplex_2',['dCOMPLEX',['../_c_u_b_a_8cpp.html#a680d5019b544486ed86a244c6584007e',1,'dCOMPLEX():&#160;CUBA.cpp'],['../_h_cubature_8cpp.html#a680d5019b544486ed86a244c6584007e',1,'dCOMPLEX():&#160;HCubature.cpp']]],
   ['debug_3',['Debug',['../namespace_hep_lib.html#a6c8acea92f3856b9760a4133c4d53bb8',1,'HepLib']]],
   ['declare_5ffunction_5f2p_4',['DECLARE_FUNCTION_2P',['../namespace_hep_lib_1_1_s_d.html#a1bfba64c369ecbb3e813f4bcff07821c',1,'HepLib::SD']]],
