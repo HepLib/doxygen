@@ -15,7 +15,8 @@ var searchData=
   ['sp_5fmap_12',['SP_map',['../namespace_hep_lib.html#a3e6a15aa7da8ea1f08f8f9f056e27fe7',1,'HepLib']]],
   ['stable_13',['STable',['../class_hep_lib_1_1_parser.html#a5ef2f2c75520b5d8cba407421d3899f4',1,'HepLib::Parser']]],
   ['starttimer_14',['StartTimer',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#ae477a85ee33973b309a43c3520ce7e6e',1,'HepLib::SD::IntegratorBase']]],
-  ['style_15',['Style',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html#a5c087a8e5f5ffebbd312b64946515c01',1,'HepLib::QGRAF::Process']]],
-  ['suffix_16',['suffix',['../class_hep_lib_1_1_s_d_1_1_cpp_format.html#a59a608a6e38a0ddd8f69c2a5a5b4f8b3',1,'HepLib::SD::CppFormat']]],
-  ['syms_17',['syms',['../exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58',1,'exfactor.cpp']]]
+  ['sthreads_15',['sThreads',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#aaa5f0b82eb4a8f8d63e8d0f7be5cedae',1,'HepLib::IBP::FIRE']]],
+  ['style_16',['Style',['../class_hep_lib_1_1_q_g_r_a_f_1_1_process.html#a5c087a8e5f5ffebbd312b64946515c01',1,'HepLib::QGRAF::Process']]],
+  ['suffix_17',['suffix',['../class_hep_lib_1_1_s_d_1_1_cpp_format.html#a59a608a6e38a0ddd8f69c2a5a5b4f8b3',1,'HepLib::SD::CppFormat']]],
+  ['syms_18',['syms',['../exfactor_8cpp.html#a95325103f7239413a9f9a115dd725b58',1,'exfactor.cpp']]]
 ];

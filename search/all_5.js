@@ -1,8 +1,8 @@
 var searchData=
 [
   ['f2ex_0',['F2ex',['../namespace_hep_lib.html#a713f5406a55ea6396d67130bef9383cb',1,'HepLib']]],
-  ['factor_1',['factor',['../_gi_na_c_w_8cpp.html#a52406fa5de76527381e31d77178e8e99',1,'GiNaCW.cpp']]],
-  ['factor_2',['Factor',['../namespace_hep_lib_1_1_s_d.html#ae3e0aa78d0f003e3025909bbb25eb64b',1,'HepLib::SD']]],
+  ['factor_1',['Factor',['../namespace_hep_lib_1_1_s_d.html#ae3e0aa78d0f003e3025909bbb25eb64b',1,'HepLib::SD']]],
+  ['factor_2',['factor',['../_gi_na_c_w_8cpp.html#a52406fa5de76527381e31d77178e8e99',1,'GiNaCW.cpp']]],
   ['factor_5fform_3',['factor_form',['../namespace_hep_lib.html#a5a072331cd5f4d78bfb89023a2560b01',1,'HepLib']]],
   ['factorial_4',['factorial',['../_gi_na_c_w_8cpp.html#ae360a21bc4fd8682e2e3db6dcde1bc8a',1,'GiNaCW.cpp']]],
   ['factoroutx_5',['FactorOutX',['../namespace_hep_lib_1_1_s_d.html#a01af25b85fc8b13abbc33cb9ef626967',1,'HepLib::SD']]],
@@ -23,7 +23,7 @@ var searchData=
   ['file2expr_20',['file2expr',['../_gi_na_c_w_8cpp.html#a2aaef6477b0e1031743bb05dd0d5885e',1,'GiNaCW.cpp']]],
   ['file2str_21',['file2str',['../namespace_hep_lib.html#ab0653cc4f630f3be4926f14e1cafa8b8',1,'HepLib']]],
   ['file2strvec_22',['file2strvec',['../namespace_hep_lib.html#a8f5b083d9cc957aa8522df0ab5d6cda5',1,'HepLib']]],
-  ['file_5fexists_23',['file_exists',['../_process_8cpp.html#a2eb789b31b6e24d925ca93991f4bc91c',1,'file_exists():&#160;Process.cpp'],['../namespace_hep_lib.html#a580b6208b2fa4dfef76ad9af7cb4cb03',1,'HepLib::file_exists()']]],
+  ['file_5fexists_23',['file_exists',['../namespace_hep_lib.html#a580b6208b2fa4dfef76ad9af7cb4cb03',1,'HepLib::file_exists()'],['../_process_8cpp.html#a2eb789b31b6e24d925ca93991f4bc91c',1,'file_exists():&#160;Process.cpp']]],
   ['findminimum_24',['FindMinimum',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html#a656faab720743b5f0073e9b20164dc08',1,'HepLib::SD::MinimizeBase::FindMinimum()'],['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html#a0ab95c59b8b20d2446ae64a02ef5f2e4',1,'HepLib::SD::HookeJeeves::FindMinimum()'],['../class_hep_lib_1_1_s_d_1_1_min_uit.html#aa10bf66a14c696e4a8e3345c2394bd77',1,'HepLib::SD::MinUit::FindMinimum()']]],
   ['findrules_25',['FindRules',['../namespace_hep_lib_1_1_i_b_p.html#afa08d10c6fb157a747493bf4aa251df2',1,'HepLib::IBP::FindRules(vector&lt; Base * &gt; fs, bool mi, std::function&lt; lst(const Base &amp;, const ex &amp;)&gt; uf)'],['../namespace_hep_lib_1_1_i_b_p.html#a2182bc58fb4dce8474cd85371b07c9b2',1,'HepLib::IBP::FindRules(Base &amp;ibp, bool mi=true, std::function&lt; lst(const Base &amp;, const ex &amp;)&gt; uf=LoopUF)']]],
   ['fire_26',['FIRE',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html',1,'HepLib::IBP']]],
@@ -53,9 +53,10 @@ var searchData=
   ['ft_50',['FT',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a3cc67d6c7da5d9ea40d11dfc2f874100',1,'HepLib::SD::IntegratorBase']]],
   ['ft_5ftype_51',['FT_Type',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#a2165b4e0e2c3b53c34dcac53ebcbf28b',1,'HepLib::SD::IntegratorBase']]],
   ['ftable_52',['FTable',['../class_hep_lib_1_1_parser.html#a03c2868fd3ece781e30ed4d314ecf224',1,'HepLib::Parser']]],
-  ['func_53',['FUNC',['../class_hep_lib_1_1_server.html#a51f025e86aba2dfa7c5b7f904cb5b765',1,'HepLib::Server']]],
-  ['functions_54',['Functions',['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a5b5b7feaf705e57727b6e33ac2d272fb',1,'HepLib::SD::XIntegrand::Functions()'],['../class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc',1,'HepLib::XIntegral::Functions()']]],
-  ['functions_2ecpp_55',['Functions.cpp',['../_s_d_2_functions_8cpp.html',1,'(Global Namespace)'],['../_b_a_s_i_c_2_functions_8cpp.html',1,'(Global Namespace)']]],
-  ['functiontype_56',['FunctionType',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html#a9893680b7ba5bd6efa5cb57052da5672',1,'HepLib::SD::MinimizeBase']]],
-  ['funexp_57',['FunExp',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ab2f1a8a33cf3a80b4e1a12695552abcb',1,'HepLib::SD::SecDec']]]
+  ['fthreads_53',['fThreads',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a7267f4489334aeacde8abf89c023d122',1,'HepLib::IBP::FIRE']]],
+  ['func_54',['FUNC',['../class_hep_lib_1_1_server.html#a51f025e86aba2dfa7c5b7f904cb5b765',1,'HepLib::Server']]],
+  ['functions_55',['Functions',['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#a5b5b7feaf705e57727b6e33ac2d272fb',1,'HepLib::SD::XIntegrand::Functions()'],['../class_hep_lib_1_1_x_integral.html#a6c52de306d29c9d282fa381b29e96dfc',1,'HepLib::XIntegral::Functions()']]],
+  ['functions_2ecpp_56',['Functions.cpp',['../_s_d_2_functions_8cpp.html',1,'(Global Namespace)'],['../_b_a_s_i_c_2_functions_8cpp.html',1,'(Global Namespace)']]],
+  ['functiontype_57',['FunctionType',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html#a9893680b7ba5bd6efa5cb57052da5672',1,'HepLib::SD::MinimizeBase']]],
+  ['funexp_58',['FunExp',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ab2f1a8a33cf3a80b4e1a12695552abcb',1,'HepLib::SD::SecDec']]]
 ];
